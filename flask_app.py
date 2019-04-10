@@ -6,6 +6,10 @@ import bcrypt
 from dict import Dict
 import csv
 from recommendation import Recommendation
+import requests
+from requests.auth import HTTPDigestAuth
+from ipify import get_ip
+
 
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] ='prs'
@@ -30,7 +34,7 @@ c=Dict.c
 tanishq =[]
 def loadcsv():
 
-    with open('static/output.csv', 'r', encoding = 'utf-8') as csvFile:
+    with open('/home/helloheroguy/mysite/static/output.csv', 'r', encoding = 'utf-8') as csvFile:
         reader = csv.reader(csvFile)
         for row in reader:
             tanishq.append(row)
@@ -48,7 +52,7 @@ def confirm_email(token):
     except SignatureExpired:
         return 'The link is expired'
     users=mongo.db.user
-    user = users.find_one({'email':email_from_token})
+
     users.update_one({'email':email_from_token},{"$set":  {'email_confirmation':'1'}})
 
     return 'token accepted'
@@ -61,6 +65,18 @@ def signup():
         password=bcrypt.hashpw(request.form['password'].encode('utf-8'),bcrypt.gensalt())
         country=request.form["country"]
 
+        base_url = "https://cloud.mongodb.com/api/atlas/v1.0"
+        GROUP_ID = '5c9871e2553855b52c5fafb3'
+        whitelist_ep = "/groups/" + GROUP_ID + "/whitelist"
+        url = '{}{}'.format(base_url, whitelist_ep)
+
+        ip = get_ip()
+
+        r =requests.post(
+            url,
+            auth=HTTPDigestAuth('shubhambhawsar63@gmail.com', '1532581d-4a2e-4711-8d63-f2e2f7f2a6df'),
+            json=[{'ipAddress': ip, 'comment': 'test'}]  # the comment is option
+            )
 
 
         users=mongo.db.user
@@ -408,7 +424,7 @@ def jtpythonres():
 # python pages
 @app.route("/python_introduction")
 def py_introduction():
-    return render_template('F_python/Introduction.html',topics=python)
+    return render_template('/home/helloheroguy/mysite/templates/F_python/Introduction.html',topics=python)
 
 @app.route("/python_Variable_and_Keywords")
 def py_Var_Key():
