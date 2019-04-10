@@ -424,7 +424,7 @@ def jtpythonres():
 # python pages
 @app.route("/python_introduction")
 def py_introduction():
-    return render_template('/home/helloheroguy/mysite/templates/F_Python/Introduction.html',topics=python)
+    return render_template('F_Python/Introduction.html',topics=python)
 
 @app.route("/python_Variable_and_Keywords")
 def py_Var_Key():
