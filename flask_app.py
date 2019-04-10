@@ -129,7 +129,7 @@ def login():
         return 'invalid username/password combo'
     else:
 
-        return render_template("login.html")
+        return render_template("LogIn.HTML")
 
 @app.route("/recommend",methods=["POST"])
 def recommendation_sys():
