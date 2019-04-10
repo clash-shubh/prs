@@ -31,3 +31,14 @@ a{
 .link-strip{
   padding:10px 0 30px 20%;
 }
+.plain-text{
+  text-align: center;
+  font-style: italic;
+  font-family: inherit;
+  font-size: 40px;
+}
+.name-re{
+  text-align: center;
+  
+  font-size: 40px;
+}

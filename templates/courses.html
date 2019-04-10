@@ -37,7 +37,28 @@
     </nav>
 
 
+  {% if recommend %}
+  <div class="contain">
+    <div class="recommendation-blox">
+      <div class="plain-text">
+        Your recommended Course is : {{info}}
+      </div>
+      <a href="python_courses">
+
+      <div class="image-re">
+        <img src="{{url_for('static',filename='img/py-logo.png')}}" height=500px width=500px>
+      </div>
+      <div class="name-re">
+        {{info}}
+      </div>
+      </a>
+    </div>
+    </div>
+  {% endif %}
+
 <div class="contain">
+
+
     <div class="box-container">
       <a href="python_courses">
       <div class="image">

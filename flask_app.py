@@ -55,7 +55,7 @@ def confirm_email(token):
 
     users.update_one({'email':email_from_token},{"$set":  {'email_confirmation':'1'}})
 
-    return 'token accepted'
+    return 'email verified'
 
 @app.route("/signup",methods=["GET","POST"])
 def signup():
@@ -100,7 +100,8 @@ def signup():
             'email':email,
             'password':password,
             'country':country,
-            'email_confirmation':'0'
+            'email_confirmation':'0',
+            'recommendation':'-1'
             })
             session['username']=name
             return redirect(url_for('survey'))
@@ -139,11 +140,18 @@ def recommendation_sys():
     recommended = Recommendation.recommend(inp1,inp2,inp3,inp4)
     h = int(round(recommended[0]))
     info=Dict.courses[h]
-    return render_template("test.html",info=info)
+
+    name = session['username']
+
+    users=mongo.db.user
+    users.update_one({'username':name},{"$set":  {'recommendation':h}})
+
+    return redirect(url_for('courses'))
 
 @app.route("/signout")
 def signout():
     session.pop('username')
+    session.clear()
     return redirect(url_for('signup'))
 
 @app.route("/loginrdr",methods=["POST","GET"])
@@ -153,7 +161,18 @@ def loginrdr():
 
 @app.route("/courses")
 def courses():
-    return render_template('courses.html')
+    recommend=None
+    users=mongo.db.user
+
+    if not session:
+        return redirect(url_for('login'))
+    name=session['username']
+
+    exist_user=users.find_one({'username': name})
+    if exist_user['recommendation'] != -1:
+        recommend = exist_user['recommendation']
+        info=Dict.courses[recommend]
+    return render_template('courses.html',info=info,recommend=recommend)
 
 
 @app.route("/forum")
