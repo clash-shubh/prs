@@ -268,215 +268,215 @@ def cpp_exception_handling():
 @app.route("/jtpython_overview")
 def pythonCourses():
     loadcsv()
-    return render_template('javatutorial/python/introduction.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/introduction.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_environment_setup")
 def jtpythonenvsetup():
     loadcsv()
-    return render_template('javatutorial/python/env_setup.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/env_setup.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_basic_syntax")
 def jtpythonbasic():
     loadcsv()
-    return render_template('javatutorial/python/basicsyntax.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/basicsyntax.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_variable_types")
 def jtpythonvar():
     loadcsv()
-    return render_template('javatutorial/python/vartype.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/vartype.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_basic_operators")
 def jtpythonop():
     loadcsv()
-    return render_template('javatutorial/python/operators.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/operators.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_decision_making")
 def jtpythondecision():
     loadcsv()
-    return render_template('javatutorial/python/decision.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/decision.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_loops")
 def jtpythonloops():
     loadcsv()
-    return render_template('javatutorial/python/loops.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/loops.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_numbers")
 def jtpythonnumbers():
     loadcsv()
-    return render_template('javatutorial/python/numbers.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/numbers.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_strings")
 def jtpythonstrings():
     loadcsv()
-    return render_template('javatutorial/python/strings.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/strings.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_list")
 def jtpythonlist():
     loadcsv()
-    return render_template('javatutorial/python/list.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/list.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_tuples")
 def jtpythontuple():
     loadcsv()
-    return render_template('javatutorial/python/tuples.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/tuples.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_dictionary")
 def jtpythondict():
     loadcsv()
-    return render_template('javatutorial/python/dictionary.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/dictionary.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_date_and_time")
 def jtpythondate():
     loadcsv()
-    return render_template('javatutorial/python/datetime.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/datetime.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_functions")
 def jtpythonfunc():
     loadcsv()
-    return render_template('javatutorial/python/functions.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/functions.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_modules")
 def jtpythonmodules():
     loadcsv()
-    return render_template('javatutorial/python/modules.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/modules.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_files_io")
 def jtpythonio():
     loadcsv()
-    return render_template('javatutorial/python/files_io.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/files_io.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_exceptions_handling")
 def jtpythonexception():
     loadcsv()
-    return render_template('javatutorial/python/exception.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/exception.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_object_oriented")
 def jtpythonoo():
     loadcsv()
-    return render_template('javatutorial/python/objectoriented.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/objectoriented.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_regular_expressions")
 def jtpythonre():
     loadcsv()
-    return render_template('javatutorial/python/regularexpressions.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/regularexpressions.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_cgi_programming")
 def jtpythoncgi():
     loadcsv()
-    return render_template('javatutorial/python/cgi.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/cgi.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_mysql_databases_access")
 def jtpythondatabase():
     loadcsv()
-    return render_template('javatutorial/python/database.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/database.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_network_programming")
 def jtpythonnetwork():
     loadcsv()
-    return render_template('javatutorial/python/network.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/network.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_sending_email_using_smtp")
 def jtpythonemail():
     loadcsv()
-    return render_template('javatutorial/python/email.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/email.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_multithreaded_programming")
 def jtpythonthread():
     loadcsv()
-    return render_template('javatutorial/python/multithreading.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/multithreading.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_xml_processing")
 def jtpythonxml():
     loadcsv()
-    return render_template('javatutorial/python/xml.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/xml.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_gui_programming")
 def jtpythongui():
     loadcsv()
-    return render_template('javatutorial/python/gui.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/gui.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_extension_programming_with_c")
 def jtpythonext():
     loadcsv()
-    return render_template('javatutorial/python/ext.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/ext.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_questions_and_answers")
 def jtpythonqa():
     loadcsv()
-    return render_template('javatutorial/python/qa.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/qa.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_quick_guide")
 def jtpythonguide():
     loadcsv()
-    return render_template('javatutorial/python/guide.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/guide.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_tools")
 def jtpythontools():
     loadcsv()
-    return render_template('javatutorial/python/tools.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/tools.html',topics=javatutpython,python=tanishq)
 
 @app.route("/jtpython_useful_resources")
 def jtpythonres():
     loadcsv()
-    return render_template('javatutorial/python/res.html',topics=javatutpython,python=tanishq)
+    return render_template('javatutorials/python/res.html',topics=javatutpython,python=tanishq)
 
 
 # python pages
 @app.route("/python_introduction")
 def py_introduction():
-    return render_template('/home/helloheroguy/mysite/templates/F_python/Introduction.html',topics=python)
+    return render_template('/home/helloheroguy/mysite/templates/F_Python/Introduction.html',topics=python)
 
 @app.route("/python_Variable_and_Keywords")
 def py_Var_Key():
-    return render_template('F_python/Variables_Keywords.html',topics=python)
+    return render_template('F_Python/Variables_Keywords.html',topics=python)
 
 @app.route("/python_Types")
 def py_types():
-    return render_template('F_python/Types.html',topics=python)
+    return render_template('F_Python/Types.html',topics=python)
 
 @app.route("/python_Operators")
 def py_operators():
-    return render_template('F_python/Operators.html',topics=python)
+    return render_template('F_Python/Operators.html',topics=python)
 
 @app.route("/python_Expressions")
 def py_expressions():
-    return render_template('F_python/Expressions.html',topics=python)
+    return render_template('F_Python/Expressions.html',topics=python)
 
 @app.route("/python_Control_Statements")
 def py_cont_stat():
-    return render_template('F_python/Control_Statements.html',topics=python)
+    return render_template('F_Python/Control_Statements.html',topics=python)
 
 @app.route("/python_Data_Structure")
 def py_ds():
-    return render_template('F_python/Data_Structures.html',topics=python)
+    return render_template('F_Python/Data_Structures.html',topics=python)
 
 @app.route("/python_Functions")
 def py_functions():
-    return render_template('F_python/Functions.html',topics=python)
+    return render_template('F_Python/Functions.html',topics=python)
 
 @app.route("/python_Modules")
 def py_mpdules():
-    return render_template('F_python/Modules.html',topics=python)
+    return render_template('F_Python/Modules.html',topics=python)
 
 @app.route("/python_Packages")
 def py_packages():
-    return render_template('F_python/Packages.html',topics=python)
+    return render_template('F_Python/Packages.html',topics=python)
 
 @app.route("/python_Object_Oriented_Programming")
 def py_oop():
-    return render_template('F_python/oop.html',topics=python)
+    return render_template('F_Python/oop.html',topics=python)
 
 @app.route("/python_Exceptions")
 def py_exceptions():
-    return render_template('F_python/Exception.html',topics=python)
+    return render_template('F_Python/Exception.html',topics=python)
 
 @app.route("/python_Standard_Library")
 def py_st_lib():
-    return render_template('F_python/Standard_Library.html',topics=python)
+    return render_template('F_Python/Standard_Library.html',topics=python)
 
 @app.route("/python_Testing")
 def py_testing():
-    return render_template('F_python/Testing.html',topics=python)
+    return render_template('F_Python/Testing.html',topics=python)
 
 #C LINKS
 
