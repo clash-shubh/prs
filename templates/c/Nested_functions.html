@@ -1,0 +1,292 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Nested Functions</FONT></H1>
+    
+    
+    
+    <P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Nested_Functions"></A>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A function calling another function within its function definition is
+known as a nested function. So, far we are declaring a <B>main
+</B>function and calling other user-defined functions and predefined
+functions like <B>printf, scanf, gets, puts </B>etc., So, <B>main
+</B>function can be treated as a nested function. Let’s see the
+following example:</P>
+<P CLASS="western"><SPAN DIR="LTR" STYLE="position: relative; top: 0.13in; left: 2.9in; width: 2.48in; height: 3.28in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; line-height: 0.19in">clrscr();</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; line-height: 0.19in">func1();</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in">getch();</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">void
+	func1()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; line-height: 0.19in">for(i
+	= 1; i&lt;= 10; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.38in">func2();</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">void
+	func2()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in">printf(&quot;%d\n&quot;,i);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.12in">
+In the above example, the <B>main </B>function is calling three
+functions namely: <B>clrscr</B>, <B>func1 </B>and <B>getch</B>. So,
+<B>main </B>is a nested function. Also, in the definition of <B>func1</B>,
+it is calling another function <B>func2. </B>So, <B>func1 </B>is also
+a nested function.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in"><I><B>Note:
+</B></I><I>In programs containing nested functions, the enclosing or
+outer function returns back only when all the inner functions
+complete their task.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Program:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.88in"><FONT SIZE=4>/*
+C program to demonstrate a nested function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>int i;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.85in">
+<FONT SIZE=4>void func1(); void func2(); main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>void
+func1()</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.15in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>for(i
+= 1; i&lt;= 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>func2();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>func2()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;%d\n&quot;,i);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Recursion"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Recursion</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in">A
+function is said to be recursive, if a function calls itself within
+the function’s definition.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Let’s see the
+following example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.48in; height: 2.45in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">void
+	func1()</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; margin-right: 1.72in; line-height: 188%">
+	int i = 0; i++;</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; margin-top: 0in">printf(&quot;%d\n&quot;,i);</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; margin-top: 0in">func1();
+	/*Recursive Call */</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+In the above example, func1 is calling itself in the last line of its
+definition. When we write recursive functions, the function only
+returns back to the main program when all the recursive calls return
+back.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.74in; text-indent: -0in">
+<I><B>Note: </B></I><I>When writing recursive functions, proper care
+must be taken that the recursive calls return a value back at some
+point. Otherwise, the function calls itself infinite number of times.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Program:</B></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.62in"><FONT SIZE=4>/*
+C Program to demostrate recursion */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>void func1(); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0.15in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+func1()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.03in"><FONT SIZE=4>int
+i = 0; i++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>printf(&quot;%d\n&quot;,i); </FONT><FONT SIZE=4>func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in; line-height: 0.24in">
+<FONT SIZE=4>/* C program to find the factorial of a given number
+using a recursive function</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.39in"><FONT SIZE=4>*/
+#include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>int factorial(int x); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.86in"><FONT SIZE=4>int
+n, fact; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.25in"><FONT SIZE=4>printf(&quot;Enter
+the value of n: &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>fact =
+factorial(n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;Factorial
+of %d is: %d&quot;, n, fact);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>int
+factorial(int x)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>if(x
+== 0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>return
+1;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>return
+x*factorial(x-1);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.82in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to generate the first n terms of the
+Fibonacci sequence using a recursive function*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.39in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>int fib(int n); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.59in"><FONT SIZE=4>int
+i, number; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.69in"><FONT SIZE=4>printf(&quot;Enter
+the number of terms: &quot;); scanf(&quot;%d&quot;,&amp;number);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>if(number
+== 1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;0&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>else
+if(number == 2)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;0
+1&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;0
+1 &quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>for(i =
+3; i &lt;= number; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>printf(&quot;%d
+&quot;, fib(i));</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>int
+fib(int n)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.8in"><FONT SIZE=4>int
+i, temp; if(n == 1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>return 0;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>else if(n
+== 2)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>return
+1;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0.15in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-right: 4.48in; text-indent: -0in">
+<FONT SIZE=4>temp = fib(n-1) + fib(n-2); return temp;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

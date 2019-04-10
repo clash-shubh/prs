@@ -1,0 +1,41 @@
+{%extends "forum_layout.html"%}
+
+{%block forum%}
+
+<div class="legend">
+  Forum
+</div>
+<div class="legend-hr">
+<hr>
+</div>
+
+<div class="forum-heading">
+  <div class="category">
+    category
+  </div>
+  <div class="posts">
+    posts
+  </div>
+  <div class="views">
+    views
+  </div>
+</div>
+{%for i in range(0, 50):%}
+<div class="category-container">
+  <div class="category-name">
+    <a href="python_forum">
+    course {{i}}
+    </a>
+  </div>
+  <div class="post-count">
+    5
+  </div>
+  <div class="view-count">
+    100
+  </div>
+
+</div>
+{%endfor%}
+
+
+{%endblock forum%}

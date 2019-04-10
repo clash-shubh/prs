@@ -1,0 +1,653 @@
+{% extends "layout.html" %}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western" STYLE="page-break-before: always"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_6ab8d59f.gif')}}" ALIGN=LEFT><BR CLEAR=LEFT><FONT COLOR="#17365d">Exception Handling</FONT></H1>
+
+
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT COLOR="#4f81bc">Introduction</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+An error is an abnormal condition that results in unexpected behavior
+of a program. Common kinds of errors are syntax errors and logical
+errors. Syntax errors arise due to poor understanding of the
+language. Logical errors arise due to poor understanding of the
+problem and its solution.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Anomalies that occur at runtime are known as exceptions. Exceptions
+are of two types: synchronous exceptions and asynchronous exceptions.
+Synchronous exceptions are caused due to mistakes in the logic of the
+program and can be controlled. Asynchronous exceptions are caused due
+to hardware failure or operating system level failures and cannot be
+controlled.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Examples of synchronous exceptions are: divide by zero, array index
+out of bounds, etc.) . Examples of asynchronous exceptions are: out
+of memory error, memory overflow, memory underflow, disk failure,
+etc. Overview of errors and exceptions in Python is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.18in; left: 1.91in; width: 429px"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_2d202a7d.png')}}" NAME="image2.png" WIDTH=429 HEIGHT=225 BORDER=0></SPAN><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#4f81bc">Handling Exceptions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Flowchart for exception
+handling process is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.18in; left: 1.92in; width: 427px"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_6c87be5c.png')}}" NAME="image3.png" WIDTH=427 HEIGHT=294 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0.14in">
+We can handle exceptions in Python code using <I>try </I>and <I>except
+</I>blocks. Statements which can raise exceptions are placed in try
+block. Code that handles the exception is placed in except block. The
+code that handles an exception is known as exception handler and this
+process is known as exception handling.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">try
+and except</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Syntax
+for using try and except for exception handling is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.18in">
+<I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">except</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">ExceptionName:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following is an example
+for handling divide by zero exception using try and except blocks:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.84in; margin-top: 0in">
+<I>numerator = int(input()) denominator = int(input()) try:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.75in"><I>quotient
+= numerator / denominator print(&quot;Quotient:&quot;, quotient)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.7in; text-indent: -0.5in">
+<I>except ZeroDivisionError: print(&quot;Denominator cannot be zero&quot;)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Input:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">10</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">0</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Denominator
+cannot be zero</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Input:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">10</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">2</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Quotient: 5.0</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Multiple
+Except Blocks</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; margin-top: 0in">
+Often, there will be a need to handle more than one exception raised
+by a try block. To handle multiple exceptions, we can write multiple
+except blocks as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.93in; margin-top: 0in">
+<SPAN STYLE="background: #ffff00"> </SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">except</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">ExceptionName1:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.93in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">except</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">ExceptionName2:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I><SPAN STYLE="background: #ffff00">...</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following is an example
+for handling multiple exceptions using multiple except blocks:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.84in"><I>numerator
+= int(input()) denominator = int(input()) try:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.75in"><I>quotient
+= numerator / denominator print(&quot;Quotient:&quot;, quotient)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>except</I><I>
+</I><I>NameError:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.59in; text-indent: 0.5in">
+<I>print(&quot;You are using a variable which is not declared&quot;)
+except</I><I> </I><I>ValueError:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.65in; text-indent: 0.5in">
+<I>print(&quot;Invalid value&quot;) except</I><I> </I><I>ZeroDivisionError:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>print(&quot;Denominator
+cannot be zero&quot;)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+In the previous example for input 10 and 0, the output displayed is
+“Denominator cannot be zero”. When the divide by zero exception
+was triggered in try block, first two except blocks were skipped as
+the type of exception didn’t match with either <I>NameError </I>or
+<I>ValueError</I>. So, third except block was executed.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><FONT COLOR="#4f81bc">Multiple
+Exceptions in a Single Block</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+We can handle multiple exceptions using a single except block as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.18in">
+<I><SPAN STYLE="background: #ffff00">except(ExceptionName1,
+ExceptionName2,..):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Following
+is an example which demonstrates handling multiple exceptions using a
+single except block:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>numerator
+= int(input())</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.84in; margin-top: 0.06in; page-break-before: always">
+<I>denominator = int(input()) try:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.75in"><I>quotient
+= numerator / denominator print(&quot;Quotient:&quot;, quotient)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.26in; text-indent: -0.5in">
+<I>except (NameError,ValueError,ZeroDivisionError):
+print(&quot;Denominator cannot be zero&quot;)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For input 20 and 0, the
+output for the above code is:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Denominator cannot be
+zero</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Handle
+Any Exception</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">In
+some cases, we might want to execute the same code (handler) for any
+type of exception. Such common handler can be created using except as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.24in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">except:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Following
+is an example which demonstrates handling any exception with a single
+except block:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.84in"><I>numerator
+= int(input()) denominator = int(input()) try:</I></P>
+<DIV ID="Section1" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>except:</I></P>
+	<P CLASS="western" STYLE="margin-left: 0.03in; margin-right: 3.75in">
+	<I>quotient = numerator / denominator print(&quot;Quotient:&quot;,
+	quotient)</I></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.03in"><I>print(&quot;Denominator
+	cannot be zero&quot;)</I></P>
+</DIV>
+<DIV ID="Section2" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">For
+	input 8 and 0, the output for the above code is:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Denominator cannot be
+	zero</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H3 CLASS="western"><FONT COLOR="#4f81bc">else Clause</FONT></H3>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+	The try and except blocks can be followed by an optional <I>else
+	</I>block. The code in else block executes only when there is no
+	exception in the try block. The else block can be used to execute
+	housekeeping code like code to free the resources that are being
+	used.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H3 CLASS="western"><FONT COLOR="#4f81bc">Raising Exceptions</FONT></H3>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">We
+	can raise exceptions manually even though there are no exceptions
+	using the <I>raise </I>keyword. Syntax of raise statement is as
+	follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><I>raise[ExceptionName
+	[, args [, traceback]]]</I></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+	ExceptionName is the type of exception we want to raise. Args are
+	the exception arguments and traceback is the traceback object used
+	for the exception. Following is an example for demonstrating raise
+	keyword:</P>
+</DIV>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.94in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	raise NameError</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">except</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">NameError:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	print(&quot;Name</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">error&quot;)</SPAN></I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">In
+the above code NameError exception is raised by the raise statement
+and is handled by the except block.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Re-raising
+Exceptions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">In
+Python, we can re-raise the exceptions in the except block by writing
+<I>raise </I>keyword. Following code demonstrates re-raising
+exceptions:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I>try:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>raise</I><I>
+</I><I>NameError</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>except</I><I>
+</I><I>NameError:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.73in; margin-top: 0in">
+<I>print(&quot;Name error&quot;) raise</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Name error</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Traceback (most recent
+call last):</P>
+<P CLASS="western" STYLE="margin-left: 0.25in; margin-right: 4.24in; text-indent: -0.08in">
+File &quot;test1.py&quot;, line 2, in &lt;module&gt; raise NameError</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">NameError</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Handling
+Exceptions in Functions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+We can use try and except blocks inside functions as we are using
+until now. In the try block, we can call a function. If this function
+raises an exception, it can be handled by the except block which
+follows the try block. Following example demonstrates handling
+exceptions in functions:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>def
+div(num, denom):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>return
+num/denom</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>try:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>div(30, 0)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.7in; text-indent: -0.5in">
+<I>except ZeroDivisionError: print(&quot;Denominator cannot be zero&quot;)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output for the above
+program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Denominator
+cannot be zero</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">finally block</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A try block must be followed by one or more except blocks or one
+finally block. A finally block contains code that executes
+irrespective of whether an exception occurs or not. Syntax for
+finally block is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.24in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">finally:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement(s)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+finally block is generally used to write resource freeing code. We
+cannot write a else block along with finally block.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Built-in
+Exceptions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+There are several built-in or pre-defined exceptions in Python.
+Python automatically recognizes the built-in exceptions and handles
+them appropriately. Following are some of the built-in exceptions in
+Python:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=177>
+	<COL WIDTH=422>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Exception</B></P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Exception</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Base class for
+			all exceptions</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">StandardError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Base class for
+			all built-in exceptions (excluding StopIteration and SystemExit)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">SystemExit</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised by
+			sys.exit() function</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">ArithmeticError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Base class for
+			errors generated by mathematical calculations</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">OverflowError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when the
+			maximum limit of a numeric type exceeds</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">FloatingPointError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when a
+			floating point error could not be raised</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">ZeroDivisionError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when a
+			number is divided by zero</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">AssertionError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when the
+			assert statement fails</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">AttributeError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when
+			attribute reference or assignment fails</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">EOFError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when
+			end-of-file is reached or there is no input for input() function</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">ImportError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when an
+			import statement fails</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">LookupError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Base class for
+			all lookup errors</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">IndexError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when an
+			index is not found in a sequence</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">KeyError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when a
+			key is not found in the dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">NameError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when an
+			identifier is not found in local or global namespace</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">IOError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when
+			input or output operation fails</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">SyntaxError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when
+			there is syntax error in the program</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">ValueError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when the
+			value of an argument is invalid</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">RuntimeError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when the
+			generated error does not fall into any of the above categories</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=40 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">NotImplementedError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when an
+			abstract method that needs to be implemented is not implemented in
+			the derived class</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=177>
+	<COL WIDTH=422>
+	<TR VALIGN=TOP>
+		<TD WIDTH=177 HEIGHT=22 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">TypeError</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Raised when two
+			incompatible types are used in an operation</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.15in"><FONT COLOR="#4f81bc">User-defined
+Exceptions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+If the pre-defined exceptions doesn’t handle your custom error
+condition, we can create our own exceptions. Such exceptions are
+known as user-defined or custom exceptions. Steps in creating custom
+exceptions:</P>
+<P CLASS="western"><BR>
+</P>
+<OL TYPE=a START=3>
+	<OL>
+		<OL>
+			<LI><P STYLE="line-height: 100%">Create a new class and extend
+			Exception class.</P>
+			<LI><P STYLE="line-height: 0.18in">Raise the custom exception.</P>
+			<LI><P STYLE="line-height: 0.18in">Handle the custom exception.</P>
+		</OL>
+	</OL>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+Following example demonstrates creating and using a user-defined
+exception:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; margin-bottom: 0in">
+<I><SPAN STYLE="background: #ffff00">#NegativeError is the custom
+exception</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"></P>
+<P CLASS="western" STYLE="margin-left: 2.12in; line-height: 0.16in"><I>e</I><SPAN DIR="LTR" STYLE="position: relative; top: -0.01in; left: 1in; width: 2.07in; height: 0.18in; border: none; padding: 0in; background: #ffff00">
+	<P STYLE="margin-left: 1in; line-height: 0.18in"><I>self.value =
+	valu</I></P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	def	str	(self):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_8a8102bd.gif')}}" ALIGN=LEFT><I>return
+repr(self.value)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I><SPAN STYLE="background: #ffff00">try:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.41in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	raise NegativeError(-20)</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">except NegativeError as</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">ne:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	print(ne.value,&quot;is</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">negative.&quot;)</SPAN></I></P>
+{%endblock course%}

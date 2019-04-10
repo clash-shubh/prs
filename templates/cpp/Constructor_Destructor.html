@@ -1,0 +1,1226 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">CONSTRUCTORS
+&amp; DESTRUCTORS</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction_(2)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Until now in our C++ programs, we are initializing the data members
+of a class by creating one or more member functions and passing
+values as parameters to those functions. We know that C++ considers
+user-defined types on par with pre-defined types. We can initialize a
+pre- defined type at the time of declaration itself as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int x = 20;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Similarly, to initialize the data members when an object is created,
+C++ provides a special member function called a <I>constructor </I>and
+to de-initialize an object, another special member function called a
+<I>destructor </I>is used.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Constructor"></A><FONT COLOR="#365f91">Constructor</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Constructor is a special member function which is invoked
+automatically when an object is created to initialize the data
+members of that object. Following are the characteristics of a
+constructor:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	name of a constructor is same as the class</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>name.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	constructor must be declared in public section of the</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>It
+	should not be called explicitly as it is automatically called when
+	an object is created.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	constructor doesn't return any value. So, a constructor doesn't have
+	any return type. Not even</FONT><FONT SIZE=3> </FONT><FONT SIZE=3><I>void</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	constructor cannot be inherited or</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>virtual.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	address of a constructor cannot be referred in programs. So,
+	pointers and references cannot be used with</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructors.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	constructor cannot be declared as </FONT><FONT SIZE=3><I>static,
+	volatile, </I></FONT><FONT SIZE=3>or</FONT><FONT SIZE=3> </FONT><FONT SIZE=3><I>const</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constructors
+	can be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>overloaded.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constructors
+	can have default</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>arguments.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Like a member function, we can define a constructor inside or outside
+the class. Syntax for defining a constructor inside the class is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">class
+ClassName</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">ClassName( )</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+//Body of constructor</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Syntax
+for defining a constructor outside the class is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class ClassName</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">ClassName(
+);	//Constructor declaration</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">ClassName::ClassName(
+)	//Constructor definition</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of constructor</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+is an example which demonstrates constructor defined inside the
+class:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.19in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">string
+branch;</P>
+<DIV ID="Section69" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student()	//Constructor</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section70" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">age = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">branch = &quot;CSE&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+</DIV>
+<DIV ID="Section71" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.67in">cout&lt;&lt;&quot;Age
+	of student is: &quot;&lt;&lt;age&lt;&lt;endl; cout&lt;&lt;&quot;Branch
+	of student is: &quot;&lt;&lt;branch&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section72" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.8in">Student
+	s1; s1.get_details(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Output for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.64in">Age
+of student is: 20 Branch of student is: CSE</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.84in; margin-top: 0in; line-height: 0.38in">
+Following is an example which demonstrates constructor defined
+outside the class: #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.72in">Student();	//Constructor
+declaration void get_details()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.67in">cout&lt;&lt;&quot;Age
+of student is: &quot;&lt;&lt;age&lt;&lt;endl; cout&lt;&lt;&quot;Branch
+of student is: &quot;&lt;&lt;branch&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Student::Student()	//Constructor
+definition</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">age
+= 20;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">branch
+= &quot;CSE&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.8in; margin-top: 0in">
+Student s1; s1.get_details(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.46in; margin-top: 0.06in">
+Output for the above program is as follows: Age of student is: 20</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Branch of student is:
+CSE</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Types_of_Constructors"></A>
+<FONT COLOR="#365f91">Types of Constructors</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A constructor can be
+classified into following types:</P>
+<P CLASS="western"><BR>
+</P>
+<OL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Dummy</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Default</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Parameterized</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Copy</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Dynamic</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor</FONT></FONT></P>
+</OL>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Dummy_Constructor"></A>
+<FONT COLOR="#4f81bd">Dummy Constructor</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When no constructors are declared explicitly in a C++ program, a
+dummy constructor is invoked which does nothing. So, data members of
+a class are not initialized and contains garbage values. Following
+program demonstrates a dummy constructor:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section73" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section74" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.67in">cout&lt;&lt;&quot;Age
+	of student is: &quot;&lt;&lt;age&lt;&lt;endl; cout&lt;&lt;&quot;Branch
+	of student is: &quot;&lt;&lt;branch&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section75" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.8in">Student
+	s1; s1.get_details(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.56in">Age
+	of student is: 4883904 Branch of student is:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">You can see that since
+	age and branch are not initialized, they are displaying garbage
+	values.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Default_Constructor"></A><FONT COLOR="#4f81bd">Default
+	Constructor</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	A constructor which does not contain any parameters is called a
+	default constructor or also called as no parameter constructor. It
+	is used to initialize the data members to some default values.
+	Following program demonstrates a default constructor:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in; margin-top: 0in">
+	#include &lt;iostream&gt; using namespace std; class Student</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+	name; string regdno; int age;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0.06in">string
+branch;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">Student()	//Constructor</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<DIV ID="Section76" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">age = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">branch = &quot;CSE&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+</DIV>
+<DIV ID="Section77" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.67in">cout&lt;&lt;&quot;Age
+	of student is: &quot;&lt;&lt;age&lt;&lt;endl; cout&lt;&lt;&quot;Branch
+	of student is: &quot;&lt;&lt;branch&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section78" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.8in">Student
+	s1; s1.get_details(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.64in">Age
+	of student is: 20 Branch of student is: CSE</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Parameterized_Constructor"></A><FONT COLOR="#4f81bd">Parameterized
+	Constructor</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">A constructor which
+	accepts one or more parameters is called a parameterized
+	constructor. Following program demonstrates a parameterized
+	constructor:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Student</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+	name; string regdno; int age;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+</DIV>
+<DIV ID="Section79" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student(int a, string
+	b)//Constructor</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section80" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.1in">age
+	= a; branch = b;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.67in">cout&lt;&lt;&quot;Age
+	of student is: &quot;&lt;&lt;age&lt;&lt;endl; cout&lt;&lt;&quot;Branch
+	of student is: &quot;&lt;&lt;branch&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.32in">Student
+s1(21, &quot;CSE&quot;); s1.get_details();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.64in">Age
+of student is: 21 Branch of student is: CSE</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Copy_Constructor"></A><FONT COLOR="#4f81bd">Copy
+Constructor</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+A constructor which accepts an already existing object through
+reference to copy the data member values is called a copy
+constructor. As the name implies a copy constructor is used  to
+create a copy of an already existing object. Following program
+demonstrates a copy constructor:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Square</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int side;</P>
+<DIV ID="Section81" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Square(int s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section82" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">side = s;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Square(Square &amp;s)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">side = s.side;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Side
+	of square is: &quot;&lt;&lt;side&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 4.85in">
+	Square s1(10); Square s2(s1); Square s3 = s2; s1.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">s2.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.04in">s3.display();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 5.02in">
+Side of square is: 10 Side of square is: 10 Side of square is: 10</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program you can see that there are two ways for calling
+a copy constructor. One way is to call the copy constructor by
+passing the object as a parameter (in case of s2). Other way is to
+directly assign an existing object to a new object (in case of s3).</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I><B>Note</B></I>:
+Copying an object through assignment only works during object
+declaration. After declaring an object, assignment just serves its
+basic purpose.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Dynamic_Constructor"></A><FONT COLOR="#4f81bd">Dynamic
+Constructor</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">A
+constructor in which the memory for data members is allocated
+dynamically is called a dynamic constructor. Following program
+demonstrates dynamic constructor:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.45in">string
+branch; int *marks;</P>
+<DIV ID="Section83" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student(int n)
+	//Constructor</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section84" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">marks = new int[n];</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.86in">cout&lt;&lt;&quot;Enter
+	marks for &quot;&lt;&lt;n&lt;&lt;&quot; subjects: &quot;; for(int
+	i=0; i&lt;n; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">cin&gt;&gt;marks[i];</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display_marks(int
+	n)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+</DIV>
+<DIV ID="Section85" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; margin-top: 0.16in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.45in; margin-top: 0in">
+	cout&lt;&lt;&quot;Marks are: &quot;; for(int i=0; i&lt;n; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;marks[i]&lt;&lt;&quot;
+	&quot;;</P>
+</DIV>
+<DIV ID="Section86" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">int n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.75in">cout&lt;&lt;&quot;Enter
+	no. of subjects: &quot;; cin&gt;&gt;n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Student s1(n);</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.47in; margin-top: 0.06in; page-break-before: always">
+s1.display_marks(n); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+Input and output for the above program are as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter no.
+of subjects: 4</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+marks for 4 subjects: 20 18 19 16</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><A NAME="Constructor_with_Default_Arguments"></A>
+Marks are: 20 18 19 16</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.13in"><FONT COLOR="#365f91">Constructor
+with Default Arguments</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A constructor like a member function can have default arguments. The
+default arguments should be declared at the end of the parameters
+list. Following program demonstrates a constructor with default
+arguments:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.45in">string
+branch; int *marks;</P>
+<DIV ID="Section87" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">Student(string
+	branch, int n = 4)	//Constructor</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section88" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">marks = new int[n];</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.86in">cout&lt;&lt;&quot;Enter
+	marks for &quot;&lt;&lt;n&lt;&lt;&quot; subjects: &quot;; for(int
+	i=0; i&lt;n; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.92in; text-indent: 0.5in">
+	cin&gt;&gt;marks[i]; cout&lt;&lt;&quot;Student marks are: &quot;;
+	for(int i=0; i&lt;n; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.92in; text-indent: 0.5in">
+	cout&lt;&lt;marks[i]&lt;&lt;&quot; &quot;; cout&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section89" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">int n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.75in">cout&lt;&lt;&quot;Enter
+	no. of subjects: &quot;; cin&gt;&gt;n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.4in">Student
+	s1(&quot;CSE&quot;, n); Student s2(&quot;CSE&quot;); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Output for the above
+	program is as follows:</P>
+</DIV>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Enter no. of subjects: 3</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+marks for 3 subjects: 10 20 30</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Student
+marks are: 10 20 30</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+marks for 4 subjects: 15 18 16 20</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Student
+marks are: 15 18 16 20</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.13in"><A NAME="Constructor_Overloading"></A>
+<FONT COLOR="#365f91">Constructor Overloading</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Declaring multiple constructors with varying number of arguments or
+types of arguments is known as constructor overloading. All the
+overloaded constructors will have the same name as that of the class.
+Following program demonstrates constructor overloading:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section90" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section91" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Default
+	student constructor is invoked&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Student(int age)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Student
+	constructor with one parameter is invoked&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Student(string n,
+	string reg, int a, string br)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Student
+	constructor with four parameters is invoked&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.84in">Student
+	s1; Student s2(20);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Student s3(&quot;Mahesh&quot;,
+	&quot;501&quot;, 20, &quot;CSE&quot;);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Default student
+	constructor is invoked</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.91in">Student
+	constructor with one parameter is invoked Student constructor with
+	four parameters is invoked</P>
+</DIV>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Destructor</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Destructor"></A>
+A destructor is a special member function that is invoked
+automatically when the object goes out of scope and is used to
+perform clean up actions. Following are the characteristics of a
+destructor:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Name
+	of the destructor is same as the class name. However, destructor
+	name is preceded by the tilde (~)</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>symbol.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	destructor is called when a object goes out of</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>scope.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	destructor is also called when the programmer calls </FONT><FONT SIZE=3><I>delete
+	</I></FONT><FONT SIZE=3>operator on an</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>object.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Like
+	a constructor, destructor is also declared in the </FONT><FONT SIZE=3><I>public
+	</I></FONT><FONT SIZE=3>section of a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	order of invoking a destructor is the reverse of invoking a</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Destructors
+	do not take any arguments and hence cannot be</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>overloaded.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	destructor does not return a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>value.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	address of a destructor cannot be accessed in a</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>program.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>An
+	object with a constructor or a destructor cannot be used as members
+	of a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>union.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Destructor
+	cannot be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>inherited.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Unlike
+	constructors, destructors can be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>virtual.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Syntax
+for creating a destructor is as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">~ClassName(
+)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of destructor</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program demonstrates a destructor:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in; margin-top: 0in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section92" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student(string n)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section93" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">regdno = n;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Memory
+	allocated for student &quot;&lt;&lt;regdno&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">~Student()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Memory
+	deallocated for student &quot;&lt;&lt;regdno&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 4.63in">
+Student s1(&quot;501&quot;); Student s2(&quot;502&quot;); Student
+s3(&quot;503&quot;); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.94in">Memory
+allocated for student 501 Memory allocated for student 502 Memory
+allocated for student 503 Memory deallocated for student 503 Memory
+deallocated for student 502 Memory deallocated for student 501</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><I><B>Note:
+</B></I>If a destructor is not defined by the programmer, C++
+compiler will create a inline public destructor automatically.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Constructors_and_Destructors"></A><FONT COLOR="#365f91">Constructors
+and Destructors</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Explicit_Invocation"></A>
+<FONT COLOR="#4f81bd">Explicit Invocation</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Constructors
+and destructors can be invoked (called) explicitly from the main()
+function. A constructor can be invoked as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ClassName(params-list
+);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For example,
+constructor of <I>Student </I>class can be called as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>Student(
+);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In case of a
+destructor, we need to write the class name along with the destructor
+name as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.55in; line-height: 200%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>object_name.ClassName::~ClassName(
+); or</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>object_name.~ClassName(
+);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For example, destructor
+of <I>Student </I>class can be called as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>s1.~Student(
+);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A destructor can be
+called from a constructor as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">Student( )</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<DIV ID="Section94" DIR="LTR" GUTTER=24 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.07in">}</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">this-&gt;Student::~Student(
+	);	//Call to destructor</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+</DIV>
+<DIV ID="Section95" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Similarly,
+	a constructor can be called from a destructor as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">~Student( )</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Student( );	//Call to
+	constructor</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western" STYLE="margin-top: 0.17in"><A NAME="Private_Constructor_and_Destructor"></A>
+	<FONT COLOR="#4f81bd">Private Constructor and Destructor</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	Sometimes programmers may want to prevent direct access to a
+	constructor or destructor. In such cases, they can be made <I>private</I>.
+	Access to a private constructor or destructor can be granted through
+	<I>public </I>member functions or through a <I>friend </I>function.
+	Following program demonstrates creating private constructors and a
+	destructor and accessing them using public member functions:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Student</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+	name; string regdno; int age;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.46in">string
+	branch;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.46in">Student()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Student(string n)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">regdno = n;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Memory
+	allocated for student &quot;&lt;&lt;regdno&lt;&lt;endl;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">~Student()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Memory
+deallocated for student &quot;&lt;&lt;regdno&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">Student* init(string
+reg)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">return new
+Student(reg);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void destroy(Student
+*s)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">delete(s);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">Student *s;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.65in">s
+= s-&gt;init(&quot;501&quot;); s-&gt;destroy(s); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.94in; margin-top: 0in">
+Memory allocated for student 501 Memory deallocated for student 501</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Object_Copy"></A>
+<FONT COLOR="#365f91">Object Copy</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Frequently
+while programming there will be need to create a copy of an existing
+object. This can be done in three ways:</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Shallow_Copy"></A>
+<FONT COLOR="#4f81bd">Shallow Copy</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In this method the copy (object) only copies the addresses (for
+dynamic memory) of the source object's members. This is similar with
+the semantics of <I>static </I>data members. A same copy is shared
+among several objects. Similarly, in shallow copy method, both the
+source and copied objects share the same memory location.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Deep_Copy"></A><FONT COLOR="#4f81bd">Deep
+Copy</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In this method the copied object maintains a copy of the value of
+each source object's data members. To achieve this, programmer should
+explicitly provide a copy constructor to copy all the values of
+source object's members (including dynamic memory).</P>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Lazy_Copy"></A>
+<FONT COLOR="#4f81bd">Lazy Copy</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+This method has the advantages of the above two methods. Initially
+during copying, it uses shallow copying and maintains a counter to
+keep track of how many objects are sharing the data. When there is an
+attempt to modify the data, it may initiate deep copy, if necessary.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+For more info visit this link:
+<A HREF="https://www.hackerearth.com/notes/deep-copy-and-shallow-copy/"><FONT COLOR="#0000ff"><U>https://www.hackerearth.com/notes/deep-copy-and-shallow-</U></FONT></A><FONT COLOR="#0000ff">
+</FONT><A HREF="https://www.hackerearth.com/notes/deep-copy-and-shallow-copy/"><FONT COLOR="#0000ff"><U>copy/</U></FONT></A></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Constant_Objects"></A>
+<FONT COLOR="#365f91">Constant Objects</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">When
+there is a need to create a read-only object, the object can be
+declared as a constant object using the <I>const </I>keyword. Syntax
+for creating a constant object is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ClassName
+const object_name(params-list);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+characteristics of a constant object:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constant
+	object can be initialized only through a</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Data
+	members of a constant object cannot be modified by any member</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constant
+	object are read-only</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>objects.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constant
+	objects should be accessed only through constant member</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>functions.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.95in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates a constant object: #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section96" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student(string br)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section97" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">branch = br;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void get_branch()
+	const</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Branch
+	is: &quot;&lt;&lt;branch;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Student const
+	s(&quot;CSE&quot;);</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.86in; margin-top: 0.06in; page-break-before: always">
+s.get_branch(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Branch is: CSE</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Anonymous_Objects"></A><FONT COLOR="#365f91">Anonymous
+Objects</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">An object which has no
+name is known as an anonymous object. Syntax for creating an
+anonymous object is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ClassName(params-list);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+An anonymous object can be created and used in any statement without
+using any name. It is automatically destroyed after the control moves
+on to the next statement. Following program demonstrates an anonymous
+object:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section98" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Student(string reg)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section99" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">regdno = reg;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">cout&lt;&lt;&quot;Student
+	with regdno &quot;&lt;&lt;regdno&lt;&lt;&quot; is created&quot;;</P>
+</DIV>
+<DIV ID="Section100" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.02in">Student(&quot;501&quot;);	//Anonymous
+	object return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.46in; margin-top: 0.06in; line-height: 200%">
+	Output for the above program is as follows: Student with regdno 501
+	is created</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+	advantages of anonymous objects:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>They
+		result in cleaner, shorter, and efficient</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>code.</FONT></FONT></P>
+	</UL>
+</DIV>
+<UL>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 0.2in; page-break-before: always">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>There is no need
+	to name objects which are going to be used</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>temporarily.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>No
+	need to declare</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>them.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Unnamed
+	are objects are destroyed automatically after their use is</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>over.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><A NAME="Anonymous_Classes"></A>
+<FONT COLOR="#365f91">Anonymous Classes</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A class which does not have a name is called an anonymous class. They
+are generally created when the class body is very short and only one
+object of that class is required. Following are the restrictions on
+anonymous classes:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Anonymous
+	classes cannot have a constructor.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Anonymous
+	classes can have a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>destructor.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Anonymous
+	classes cannot be passed as arguments to</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>functions.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Anonymous
+	classes cannot be used as return values from</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>functions.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.73in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates an anonymous class: #include
+&lt;iostream&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.15in">
+using namespace std;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">typedef
+class	//Anonymous class</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section101" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void
+	set_branch(string br)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section102" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">branch = br;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">void
+	get_branch()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Branch
+	is: &quot;&lt;&lt;branch;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.71in">}Student;
+	int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.45in">Student
+	s; s.set_branch(&quot;CSE&quot;); s.get_branch(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.46in; margin-top: 0.06in">
+	Output for the above program is as follows: Branch is: CSE</P>
+</DIV>
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

@@ -1,0 +1,944 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+<H4 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Exception
+Handling</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.07in"><A NAME="Introduction_(7)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In programming, it is common for programmers to make mistakes which
+leads to abnormal conditions called as errors. In general, these
+errors are of three types: 1) Syntax errors, 2) Logical errors, and
+3) Run-time errors.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Syntax errors are most frequent type of errors. For example, if we
+forget to place a semi- colon, it is a syntax error. Logical errors
+arise when programmer performs a mistake in the logic of a program.
+For example, in addition of two numbers program, if the programmers
+places a minus instead of plus, it is a logical error. These are very
+hard to detect.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The last category of errors are the errors which occur while
+executing the program. These errors are known as run-time errors or
+exceptions. Exceptions are of two types: 1) Synchronous, and 2)
+Asynchronous.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Synchronous exceptions are the run-time exceptions which occur due to
+the code written by the programmer and they can be handled by the
+programmer. Asynchronous exceptions are run-time exceptions which
+occur due to code outside the program. For example, if no memory is
+available in the RAM, it will lead to out of memory error which is an
+asynchronous exception. Such asynchronous exceptions cannot be
+handled. Errors in programs can be illustrated as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_71d09d16.png')}}" NAME="image42.png" WIDTH=602 HEIGHT=224 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><A NAME="Exception_Handling"></A>
+<FONT COLOR="#365f91">Exception Handling</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Handling synchronous exceptions is known as exception handling.
+Exception handling deals with detecting run-time exceptions and
+reporting it to the user for taking appropriate action. C++ provides
+<I>try</I>, <I>catch</I>, and <I>throw </I>elements for handling
+exceptions.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">A <I>try
+</I>block contains code which might raise exceptions. Syntax of try
+block is as follows:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<DIV ID="Section206" DIR="LTR" GUTTER=18 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>try</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>}</I></FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>//Code</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+</DIV>
+<DIV ID="Section207" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+	A <I>catch </I>block contains code for handling exceptions that may
+	raise in the try block. Syntax of catch block is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>catch(Exception-type)</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>//Code
+	to handle exception</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>}</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.06in">
+	The <I>throw </I>clause is used to throw an exception which will be
+	caught by the <I>catch </I>block. Syntax of throw clause is as
+	follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>throw
+	exception;</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.79in; margin-top: 0.04in; line-height: 0.38in">
+	Following program handles divide by zero exception:
+	#include&lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+	namespace std;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">int
+	main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.77in">cout&lt;&lt;&quot;Enter
+	a and b values: &quot;; cin&gt;&gt;a&gt;&gt;b;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">try</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">if(b == 0)</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">throw b;</P>
+</DIV>
+<DIV ID="Section208" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.08in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.21in">cout&lt;&lt;&quot;Result
+	of a/b = &quot;&lt;&lt;(a/b);</P>
+</DIV>
+<DIV ID="Section209" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(int b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;b
+	cannot be zero&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.64in">Enter
+	a and b values: 10 0 b cannot be zero</P>
+</DIV>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always"><A NAME="Multiple_Catch_Statements"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I><B>Note: </B></I></FONT><FONT SIZE=3>If
+an exception arises and there is no catch block to handle that
+exceptions, </FONT><FONT SIZE=3><I>terminate() </I></FONT><FONT SIZE=3>function
+will execute which in turn calls </FONT><FONT SIZE=3><I>abort()
+function and the execution of program stops abruptly.</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#365f91">Multiple
+Catch Statements</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A try block can be associated with more than one catch block.
+Multiple catch statements can follow a try block to handle multiple
+exceptions. The first catch block that matches the exception type
+will execute and the control shifts to next statement after all the
+available catch blocks.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+A try block should be followed by at least one catch block. If non
+catch block matches with the exception, then <I>terminate() </I>function
+will execute. Following program demonstrates handling multiple
+exceptions using multiple catch statements:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.77in">cout&lt;&lt;&quot;Enter
+a and b values: &quot;; cin&gt;&gt;a&gt;&gt;b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">try</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">if(b == 0)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.31in; text-indent: 0.5in">
+throw b; else if(b &lt; 0)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">throw &quot;b cannot be
+negative&quot;;</P>
+<DIV ID="Section210" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.08in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.21in">cout&lt;&lt;&quot;Result
+	of a/b = &quot;&lt;&lt;(a/b);</P>
+</DIV>
+<DIV ID="Section211" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(int b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;b
+	cannot be zero&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(const char* msg)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;msg;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">First Run:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.64in">Enter
+	a and b values: 10 0 b cannot be zero</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Second Run:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.58in; margin-top: 0.06in; page-break-before: always">
+Enter a and b values: 10 -5 b cannot be negative</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Catch_All_Exceptions"></A>
+<FONT COLOR="#365f91">Catch All Exceptions</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+While writing programs if the programmer doesn't know what kind of
+exception the program might raise, the catch all block can be used.
+It is used to catch any kind of exception. Syntax of catch all block
+is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>catch(...)</I></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>//Code
+to handle exception</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>}</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+While writing multiple catch statements care should be taken such
+that a catch all block should be written as a last block in the catch
+block sequence. If it is written first in the sequence, other catch
+blocks will never be executed. Following program demonstrates catch
+all block:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.77in">cout&lt;&lt;&quot;Enter
+a and b values: &quot;; cin&gt;&gt;a&gt;&gt;b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">try</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">if(b == 0)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.31in; text-indent: 0.5in">
+throw b; else if(b &lt; 0)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">throw &quot;b cannot be
+negative&quot;;</P>
+<DIV ID="Section212" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.08in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.21in">cout&lt;&lt;&quot;Result
+	of a/b = &quot;&lt;&lt;(a/b);</P>
+</DIV>
+<DIV ID="Section213" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(int b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;b
+	cannot be zero&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(...)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Unkown
+	exception in program&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.33in; margin-top: 0.06in">
+Enter a and b values: 10 -5 Unkown exception in program</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Rethrowing_an_Exception"></A><FONT COLOR="#365f91">Rethrowing
+an Exception</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+In C++ if a function or a nested try-block does not want to handle an
+exception, it can rethrow that exception to the function or the outer
+try-block to handle that exception. Syntax for rethrowing and
+exception is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>throw;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.76in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates rethrowing and exception to outer
+try-catch block: #include&lt;iostream&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.15in">
+using namespace std;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">int
+main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.77in">cout&lt;&lt;&quot;Enter
+a and b values: &quot;; cin&gt;&gt;a&gt;&gt;b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">try</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<DIV ID="Section214" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in">if(b == 0)</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in; margin-right: 3.81in; text-indent: 0.5in">
+	throw b; else if(b &lt; 0)</P>
+	<P CLASS="western" STYLE="margin-left: 0.79in">throw &quot;b cannot
+	be negative&quot;;</P>
+</DIV>
+<DIV ID="Section215" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.42in; margin-top: 0in">
+	}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.21in">cout&lt;&lt;&quot;Result
+	of a/b = &quot;&lt;&lt;(a/b);</P>
+</DIV>
+<DIV ID="Section216" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in">catch(int b)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;b
+	cannot be zero&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">catch(...)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">throw;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(const char* msg)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;msg;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Input and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.58in">Enter
+a and b values: 10 -2 b cannot be negative</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program we can see that the exception is raised in the
+inner try block. The catch all block catches the exception and is
+rethrowing it to the outer try-catch block where it got handled.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Throwing_Exceptions_in_Function_Definiti"></A>
+<FONT COLOR="#365f91">Throwing Exceptions in Function Definition</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A function can declare
+what type of exceptions it might throw. Syntax for declaring the
+exceptions that a function throws is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>return-type
+function-name(params-list) throw(type1, type2, ...)</I></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>//Function
+body</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>}</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program demonstrates throwing exceptions in a function definition:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.92in">#include&lt;iostream&gt;
+using namespace std; void sum() throw(int)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">int a,
+b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.77in">cout&lt;&lt;&quot;Enter
+a and b values: &quot;; cin&gt;&gt;a&gt;&gt;b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">if(a==0 || b==0)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">throw 1;</P>
+<DIV ID="Section217" DIR="LTR" GUTTER=11 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">else</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">cout&lt;&lt;&quot;Sum
+	is: &quot;&lt;&lt;(a+b);</P>
+</DIV>
+<DIV ID="Section218" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section219" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in">sum();</P>
+</DIV>
+<DIV ID="Section220" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(int)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;a or
+	b cannot be zero&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.72in; margin-top: 0.06in">
+Enter a and b values: 5 0 a or b cannot be zero</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">In the
+above program the <I>sum() </I>function can throw an exception of
+type <I>int</I>. So, the calling function must provide a catch block
+for exception of type <I>int</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Throwing_Exceptions_of_Class_Type"></A>
+<FONT COLOR="#365f91">Throwing Exceptions of Class Type</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Instead of throwing exceptions of pre-defined types like <I>int,
+float, char, etc., </I>we can create classes and throw those class
+types as exceptions. Empty classes are particularly useful in
+exception handling. Following program demonstrates throwing class
+types as exceptions:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class ZeroError {}; void sum()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.77in">cout&lt;&lt;&quot;Enter
+a and b values: &quot;; cin&gt;&gt;a&gt;&gt;b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">if(a==0 || b==0)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">throw ZeroError();</P>
+<DIV ID="Section221" DIR="LTR" GUTTER=11 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">cout&lt;&lt;&quot;Sum
+	is: &quot;&lt;&lt;(a+b);</P>
+</DIV>
+<DIV ID="Section222" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section223" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in">sum();</P>
+</DIV>
+<DIV ID="Section224" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(ZeroError e)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;a or
+	b cannot be zero&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.72in">Enter
+	a and b values: 0 8 a or b cannot be zero</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">In the above program
+	<I>ZeroError </I>is an empty class created for handling exception.</P>
+</DIV>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Exception Handling and Inheritance</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Exception_Handling_and_Inheritance"></A>
+In inheritance, while throwing exceptions of derived classes, care
+should be taken that catch blocks with base type should be written
+after the catch block with derived type. Otherwise, the catch block
+with base type catches the exceptions of derived class types too.
+Consider the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+#include&lt;iostream&gt; using namespace std; class Base {};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.31in">class
+Derived : public Base {}; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section225" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in">throw Derived();</P>
+</DIV>
+<DIV ID="Section226" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(Base b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Base
+	object caught&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(Derived d)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Derived
+	object caught&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Base object caught</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	You can see that in the above program even though the exception
+	thrown is of the type <I>Derived </I>it is caught by the catch block
+	of the type <I>Base</I>. To avoid that we have to write the catch
+	block of <I>Base </I>type at last in the sequence as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; class Base {};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.31in">class
+	Derived : public Base {}; int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section227" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in">throw Derived();</P>
+</DIV>
+<DIV ID="Section228" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(Derived d)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Derived
+	object caught&quot;;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+catch(Base b)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Base
+object caught&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in">return
+0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Derived object caught</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Exceptions_in_Constructors_and_Destructo"></A>
+<FONT COLOR="#365f91">Exceptions in Constructors and Destructors</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+It is possible that exceptions might raise in a constructor or
+destructors. If an exception is raised in a constructor, memory might
+be allocated to some data members and might not be allocated for
+others. This might lead to memory leakage problem as the program
+stops and the memory for data members stays alive in the RAM.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Similarly, when an exception is raised in a destructor, memory might
+not be deallocated which may again lead to memory leakage problem.
+So, it is better to provide exception handling within the constructor
+and destructor to avoid such problems. Following program demonstrates
+handling exceptions in a constructor and destructor:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Divide</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.94in">int
+*x; int *y;</P>
+<DIV ID="Section229" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Divide()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section230" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.94in">x
+	= new int(); y = new int();</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.85in">cout&lt;&lt;&quot;Enter
+	two numbers: &quot;; cin&gt;&gt;*x&gt;&gt;*y;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">try</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">if(*y == 0)</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">{</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.69in; margin-right: 1.33in">
+	throw *x;</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">catch(int)</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">delete x;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 2.1in; margin-top: 0.06in; page-break-before: always">
+delete y;</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; margin-right: 1.13in">cout&lt;&lt;&quot;Second
+number cannot be zero!&quot;&lt;&lt;endl; throw;</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">~Divide()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<DIV ID="Section231" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in; margin-right: 3.8in">delete
+	x; delete y;</P>
+</DIV>
+<DIV ID="Section232" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">catch(...)</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">cout&lt;&lt;&quot;Error
+	while deallocating memory&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">float division()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+</DIV>
+<DIV ID="Section233" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">return (float)*x / *y;</P>
+</DIV>
+<DIV ID="Section234" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.1in; margin-top: 0in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in">Divide d;</P>
+	<P CLASS="western" STYLE="margin-left: 0.29in; margin-right: 2.9in">float
+	res = d.division(); cout&lt;&lt;&quot;Result of division is: &quot;&lt;&lt;res;</P>
+</DIV>
+<DIV ID="Section235" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">catch(...)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Unkown
+	exception!&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Enter two numbers: 5 0</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.26in">Second
+	number cannot be zero! Unkown exception!</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western"><A NAME="Advantages_of_Exception_Handling"></A><FONT COLOR="#365f91">Advantages
+	of Exception Handling</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+	advantages of exception handling:</P>
+</DIV>
+<UL>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 0.2in; page-break-before: always">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Exception handling
+	helps programmers to create reliable</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>systems.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Exception
+	handling separates the exception handling code from the main logic
+	of program.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Exceptions
+	can be handled outside of the regular code by throwing the
+	exceptions from a function definition or by re-throwing an</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>exception.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Functions
+	can handle only the exceptions they choose i.e., a function can
+	throw many exceptions, but may choose handle only some of</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>them.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	program with exception handling will not stop abruptly. It
+	terminates gracefully by giving appropriate</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>message.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-right: 0.11in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

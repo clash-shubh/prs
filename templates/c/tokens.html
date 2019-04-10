@@ -1,0 +1,364 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>C
+Tokens</FONT></H1>
+    
+    
+    
+    
+
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In a paragraph of text, individual words and punctuation marks are
+considered as tokens. Likewise in a C program, the smallest
+individual units are known as C tokens. C has six types of tokens as
+shown below. C programs are written using these tokens and the syntax
+of the language.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 0.95in; width: 613px"><IMG SRC="{{url_for('static',filename='img/C_html_d2aaf02c.png')}}" NAME="image36.png" WIDTH=613 HEIGHT=343 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.12in"><A NAME="Keywords"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Keywords</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Every word used in a C program is classified as either a keyword or
+as an identifier. A keyword in C is a reserved word which has a
+specific meaning. Keywords in C cannot be used as identifiers.
+Keywords serve as the basic building blocks for program statements.
+Keywords in C are always in lowercase. ANSI C supports 32 keywords
+which are listed below:</P>
+<P CLASS="western" STYLE="margin-left: 1.45in; page-break-before: always">
+<IMG SRC="{{url_for('static',filename='img/C_html_3ab2a25d.gif')}}"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.07in"><A NAME="Identifiers"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Identifiers</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Identifiers refer to the names of variables, functions and arrays.
+These are user-defined names and consist of sequence of letters and
+digits, with a letter as a first character. Both uppercase and
+lowercase letters can be used, although lowercase letters are
+generally used. The underscore character is also permitted in
+identifiers. There certain rules while writing identifiers. They are
+as follows:</P>
+<OL>
+	<LI><P>First character must be an alphabet or underscore.</P>
+	<LI><P STYLE="line-height: 0.19in">Must consist of only letters,
+	digits or underscore.</P>
+	<LI><P STYLE="line-height: 0.19in">Only first 31 characters are
+	significant.</P>
+	<LI><P STYLE="margin-top: 0in">Cannot use a keyword.</P>
+	<LI><P>Must not contain white space.</P>
+</OL>
+<H4 CLASS="western" STYLE="page-break-before: always"><A NAME="Constants,_Variables_and_Data_Types"></A>
+<FONT COLOR="#365f91">Constants and Variables</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Constants"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Constants</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Constants are fixed values, which do not change during the execution
+of a program. C supports several types of constants, which are as
+shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.22in; left: 1.83in; width: 446px"><IMG SRC="{{url_for('static',filename='img/C_html_c3ed6e1e.png')}}" NAME="image38.png" WIDTH=446 HEIGHT=284 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.11in"><A NAME="Integer_Constants"></A>
+    <FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Integer Constants</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+An integer constant refers to a sequence of digits. Generally in
+programs, the number systems used are: decimal, octal and
+hexadecimal. Decimal integers consists of umbers from 0 to 9,
+preceded by an optional + or –  sign. Some valid examples of
+decimal integer constants are: 133, +45, -15, 0, 342332 etc. Embedded
+spaces and non- digit characters are cannot be used between digits.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+An octal integer consists of numbers from 0 to 7. Octal integer
+numbers are always preceded by a zero. For example if we have to
+represent 35 in octal system, we must write it as 035 in the program.
+Some valid examples of octal integer constants are: 035, 02, 0435,
++025 etc.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+An hexadecimal integer consists of numbers from 0 to 9 and 10, 11,
+12, 13, 14 and 15 are represented as A, B, C, D, E and F. Hexadecimal
+numbers are always preceded by 0x or 0X. Some valid examples of
+hexadecimal integer constants are: 0x54, 0X23, +0x1F, -0X56 etc.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in"><A NAME="Real_Constants"></A>
+ <FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Real Constants</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=RIGHT STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Integer numbers are not sufficient to represent quantities that vary
+continuously, such as distances, height, prices etc. These quantities
+are represented by numbers containing fractional parts like 25.234.
+Such numbers are called as real or floating point constants. Some
+valid examples of real constants are: 0.067, -12.5, +4.67, .87, 121.
+Etc.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0in">
+A real number may also be expressed in exponential (scientific)
+notation. For example, 45.2344 can be written 0.452344e2. The
+exponential notation is: <I><B>mantissa e exponent. </B></I>The
+mantissa is either a real number expressed in decimal notation or an
+integer with an optional + or – sign. The exponent is an integer
+number with an optional + or – sign. Some valid examples of real
+constants in exponential notation are: 0.34e2, 13e-2, -1.23e-1 etc.</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always"><A NAME="Single_Character_Constants"></A>
+ <FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Single Character Constants</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+A single character constant or character constant contains a single
+character enclosed in between single quotes. Some valid examples of
+character constants are: ‘f’, ‘A’, ‘/’, ’;’, ‘ ‘,
+‘4’. The character constant ‘4’ is not equal to the number 4.
+Every character constant will have an associated integer value known
+as ASCII code. Since each character constant has an associated
+integer value, we can perform arithmetic operations on them.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western"><A NAME="String_Literals_or_String_Constants"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>String Literals or String Constants</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+A sequence of characters that are enclosed between double quotes is
+known as a string literal or string constant. The characters in a
+string literal can be either letters, digits or special symbols or
+white spaces. The string literal does not have an associated integer
+value like the character constants. Some valid examples of string
+constants are: “hai”, “hEllO”, “hi5”, “Wel come” etc.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western"><A NAME="Escape_Sequences"></A><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Escape
+Sequences</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+C supports some special backslash character constants that are used
+in output functions like printf(). For example to move the cursor
+from the current line to next line, there is no standard way to
+achieve it. So, for such special cases, C provides escape sequences.
+In this case \n is used to move the cursor to next new line. Even
+though the escape sequences consist of a backslash (\) and a
+character or symbol, it is treated as a single character. C supports
+the following escape sequences:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=418 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=206>
+	<COL WIDTH=206>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Constant</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Meaning</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=26 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\a</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Alert</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\b</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Backspace</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=26 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\f</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Form feed</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\n</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">New line</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=26 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\r</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Carriage Return</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\t</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Horizontal tab</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=26 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\v</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Vertical tab</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\’</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Single quote</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\”</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Double quote</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=26 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\?</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Question mark</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\\</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Backslash</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=206 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">\0</P>
+		</TD>
+		<TD WIDTH=206 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Null</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0in"><A NAME="Variables"></A><FONT COLOR="#365f91">Variables</FONT></H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In the programs, generally we need to store values in the memory and
+perform operations on those values. This can be achieved in C, by the
+concept of variables. A variable is a placeholder for holding a value
+in the main memory (RAM). As the name implies, the value in the
+variable can change at any point of execution of the program. For
+using variables in our programs, there are essentially two steps:</P>
+<P CLASS="western"><BR>
+</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in">Declare the variable</P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<OL START=2>
+	<LI><P>Initialize the variable</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always"><A NAME="Declaring_a_Variable"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Declaring a Variable</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Before using a variable in the program, we have to declare the
+variable. The syntax for declaring a variable in a program is as
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.14in; left: 2.7in; width: 2.61in; height: 0.3in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.68in; margin-top: 0.05in">type
+	variable-name;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; margin-top: 0.09in">
+The “type” in the above syntax represents the data type. The
+“variable-name” is the identifier. There are certain rules that
+must be followed while writing the variable name. They are as
+follows:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">A variable name
+	must always start with an alphabet (letter) or an underscore ( _ ).</P>
+	<LI><P STYLE="margin-right: 0.08in">The variable name must not be
+	more than 31 characters. The suggested length of a variable name is
+	8 characters.</P>
+	<LI><P>C is case sensitive. So, the variable name “average” is
+	different from “AVERAGE”.</P>
+	<LI><P>Keywords must not be used for declaring variables.</P>
+	<LI><P>White spaces are not allowed within the variable name.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><A NAME="Initializing_a_Variable"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Initializing a Variable</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+After declaring the variable, we can assign a value to the variable.
+This process of assigning a value to the variable is known as
+initialization. Syntax for initializing a variable is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.21in; left: 3.08in; width: 1.73in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.15in; margin-top: 0.05in">variable-name
+	= value;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.57in; margin-top: 0.03in; line-height: 200%">
+The value we assign to the variable depends on the data type of the
+variable. Example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">The declaration and
+initialization can be combined into a single line as shown below:<SPAN DIR="LTR" STYLE="position: relative; top: -0.85in; left: 0.61in; width: 0.64in; height: 0.68in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">int
+	a;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">a = 10;</P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.13in; left: 0.61in; width: 0.86in; height: 0.27in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">int
+	a = 10;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

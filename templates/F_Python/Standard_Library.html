@@ -1,0 +1,1088 @@
+{% extends "layout.html" %}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Standard
+Library</FONT></H1>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.07in"><FONT COLOR="#365f91">Introduction
+to Standard Library</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A library is a set of files which contains pre-defined code that we
+can use in our own programs. For example in our Python programs we
+are using <I>print() </I>and <I>input() </I>for printing and reading
+input. These functions are a part of Python's default library.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Python's standard library is a collection of several modules which
+will be installed by default when you install Python. There are other
+third party libraries which need to be installed separately after
+installing Python. Some examples of third party libraries are: <I>NumPy,
+SciPy, ScikitLearn </I>etc.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Python standard library contains several modules for performing
+several operations from sending email messages to creating a basic
+HTTP server. Some of the tasks that can be done using Python's
+standard library are:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Text
+	manipulation</P>
+	<LI><P STYLE="line-height: 0.19in">Creating and working with data
+	structures</P>
+	<LI><P STYLE="line-height: 0.19in">Date and time manipulation</P>
+	<LI><P STYLE="line-height: 0.19in">Mathematical calculations</P>
+	<LI><P STYLE="line-height: 0.19in">File system access</P>
+	<LI><P STYLE="line-height: 0.19in">Data access and storage</P>
+	<LI><P STYLE="line-height: 0.19in">Data compression</P>
+	<LI><P STYLE="line-height: 0.19in">Cryptography</P>
+	<LI><P STYLE="line-height: 0.19in">Process and thread management</P>
+	<LI><P STYLE="line-height: 0.19in">Networking</P>
+	<LI><P STYLE="line-height: 0.19in">Internet access and management</P>
+	<LI><P STYLE="line-height: 0.19in">Email functionality</P>
+	<LI><P STYLE="line-height: 0.19in">Internationalization and
+	Localization</P>
+	<LI><P STYLE="line-height: 0.19in">Testing</P>
+	<LI><P STYLE="line-height: 0.19in">Operating system interfacing</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><FONT COLOR="#4f81bc">Operating
+System Interface</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+The <I>os </I>module provides a portable interface to most of the
+operating systems like Windows, Linux, Mac OS X etc. It provides
+functions for creating and managing processes, file system access,
+and other functionality. Following are some of the functions
+available in <I>os</I><I> </I>module:</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=609 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=147>
+	<COL WIDTH=456>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">getuid( )</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the user id for the process</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">geteuid( )</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the effective user id for
+			the process</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">getgid( )</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the group id to which the
+			user belongs</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">getegid( )</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the effective group id to
+			which the user belongs</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">getenv(variable_name)</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the value of specified
+			environment variable</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">getcwd( )</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the current working
+			directory</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">chdir(new_dir )</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Moves the current working directory
+			to the specified new directory</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">stat(filename)</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns information of a file like
+			file size, permissions, owner, etc.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=147 HEIGHT=31 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-right: 0.35in; margin-top: 0in">
+			chmod(filename, new_permissions)</P>
+		</TD>
+		<TD WIDTH=456 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in; margin-top: 0.09in">Assigns new
+			permissions to the specified filename</P>
+		</TD>
+	</TR>
+</TABLE>
+<H3 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#4f81bc">String Pattern Matching</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+We can search for a specific pattern in a given string using regular
+expressions. Regular expressions provide a formal syntax for
+searching a given pattern in a string. Regular expressions in Python
+follows Perl syntax. Regular expressions are implemented in Python by
+the <I>re </I>module.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+function <I>start() </I>takes in two arguments. First argument is the
+pattern we want to search and the second argument is the text in
+which we want to search. The <I>start() </I>functions returns a <I>Match
+</I>object.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+<I>Match </I>object contains <I>start() </I>and <I>end() </I>functions
+which returns the starting and ending index of the pattern in the
+string. Consider the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">import re</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.76in">result
+= re.search('aa', 'My name is aakaash') print(result.start(),
+result.end())</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.22in">The
+above code prints <I>11 13 </I>as the output. The pattern in this
+example is <I>'aa' </I>and the text is <I>'My name is aakaash'</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The function <I>findall() </I>takes pattern and text as input and
+returns all substrings matching pattern in the given text. The
+function <I>finditer() </I>also takes pattern and text as input and
+returns an iterator that produces <I>Match </I>objects. Consider the
+following example which returns the multiple occurrences of the
+pattern:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.7in">import
+re pattern = 'aa'</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.18in">
+text = 'My name is aakaash'</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4in; text-indent: -0.5in">
+for match in re.finditer(pattern, text): print(match.start(),
+match.end())</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Output of
+the above code is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">11 13</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">14 16</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><FONT COLOR="#4f81bc">Mathematics</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+It is common in Python programs to perform mathematical operations.
+Operators provide support for performing basic mathematical
+operations. Python's standard library provides support for performing
+advanced mathematical operations like generating random numbers,
+finding logarithmic values, performing trigonometric calculations
+etc.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+To generate pseudo random numbers, we can use the <I>random </I>module.
+The pseudo random number generator of Python is based on <I>Mersenne
+Twister </I>algorithm. Following are some of the functions available
+in random module:</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=167>
+	<COL WIDTH=432>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">random( )</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a floating-point value in
+			the range 0 to 1.0</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">uniform(start, end)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a floating-point value in
+			the range start to end</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">seed(value)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Sets the seed value of random
+			number generator</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">randint(start, end)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns an integer in the range
+			start to end</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=31 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-top: 0.09in">randrange(start,
+			end, step)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-right: 0.07in">Returns an
+			integer in the range start to end. It is equivalent to selecting a
+			random number from range(start, end, step)</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=167>
+	<COL WIDTH=432>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">choice(sequence)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Selects a random item from the
+			given sequence</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">sample(sequence, n)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Generates n samples from the
+			sequence without repeating values</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0.06in">
+The <I>math </I>module contains several functions which are useful
+for performing advanced mathematical computations. Following are some
+of the constants and functions available in <I>math </I>module:</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=167>
+	<COL WIDTH=432>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Element</B></P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">pi</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Prints the mathematical value of
+			<FONT FACE="Cambria Math, serif"></FONT>.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">e</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Prints the mathematical value of <I>e</I>.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">trunc(float)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns an integer value without
+			the decimal part</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">ceil(float)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns the integer greater than or
+			equal to the given number</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">floor(float)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns the integer lesser than or
+			equal to the given number</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">modf(float)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a tuple containing the
+			fractional part and the whole part</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fabs(float)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns the absolute value of the
+			given floating-point value</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fsum(list of float values)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns the sum of floating-point
+			values</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">factorial(int)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns the factorial of given
+			integer value</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">pow(x, y)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a floating-point value
+			which represents the x<SUP>y</SUP></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">sqrt(x)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a floating-point value
+			which represents the square root of x</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">log(x)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a floating-point value
+			which represents natural log. value of x</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=167 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Log(x, b)</P>
+		</TD>
+		<TD WIDTH=432 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Returns a floating-point value
+			which represents log. value with base b</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Internet
+Access</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+Internet access is required for almost any kind of real world
+application. Even a single script can access a remote server and
+retrieve information or store data to it. Python provides several
+modules to create web-based applications.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in; margin-top: 0in">
+The <I>urlparse </I>module allows to manipulate URLs, i.e., splitting
+them or combining the individual components together to form an URL.
+It can be useful either in a client program or in a server program.
+Following are some of the functions available in <I>urlparse </I>module:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=148>
+	<COL WIDTH=451>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=49 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.07in; margin-top: 0in">urlparse(string)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Takes an URL as a string and
+			returns a tuple containing the individual</P>
+			<P STYLE="margin-left: 0.08in; margin-top: 0in">components of an
+			URL like: scheme, netloc, path, params, query, and fragment</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">urlsplit(string)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">This function is an alternative to
+			<I>urlpase( ) </I>function</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">geturl( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the parsed URL</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">urlunparse(tuple)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Takes a tuple and combines the
+			elements in the tuple in to an URL</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+The <I>urllib </I>module provides various functions that allows our
+script to access network resources that do not need any
+authentication. It also provides support for encoding and appending
+arguments to be passed over HTTP to a server. Some of the functions
+in the <I>urllib </I>module are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=148>
+	<COL WIDTH=451>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=32 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-top: 0.09in">urlretrieve( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0in">
+			Takes four arguments: temporary filename an URL, a function to
+			report the download progress, and data to pass if the URL refers
+			to a form.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">urlcleanup( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Removes the temporary files.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=32 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-top: 0.09in">urlencode( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in; margin-top: 0in">Takes a dictionary
+			containing data in the form of key value pairs and appends them to
+			the URL.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">urlopen( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Takes an URL as a string and
+			returns a handle to the remote resource.</P>
+		</TD>
+	</TR>
+</TABLE>
+<H3 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#4f81bc">Dates and Times</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Python
+does not provide native types to handle dates and times. Python's
+standard library provides three modules which allows us to work with
+dates and times.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The <I>time </I>module contains functions to work with clock time and
+processor runtime. The <I>datetime </I>modules provides classes and
+functions which provide an interface to work with date, time, and
+combined values. The <I>calendar </I>module allows us to create
+formatted representation of weeks, months, and years.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are some of
+the functions from <I>time </I>module:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=148>
+	<COL WIDTH=451>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=32 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-top: 0.09in">time( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in; margin-right: 0.23in; margin-top: 0in">
+			Returns the number of seconds since the start of the epoch as a
+			floating- point value.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">ctime( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Displays the date and time in a
+			human readable format.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">clock( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns the processor's clock time
+			as a float.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are some of
+the functions from <I>datetime </I>module:</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=148>
+	<COL WIDTH=451>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">today( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">This function which belongs to <I>date
+			</I>class returns date of current day.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">replace( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Used to change the day, month, or a
+			year in a date.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">now( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Returns current day date and time.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strftime(format)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Displays the date and time based on
+			the given format.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Data
+Compression</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">To save the storage
+area in the hard disk we can compress the existing files. Python's
+standard library provides various modules to work with various
+popular compression libraries.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.22in">Python's
+<I>zlib </I>and <I>gzip </I>modules provides an interface to the GNU
+zip library. The module <I>bz2 </I>supports the recent bzip2 format.
+We can use these modules for reading and writing compressed files.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The <I>zlib </I>module provides a low-level interface to many of the
+functions in the <I>zlib </I>compression library from the GNU
+project. For working with <I>zlib</I>, the data that need to be
+compressed or decompressed needs to be in the memory. The <I>zlib
+</I>module contains a function <I>compress( )</I><I> </I>to compress
+the data and another function <I>decompress( ) </I>to decompress the
+data. Following is an example which demonstrates compressing and
+decompressing data using the <I>zlib</I><I> </I>module:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.56in; margin-top: 0in">
+import zlib import binascii</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">original_data
+= ’This is the original text.’</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.41in">print
+’Original :’, len(original_data), original_data compressed =
+zlib.compress(original_data)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.28in">print
+’Compressed :’, len(compressed), binascii.hexlify(compressed)
+decompressed = zlib.decompress(compressed)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.9in; line-height: 200%">
+print ’Decompressed :’, len(decompressed), decompressed The
+output for the above code is as follows:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.18in">
+Original : 26 This is the original text.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.18in">
+Compressed : 32
+789c0bc9c82c5600a2928c5485fca2ccf4ccbcc41c8592d48a123d007f2f097e</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Decompressed : 26 This is the original text.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Multithreading</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Threading allows several parts of a program to run in parallel
+(concurrently). This allows the program to execute faster and to keep
+the CPU busy. The <I>threading </I>module of Python's standard
+library allows us to easily manage several threads of execution. This
+module builds on the low-level features provided by <I>thread</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The simplest way to create a thread is to create an object for the
+<I>Thread </I>class with a target function and call the <I>start()
+</I>function to start the execution of the thread. Following program
+demonstrates creating and executing a thread:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.46in; margin-top: 0in; line-height: 0.35in">
+import threading def worker():</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.2in; margin-top: 0in">
+&quot;&quot;&quot;thread worker function&quot;&quot;&quot; print
+’Worker’</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">return</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">threads
+= []</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">for i in range(5):</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.26in">t
+= threading.Thread(target=worker) threads.append(t)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">t.start()</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output of the above
+program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 6.02in; margin-top: 0in">
+Worker Worker Worker Worker Worker</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.22in">We
+can pass information to a thread as arguments. Any type of object can
+be passed as an argument to the thread. Following example
+demonstrates passing arguments to the function:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.4in; margin-top: 0.04in; line-height: 0.35in">
+import threading def worker(num):</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.14in">&quot;&quot;&quot;thread
+worker function&quot;&quot;&quot;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.34in">print
+’Worker: %s’ % num return</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">threads = []</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.18in">
+for i in range(5):</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.66in">t
+= threading.Thread(target=worker, args=(i,)) threads.append(t)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">t.start()</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.81in; line-height: 200%">
+Output for the above program is as follows: Worker: 0</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Worker: 1</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Worker:
+2</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">Worker:
+3</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">Worker:
+4</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Turtle
+Graphics</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Turtle graphics is a popular way to introduce programming. It was
+part of the original <I>Logo </I>programming language. Python's
+standard library provides the <I>turtle </I>module to access the
+graphics package. To use the <I>turtle </I>module, write the
+following:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">import turtle</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Now,
+we can use the functions available in the turtle module. For example,
+we can move the turtle forward by 200 steps by using the function
+<I>forward( ) </I>as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">turtle.forward(200)</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Following
+are some of the functions available in <I>turtle </I>module:</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=148>
+	<COL WIDTH=451>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">forward(distance)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Moves the turtle forward by
+			specified distance</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">backward(distance)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Moves the turtle backward by
+			specified distance</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">right(angle)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Turn the turtle right by specified
+			angle</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">left(angle)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Turn the turtle left by specified
+			angle</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">setpos(x, y)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Set the position of turtle based on
+			the given x and y co-ordinates</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">setx(x)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Set the x coordinate of turtle</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">sety(y)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Set the y coordinate of turtle</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">home( )</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Move the turtle to the origin (0,
+			0)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=148 HEIGHT=14 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">circle(radius)</P>
+		</TD>
+		<TD WIDTH=451 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.08in">Draw circle with the given radius</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Some
+interesting programs can be written to generate graphics using the
+turtle graphics module. Following is one such program to draw circle
+pattern with different colors:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.71in">import
+turtle x = 0</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">for
+_ in range(30, 361, 30):</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">if(x %
+3 == 0): turtle.pencolor(&quot;red&quot;)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">if(x % 3 == 1):
+turtle.pencolor(&quot;green&quot;)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.64in">if(x
+% 3 == 2): turtle.pencolor(&quot;blue&quot;) turtle.circle(50)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.08in">turtle.right(30)
+x = x + 1</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">n = input()</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Output
+of the above program is as follows:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.12in"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_d4e9dd.png')}}" NAME="image4.png" ALIGN=BOTTOM WIDTH=196 HEIGHT=185 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.07in"><FONT COLOR="#4f81bc">GUI
+Programming</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+Python provides <I>tkinter </I>module for GUI programming. The type
+of programming in which a user can see an interface containing
+different widgets (controls) and interact with them using mouse is
+known as GUI programming.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The <I>tkinter </I>module is an interface to the popular Tk GUI
+toolkit which was developed as an extension to the Tcl scripting
+language. Tkinter is an acronym for <I>Tk interface</I>. Tk toolkit
+provides the following widgets:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">button</P>
+	<LI><P STYLE="line-height: 0.19in">canvas</P>
+	<LI><P STYLE="line-height: 0.19in">checkbutton</P>
+	<LI><P STYLE="line-height: 0.19in">combobox</P>
+	<LI><P STYLE="line-height: 0.19in">entry</P>
+	<LI><P STYLE="line-height: 0.19in">frame</P>
+	<LI><P STYLE="line-height: 0.19in">label</P>
+	<LI><P STYLE="line-height: 0.19in">labelframe</P>
+	<LI><P STYLE="line-height: 0.19in">listbox</P>
+	<LI><P STYLE="line-height: 0.19in">menu</P>
+	<LI><P STYLE="line-height: 0.19in">menubutton</P>
+	<LI><P STYLE="line-height: 0.19in">message</P>
+	<LI><P STYLE="line-height: 0.19in">notebook</P>
+	<LI><P STYLE="line-height: 0.19in">tk_optionMenu</P>
+	<LI><P STYLE="line-height: 0.19in">panedwindow</P>
+	<LI><P STYLE="line-height: 0.19in">progressbar</P>
+	<LI><P STYLE="line-height: 0.19in">radiobutton</P>
+	<LI><P STYLE="line-height: 0.19in">scale</P>
+	<LI><P STYLE="line-height: 0.19in">scrollbar</P>
+	<LI><P STYLE="line-height: 0.19in">separator</P>
+	<LI><P STYLE="line-height: 0.19in">sizegrip</P>
+	<LI><P STYLE="line-height: 0.19in">spinbox</P>
+	<LI><P STYLE="line-height: 0.19in">text</P>
+	<LI><P STYLE="line-height: 0.19in">treeview</P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">It
+provides the following top-level windows:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">tk_chooseColor - pops up a dialog
+	box for the user to select a color.</P>
+	<LI><P STYLE="line-height: 0.19in">tk_chooseDirectory - pops up a
+	dialog box for the user to select a directory.</P>
+	<LI><P STYLE="line-height: 0.19in">tk_dialog - creates a modal
+	dialog and waits for a response.</P>
+	<LI><P STYLE="line-height: 0.19in">tk_getOpenFile - pops up a dialog
+	box for the user to select a file to open.</P>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 0.19in; page-break-before: always">
+	tk_getSaveFile - pops up a dialog box for the user to select a file
+	to save.</P>
+	<LI><P STYLE="line-height: 0.19in">tk_messageBox - pops up a message
+	window and waits for a user response.</P>
+	<LI><P STYLE="line-height: 0.19in">tk_popup - posts a popup menu.</P>
+	<LI><P STYLE="line-height: 0.19in">toplevel - creates and
+	manipulates toplevel widgets.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Tk also provides three
+geometry managers:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">place - which positions widgets
+	at absolute locations</P>
+	<LI><P STYLE="line-height: 0.19in">grid - which arranges widgets in
+	a grid</P>
+	<LI><P STYLE="line-height: 0.19in">pack - which packs widgets into a
+	cavity</P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.06in; margin-top: 0.04in; line-height: 0.35in">
+Following is a simple program to create a window using <I>tkinter
+</I>module: import tkinter</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.14in">top
+= tkinter.Tk()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.23in">#
+Code to add widgets will go here... top.mainloop()</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The output of the above
+code is a window as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.18in; left: 1.02in; width: 208px"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_6fdc3af6.jpg')}}" NAME="image5.jpeg" WIDTH=208 HEIGHT=234 BORDER=0></SPAN><BR>
+</P>
+{%endblock course%}

@@ -1,0 +1,194 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Expressions</FONT></H1>
+    
+    
+    
+    
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+An expression is a sequence of operands and operators that reduces to
+a single value. For example, the expression, 10+5 reduces to the
+value of 15. Based on the operators and operators used in the
+expression, they are divided into several types. Some of them are:</P>
+<OL>
+	<LI><P>Integer expressions – expressions which contains integers
+	and operators</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Real expressions
+	– expressions which contains floating point values and operators</P>
+	<LI><P STYLE="line-height: 0.19in">Arithmetic expressions –
+	expressions which contain operands and arithmetic operators</P>
+	<LI><P>Mixed mode arithmetic expressions – expressions which
+	contain both integer and real operands</P>
+	<LI><P>Relational expressions – expressions which contain
+	relational operators and operands</P>
+	<LI><P>Logical expressions – expressions which contain logical
+	operators and operands</P>
+	<LI><P STYLE="margin-top: 0in">Assignment expressions and so on… -
+	expressions which contain assignment operators and operands</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Expression_Evaluation"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Expression
+Evaluation</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">Expressions
+are evaluated using an assignment statement of the form:<SPAN DIR="LTR" STYLE="position: relative; top: 0.29in; left: 3.45in; width: 1.59in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.14in; margin-top: 0.05in">variable
+	= expression</P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In the above syntax, <B>variable </B>is any valid C variable name.
+When the statement like the above form is encountered, the expression
+is evaluated first and then the value is assigned to the variable on
+the left hand side. All variables used in the expression must be
+declared and assigned values before evaluation is attempted. Examples
+of expressions are:<SPAN DIR="LTR" STYLE="position: relative; top: 0.79in; left: 3.82in; width: 0.89in; height: 0.67in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.16in; margin-top: 0.05in">
+	x = a*b-c y=b/c*a z=a-b/c+d</P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Expressions are
+evaluated based on operator precedence and associativity rules when
+an expression contains more than one operator.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Operator_Precedence_and_Associativity"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Operator
+Precedence and Associativity</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Every C operator has a precedence (priority) associated with it. This
+precedence is used to determine how an expression involving more than
+one operator is evaluated. There are different levels of operator
+precedence and an operator may belong to one of these levels. The
+operators at the higher level of precedence are evaluated first. The
+operators in the same level of precedence are evaluated from left to
+right or from right to left, based on the <B>associativity </B>property
+of an operator. In the below table we can look at the precedence
+levels of operators and also the associativity of the operators
+within the same level. Rank 0 indicates the lowest precedence and
+Rank 14 indicates highest precedence.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Example_1"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Example 1</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; margin-top: 0.03in">
+Let’s understand the operator precedence and associativity rules
+with the help of an example. The expression that we consider for this
+example is:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 0.19in"><B>if(x==10+15&amp;&amp;y&lt;10)</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In the above expression, the operators used are: ==,+,&amp;&amp; and
+&lt;. By looking at the operator precedence table, + operator is at
+level 4, &lt; operator is at level 6, == operator is at level 7 and
+&amp;&amp; operator is at level 11. So clearly, the + operation is
+performed first. Then our expression becomes:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 0.19in"><B>if(x==25&amp;&amp;y&lt;10)</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: -0in">
+Now, since &lt; operator has the next highest precedence, y&lt;10 is
+evaluated. If we assume value of x is 20 and value of y is 5, then
+the value of y&lt;10 is true. Then the == operator is evaluated.
+Since value of x is 20, x==25 evaluates to false. So, our expression
+becomes:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><B>if(false&amp;&amp;true)</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Now, the only operator
+left is &amp;&amp;. It is evaluated next and the result is false.</P>
+<P CLASS="western" STYLE="margin-left: 0.99in; page-break-before: always">
+<IMG SRC="{{url_for('static',filename='img/C_html_ceff8fb9.png')}}" NAME="image50.png" ALIGN=BOTTOM WIDTH=525 HEIGHT=732 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0.07in"><A NAME="Example_2"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Example
+2</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0.03in; line-height: 0.19in">
+Let us try to evaluate an arithmetic expression as shown below:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0in; line-height: 0.19in">
+<B>x = a-b/3+c*2-1</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0in">
+Let a = 9, b =12, and c=3. Then our expression becomes:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0in"><B>x =
+9-12/3+3*2-1</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+From the above table, we can see that the * and / operators are
+having higher precedence than + and – operators. Also, the * and /
+operators are at the same level of precedence, so we have to apply
+the associativity rules. Since the associativity rule is
+left-to-right, we apply the / operator first and the expression
+evaluates to:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 0.19in"><B>x =
+9-4+3*2-1</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">Next, we
+apply the * operator and the expression becomes:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0in; margin-top: 0in">
+<B>x = 9-4+6-1</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; text-indent: -0in; margin-top: 0in; page-break-before: always">
+Next, we apply the first – operator as the – and + operators are
+at the same level and the associativity rule is from left to right.
+The expression becomes:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 0.19in"><B>x =
+5+6-1</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Now, we apply the +
+operator and the expression become:</P>
+<P CLASS="western" ALIGN=CENTER><B>x = 11-1</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Finally, we apply the
+– operator and the result is:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><B>x = 10</B></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in"><B>/*
+C Program to demonstrate expressions and operator precedence */</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.19in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.22in">int m1=60,m2=60,m3=60;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; line-height: 0.19in">int
+average;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.17in">average
+= m1+m2+m3/3; printf(&quot;Average is: %d&quot;,average);</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in; line-height: 0.19in">
+Ouput:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">Average
+is: 140</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Explanation:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In the above program average is computed with the help of the
+expression, m1+m2+m3/3. Although this is mathematically correct, it
+is programmatically incorrect. We can see that the expression is made
+up of + and / operators. As / operator is having higher precedence
+than the + operator, m3/3 is evaluated first which gives 20. Then
+this 20 is added to m1 and m2 which gives 140. So, while writing
+expressions with multiple operators you should be careful.</P>
+
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

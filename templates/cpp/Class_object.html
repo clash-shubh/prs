@@ -1,0 +1,2344 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">CLASSES
+&amp; OBJECTS</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction_(1)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Object oriented programming paradigm makes it easy to solve
+real-world problems. Classes and objects are the fundamental concepts
+of object oriented paradigm. They make development of large and
+complex systems easier and help to produce software which is easy to
+understand, modular, modify, and reusable.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Syntactically structures and classes are similar. But a major
+difference between them is, by default all the members of a structure
+are <I>public</I>. Whereas, by default all the members of a class are
+<I>private</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A rule of thumb is, use structures to store less amount of data and
+classes to store data as well as functions to process that data.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Class_Declaration"></A><FONT COLOR="#365f91">Class
+Declaration</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+A class is a template or blueprint for creating objects. Class is the
+basic mechanism to implement encapsulation. A class combines
+variables (data) and functions (behavior) into a single entity. By
+declaring a class we are creating a new user-defined type. Syntax for
+declaring a class is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">class
+ClassName</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">access-specifier:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.37in">type
+variable1; type variable2;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">....</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.5in">type
+function1(params-list); type function2(params-list);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">....</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+In the above class declaration syntax <I>class </I>is a keyword which
+is used to declare classes. The body of the class starts with { and
+ends with };. A class can have variables and functions. These are
+together called as class members. Access specifier can be either
+<I>public, private, </I>or <I>protected</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+<B>Private: </B>All class members declared as private are only
+accessible within the class and are not accessible outside the class.
+Data hiding is implemented through <I>private </I>access specifier.
+By default access specifier for class members is <I>private</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><B>Public:
+</B>All class members declared as public are accessible inside and
+outside the class.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Example for class declaration is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<DIV ID="Section10" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+	get_details(); void show_details();</P>
+</DIV>
+<DIV ID="Section11" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Function_Definition_(1)"></A>
+	<FONT COLOR="#365f91">Function Definition</FONT></H5>
+	<H6 CLASS="western" STYLE="margin-top: 0.17in"><A NAME="Inside_Class"></A>
+	<FONT COLOR="#4f81bd">Inside Class</FONT></H6>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+	A function can be defined inside a class like we define functions in
+	our C++ programs. Functions defined inside a class are by default
+	treated as inline functions (provided they don't contain any loops,
+	switch, goto, static variables, or recursive code). An example of
+	function defined inside the class is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">class
+	Student</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+	name; string regdno; string branch; int age;</P>
+</DIV>
+<DIV ID="Section12" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">void
+	get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section13" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.84in">cout&lt;&lt;&quot;Enter
+	student name: &quot;; cin&gt;&gt;name;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.73in">cout&lt;&lt;&quot;Enter
+	student regdno: &quot;; cin&gt;&gt;regdno;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.74in">cout&lt;&lt;&quot;Enter
+	student branch: &quot;; cin&gt;&gt;branch;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.97in">cout&lt;&lt;&quot;Enter
+	student age: &quot;; cin&gt;&gt;age;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_details();</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western" STYLE="margin-top: 0.17in"><A NAME="Outside_Class"></A>
+	<FONT COLOR="#4f81bd">Outside Class</FONT></H6>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">Functions
+	defined outside the class will contain scope resolution operator
+	(::) to notify the compiler that this function belongs to a certain
+	class.</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Uses of scope resolution operator in a function definition are:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+	a function with same name is available in different classes, this
+	operator resolves the scope of a function to a certain</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>To
+	restrict access to private data of a class to non-member</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>functions.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Allows
+	a member function of a class to call another member function of the
+	same class without using dot</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>operator.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.37in; margin-top: 0.04in; line-height: 0.38in">
+Syntax of defining a function outside the class is as follows:
+return-type class-name :: function-name(params-list)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//statement(s)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">An
+example of defining a function outside the class is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<DIV ID="Section14" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in; margin-top: 0in">
+	void get_details(); void show_details();</P>
+</DIV>
+<DIV ID="Section15" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.84in">cout&lt;&lt;&quot;Enter
+	student name: &quot;; cin&gt;&gt;name;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.73in">cout&lt;&lt;&quot;Enter
+	student regdno: &quot;; cin&gt;&gt;regdno;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.74in">cout&lt;&lt;&quot;Enter
+	student branch: &quot;; cin&gt;&gt;branch;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.97in">cout&lt;&lt;&quot;Enter
+	student age: &quot;; cin&gt;&gt;age;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Creating_Objects"></A>
+	<FONT COLOR="#365f91">Creating Objects</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	For using the classes that we declared in our programs, we need to
+	create objects. An object  is an instance of a class. The process of
+	creating an object for a class in called as <B>instantiation</B>.
+	Memory is only allocated for an object. Not to a class. Object
+	creation syntax is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">ClassName
+	object-name;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.68in; margin-top: 0.06in; line-height: 200%; page-break-before: always">
+Based on our student class example, objects can be created as
+follows: Student std1, std2;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+the above example, </FONT><FONT SIZE=3><I>std1 </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>std2 </I></FONT><FONT SIZE=3>are objects of
+class </FONT><FONT SIZE=3><I>Student</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Accessing_Object_Members"></A><FONT COLOR="#365f91">Accessing
+Object Members</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in">After
+creating an object, we can access the data and functions using the
+dot operator as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">object-name.variable-name;
+(or)</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">object-name.function-name(params-list);</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">Based
+on our student class example, we can access the <I>get_details()
+</I>function as shown  below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.17in">std1.get_details();
+std2.get_details();</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">The
+complete program which demonstrates creating class, creating objects,
+and accessing object members is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<DIV ID="Section16" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+	get_details(); void show_details();</P>
+</DIV>
+<DIV ID="Section17" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.84in">cout&lt;&lt;&quot;Enter
+	student name: &quot;; cin&gt;&gt;name;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.73in">cout&lt;&lt;&quot;Enter
+	student regdno: &quot;; cin&gt;&gt;regdno;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.74in">cout&lt;&lt;&quot;Enter
+	student branch: &quot;; cin&gt;&gt;branch;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.97in">cout&lt;&lt;&quot;Enter
+	student age: &quot;; cin&gt;&gt;age;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+void Student::show_details()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;-----Student
+Details	&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.98in">cout&lt;&lt;&quot;Student
+name: &quot;&lt;&lt;name&lt;&lt;endl; cout&lt;&lt;&quot;Student
+regdno: &quot;&lt;&lt;regdno&lt;&lt;endl; cout&lt;&lt;&quot;Student
+branch: &quot;&lt;&lt;branch&lt;&lt;endl; cout&lt;&lt;&quot;Student
+age: &quot;&lt;&lt;age&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.52in">Student
+std1, std2; std1.get_details(); std1.show_details(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program are as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Enter student name:
+teja</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.08in">Enter
+student regdno: 15pa1a0501 Enter student branch: teja</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Enter student age: 22</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Student name: teja</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.45in">Student
+regdno: 15pa1a0501 Student branch: teja</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">Student
+age: 22</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+the above program class name is </FONT><FONT SIZE=3><I>Student </I></FONT><FONT SIZE=3>and
+object names are </FONT><FONT SIZE=3><I>std1 </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>std2</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Nested_Functions"></A>
+<FONT COLOR="#365f91">Nested Functions</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A member function can call another member function directly without
+any need of dot operator. To call another member function, we can
+simply write the function name followed by parameter values enclosed
+in parentheses. An example for calling another member function is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Square</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section18" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: -0.01in; line-height: 200%">
+	public: public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">int side;</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.01in">
+	float area(float); float peri(float); void show_details();</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+float Square::area(float s)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return s*s;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">float
+Square::peri(float s)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 4*s;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">void
+Square::show_details()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Side
+is: &quot;&lt;&lt;side&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.36in">cout&lt;&lt;&quot;Area
+of sqaure is: &quot;&lt;&lt;area(side)&lt;&lt;endl; cout&lt;&lt;&quot;Perimeter
+of sqaure is: &quot;&lt;&lt;peri(side)&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.1in">Square
+s1; s1.side = 2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.65in">s1.show_details();
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Side is: 2</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.74in; margin-top: 0in">
+Area of sqaure is: 4 Perimeter of sqaure is: 8</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+the above program, the function </FONT><FONT SIZE=3><I>show_details()
+</I></FONT><FONT SIZE=3>contains nested call to </FONT><FONT SIZE=3><I>area()
+</I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>peri()</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in">functions.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Inline_Member_Functions"></A>
+<FONT COLOR="#365f91">Inline Member Functions</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Making a function inline avoids the overhead of a function call. By
+default functions defined inside a class are inline. To get the
+benefits of making a function inline, functions defined outside the
+class can also be made inline. Syntax for defining a function as
+inline is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">inline return-type
+ClassName :: function-name(params-list)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Consider
+the following example which demonstrates inline member functions:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Square</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: -0.01in; line-height: 200%">
+public: public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">int side;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.01in; margin-top: 0in">
+float area(float); float peri(float); void show_details();</P>
+<DIV ID="Section19" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">inline float
+	Square::area(float s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Area
+	of square is: &quot;&lt;&lt;(s*s)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">inline float
+	Square::peri(float s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Perimeter
+	of square is: &quot;&lt;&lt;(4*s)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Square::show_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.74in">cout&lt;&lt;&quot;Side
+	is: &quot;&lt;&lt;side&lt;&lt;endl; area(side);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">peri(side);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.1in">Square
+	s1; s1.side = 2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.65in">s1.show_details();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Side is: 2</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.74in">Area
+	of sqaure is: 4 Perimeter of sqaure is: 8</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western"><A NAME="Memory_Allocation_for_Classes_and_Object"></A>
+	<FONT COLOR="#365f91">Memory Allocation for Classes and Objects</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	Class is not allocated any memory. This is partially true. The
+	functions in a class are allocated memory which are shared by all
+	the objects of a class. Only the data in a class is allocated memory
+	when an object is created. Every object has its own memory for data
+	(variables). For example consider the following <I>Student </I>class
+	and its functions:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+	name; string regdno;</P>
+</DIV>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.45in; margin-top: 0.06in">
+string branch; int age;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+get_details(); void show_details();</P>
+<DIV ID="Section20" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.84in">cout&lt;&lt;&quot;Enter
+	student name: &quot;; cin&gt;&gt;name;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.73in">cout&lt;&lt;&quot;Enter
+	student regdno: &quot;; cin&gt;&gt;regdno;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.74in">cout&lt;&lt;&quot;Enter
+	student branch: &quot;; cin&gt;&gt;branch;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.97in">cout&lt;&lt;&quot;Enter
+	student age: &quot;; cin&gt;&gt;age;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::show_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;-----Student
+	Details	&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.98in">cout&lt;&lt;&quot;Student
+	name: &quot;&lt;&lt;name&lt;&lt;endl; cout&lt;&lt;&quot;Student
+	regdno: &quot;&lt;&lt;regdno&lt;&lt;endl; cout&lt;&lt;&quot;Student
+	branch: &quot;&lt;&lt;branch&lt;&lt;endl; cout&lt;&lt;&quot;Student
+	age: &quot;&lt;&lt;age&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.9in; margin-top: 0.06in; line-height: 200%">
+	Now let's create two objects for the above <I>Student </I>class as
+	follows: Student std1, std2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Memory representation
+	for the objects s1 and s2 will be as shown in the below diagram:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.33in; width: 347px"><IMG SRC="{{url_for('static',filename='img/CPP_html_48393373.png')}} " NAME="image33.png" WIDTH=347 HEIGHT=243 BORDER=0></SPAN><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Static_Members"></A>
+	<FONT COLOR="#4f81bd">Static Members</FONT></H6>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">C++
+	allows us to declare variables or functions as static members by
+	using the keyword</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>static</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+</DIV>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always"><A NAME="Static_Data"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Static
+Data</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.03in">
+Syntax for declaring a static variable is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>static data-type
+variable-name;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Static
+data members will have the following properties:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Only
+	one copy of static data element will be created irrespective of the
+	no. of objects created.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>All
+	objects share the same copy of the static data</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>element.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>All
+	static data members are initialized to 0 when the first object for a
+	class is</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>created.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Static
+	data members are only visible within the class. But their lifetime
+	is throughout the</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>program.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+If needed, static data members can be accessed using the class name
+along with scope resolution operator. Let's add a static member <I>count
+</I>to our <I>Student </I>class. The memory representation of two
+objects will be as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.19in; width: 375px"><IMG SRC="{{url_for('static',filename='img/CPP_html_ab5782ef.png')}}"  NAME="image34.png" WIDTH=375 HEIGHT=262 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.85in; line-height: 0.38in">
+<I>Student </I>class with <I>count </I>static member is as follows:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">static int count;</P>
+<DIV ID="Section21" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+	get_details(); void show_details(); void show_count()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;No.of students: &quot;&lt;&lt;count++&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.87in">int
+Student::count = 1; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 4.6in">
+Student std1, std2; std1.show_count(); std2.show_count(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">No.of students: 1</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">No.of students: 2</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in"><A NAME="Static_Functions"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Static
+Functions</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">Functions
+of a class can also be declared as static. Static functions have
+following properties:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>It
+	can access only static members declared in the same</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>As
+	it is not part of an object, it is called using the class name along
+	with scope resolution</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>operator.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>As
+	static functions does not belong to a object, </FONT><FONT SIZE=3><I>this
+	</I></FONT><FONT SIZE=3>pointer cannot be used with</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>them.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	static function cannot be declared as a virtual</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	static function can be declared with </FONT><FONT SIZE=3><I>const,
+	volatile </I></FONT><FONT SIZE=3>type</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>qualifiers.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax for creating a
+static member function is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>static
+return-type function-name(params-list)</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>//body
+of function</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>}</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Syntax
+for accessing a static member function outside the class is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ClassName
+:: function-name(param-values list);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.74in; margin-top: 0.04in; line-height: 0.38in">
+Following example demonstrates creating and using a static function:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0.06in">static
+int count;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+get_details(); void show_details();</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">static void
+show_count()</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<DIV ID="Section22" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;No.of
+	students: &quot;&lt;&lt;count++&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.87in">int
+	Student::count = 1; int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.3in">Student
+	std1, std2; Student::show_count(); Student::show_count(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">No.of students: 1</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">No.of students: 2</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in"><I><B>Note:
+	</B></I>Two member functions cannot be declared with one function as
+	static and another as non-static having the same name and same
+	parameters list.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="Static_Objects"></A>
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Static
+	Objects</B></FONT></FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+	By default object data members contains garbage values. To
+	initialize the data members to their default values, we can declare
+	the objects as static. Syntax for creating static objects is as
+	follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>static
+	ClassName object-name;</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.52in; margin-top: 0.04in; line-height: 0.38in">
+	Below example demonstrates working with static objects:
+	#include&lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+	namespace std;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section23" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.14in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.44in">
+	string name; string regdno; string branch; int age;</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+	get_details(); void show_details();</P>
+</DIV>
+<DIV ID="Section24" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">static Student std1,
+std2;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 2.66in">
+cout&lt;&lt;&quot;Age of student 1 is: &quot;&lt;&lt;std1.age&lt;&lt;endl;
+cout&lt;&lt;&quot;Age of student 2 is: &quot;&lt;&lt;std2.age&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Age of student 1 is: 0</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Age of student 2 is: 0</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above program, <I>std1 </I>and <I>std2 </I>are static objects. So
+all their data members like <I>name</I>, <I>age, </I>etc. will be
+initialized to their default values.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Array_of_Objects"></A><FONT COLOR="#365f91">Array
+of Objects</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+As we can create array of basic data types, we can also create an
+array of user-defined types. An array of objects can be used to
+maintain details of a group of objects which are stored contiguously
+in memory. Syntax for creating an array of objects is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ClassName
+array-name[size];</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+For example we can create an array of objects for <I>Student </I>class
+which can be used to  maintain details of a set of students. A single
+object in an array can be accessed using the subscript or index.
+Below program demonstrates the use of an array of objects:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<DIV ID="Section25" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+	get_details(); void show_details();</P>
+</DIV>
+<DIV ID="Section26" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.84in">cout&lt;&lt;&quot;Enter
+	student name: &quot;; cin&gt;&gt;name;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.73in">cout&lt;&lt;&quot;Enter
+	student regdno: &quot;; cin&gt;&gt;regdno;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.74in">cout&lt;&lt;&quot;Enter
+	student branch: &quot;; cin&gt;&gt;branch;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.97in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;Enter student age: &quot;; cin&gt;&gt;age;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">void
+Student::show_details()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;-----Student
+Details	&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.98in">cout&lt;&lt;&quot;Student
+name: &quot;&lt;&lt;name&lt;&lt;endl; cout&lt;&lt;&quot;Student
+regdno: &quot;&lt;&lt;regdno&lt;&lt;endl; cout&lt;&lt;&quot;Student
+branch: &quot;&lt;&lt;branch&lt;&lt;endl; cout&lt;&lt;&quot;Student
+age: &quot;&lt;&lt;age&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">Student s[3];</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=0; i&lt;3;
+i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.01in">cout&lt;&lt;&quot;Enter
+student &quot;&lt;&lt;i+1&lt;&lt;&quot; details: &quot;&lt;&lt;endl;
+s[i].get_details();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=0; i&lt;3;
+i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.14in">cout&lt;&lt;&quot;Student
+&quot;&lt;&lt;i+1&lt;&lt;&quot; details are: &quot;&lt;&lt;endl;
+s[i].show_details();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.51in">Enter
+student 1 details: Enter student name: ramesh Enter student regdno:
+101 Enter student branch: cse Enter student age: 23</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.58in; margin-top: 0in">
+Enter student 2 details: Enter student name: suresh Enter student
+regdno: 102 Enter student branch: cse Enter student age: 23 Enter
+student 3 details:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.48in">Enter
+student name: mahesh Enter student regdno: 103 Enter student branch:
+cse Enter student age: 24 Student 1 details are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.89in">Student
+name: ramesh Student regdno: 101 Student branch: cse Student age: 23</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Student 2 details are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.94in">Student
+name: suresh Student regdno: 102 Student branch: cse Student age: 23
+Student 3 details are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.86in">Student
+name: mahesh Student regdno: 103 Student branch: cse Student age: 24</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Dynamic_memory_allocation_for_array_of_o"></A>
+<FONT COLOR="#4f81bd">Dynamic memory allocation for array of objects</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+In the previous topic memory for array of objects was static as the
+memory was allocated at compile time. To allocate memory dynamically
+or at run time, we use an array of pointers which can be created as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ClassName
+*array-name[size];</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Memory allocated for an
+array of pointers is far less than memory allocated for an array of
+objects. We can create an object at run time using the <I>new
+</I>operator as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>array-name[index]
+= new ClassName;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">After
+dynamically allocating memory for an object we access the members
+using the -&gt; operator as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>array-name[index]-&gt;member;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.04in; line-height: 0.38in">
+Below example demonstrates how to dynamically allocate memory for an
+array of objects: #include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; string branch; int age;</P>
+<DIV ID="Section27" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in; margin-top: 0in">
+	void get_details(); void show_details();</P>
+</DIV>
+<DIV ID="Section28" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::get_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Enter
+	student name: &quot;;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+cin&gt;&gt;name;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.73in">cout&lt;&lt;&quot;Enter
+stduent regdno: &quot;; cin&gt;&gt;regdno;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.74in">cout&lt;&lt;&quot;Enter
+student branch: &quot;; cin&gt;&gt;branch;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.97in">cout&lt;&lt;&quot;Enter
+student age: &quot;; cin&gt;&gt;age;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">void
+Student::show_details()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;-----Student
+Details	&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.98in">cout&lt;&lt;&quot;Student
+name: &quot;&lt;&lt;name&lt;&lt;endl; cout&lt;&lt;&quot;Student
+regdno: &quot;&lt;&lt;regdno&lt;&lt;endl; cout&lt;&lt;&quot;Student
+branch: &quot;&lt;&lt;branch&lt;&lt;endl; cout&lt;&lt;&quot;Student
+age: &quot;&lt;&lt;age&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.5in">Student
+*s[3]; for(int i=0; i&lt;3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">s[i] = new Student;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in">cout&lt;&lt;&quot;Enter
+stduent &quot;&lt;&lt;i+1&lt;&lt;&quot; details: &quot;&lt;&lt;endl;
+s[i]-&gt;get_details();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in; line-height: 0.19in">
+for(int i=0; i&lt;3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.15in">cout&lt;&lt;&quot;Student
+&quot;&lt;&lt;i+1&lt;&lt;&quot; details are: &quot;&lt;&lt;endl;
+s[i]-&gt;show_details();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.51in">Enter
+student 1 details: Enter student name: ramesh Enter student regdno:
+101 Enter student branch: cse Enter student age: 23</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.58in">Enter
+student 2 details: Enter student name: suresh Enter student regdno:
+102 Enter student branch: cse Enter student age: 23 Enter student 3
+details:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.48in">Enter
+student name: mahesh Enter student regdno: 103 Enter student branch:
+cse Enter student age: 24</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Student 1 details are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.89in">Student
+name: ramesh Student regdno: 101 Student branch: cse Student age: 23
+Student 2 details are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.94in">Student
+name: suresh Student regdno: 102 Student branch: cse Student age: 23
+Student 3 details are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">-----Student
+Details-----</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.86in">Student
+name: mahesh Student regdno: 103 Student branch: cse Student age: 24</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Objects_As_Function_Arguments"></A><FONT COLOR="#365f91">Objects
+As Function Arguments</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Like variables, objects can also be passed using pass-by-value,
+pass-by-reference, and pass- by-address. In pass-by-value we pass the
+copy of an object to a function. In pass-by-reference we pass a
+reference to the existing object. In pass-by-address we pass the
+address of an existing object. Following program demonstrates all
+three methods of passing objects as function arguments:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+#include&lt;iostream&gt; using namespace std; class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<DIV ID="Section29" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.16in">
+	string branch; void get_details();</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void show_details();</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">//Pass-by-value</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void
+	set_branch(Student s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section30" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">branch = s.branch;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">//Pass-by-reference</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void
+	set_branch(Student &amp;s, int x)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">branch = s.branch;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">//Pass-by-address</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void set_branch(Student
+*s)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">branch = s-&gt;branch;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.4in">Student
+s1, s2, s3, s4; s1.branch = &quot;cse&quot;; s2.set_branch(s1);
+s3.set_branch(s1, 10); s4.set_branch(&amp;s1); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Returning_Objects"></A>
+<FONT COLOR="#365f91">Returning Objects</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">We
+can not only pass objects as function arguments but can also return
+objects from functions. We can return an object in the following
+three ways:</P>
+<P CLASS="western"><BR>
+</P>
+<OL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Returning
+	by value which makes a duplicate copy of the local</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>object.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Returning
+	by using a reference to the object. In this way the address of the
+	object is passed implicitly to the calling</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Returning
+	by using the 'this pointer' which explicitly sends the address of
+	the object to the calling</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>function.</FONT></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.68in; margin-top: 0in; line-height: 0.38in">
+Following program demonstrates the three ways of returning objects
+from a function: #include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class Comparer</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section31" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">int value;</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 2.81in">
+	Comparer compare_val(Comparer); Comparer &amp;compare_ref(Comparer);
+	Comparer &amp;compare_add(Comparer);</P>
+</DIV>
+<DIV ID="Section32" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">//Return by value</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Comparer
+	Comparer::compare_val(Comparer c)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.53in">Comparer
+	x; x.value = 10; if(x.value &lt; c.value)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">return x;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">else</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+return c;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">//Return by reference</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Comparer
+&amp;Comparer::compare_ref(Comparer c)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.53in">Comparer
+x; x.value = 10; if(x.value &lt; c.value)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">return x;</P>
+<DIV ID="Section33" DIR="LTR" GUTTER=11 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">return c;</P>
+</DIV>
+<DIV ID="Section34" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">//Return by address</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Comparer
+	&amp;Comparer::compare_add(Comparer c)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.53in">Comparer
+	x; x.value = 10; if(x.value &lt; c.value)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">return x;</P>
+</DIV>
+<DIV ID="Section35" DIR="LTR" GUTTER=11 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">return *this;</P>
+</DIV>
+<DIV ID="Section36" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.86in">Comparer
+	obj; obj.value = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">obj
+	= obj.compare_val(obj);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.93in; margin-top: 0in">
+	cout&lt;&lt;&quot;Least value is: &quot;&lt;&lt;obj.value&lt;&lt;endl;
+	obj.value = 5;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">obj =
+	obj.compare_ref(obj);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.93in">cout&lt;&lt;&quot;Least
+	value is: &quot;&lt;&lt;obj.value&lt;&lt;endl; obj.value = 2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">obj =
+	obj.compare_ref(obj);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.93in">cout&lt;&lt;&quot;Least
+	value is: &quot;&lt;&lt;obj.value&lt;&lt;endl; return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.2in">Least
+	value is: 10 Least value is: 5 Least value is: 2</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="this_Pointer"></A>
+	<FONT COLOR="#365f91">this Pointer</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">For every object in
+	C++, there is an implicit pointer called <I>this </I>pointer. It is
+	a constant pointer which always points to the current object. Uses
+	of <I>this </I>pointer are as follows:</P>
+</DIV>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; margin-top: 0.06in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When data member
+	names and function argument names are same, </FONT><FONT SIZE=3><I>this
+	</I></FONT><FONT SIZE=3>pointer can be used to distinguish a data
+	member by writing</FONT><FONT SIZE=3> </FONT><FONT SIZE=3><I>this-&gt;member-name</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>It
+	can be used inside a member function to return the current object by
+	address by writing </FONT><FONT SIZE=3><I>return</I></FONT><FONT SIZE=3><I>
+	</I></FONT><FONT SIZE=3><I>*this</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">The
+<I>this </I>pointer cannot be used along with static functions as
+static functions are not part of any object. Following program
+demonstrates the use of <I>this </I>pointer:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Circle</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int r;</P>
+<DIV ID="Section37" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.42in">
+	void area(int); void peri(int);</P>
+</DIV>
+<DIV ID="Section38" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void Circle::area(int
+	r)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">this-&gt;r = r;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Area
+	of circle is: &quot;&lt;&lt;(3.1415*this-&gt;r*this-&gt;r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void Circle::peri(int
+	r)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">this-&gt;r = r;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Perimeter
+	of circle is: &quot;&lt;&lt;(2*3.1415*this-&gt;r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.15in">Circle
+	c; c.area(10);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.17in">c.peri(10);
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.51in">Area
+	of circle is: 314.15 Perimeter of circle is: 62.83</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.43in; margin-top: 0in; line-height: 0.38in">
+	Modify the <I>area() </I>function in the above program with the
+	following code: void Circle::area(int r)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">r = r;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Radius
+	of circle is: &quot;&lt;&lt;this-&gt;r&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Area
+	of circle is: &quot;&lt;&lt;(3.1415*this-&gt;r*this-&gt;r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Now again compile and execute the program. Observe the value of
+radius in the output. Is it correct?</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Constant_Parameters_and_Members"></A>
+<FONT COLOR="#365f91">Constant Parameters and Members</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Constant_Member_Functions"></A>
+<FONT COLOR="#4f81bd">Constant Member Functions</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Member functions in a class can be declared as constant if that
+member function has no necessity of modifying any data members. A
+member function can be declared as constant as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>return-type
+function-name(params-list) const</I></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>//body
+of function</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>}</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program demonstrates the use of constant member functions:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class Circle</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int r;</P>
+<DIV ID="Section39" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.02in">
+	void area() const; void peri() const; void set_radius(int);</P>
+</DIV>
+<DIV ID="Section40" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void Circle::area()
+	const</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//r = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Area
+	of circle is: &quot;&lt;&lt;(3.1415*r*r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void Circle::peri()
+	const</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//r = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Perimeter
+	of circle is: &quot;&lt;&lt;(2*3.1415*r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Circle::set_radius(int radius)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">r = radius;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.75in">Circle
+	c; c.set_radius(10); c.area();</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.3in; margin-top: 0.06in; page-break-before: always">
+c.peri(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.51in">Area
+of circle is: 314.15 Perimeter of circle is: 62.83</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above program there is no need for <I>area() </I>and <I>peri()
+</I>functions to modify the data member <I>r</I>. So, they are
+declared as constant member functions.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Constant_Parameters"></A><FONT COLOR="#4f81bd">Constant
+Parameters</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+To prevent functions from performing unintended operations on data
+members of an object, we can declare the object arguments as constant
+arguments as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>const
+ClassName object-name</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.05in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates the use of constant parameters:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Circle</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int r;</P>
+<DIV ID="Section41" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.02in">
+	void area() const; void peri() const; void set_radius(int);</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void get_radius(const
+	Circle);</P>
+</DIV>
+<DIV ID="Section42" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void Circle::area()
+	const</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//r = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Area
+	of circle is: &quot;&lt;&lt;(3.1415*r*r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void Circle::peri()
+	const</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//r = 20;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Perimeter
+	of circle is: &quot;&lt;&lt;(2*3.1415*r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Circle::set_radius(int radius)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">r = radius;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Circle::get_radius(const Circle c)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//c.r = 30;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;Radius of circle is: &quot;&lt;&lt;r&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.75in">Circle
+c; c.set_radius(10); c.get_radius(c); c.area();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.03in">c.peri();
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.75in">Radius
+of circle is: 10 Area of circle is: 314.15</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Perimeter of circle is:
+62.83</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above program
+inside the <I>get_radius() </I>function, <I>Circle </I>object has
+been declared as constant. So performing <I>c.r = 30 </I>is invalid
+as modifying constant values is illegal.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Pointers_within_a_Class"></A><FONT COLOR="#365f91">Pointers
+within a Class</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Pointers can be used
+inside a class for the following reasons:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Pointers
+	save memory consumed by objects of a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Pointers
+	can be used to allocate memory dynamically i.e., at run</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>time.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.89in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates the use of pointers within a class:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int *marks;</P>
+<DIV ID="Section43" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.16in">
+	string branch; void get_details();</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4in">void
+	show_details(); void get_marks();</P>
+</DIV>
+<DIV ID="Section44" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::get_marks()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">int n;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.79in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;Enter no.of subjects: &quot;; cin&gt;&gt;n;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.49in">marks
+= new int[n]; for(int i=0; i&lt;n; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.41in">cout&lt;&lt;&quot;Enter
+subject &quot;&lt;&lt;(i+1)&lt;&lt;&quot; marks: &quot;;
+cin&gt;&gt;marks[i];</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.83in">Student
+s1; s1.get_marks(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.66in">Enter
+no.of subjects: 6 Enter subject 1 marks: 20</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+subject 2 marks: 15</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+subject 3 marks: 16</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+subject 4 marks: 19</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+subject 5 marks: 20</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+subject 6 marks: 18</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.1in">In
+the above program <I>marks </I>is a pointer inside the class <I>Student</I>.
+It is used to allocate memory dynamically inside the <I>get_marks()
+</I>function with the help of <I>new </I>operator.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Local_Classes"></A>
+<FONT COLOR="#365f91">Local Classes</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A class which is declared inside a function is called a local class.
+A local class is accessible only within the function it is declared.
+Following guidelines should be followed while using local classes:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Local
+	classes can access global variables only along with scope resolution</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operator.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Local
+	classes can access static variables declared inside a</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Local
+	classes cannot access auto variables declared inside a</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Local
+	classes cannot have static</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>variables.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Member
+	functions must be defined inside the</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Private
+	members of the class cannot be accessed by the enclosing function if
+	it is not declared as a friend</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>function.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.51in; margin-top: 0.04in; line-height: 0.38in">
+Below example demonstrates a local class: #include&lt;iostream&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.15in">
+using namespace std;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">const
+float PI = 3.1415;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">class Circle</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<DIV ID="Section45" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">int r;</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void area()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section46" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 2.1in">cout&lt;&lt;&quot;Area
+	of circle is: &quot;&lt;&lt;(::PI*r*r);</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">void set_radius(int
+	radius)</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">{</P>
+</DIV>
+<DIV ID="Section47" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.58in; margin-right: 0.43in">
+	};</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Circle c;</P>
+	<P CLASS="western" STYLE="margin-left: 0.9in">r = radius;</P>
+	<P CLASS="western" STYLE="margin-left: 0.4in">}</P>
+</DIV>
+<DIV ID="Section48" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.75in">c.set_radius(10);
+	c.area();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Area of circle is:
+	314.15</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western"><A NAME="Nested_Classes"></A><FONT COLOR="#365f91">Nested
+	Classes</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+	C++ allows programmers to declare one class inside another class.
+	Such classes are called nested classes. When a class B is declared
+	inside class A, class B cannot access the members of class A. But
+	class A can access the members of class B through an object of class
+	B. Following are the properties of a nested class:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+		nested class is declared inside another</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		scope of inner class is restricted by the outer</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>class.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>While
+		declaring an object of inner class, the name of the inner class
+		must be preceded by the outer class name and scope resolution</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>operator.</FONT></FONT></P>
+	</UL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.45in; margin-top: 0.04in; line-height: 0.38in">
+	Following program demonstrates the use of nested classes:
+	#include&lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+	namespace std;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 4.45in">
+	string regdno; string branch; int age;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+class Name</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; margin-right: 3.41in">string
+fname; string mname; string lname;</P>
+<DIV ID="Section49" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT>public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">string get_name()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section50" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 2.6in">return fname+&quot;
+	&quot;+mname+&quot; &quot;+lname;</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">void set_name(string
+	f, string m, string l)</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">{</P>
+</DIV>
+<DIV ID="Section51" DIR="LTR" GUTTER=72 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; margin-top: 0.14in">
+	};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.02in">fname
+	= f; mname = m; lname = l;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<DIV ID="Section52" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">Student::Name n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.5in">n.set_name(&quot;P&quot;,
+	&quot;S&quot;, &quot;Suryateja&quot;); cout&lt;&lt;&quot;Name is:
+	&quot;&lt;&lt;n.get_name(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Name is: P S Suryateja</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western"><A NAME="Object_Composition"></A><FONT COLOR="#365f91">Object
+	Composition</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+	In real-world programs an object is made up of several parts. For
+	example a car is made up of several parts (objects) like engine,
+	wheel, door etc. This kind of whole part relationship is known as
+	composition which is also known as has-a relationship. Composition
+	allows us to create separate class for each task. Following are the
+	advantages or benefits of composition:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="margin-top: 0in; line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Each
+		class can be simple and</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>straightforward.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+		class can focus on performing one specific</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>task.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Classes
+		will be easier to write, debug, understand, and usable by other</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>people.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Lowers
+		the overall complexity of the whole</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>object.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		complex class can delegate the control to smaller classes when</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>needed.</FONT></FONT></P>
+	</UL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.24in; margin-top: 0in; line-height: 0.38in">
+	Following program demonstrates composition: #include&lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">using
+	namespace std;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+class Engine</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section53" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">int power;</P>
+</DIV>
+<DIV ID="Section54" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Car</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section55" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Engine e;</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.29in">
+	string company; string color;</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void show_details()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section56" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; margin-top: 0.16in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.92in">cout&lt;&lt;&quot;Compnay
+	is: &quot;&lt;&lt;company&lt;&lt;endl; cout&lt;&lt;&quot;Color is:
+	&quot;&lt;&lt;color&lt;&lt;endl; cout&lt;&lt;&quot;Engine horse
+	power is: &quot;&lt;&lt;e.power;</P>
+</DIV>
+<DIV ID="Section57" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">Car c;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.25in">c.e.power
+	= 500; c.company = &quot;hyundai&quot;; c.color = &quot;black&quot;;
+	c.show_details();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">return
+	0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.94in">Compnay
+	is: hyundai Color is: black</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Engine horse power is:
+	500</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western"><A NAME="Friend_Functions"></A><FONT COLOR="#365f91">Friend
+	Functions</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	A friend function is a non-member function which can access the
+	private and protected members of a class. To declare an external
+	function as a friend of the class, the function prototype preceded
+	with <I>friend </I>keyword should be included in that class. Syntax
+	for creating a friend function is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>class
+	ClassName</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>friend
+	return-type function-name(params-list);</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>};</I></FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Following are the properties of a friend function:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Friend
+	function is a normal external function which is given special access
+	to the private and protected members of a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Friend
+	functions cannot be called using the dot operator or -&gt;</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operator.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Friend
+	function cannot be considered as a member</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	function can be declared as friend in any number of</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>classes.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>As
+	friend functions are non-member functions, we cannot use </FONT><FONT SIZE=3><I>this
+	</I></FONT><FONT SIZE=3>pointer with</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>them.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	keyword </FONT><FONT SIZE=3><I>friend </I></FONT><FONT SIZE=3>is
+	used only in the declaration. Not in the</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>definition.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Friend
+	function can access the members of a class using an object of that</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>class.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.55in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates using a friend function:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section58" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void
+	set_name(string);</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">friend void
+	show_details(Student);</P>
+</DIV>
+<DIV ID="Section59" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	Student::set_name(string n)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">name = n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void
+	show_details(Student s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Name
+	of the student is: &quot;&lt;&lt;s.name;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.23in">Student
+	s1; s1.set_name(&quot;Mahesh&quot;); show_details(s1);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Name of the student
+	is: Mahesh</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">In the above program
+	<I>show_details() </I>function was able to access the private data
+	member</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>name
+	</I></FONT><FONT SIZE=3>as it is a friend of </FONT><FONT SIZE=3><I>Student
+	</I></FONT><FONT SIZE=3>class.</FONT></FONT></P>
+</DIV>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Friend Class</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Friend_Class"></A>
+A friend class is a class which can access the private and protected
+members of another class. If a class B has to be declared as a <I>friend
+</I>of class A, it is done as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<DIV ID="Section60" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.19in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>class A</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>{</I></FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>};</I></FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>friend
+	class B;</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: -0.01in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: -0.01in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>...</I></FONT></FONT></P>
+</DIV>
+<DIV ID="Section61" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+	are properties of a friend class:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+		class can be friend of any number of</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>classes.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+		a class A becomes the friend of class B, class A can access all the
+		members of class B. But class B can access only the public members
+		of class</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>A.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Friendship
+		is not transitive. That means a friend of friend is not a friend
+		unless specified</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>explicitly.</FONT></FONT></P>
+	</UL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.19in; margin-top: 0.04in; line-height: 0.38in">
+	Following program demonstrates a friend class: #include&lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+	namespace std;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.9in">friend
+	class B; private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">int
+	x;</P>
+</DIV>
+<DIV ID="Section62" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void set_x(int n)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section63" DIR="LTR" GUTTER=5 STYLE="column-count: 3">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.49in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: -0.01in; margin-top: 0.16in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 0.49in">int y;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = n;</P>
+</DIV>
+<DIV ID="Section64" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void set_y(int n)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section65" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">y = n;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show(A obj)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.95in">cout&lt;&lt;&quot;x
+	= &quot;&lt;&lt;obj.x&lt;&lt;endl; cout&lt;&lt;&quot;y = &quot;&lt;&lt;y;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.07in">A
+a; a.set_x(10); B b; b.set_y(20);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.16in">b.show(a);
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">x = 10</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">y = 20</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.1in">In
+the above program class B has been declared as a <I>friend </I>of
+class A. That is why it is able to access private member <I>x </I>of
+class <I>A</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Bit_Fields_in_Classes"></A><FONT COLOR="#365f91">Bit
+Fields in Classes</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A field or member inside a class which allows programmers to save
+memory are known as bit fields. As we know a integer variable
+occupies 32 bits (on a 32-bit machine). If we only want to store two
+values like 0 and 1, only one bit is sufficient. Remaining 31-bits
+are wasted. In order to reduce such wastage of memory, we can use bit
+fields. Syntax of a bit field is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>type-specifier
+declarator: width;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+the above syntax </FONT><FONT SIZE=3><I>declarator </I></FONT><FONT SIZE=3>is
+an identifier (bit-field name), </FONT><FONT SIZE=3><I>type-specifier
+</I></FONT><FONT SIZE=3>is the data type of the declarator and </FONT><FONT SIZE=3><I>width
+</I></FONT><FONT SIZE=3>is the size of bit field.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+properties of bit-fields:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>C++
+	does not allow arrays of bit fields, pointers to bit fields, and
+	functions returning bit</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>fields.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	declarator is optional and is used only to name the bit</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>field.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	address operator (&amp;) cannot be used with bit</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>fields.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+	a value that is out of range is assigned to a bit field, the
+	lower-order bit pattern is preserved.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Bit
+	fields with a size of 0 must be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>unnamed.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.13in; margin-right: 2.86in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates bit field in a class:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.13in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.13in; line-height: 0.19in">class
+Student</P>
+<P CLASS="western" STYLE="margin-left: 0.13in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">public:</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.44in; margin-top: 0.06in">
+string name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">string branch;</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">unsigned int status :
+1; //size of status field is 1-bit</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">void set_status(int x)</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<DIV ID="Section66" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">status = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int get_status()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return status;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.79in">Student
+	s1; s1.set_status(1);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.7in">cout&lt;&lt;&quot;Status
+	of student is: &quot;&lt;&lt;s1.get_status(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.13in; margin-top: 0.06in">
+	Output of the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.13in">Status
+	of student is: 1</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.13in">In the
+	above program size of <I>status </I>field is only 1-bit. It can
+	store either a 0 or 1.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><A NAME="Volatile_Objects_and_Member_Functions"></A>
+	<FONT COLOR="#365f91">Volatile Objects and Member Functions</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.13in; margin-right: 0.11in">
+	An object which can be modified by some unknown forces (like
+	hardware) other than the program itself can be declared as <I>volatile</I>.
+	Compiler doesn't apply any optimizations for such volatile objects.
+	Syntax for declaring an volatile object is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>volatile
+	ClassName object-name;</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.13in; margin-right: 0.11in">
+	A member function can be declared as <I>volatile </I>to make the
+	access to member variables to be volatile. A volatile object can
+	access only volatile functions. Syntax for creating a volatile
+	function is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>return-type
+	function-name(params-list) volatile;</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.13in; margin-right: 1.19in; margin-top: 0.04in; line-height: 0.38in">
+	Following program demonstrates both volatile objects and volatile
+	programs: #include&lt;iostream&gt;</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.13in; line-height: 0.15in">
+	using namespace std;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.13in; margin-top: 0.06in; page-break-before: always">
+class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.13in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">string
+name; string regdno; int age;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">string branch;</P>
+<DIV ID="Section67" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void
+	set_name(string);</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void
+	get_name(Student) volatile;</P>
+</DIV>
+<DIV ID="Section68" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.13in">void
+	Student::set_name(string n)</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">name = n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">void
+	Student::get_name(Student s) volatile</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Name
+	is: &quot;&lt;&lt;s.name;</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.23in">Student
+	s1; s1.set_name(&quot;Mahesh&quot;); volatile Student s2;
+	s2.get_name(s1);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in; line-height: 0.19in">
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">Name is: Mahesh</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">In the above program
+	volatile function is <I>get_name() </I>and volatile object is <I>s2</I>.
+	The object <I>s2</I></P>
+	<P CLASS="western" STYLE="margin-left: 0.13in">can access only
+	volatile member functions.</P>
+</DIV>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

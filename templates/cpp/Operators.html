@@ -1,0 +1,503 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Operators</FONT></H4>
+
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+It is common in programming to use various kinds of operations like
+addition, subtraction, multiplication etc. C++ supports wide variety
+of operators which can be broadly divided in to following categories:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Arithmetic</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operators</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Relational</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operators</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Logical</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operators</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Bitwise</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operators</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Other</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operators</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><A NAME="Assignment_Operator"></A>
+<FONT COLOR="#4f81bd">Assignment Operator</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The assignment operator (=) is used to assign the value of an
+expression to a variable and can be used within any valid expression.
+We need to know about two important terms frequently encountered in
+compiler error messages: <I>lvalue </I>and <I>rvalue</I>. Lvalue
+refers to the variable on the left hand side of the assignment
+operator and Rvalue refers to the expression on the right hand side
+of the assignment operator.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.1in">The
+expression on the right hand side can be a constant or a variable or
+a complex expression. Left hand side should never be a function or a
+constant.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.06in; page-break-before: always">
+Multiple variables can be assigned the same value using assignment
+operator as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in"><B>int a, b, c;</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>a
+= b = c = 0;</B></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="Arithmetic_Operators"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Arithmetic
+Operators</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Perhaps arithmetic operators are the most frequently used operators
+in programs. Arithmetic operators contains operators for performing
+addition, subtraction, multiplication, division and modulus
+(remainder). Remember that floating point values cannot be used along
+with modulus operator. Arithmetic operators are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_9069d1ee.png')}}" NAME="image27.png" WIDTH=602 HEIGHT=246 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Also increment (++) and decrement (--) operators are included in this
+category. Increment operator increments the value of operand by one
+and decrement operator decrements the value of the operand by one.
+Both of these operators are unary operators i.e they are used along
+with a single operand.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Increment and decrement operators can be used before or after the
+operand. If they are used before the operand, they are called as pre
+increment / decrement operator or if they are used after the operand,
+they are called as post increment / decrement operator.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+expressions, post and pre increment / decrement operators have
+different effects. Consider the following example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">a = 5;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">b = a++;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">While
+using post increment, value of the operand is fetched, used in the
+expression and then it is incremented. So, value of b is 5 in the
+above example. Now, consider another example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">a = 5;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">b =
+++a;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">While using pre
+increment, value of the operand is fetched, incremented and then used
+in the expression. So, value of b is 6 in the above example.</P>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Relational_Operators"></A>
+<FONT COLOR="#4f81bd">Relational Operators</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Whenever we want to compare two values or variables, we can use
+relational operators. These operators return <I>true </I>or <I>false
+</I>based on the values or variables used in the expression.
+Relational operators in C++ are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_24251387.png')}}" NAME="image28.png" WIDTH=603 HEIGHT=254 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Logical_Operators"></A>
+<FONT COLOR="#4f81bd">Logical Operators</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Operators which are frequently used in conjunction with relational
+operators to measure the logical (boolean) value of an expression are
+the logical operators. Expressions with logical operators always
+evaluates to either <I>true </I>or <I>false</I>. Logical operators in
+C++ are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_3995d11b.png')}}" NAME="image29.png" WIDTH=602 HEIGHT=178 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+The truth table of the above mentioned logical operators is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 594px"><IMG SRC="{{url_for('static',filename='img/CPP_html_940f6e25.png')}}" NAME="image30.png" WIDTH=594 HEIGHT=200 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+The logical operators &amp;&amp; and || are called short-circuit
+operators. In a boolean expression having logical AND (&amp;&amp;),
+when left expression is <I>false</I>, right expression is never
+evaluated. Similarly in a boolean expression having logical OR (||),
+when left expression is <I>true</I>, right expression is never
+evaluated.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Bitwise_Operators"></A><FONT COLOR="#4f81bd">Bitwise
+Operators</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+All the operators discussed until now operate at value or variable
+level. As C++ is a superset of C language, C++ also supports
+low-level programming. In low-level programming it is common to
+manipulate individual bits. Such bit-level programming is supported
+by bitwise operators. Bitwise operators in C++ are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_2fb21a9d.png')}}" NAME="image31.png" WIDTH=603 HEIGHT=254 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Truth table for the
+bitwise operators is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_3377d97b.png')}}" NAME="image32.png" WIDTH=603 HEIGHT=203 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Performing left shift once is equivalent to multiplying the value by
+2 and performing right shift once is equivalent to dividing the value
+by 2.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Bitwise operators are used in low-level programming like writing
+device drivers, printer routines etc.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Special_Operators"></A><FONT COLOR="#4f81bd">Special
+Operators</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.03in">
+Apart from general operators there are other operators which are used
+for special purpose.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always"><A NAME="?_Operator"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>?
+Operator</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+C++ supports a powerful operator called conditional operator (?)
+which is an equivalent to some of the if-then-else statements (will
+be explained later). Conditional operator is a ternary operator.
+General form of conditional operator is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>expr1
+? expr2 : expr3;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In the above
+syntax, </FONT><FONT SIZE=3><I>expr1</I></FONT><FONT SIZE=3>, </FONT><FONT SIZE=3><I>expr2,
+</I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>expr3 </I></FONT><FONT SIZE=3>are
+expressions. First </FONT><FONT SIZE=3><I>expr1 </I></FONT><FONT SIZE=3>is
+evaluated. If </FONT><FONT SIZE=3><I>expr1 </I></FONT><FONT SIZE=3>evaluates
+to </FONT><FONT SIZE=3><I>true </I></FONT><FONT SIZE=3>then </FONT><FONT SIZE=3><I>expr2
+</I></FONT><FONT SIZE=3>is executed. Otherwise, </FONT><FONT SIZE=3><I>expr3
+</I></FONT><FONT SIZE=3>is executed. Consider the following example
+for conditional</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>operator.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.09in">int
+a = 10, b = 5, c; c = (a&gt;b) ? 20 : 12;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">In the
+above example, <I>a&gt;b </I>evaluates to true and <I>c </I>will be
+assigned the value of 20.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="&amp;_and_*_Operators"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>&amp;
+and * Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+A pointer (will be explained in detail later) is a memory address. A
+pointer variable is a variable which is capable of holding the
+address of another memory location. We use two operators along with
+pointers. They are address (&amp;) operator and dereferencing (*)
+operator.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">The
+syntax for declaring a pointer is a follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0in">
+<B>data-type *pointer-name;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">So, while
+declaring a pointer variable we have to use *. Let's declare an
+integer pointer.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>int
+*p;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above example <I>p </I>is a pointer of the type <I>int</I>. It
+is capable of storing the address of a memory location which holds an
+integer value. Now, we can obtain the address of a variable using &amp;
+operator as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.68in">int
+a = 10; int *p;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">p = &amp;a;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above example we are retrieving the address of variable <I>a
+</I>using &amp; operator and assigning it to pointer <I>p</I>. Now,
+we can modify the value of variable <I>a </I>indirectly by using the
+pointer <I>p </I>as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">*p = 20;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In the above
+example, </FONT><FONT SIZE=3><I>*p </I></FONT><FONT SIZE=3>can be
+read as </FONT><FONT SIZE=3><I>value stored at the address pointed by
+p</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="sizeof_Operator"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>sizeof
+Operator</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.03in">
+<I>sizeof </I>is a unary compile-time operator which returns the size
+of operand in bytes.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+General syntax of <I>sizeof </I>operator is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>sizeof(operand)</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+When using <I>sizeof </I>along with variables, we can omit
+parentheses. But, when using with basic data types like <I>int,
+double, </I>etc., we have to use parentheses also. Consider the
+following example which demonstrates <I>sizeof </I>operator:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int a = 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.61in">cout&lt;&lt;Size
+of a is:&lt;&lt;sizeof a&lt;&lt;endl; cout&lt;&lt;Size of int
+is:&lt;&lt;sizeof(int)&lt;&lt;endl;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above example,
+both statements will give the same size of 4 bytes (size of an
+integer).</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="Dot_(.)_and_Arrow_(-&gt;)_Operators"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Dot
+(.) and Arrow (-&gt;) Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Both of these operators are used to access the members of structures,
+unions and classes in C++. In case of structures and unions, dot
+operator is used when accessing the members directly. Arrow operator
+is used while accessing members using a pointer. These two operators
+will be explained in detail later.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="[_]_and_(_)_Operators"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>[
+] and ( ) Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+Square brackets are used along with arrays to reference the array
+elements and parentheses are used to increase the precedence of
+expressions and are also used along with functions.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="Comma_(,)_Operator"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Comma
+(,) Operator</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The comma operator is used to join several expressions together. The
+left side of the comma operator is always evaluated as <I>void</I>.
+When used in an assignment statement, the value of the last
+expression (right-most) is the value to be assigned.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Remember that when using along with assignment (=) operator, enclose
+comma separated expressions inside parentheses as comma operator has
+lower precedence (importance) than assignment operator. Consider the
+following example which demonstrates the use of comma operator:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int a, b, c;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">c = (a=5, b=5, a+b);</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above example, first <I>a </I>is assigned 5, then <I>b </I>is
+assigned 5 and finally 10 (a+b) is assigned to <I>c</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Scope_Resolution_Operator_(::)"></A><FONT COLOR="#4f81bd">Scope
+Resolution Operator (::)</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The scope resolution operator helps in resolving the scope of a
+variable or a class member. When the C++ program contains two
+variables with same name i.e. for example one global and another
+local variable, we can access the global variable using the scope
+resolution operator. Consider the following code:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+int x; //global variable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+void myfun( )</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int x; //local variable</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">x = 20; //refers to
+local x</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">..</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">..</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">::x = 20; //refers to
+global x</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">..</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">In
+the above code sample, ::x refers to the global variable <I>x</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Memory_Management_Operators"></A><FONT COLOR="#4f81bd">Memory
+Management Operators</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+As C language provides <I>malloc() </I>and <I>free() </I>for
+allocating and deallocating memory, C++ provides <I>new </I>and
+<I>delete </I>operators for allocating and deallocating memory. Since
+the memory allocated and deallocated by these operators is at
+runtime, they are called as <I>dynamic allocation operators</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+The <I>new </I>operator is used to allocate dynamic memory. It
+returns a pointer to the newly created memory. There is no need to
+specify the size of the memory to allocate and cast the pointer to
+respective type. It is done automatically by the <I>new </I>operator.
+General syntax of <I>new </I>is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>p-var
+= new type;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above syntax, <I>p-var </I>is a pointer variable and <I>type
+</I>is the data type of value to be stored in the newly allocated
+memory location.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Dynamic memory is allocated on the heap (area in memory) and this
+heap is of limited size. When the heap is filled out, <I>new </I>will
+raise an exception <I>bad_alloc </I>which must be caught. More about
+exceptions and exception handling later.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The <I>delete </I>operator is used to deallocate the memory. General
+syntax of <I>delete </I>operator is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>delete
+p-var;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above syntax, <I>p-var </I>is the pointer variable which holds
+the pointer to the dynamic memory. Consider the following example
+which demonstrates both <I>new </I>and <I>delete </I>operators:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">int *p;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">p = new
+int;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">*p = 150;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">delete p;</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Namespace</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Namespace"></A>
+It is common in large programs or projects to create multiple files
+and declare variables, functions, classes, etc. with same names which
+results in collisions of names. In order to eliminate collisions, C++
+introduced the concept of <I>namespaces </I>which is a logical space
+for creating names.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.55in; margin-top: 0.04in; line-height: 0.38in">
+A namespace can be created using the keyword <I>namespace </I>and its
+syntax is as follows: namespace name</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.15in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">//declarations</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+Essentially a namespace creates a scope of for all the elements
+inside it. Syntax for accessing an element outside the namespace is
+as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 2.51in"><B>namespace::element</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+If we are accessing a member of the namespace at multiple spots
+within a program, it will become cumbersome to use the above syntax
+at every point. Instead we use the <I>using </I>keyword to use the
+namespace once. We can use the entire namespace or only a single
+member of the namespace using the following syntax:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; margin-right: 4.37in"><B>using
+namespace name; using name::member;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above syntax, <I>name </I>is the name of the namespace we want
+to use and <I>member </I>is the name of the element we want to access
+in our program.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

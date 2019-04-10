@@ -1,0 +1,218 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Creating
+and Running C Programs</FONT></H1>
+    
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Creating_and_Running_C_Programs"></A>
+<B>
+
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The steps for creating and running programs are: writing/editing,
+compiling, linking and execution. This can be viewed diagrammatically
+as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.85in; width: 245px"><IMG SRC="{{url_for('static',filename='img/C_html_4269f793.png')}}" NAME="image34.png" WIDTH=245 HEIGHT=264 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0in; page-break-before: always">
+<B>Writing/Editing: </B>The first step in creating programs is,
+writing or editing the program. A program can be written in any text
+editor like notepad. After writing a program, the program must be
+saved, In C language, the program is saved with the extension “.c”.
+This is the source program written in a high-level language.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+<B>Compilation: </B>After writing and saving the source program, the
+next step is compilation. Here we will use a software called as
+compiler, which converts a program written in high-level language
+into machine language. The resultant file is known as an object file
+in C. The extension of that file is “.obj”.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+<B>Linking: </B>After compilation the next step is linking. Here
+software called linker is used. The linker links the program with
+external library files which contains the code for predefined
+functions and creates an executable file. The extension of the
+executable file is “.exe”.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+<B>Execution: </B>Finally after the executable file is created after
+linking, the next step is execution. The operating system executes
+the executable file which is the machine code with the help of the
+CPU and other hardware components.</P>
+<H4 CLASS="western" STYLE="page-break-before: always"><A NAME="Structure_of_a_C_Program"></A>
+<FONT COLOR="#365f91">Structure of a C Program</FONT></H4>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">Every
+program written in C follows a certain structure. That structure is
+as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.72in; width: 467px"><IMG SRC="{{url_for('static',filename='img/C_html_60974c82.png')}}" NAME="image35.png" WIDTH=467 HEIGHT=311 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in"><B>Documentation
+Section:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+The documentation section is used to improve the readability and to
+understand various elements in the program. This section is used to
+provide help for the general users. This section consists of plain
+text written in English and includes information like author, purpose
+of the program, date on which the program was created etc. This
+section is included inside comments. Example:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.19in">
+/*********************************</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Author: Name	*</P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.15in">* Date: 7/10/2012	*</P>
+<UL>
+	<LI><P>Purpose: Theme of the program	*</P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.15in; margin-top: 0in">****************************
+*** */</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in"><B>Link
+Section:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+The link section is used to include the external header files in
+which the pre-defined functions are available. To use the pre-defined
+functions in our C programs, these files must be linked with our
+program. Files can be included by using the “include” directive.
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">#include&lt;stdio.h&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+In the above example “stdio.h” is a header file which is
+available in the system area in the programmer’s computer. The
+angular brackets “&lt; and &gt;” tells the compiler to search the
+file “stdio.h” in the system area. If we specify the above
+example as #include”stdio.h”, then the compiler searches for the
+file “stdio.h” in the current directory.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>Definition</B><B>
+</B><B>Section:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+This section is used to define symbolic constants. Symbolic constants
+can be declared by using the #define directive. Example:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">#define
+PI 3.142</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in"><B>Global
+Declaration Section:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+This section is used for declaring global variables which can be
+throughout the program and for declaring function prototypes. The
+global variables can be accessed by any function within the file.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>main() Function
+Section:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0in; page-break-before: always">
+The main() function is necessary in every C program. It specifies the
+starting point of execution in a program. There should be a main()
+declared in every C program. The main() function consists of the
+executable instructions and declaration statements. It may call other
+user defined functions.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in"><B>Subprogram
+Section:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+This section includes the definitions of user-defined functions. A
+function is essentially a set of instructions for performing a task.
+We can divide a problem into sub problems and write a function for
+solving each sub problem.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>Example: HelloWorld
+Program</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">/*********************************</P>
+<UL>
+	<LI><P>Author: Teja	*</P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.15in; margin-top: 0in">*
+Date: 7/10/2012	*</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Purpose: To print Hello World	*</P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.71in; text-indent: 0.07in">
+**************************** *** */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.2in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; text-indent: -0in">
+clrscr(); printf(“HelloWorld!”); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">In
+the above example we can see three sections: documentation section,
+link section and main() function section.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In the above program, <B>/* and */ denotes multi-line comments</B>.
+The /* indicates the starting of multi-line comment and the */
+indicates the ending of multi-line comments. Everything included
+between /* and */ is ignored by the compiler. In the next line after
+the multi-line comments, <B>#include </B>is a pre-processor directive
+which is used to link the program with external files like header
+files in which the predefined functions are declared. The <B>main()
+</B>function is essential in every C program, as it specifies the
+starting point of execution in a program. Everything starting from <B>{
+</B>to <B>} </B>is known as the body of the main function. <B>clrscr()
+</B>function is used to clear the output screen (console). The
+<B>printf() </B>function is used to output characters onto the
+console. The <B>getch() </B>function pauses the execution of the
+program, and waits for a single character input from the user. The
+declaration of printf() is available in <B>stdio.h </B>(<B>St</B>andar<B>d
+I</B>nput <B>O</B>utput) header file and the declarations of clrscr()
+and getch() are available in <B>conio.h </B>(<B>Con</B>sole <B>I</B>nput
+<B>O</B>utput) header file.</P>
+<H4 CLASS="western" STYLE="page-break-before: always"><FONT COLOR="#365f91">C
+Tokens</FONT></H4>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.17in"><A NAME="Introduction"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Introduction</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+A programming language is designed to help process certain kinds of
+data consisting of numbers, characters and strings and to provide
+useful output known as information. The task of processing data is
+achieved by writing instructions. These set of instructions is known
+as a program. Programs are written using words and symbols according
+to the rigid rules of the programming language known as syntax.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Character_Set"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Character
+Set</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The characters that can be used to form words, numbers and
+expressions depend upon the computer on which the program is run. The
+characters in C, are grouped into the following four categories:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in">Letters</P>
+	<LI><P STYLE="line-height: 0.19in">Digits</P>
+	<LI><P STYLE="line-height: 0.19in">Special Characters</P>
+	<LI><P>Whitespaces</P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in">The
+compiler ignores the white spaces unless they are part of the string
+constants. White spaces are used to separate words from each other,
+but they cannot be used in between the characters of keywords and
+identifiers.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="C_Tokens"></A>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

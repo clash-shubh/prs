@@ -1,0 +1,379 @@
+
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Type Conversion</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+	<FONT COLOR="#365f91">Type Conversion</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	In expressions when there are constants or variables of different
+	types (built-in), one or more types are converted to a destination
+	type. Similarly, user-defined types like classes when used in
+	expressions can also be converted to built-in types or vice versa.
+	Following are the different possibilities of type conversion:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Conversion
+		from basic type to class</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>type</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Conversion
+		from class type to basic</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>type</FONT></FONT></P>
+		<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Conversion
+		from one class type to another class</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>type</FONT></FONT></P>
+	</UL>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<H6 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><A NAME="Conversion_from_basic_type_to_class_type"></A>
+	<FONT COLOR="#4f81bd">Conversion from basic type to class type</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	A value or variable of a basic type or built-in type can be
+	converted to a class member type using a constructor. Following
+	program demonstrates conversion of a basic type to a class type:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Number</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+Number(int x)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+&quot;&lt;&lt;x;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.32in">Number
+n1 = 30;	//Conversion from int to Number n1.display();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">x = 30</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Conversion_from_class_type_to_basic_type"></A>
+<FONT COLOR="#4f81bd">Conversion from class type to basic</FONT><FONT COLOR="#4f81bd">
+</FONT><FONT COLOR="#4f81bd">type</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+A class type can be converted into a basic type by overloading the
+casting operator. Syntax for overloading the casting operator is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">operator typename( )</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Remember
+following points while overloading the casting operator:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	should be defined within the</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	does not have any return</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>type.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	does not take any</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>arguments.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Casting
+	operator is a unary operator which works on only one operand, the</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>object.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.66in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates converting a class type to basic type:
+#include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Number</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section125" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-top: 0.06in; page-break-before: always">
+this-&gt;x = x;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">operator int()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<DIV ID="Section126" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.01in">int
+	temp = x; return x;</P>
+</DIV>
+<DIV ID="Section127" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.6in">Number
+	n1 = 20; cout&lt;&lt;&quot;x = &quot;&lt;&lt;n1; return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 20</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Conversion_from_one_class_type_to_anothe"></A>
+	<FONT COLOR="#4f81bd">Conversion from one class type to another
+	class type</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">While
+	writing programs it is common to assign an object of one class type
+	to an object of another class type as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>destination-object
+	= source-object;</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	In the above notation <I>destination-object </I>is an object of
+	destination class type and <I>source- object </I>is an object of
+	source class type. The conversion from source class type to
+	destination can be done in two ways based on in which class the
+	conversion is performed.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in"><A NAME="Conversion_in_source_class"></A>
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Conversion
+	in source class</B></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">When
+	performing conversion in source class, the type cast operator should
+	be overloaded. Syntax for overloading cast operator is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">operator typename( )</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//body of function</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">In
+	the above syntax <I>typename </I>is generally the destination class
+	name. Following program converts a square to a rectangle using
+	conversion in source class:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Rectangle</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+	{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+</DIV>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.6in; margin-top: 0.06in">
+int length; int breadth;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">Rectangle(int l, int
+b)</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<DIV ID="Section128" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.06in">length
+	= l; breadth = b;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;length
+	= &quot;&lt;&lt;length&lt;&lt;&quot;, breadth = &quot;&lt;&lt;breadth;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Square</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int side;</P>
+</DIV>
+<DIV ID="Section129" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Square(int s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section130" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">side = s;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;side
+	= &quot;&lt;&lt;side;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">operator
+	Rectangle()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.48in">Rectangle
+	r = Rectangle(side, side); return r;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.34in">Rectangle
+	rect(20, 30); Square sq(30);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.39in">rect
+	= sq;	//conversion from square to rectangle rect.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">length = 30, breadth =
+	30</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="Conversion_in_destination_class"></A>
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Conversion
+	in destination class</B></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">When performing
+	conversion in destination class, a constructor of destination class
+	with one argument of type source class should be created. Syntax of
+	the constructor is as follows:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+DestinationClass(SourceClass object)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//code of constructor</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program converts a square to a rectangle using conversion in
+destination class:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Square</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int side;</P>
+<DIV ID="Section131" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Square(int s)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section132" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">side = s;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int get_side()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return side;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Rectangle</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.6in">int
+	length; int breadth;</P>
+</DIV>
+<DIV ID="Section133" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Rectangle(int l, int
+	b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section134" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.83in">length
+	= l; breadth = b;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Rectangle(Square s)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">length = breadth =
+	s.get_side();</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;length
+	= &quot;&lt;&lt;length&lt;&lt;&quot;, breadth = &quot;&lt;&lt;breadth;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.34in">Rectangle
+	rect(20, 30); Square sq(30);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.94in">rect
+	= sq; rect.display();</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.51in; margin-top: 0.06in; line-height: 200%">
+Output of the above program is as follows: length = 30, breadth = 30</P>
+
+
+
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

@@ -1,0 +1,299 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Command Line Arguments</FONT></H1>
+
+
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Command_Line_Arguments"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Command
+Line Arguments</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The parameters passed to the program when the program is invoked are
+known as command line arguments. These parameters are the additional
+information like filename or other kind of input to the program. By
+passing command line arguments there is no need for the user to
+provide the input while executing the program.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+These command line arguments can be processed by using the arguments
+available in the <B>main </B>function. The <B>main </B>allows two
+parameters namely: <B>argc </B>and <B>argv. </B>The <B>argc
+</B>represents the argument counter which contains the number of
+arguments passed in the command line. The <B>argv </B>is a character
+pointer array which points to the arguments passed in the command
+line.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+To know the number of command line arguments, we can use the <B>argc
+</B>parameter of the <B>main </B>function and to access the
+individual arguments, we can use the <B>argv </B>array. The first
+element in the <B>argv </B>array is always the <B>program name. </B>So
+the first argument can be accessed by using <B>argv[1] </B>and so on.
+The main function will be as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.1in; width: 2.06in; height: 1.78in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">main(int
+	argc, char *argv[ ])</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">-----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">-----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Programs"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.71in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to open and close a file */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>FILE
+*fp;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.32in"><FONT SIZE=4>fp
+= fopen(&quot;C:\\xyz.txt&quot;, &quot;w&quot;); fclose(fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.71in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to read data from a file */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6in"><FONT SIZE=4>FILE
+*fp; char ch;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.39in"><FONT SIZE=4>fp
+= fopen(&quot;C:\\xyz.txt&quot;, &quot;r&quot;); while((ch=getc(fp))
+!= EOF)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;%c&quot;,ch);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.87in"><FONT SIZE=4>fclose(fp);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.88in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to write data to a file */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6in"><FONT SIZE=4>FILE
+*fp; char ch;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>fp =
+fopen(&quot;C:\\xyz.txt&quot;, &quot;w&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>while((ch
+= getchar()) != '\n')</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>putc(ch,
+fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.87in"><FONT SIZE=4>fclose(fp);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.69in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to append data to a file */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6in"><FONT SIZE=4>FILE
+*fp; char ch;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>fp
+= fopen(&quot;C:\\xyz.txt&quot;, &quot;a&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>while((ch
+= getchar()) != '\n')</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>putc(ch,
+fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.87in"><FONT SIZE=4>fclose(fp);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.04in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to read numbers and write numbers to a file
+*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6in"><FONT SIZE=4>FILE
+*fp; int i; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.64in"><FONT SIZE=4>fp
+= fopen(&quot;abc.txt&quot;,&quot;w&quot;); for(i = 1; i &lt;= 10;
+i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>putw(i,
+fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>fclose(fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.54in"><FONT SIZE=4>fp
+= fopen(&quot;abc.txt&quot;,&quot;r&quot;); while((i = getw(fp)) !=
+EOF)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;%d
+&quot;,i);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.87in"><FONT SIZE=4>fclose(fp);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.12in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to read and write mixed type data into
+files */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.92in"><FONT SIZE=4>char
+name[20], grade; int age, i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6in"><FONT SIZE=4>FILE
+*fp; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.95in"><FONT SIZE=4>fp
+= fopen(&quot;abc.txt&quot;,&quot;w&quot;); printf(&quot;Enter
+Student Details: \n&quot;); printf(&quot;Name\t Age\t Grade\n&quot;);
+for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-right: 2.72in"><FONT SIZE=4>fscanf(stdin,
+&quot;%s %d %c&quot;, name, &amp;age, &amp;grade); fprintf(fp, &quot;%s
+%d %c&quot;, name, age, grade);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>fclose(fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.13in"><FONT SIZE=4>fp
+= fopen(&quot;abc.txt&quot;,&quot;r&quot;); printf(&quot;Student
+details are: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-right: 2.66in; margin-top: 0in">
+<FONT SIZE=4>fscanf(fp, &quot;%s %d %c&quot;, name, &amp;age,
+&amp;grade); fprintf(stdout, &quot;%s %d %c\n&quot;, name, age,
+grade);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.87in"><FONT SIZE=4>fclose(fp);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.72in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to demonstrate ftell, fseek and rewind
+functions */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.77in"><FONT SIZE=4>FILE
+*fp; long offset; char ch; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.03in"><FONT SIZE=4>fp
+= fopen(&quot;abc.txt&quot;,&quot;w&quot;); printf(&quot;Enter some
+characters: &quot;); while((ch=getchar())!= '\n')</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>putc(ch,
+fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 1.96in; text-indent: -0in">
+<FONT SIZE=4>printf(&quot;Number of characters entered is:
+%ld\n\n&quot;,ftell(fp)); rewind(fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 1.56in; text-indent: -0in">
+<FONT SIZE=4>printf(&quot;After rewind file pointer is at location:
+%ld\n\n&quot;,ftell(fp)); fclose(fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>offset =
+0L;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.72in"><FONT SIZE=4>fp
+= fopen(&quot;abc.txt&quot;,&quot;r&quot;); while(feof(fp) == 0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.94in"><FONT SIZE=4>fseek(fp,
+offset, 0);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.94in; margin-right: 2.55in"><FONT SIZE=4>printf(&quot;Position
+of %c is %ld\n&quot;, getc(fp), ftell(fp)); offset++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>fseek(fp,
+-1L, 2);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.61in"><FONT SIZE=4>printf(&quot;\nFile
+contents in reverse: \n&quot;); do</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.94in"><FONT SIZE=4>putchar(getc(fp));</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.78in"><FONT SIZE=4>while(!fseek(fp,
+-2L, 1)); fclose(fp);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.24in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to demonstrate command line arguments */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.71in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; main(int argc, char</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>*argv[])</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6in"><FONT SIZE=4>FILE
+*fp; int i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.09in"><FONT SIZE=4>printf(&quot;Number
+of arguments is: %d\n&quot;,argc); fp = fopen(&quot;C:\\xyz.txt&quot;,
+&quot;w&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>for(i
+= 1; i &lt; argc; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0in"><FONT SIZE=4>fprintf(fp,
+&quot;%s &quot;, argv[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.95in"><FONT SIZE=4>fclose(fp);
+printf(&quot;Data Saved!&quot;); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in"><FONT SIZE=4>Running
+the program:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>C:/tc &gt;
+tcc file8.c</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>C:/tc &gt;
+file8 aaa bbb ccc ddd</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>aaa,
+bbb, ccc and ddd are the command line arguments.</FONT></P>
+{% endblock course %}

@@ -1,0 +1,711 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Control Statements</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When a program is executed, the statements are executed sequentially
+one after another if there are no control statements. However, in
+general, in almost every program there will be need to skip some
+statements, repeat a set statements or execute a set of statements
+based on a condition. Such types of execution can be achieved through
+control statements.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Control statements are generally divided into three categories: 1)
+Selection statements, 2) Iterative statements, and 3) Jump
+statements.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Selection_statements"></A>
+<FONT COLOR="#4f81bd">Selection statements</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+These statements allows programmers to execute a set of statements
+based on the value of a condition. Selection statements in C++ are
+if...else, nested if, else if ladder and switch statement.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always"><A NAME="if...else"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>if...else</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">The
+if...else statement is a two way selection statement. The syntax of
+if...else statement is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">if(condtion)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<DIV ID="TextSection" DIR="LTR" GUTTER=11 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">else</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">//Execute statements
+	when condition is true</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">//Execute
+	statements when condition is false</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+</DIV>
+<DIV ID="Section1" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+	the above syntax, when </FONT><FONT SIZE=3><I>condition </I></FONT><FONT SIZE=3>evaluates
+	to </FONT><FONT SIZE=3><I>true</I></FONT><FONT SIZE=3>, </FONT><FONT SIZE=3><I>if
+	</I></FONT><FONT SIZE=3>block is executed. Otherwise, </FONT><FONT SIZE=3><I>else</I></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">block is executed.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">Consider
+	the following program which prints out the largest number among two
+	numbers using <I>if...else </I>statement:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.9in">cout&lt;&lt;&quot;Enter
+	first number: &quot;; cin&gt;&gt;a;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.71in; margin-top: 0in">
+	cout&lt;&lt;&quot;Enter second number: &quot;; cin&gt;&gt;b;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">if(a&gt;b)</P>
+</DIV>
+<DIV ID="Section2" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT>else</P>
+	<P CLASS="western" STYLE="margin-left: 0.21in">cout&lt;&lt;a&lt;&lt;&quot;
+	is the largest number&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.21in">cout&lt;&lt;b&lt;&lt;&quot;
+	is the largest number&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section3" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and output of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.77in">Enter
+	first number: 15 Enter second number: 7 15 is the largest number</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">In the above program
+	as the condition <I>a&gt;b </I>returns <I>true</I>, only the <I>if
+	</I>block is executed.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I><B>Note:
+	</B></I></FONT><FONT SIZE=3>Remember that the </FONT><FONT SIZE=3><I>else
+	</I></FONT><FONT SIZE=3>part in </FONT><FONT SIZE=3><I>if...else </I></FONT><FONT SIZE=3>is
+	entirely optional. But, on the contrary you can't write </FONT><FONT SIZE=3><I>else
+	</I></FONT><FONT SIZE=3>without an </FONT><FONT SIZE=3><I>if
+	</I></FONT><FONT SIZE=3>statement.</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><I><B>Note: </B></I>When
+	<I>if </I>block and <I>else </I>block contains only one statement,
+	braces can be removed.</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always"><A NAME="Nested_if"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Nested
+if</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">To
+check multiple conditions we can use logical operators or we can use
+nested <I>if </I>statement. Syntax of nested <I>if </I>is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">if(condtion)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.97in">//Execute
+statements when condition is true if(another condition)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<DIV ID="Section4" DIR="LTR" GUTTER=11 STYLE="column-count: 3">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">else</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">else</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">//Execute statements
+	when condition is true</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">//Execute
+	statements when condition is false</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+</DIV>
+<DIV ID="Section5" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">//Execute statements
+	when condition is false</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+	In the above syntax if first <I>condition </I>is true, then next
+	condition is evaluated and so on. Consider the following program to
+	find out the largest among three numbers using nested if statement:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">int a, b, c;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.9in">cout&lt;&lt;&quot;Enter
+	first number: &quot;; cin&gt;&gt;a;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.71in">cout&lt;&lt;&quot;Enter
+	second number: &quot;; cin&gt;&gt;b;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.85in">cout&lt;&lt;&quot;Enter
+	third number: &quot;; cin&gt;&gt;c;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">if(a&gt;b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+</DIV>
+<DIV ID="Section6" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.19in">if(a&gt;c)</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.28in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-top: 0in">cout&lt;&lt;a&lt;&lt;&quot;
+	is the largest number&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section7" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">else if(b&gt;c)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;b&lt;&lt;&quot;
+	is the largest number&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">else</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;c&lt;&lt;&quot;
+	is the largest number&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Input and output of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.7in">Enter
+first number: 5 Enter second number: 10 Enter third number: 20 20 is
+the largest number</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>else
+if Ladder</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The <I>else if </I>ladder is a multi-way selection statement that
+allows us to select one set of statements among multiple sets. The
+set of statements to be executed is based on a condition. Syntax of
+<I>else if </I>ladder is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">if(condition 1)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Statements to execute</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">else if(condition 2)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">//Statements
+to execute</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">else if(condition 3)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Statements to execute</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">else if(condition n)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section8" DIR="LTR" GUTTER=11 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">else</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">//Statements to
+	execute</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">//Statements
+	to execute</P>
+</DIV>
+<DIV ID="Section9" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+	In the above syntax, only one block will be executed based on which
+	condition evaluates to <I>true</I>. If one of the condition is <I>true,
+	</I>remaining conditions will be skipped. Final <I>else </I>is
+	optional.</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Consider the following
+	program which checks whether the entered character is a vowel or not
+	using <I>else if </I>ladder:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">char ch;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.99in">cout&lt;&lt;&quot;Enter
+	a character: &quot;; cin&gt;&gt;ch;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">if(ch == 'a')</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.44in; text-indent: 0.5in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;a is a vowel&quot;&lt;&lt;endl; else if(ch == 'e')</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.44in; text-indent: 0.5in">
+cout&lt;&lt;&quot;e is a vowel&quot;&lt;&lt;endl; else if(ch == 'i')</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.47in; text-indent: 0.5in">
+cout&lt;&lt;&quot;i is a vowel&quot;&lt;&lt;endl; else if(ch == 'o')</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.43in; text-indent: 0.5in">
+cout&lt;&lt;&quot;o is a vowel&quot;&lt;&lt;endl; else if(ch == 'u')</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;u is
+a vowel&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">else</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;ch&lt;&lt;&quot;
+is not a vowel&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>First run:</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.08in">Enter
+a character: e e is a vowel</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>Second run:</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.07in">Enter
+a character: o o is a vowel</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>Third run:</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.07in">Enter
+a character: h h is not a vowel</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="switch"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>switch</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The </FONT><FONT SIZE=3><I>switch
+</I></FONT><FONT SIZE=3>statement is also a multi-way selection
+statement and is similar to </FONT><FONT SIZE=3><I>else if </I></FONT><FONT SIZE=3>in
+functionality. Frequently used keywords along with </FONT><FONT SIZE=3><I>switch
+</I></FONT><FONT SIZE=3>are: </FONT><FONT SIZE=3><I>case, break, </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>default</I></FONT><FONT SIZE=3>. The syntax of
+a </FONT><FONT SIZE=3><I>switch </I></FONT><FONT SIZE=3>statement is
+as follows:</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">switch(expression)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">case Label1:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.83in">//Statements
+to execute break;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">case Label2:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.82in">//Statements
+to execute break;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">case LabelN:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.82in">//Statements
+to execute break;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">default:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">//Statements to execute</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In the above
+syntax, the value of </FONT><FONT SIZE=3><I>expression </I></FONT><FONT SIZE=3>is
+matched against one of the labels </FONT><FONT SIZE=3><I>Label1,
+Label2, ..., LabelN</I></FONT><FONT SIZE=3>. All the labels must be
+constants. If none of the labels match, the </FONT><FONT SIZE=3><I>default
+</I></FONT><FONT SIZE=3>block is executed. The </FONT><FONT SIZE=3><I>default
+</I></FONT><FONT SIZE=3>block is optional.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+At the end of each case you can see a <I>break </I>statement which is
+optional. The execution stops whenever the <I>break </I>is
+encountered. Otherwise, the execution continues with the next case
+until a <I>break </I>is encountered or it reaches the end of <I>switch</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Consider the following program which checks whether the entered
+character is a vowel or not using <I>switch</I>:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">char ch;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.99in">cout&lt;&lt;&quot;Enter
+a character: &quot;; cin&gt;&gt;ch;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">switch(ch)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">case 'a':</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.94in">cout&lt;&lt;&quot;a
+is a vowel&quot;&lt;&lt;endl; break;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">case 'e':</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.94in">cout&lt;&lt;&quot;e
+is a vowel&quot;&lt;&lt;endl; break;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">case
+'i':</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.97in">cout&lt;&lt;&quot;i
+is a vowel&quot;&lt;&lt;endl; break;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">case 'o':</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.93in">cout&lt;&lt;&quot;o
+is a vowel&quot;&lt;&lt;endl; break;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">case 'u':</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.93in">cout&lt;&lt;&quot;u
+is a vowel&quot;&lt;&lt;endl; break;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">default:</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;ch&lt;&lt;&quot;
+is not a vowel&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the program is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>First run:</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.08in">Enter
+a character: e e is a vowel</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>Second run:</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.07in">Enter
+a character: v v is not a vowel</P>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Iterative_statements_or_Looping_statemen"></A>
+<FONT COLOR="#4f81bd">Iterative statements or Looping statements</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">Iterative
+statements are used to repeat a set of statements in a loop based on
+a condition. Iterative or looping statements in C++ are <I>while,
+do-while, </I>and <I>for</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="while_Loop"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>while
+Loop</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+A <I>while </I>loop is pre test loop which is used to repeat a set of
+statements as long as the condition is true. Syntax of <I>while </I>is
+as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">while(condition)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Statements to be
+executed repeatedly</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Consider
+the following program which prints 1-10 using a <I>while </I>loop:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.99in">int
+i = 1; while(i&lt;=10)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.44in">cout&lt;&lt;i&lt;&lt;&quot;
+&quot;; i++;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in">cout&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">1 2 3 4 5 6 7 8 9 10</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="do-while_Loop"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>do-while
+Loop</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+A <I>do-while </I>loop is a post test loop i.e., the body of loop is
+executed and then the condition is evaluated. Speciality of do-while
+loop is, the body of this loop is guaranteed to be executed at least
+once. Syntax of do-while loop is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">do</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Statements to be
+executed repeatedly</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}while(condition);</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.59in; line-height: 200%">
+Consider the following program which prints 1-10 using do-while loop:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0.06in; page-break-before: always">
+using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.22in">int
+i = 1; do</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.43in">cout&lt;&lt;i&lt;&lt;&quot;
+&quot;; i++;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.86in">}while(i&lt;=10);
+cout&lt;&lt;endl; return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">1 2 3 4 5 6 7 8 9 10</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in"><A NAME="for_Loop"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>for
+Loop</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">Compared
+to the other two loops, <I>for </I>loop is somewhat complex. Syntax
+of <I>for </I>loop is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">for(initialization;
+condition; update)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Statements to be
+executed repeatedly</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In </FONT><FONT SIZE=3><I>for
+</I></FONT><FONT SIZE=3>loop, </FONT><FONT SIZE=3><I>initialization
+</I></FONT><FONT SIZE=3>is executed first followed by the evaluation
+of </FONT><FONT SIZE=3><I>condition</I></FONT><FONT SIZE=3>. If it is
+true, body of </FONT><FONT SIZE=3><I>for </I></FONT><FONT SIZE=3>loop
+is executed followed by execution of </FONT><FONT SIZE=3><I>update</I></FONT><FONT SIZE=3>.
+Then </FONT><FONT SIZE=3><I>condition </I></FONT><FONT SIZE=3>is
+again evaluated and so</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>on.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.98in; margin-top: 0in; line-height: 0.38in">
+Consider the following program which prints 1-10 using <I>for </I>loop:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=1;i&lt;=10;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;i&lt;&lt;&quot;
+&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in">cout&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.51in; margin-top: 0.06in; line-height: 200%">
+Output of the above program is as follows: 1 2 3 4 5 6 7 8 9 10</P>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Jump_Statements"></A>
+<FONT COLOR="#4f81bd">Jump Statements</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Jump statements in C++ are used to transfer control unconditionally.
+Jumps statements in C++ consists of <I>break, continue, return, </I>and
+<I>goto</I>. Usage of jump statements must be limited in programs as
+they might decrease readability or cause undesired effects.
+Especially usage of <I>goto </I>is strictly not recommended as it
+might lead to spaghetti code.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="break"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>break</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+We already used <I>break </I>in <I>switch </I>statement. It can also
+be used inside loops to transfer control outside the loop. Generally
+such transfer control is associated with a condition evaluation.
+Consider the following program which demonstrates the use of <I>break</I>:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=1;i&lt;=10;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.38in">if(i==5)
+break; cout&lt;&lt;i&lt;&lt;&quot; &quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in">cout&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">1 2 3 4</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above program
+when <I>i </I>becomes 5, condition <I>i==5 </I>becomes true and the
+control is transferred to the next statement outside the <I>for </I>loop.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="continue"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>continue</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The <I>continue </I>statement can be used only inside loops. When
+used inside a loop, statements after the <I>continue </I>statement
+inside the loop body are skipped and execution again starts from the
+first statement inside the loop. Consider the following program which
+demonstrates the use of <I>continue</I>:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=1;i&lt;=10;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.18in">if(i==5)
+continue; cout&lt;&lt;i&lt;&lt;&quot; &quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in">cout&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output for the above
+program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">1 2 3 4 6 7 8 9 10</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above program,
+when <I>i </I>becomes 5, statement after <I>continue </I>is skipped
+and execution again starts from beginning of the loop.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="return"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>return</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The <I>return </I>statement is generally used inside functions to
+return control to the calling function which is in general <I>main()
+</I>function. When a <I>return </I>statement is encountered, control
+exits the current function and starts with the next statement after
+the function call. We will learn about <I>return </I>statement in
+details later in functions topic.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="goto"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>goto</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">The
+<I>goto </I>statement is used to transfer control to a point backward
+or forward from the current line. The point of transfer is identified
+by a label. Syntax of <I>goto </I>is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">Label:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">goto Label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">We
+can use <I>goto </I>anywhere in a program and also the <I>Label </I>can
+be placed before or after the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>goto </I>statement.
+Since use of <I>goto </I>is strictly prohibited, we will not discuss
+about it further.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

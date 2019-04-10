@@ -1,0 +1,33 @@
+body{
+  margin:0;
+  padding:0;
+  background-color: #e5e5e5;
+}
+.contain{
+  margin:5% 20% 0 20%;
+  background-color: white;
+  width:60%;
+  float:left;
+  font-family: roboto;
+}
+.box-container{
+  float:left;
+  width:50%;
+  padding-bottom:50px;
+
+}
+img{
+  padding-left: 25%;
+}
+a{
+  text-decoration: none;
+}
+.name{
+
+  padding-left: 46%;
+  padding-top:20px;
+
+}
+.link-strip{
+  padding:10px 0 30px 20%;
+}

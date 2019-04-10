@@ -1,0 +1,670 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Structures</FONT></H1>
+    
+    
+     <P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.16in"><A NAME="Structures"></A>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+We know that arrays can be used to represent a collection of elements
+of the same data type like int, float etc. They cannot be used to
+hold a collection of different types of elements. C supports a
+structured data type known as a <B>structure</B>, a way for packing
+data of different data types. A <B>structure </B>is a convenient tool
+for handling a group of logically related data items. For example, it
+can be used to represent the details of a student or the details of a
+text book etc.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><B>Definition: </B>A
+structure is a collection of heterogeneous data elements referred by
+the same name.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Defining_a_Structure"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Defining
+a Structure</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Unlike arrays, structures must be first defined first for their later
+use. The syntax for defining a structure is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.89in; width: 2.5in; height: 1.42in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">struct
+	sturcturename/tagname</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.97in">datatype
+	var1; datatype var2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">----</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">----</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+The keyword <B>struct </B>declares a structure. The <B>structurename
+/ tagname </B>represents the name of the structure. The structure
+definition is always terminated with a semicolon. Let us see an
+example for defining a structure to store the details of a student:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.89in; width: 2.5in; height: 1.42in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">struct
+	student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 0.92in; text-indent: -0in">
+	char name[20]; char rollno[15]; int age;</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in">char
+	grade;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: -0in">
+In the above example, <B>student </B>is the name of the structure.
+The members of the student structure are: name, rollno, age and
+grade. A structure itself does not occupy any memory in the RAM.
+Memory is allocated only when we create variables using the
+structure.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Declaring_Structure_Variables"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Declaring
+Structure Variables</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+After defining a structure, we can create variables of that type. A
+structure variable declaration is similar to the declaration of
+variables of any other data types. It includes the following
+elements:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">The keyword <B>struct.</B></P>
+	<LI><P>The structure name or tagname.</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">List of variable
+	names separated with commas.</P>
+	<LI><P STYLE="line-height: 0.19in">A terminating semicolon.</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in">The
+syntax for declaring structure variables is as shown below:<SPAN DIR="LTR" STYLE="position: relative; top: 0.28in; left: 2.89in; width: 2.88in; height: 0.3in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.11in; margin-top: 0.05in">struct
+	structurename var1, var2, …., varN;</P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-top: 0.12in">
+Example for creating structure variables is shown below:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.06in"></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.55in; margin-top: 0.06in">
+We can also combine the structure definition and the declaration of
+structure variables into a single line as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.46in"></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Type-Defined_Structures"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Type-Defined
+Structures</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in">We
+can use the keyword <B>typedef </B>to define a structure as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.89in; width: 2.5in; height: 1.42in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">typedef
+	struct</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 0.92in; text-indent: -0in">
+	char name[20]; char rollno[15]; int age;</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; line-height: 0.19in">
+	char grade;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}student;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.61in; margin-top: 0in">
+The name <B>student </B>represents the structure definition
+associated with it and therefore can be used to declare structure
+variables as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.47in; width: 3.33in; height: 0.33in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0.05in">student
+	student1, student2, student3;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="Accessing_Structure_Members"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Accessing
+Structure Members</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+We can access and assign values to the members of a structure in a
+number of ways. As mentioned earlier, the members themselves are not
+variables. They should be linked to the  structure variables in order
+to make them meaningful members. The link between a member and a
+variable is established using the member operator ‘ . ‘ which is
+also known as dot operator or period operator. The syntax for
+accessing a structure member is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.15in; left: 2.89in; width: 2.5in; height: 0.34in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.23in; margin-top: 0.05in">structure-varaible.membername</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.05in">Examples
+of accessing the members of the student structure are shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.51in; width: 1.25in; height: 0.73in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">student1.name</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">student1.age</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Structure_Initialization"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Structure
+Initialization</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Like any other data type, a structure variable can be initialized at
+compile time. An example of compile time initialization of the
+student structure is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.4in; width: 3.47in; height: 1.84in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in; line-height: 0.19in">
+	struct student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 1.4in; text-indent: -0in">
+	char name[20]; char rollno[15]; int age;</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-top: 0in; line-height: 0.19in">
+	char grade;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.35in">struct
+	student student1 = {“teja”,”10A1”,26,’A’}; struct
+	student student2 = {“raju”,”10A2”,24,’B’};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; margin-top: 0.08in">
+In the above example: teja, 10A1, 26 and A are assigned to student1’s
+name, rollno, age and grade. Whereas raju, 10A2, 24, B are assigned
+to student2’s name, rollno, age and grade.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<B>Note: </B><I>Partial initialization of a structure variable is
+supported. For example we can assign values to name and rollno and
+leave out age and grade. In case of partial initialization, the
+default values for int type is zero. For float and double it is 0.0.
+For characters and strings it is ‘\0’.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">An example for dynamic
+initialization is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.89in; width: 2.5in; height: 0.86in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.67in; margin-top: 0.05in">
+	gets(student1.name); gets(student1.rollno); scanf(%d”,
+	&amp;student1.age); scanf(“%c”, &amp;grade);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Arrays_of_Structures"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Arrays
+of Structures</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+We use structures to describe the format of a number of related
+variables. For example, we want to store details of 100 textbooks it
+will become difficult to declare and maintain 100 variables and store
+the data. Instead, we can declare and array of structure variables as
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.13in; left: 2.9in; width: 2.5in; height: 1.6in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">struct
+	textbook</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 0.36in; text-indent: -0in">
+	char name[40]; char author[20]; int pages;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">struct textbook
+	book[10];</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.61in; margin-top: 0.05in"><A NAME="Structures_within_Structure"></A>
+In the above example, we are declaring an array book with 10 elements
+of the type <B>textbook </B>which is a structure.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Structures
+within Structure</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+In C, structures can be nested. A structure can be defined within in
+another structure. The members of the inner structure can be accessed
+using the variable of the outer structure as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 1.78in"></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">An example for a
+nested structure is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.53in; width: 3.22in; height: 2.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">struct
+	student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 1.09in; margin-right: 1.73in; line-height: 0.19in">
+	struct</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.96in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 0.52in; text-indent: -0in">
+	char fname[20]; char mname[20]; char lname[20];</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.39in">}name;
+	char grade;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.39in; text-indent: 0in">
+	struct student s1; strcpy(s1.name.fname, “satish”);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.11in; text-indent: -0in; margin-top: 0.09in"><A NAME="Structures_and_Functions"></A>
+In the above example, <B>student </B>is the outer structure and the
+inner structure <B>name </B>consists of three members: fname, mname
+and lname.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Structures
+and Functions</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+We know that the functions are the basic building blocks of a C
+program. So, it is natural for C language to support passing
+structures as parameters in functions. We pass a copy of the entire
+structure to the called function. Since the function is working on a
+copy of the structure, any changes to structure members within the
+function are not reflected in the original structure. The syntax for
+passing the structure variable as a parameter is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.35in; width: 3.58in; height: 1.47in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in; line-height: 0.19in">
+	return-type function-name(struct structname var)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">----</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">----</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">----</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">return
+	expression;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.54in">/*
+C program to create a structure */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">struct
+student</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; margin-right: 5.62in">
+char name[20]; char rollno[15]; int age;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in">char
+grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.2in">struct
+student student1; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.7in; margin-top: 0.04in">
+/* C program to create a structure using typedef*/ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in; margin-top: 0in">
+#include&lt;conio.h&gt; main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">typedef struct</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; margin-right: 5.62in; margin-top: 0in">
+char name[20]; char rollno[15]; int age;</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">char
+grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}student;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.59in">student
+student1; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.54in; margin-top: 0.04in">
+/* C program to create a structure */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">struct
+student</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; margin-right: 5.62in">
+char name[20]; char rollno[15]; int age;</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-top: 0in; line-height: 0.19in">
+char grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.43in">}student1,
+student2; clrscr();</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.89in; margin-top: 0.04in">
+/* C program to demostrate static initialization of a structure */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">struct student</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; margin-right: 5.62in">
+char name[20]; char rollno[15]; int age;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; line-height: 0.19in">
+char grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 3.73in">struct
+student student1 = {&quot;teja&quot;,&quot;10A1&quot;,26,'A'};
+clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 3.44in; text-indent: -0in">
+printf(&quot;Name of student1 is: %s\n&quot;,student1.name);
+printf(&quot;Rollno of student1 is: %s\n&quot;,student1.rollno);
+printf(&quot;Age of student1 is: %d\n&quot;,student1.age);
+printf(&quot;Grade of student1 is: %c\n&quot;,student1.grade);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.7in; margin-top: 0.04in">
+/* C program to demostrate dynamic initialization of a structure */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in; line-height: 0.19in">
+struct student</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; margin-right: 5.61in">
+char name[20]; char rollno[15]; int age;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.86in; line-height: 0.19in">
+char grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.2in; margin-top: 0in">
+struct student student1; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.31in">printf(&quot;Enter
+the name of student1: &quot;); gets(student1.name);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.3in">printf(&quot;Enter
+the rollno of student1: &quot;); gets(student1.rollno);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.31in">printf(&quot;Enter
+the age of student1: &quot;); scanf(&quot;%d&quot;,&amp;student1.age);
+printf(&quot;Enter the grade of student1: &quot;); fflush(stdin);
+scanf(&quot;%c&quot;,&amp;student1.grade);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 3.2in">printf(&quot;\n\nName
+of student1 is: %s\n&quot;,student1.name); printf(&quot;Rollno of
+student1 is: %s\n&quot;,student1.rollno);</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 3.46in">printf(&quot;Age
+of student1 is: %d\n&quot;,student1.age); printf(&quot;Grade of
+student1 is: %c\n&quot;,student1.grade); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.9in; margin-top: 0.04in">
+/* C program for copying one structure variable into another */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.7in">
+#include&lt;conio.h&gt; #include&lt;string.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-top: 0in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">struct
+textbook</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.55in">char
+name[40]; char author[20]; int pages;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.38in">struct
+textbook t1,t2; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.32in">strcpy(t1.name,
+&quot;C Programming&quot;); strcpy(t1.author, &quot;E
+Balaguruswamy&quot;); t1.pages = 100;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">t2
+= t1;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 3.74in">printf(&quot;Name
+of text book is: %s&quot;,t2.name); printf(&quot;\nAuthor of text
+book is: %s&quot;,t2.author); printf(&quot;\nPages in text book are:
+%d&quot;,t2.pages); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.75in; margin-top: 0.04in">
+/* C program for comparing structure variables */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.7in">
+#include&lt;conio.h&gt; #include&lt;string.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">struct
+textbook</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.55in">char
+name[40]; char author[20]; int pages;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.38in">struct
+textbook t1,t2; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.32in; margin-top: 0in">
+strcpy(t1.name, &quot;C Programming&quot;); strcpy(t1.author, &quot;E
+Balaguruswamy&quot;); t1.pages = 100;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">t2
+= t1;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">if(t1.name == t2.name
+&amp;&amp; t1.author == t2.author &amp;&amp; t1.pages == t2.pages)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">printf(&quot;t1 and t2
+are equal&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">else</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">printf(&quot;t1 and t2
+are not equal&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.6in; margin-top: 0.04in">
+/* C program to demonstrate arrays of structures */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">struct
+textbook</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.55in; margin-top: 0in">
+char name[40]; char author[20]; int pages;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.12in">struct
+textbook book[10]; int i;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">for(i
+= 0; i &lt; 3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">fflush(stdin);</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 3.97in; margin-top: 0in">
+printf(&quot;Enter the name of book %d: &quot;,i+1);
+gets(book[i].name);</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 3.9in">printf(&quot;Enter
+the author of book %d: &quot;,i+1); gets(book[i].author);</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 3.96in">printf(&quot;Enter
+the pages of book %d: &quot;,i+1); scanf(&quot;%d&quot;,&amp;book[i].pages);</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">printf(&quot;\n&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">for(i
+= 0; i &lt; 3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 3.09in">printf(&quot;Name
+of book %d is: %s \n&quot;,i+1,book[i].name); printf(&quot;Author of
+book %d is: %s \n&quot;,i+1,book[i].author); printf(&quot;Pages in
+book %d is: %d \n&quot;,i+1,book[i].pages); printf(&quot;\n&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.74in">/*
+C program to demonstrate partial initialization of a structure */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">struct textbook</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.55in">char
+name[40]; char author[20]; int pages;</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">float
+price;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 2.97in">struct
+textbook t1 = {&quot;C Programming&quot;,&quot;E Balaguruswamy&quot;};
+clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.53in">printf(&quot;Name
+is: %s\n&quot;,t1.name); printf(&quot;Author is: %s\n&quot;,t1.author);
+printf(&quot;Pages are: %d\n&quot;,t1.pages); printf(&quot;Price is:
+%f&quot;,t1.price); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.29in; margin-top: 0.04in">
+/* C program to demostrate structure within structure */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.7in">
+#include&lt;conio.h&gt; #include&lt;string.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.19in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">struct
+student</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">struct</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">{</P>
+<P CLASS="western" STYLE="margin-left: 1in; margin-right: 5.36in">char
+fname[20]; char mname[20]; char lname[20];</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.87in">}name;
+char grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}s1;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.41in; margin-top: 0in">
+strcpy(s1.name.fname, &quot;Pericherla&quot;); strcpy(s1.name.mname,
+&quot;Satya&quot;); strcpy(s1.name.lname, &quot;Suryateja&quot;);
+s1.grade = 'A';</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 1.71in">printf(&quot;Name
+is: %s %s %s \n&quot;,s1.name.fname,s1.name.mname,s1.name.lname);
+printf(&quot;Grade is: %c&quot;,s1.grade);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.92in">/*
+C program to demonstrate passing structure to a function */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+struct textbook</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.69in">char
+name[40]; char author[20]; int pages;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">float
+price;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.81in">void
+dispbook(struct textbook t); main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 2.5in">struct
+textbook t1={&quot;C Programming&quot;,&quot;E
+Balaguruswamy&quot;,300,200}; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.88in">dispbook(t1);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">void dispbook(struct
+textbook t)</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.57in">printf(&quot;Name
+is: %s \n&quot;,t.name); printf(&quot;Author is: %s \n&quot;,t.author);
+printf(&quot;Pages are: %d \n&quot;,t.pages); printf(&quot;Price is:
+%f&quot;,t.price);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.96in; margin-top: 0.04in">
+/* C program to calculate size of a structure */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">struct textbook</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.55in">char
+name[40]; char author[20]; int pages;</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">float price;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.55in">struct
+textbook t1; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.08in">printf(&quot;Size
+of structure is: %d&quot;,sizeof(t1)); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

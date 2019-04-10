@@ -1,0 +1,288 @@
+{% extends "layout.html" %}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Modules</FONT></H1>
+
+
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0in"><FONT COLOR="#4f81bc">Introduction</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A function allows to
+reuse a piece of code. A module on the other hand contains multiple
+functions, variables, and other elements which can be reused. A
+module is a Python file with .py extension. Each</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">.py
+file can be treated as a module.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">We can
+print the name of existing module by using the <U>    </U><I>name</I><I><U>
+	</U></I>attribute of the module as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>print(“Name of
+module is:”,</I><I><U> </U></I><I>name</I><I><U> </U></I><I>)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.41in; margin-top: 0.06in; page-break-before: always">
+Above code prints the name of module as<U>   </U><I>main</I><I><U>
+</U></I>. By default the name of the current module will   be<U> </U><I>main</I><I><U>
+</U></I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">Module Loading and
+Execution</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A module imported in a Python program should available where the
+program file is located. If the module is not available where the
+program file is, it looks for the module in the directories available
+in PYTHONPATH. If the module is still not found, it will search in
+the <I>lib </I>directory of Python installation. If still not found,
+it will generated error names <I>ImportError</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Once a module is located, it is loaded into memory. A compiled
+version of the module will be created with <I>.pyc </I>extension.
+When the module is referenced next time, the <I>.pyc </I>file will be
+loaded into memory instead of recompiling it. A new compiled version
+(.pyc) will be generated whenever it is out of date. Programmer can
+also force the Python shell to recompile the .py file by using the
+<I>reload </I>function.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">import Statement</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; margin-top: 0in">
+The <I>import </I>keyword allows to use functions or variables
+available in a module. Syntax of import statement is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>import module_name</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">After importing the
+module, we can access functions and variables available in it as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.93in"><I>module_name.variable_name
+module_name.function_name(arguments)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following program
+imports the pre-defined <I>sys </I>module and prints the PYTHONPATH
+information by using the <I>path </I>variable as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.58in"><I>import
+sys print(sys.path)</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Following
+program imports the pre-defined <I>random </I>module and prints a
+random number by calling the <I>choice </I>function as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.26in; margin-top: 0in">
+<I>import random print(random.choice(range(1,101)))</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Above
+code generates a random number in the range 1 to 100.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">from...import
+Statement</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A module contains several variables and functions. When we use <I>import
+</I>statement we are importing everything in the module. To import
+only selected variables or functions from the module, we use
+<I>from...import </I>statement. To import everything from the module
+we can write:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>from
+module-name import *</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">For
+example to import the <I>pi </I>variable from the math module we can
+write:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I>from
+math import pi</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Now, we can directly
+use pi variable in our program as:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>pi * r * r</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">We can import multiple
+elements from the module as:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>from module-name
+import ele1, ele2, ...</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">We can also import a
+module element with another name (alias) using the <I>as </I>keyword
+as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>from
+module-name import element as newname</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">We
+can access the command line parameters passed to a Python script
+using the <I>argv </I>variable available in the <I>sys </I>module as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>import
+sys</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>print(sys.argv[0],
+sys.argv[1], ...)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">We can terminate a
+Python script abruptly by using the <I>exit() </I>method as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.41in"><I>import
+sys sys.exit(“Error”)</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Creating
+Modules</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A python file with .py
+extension is treated as a module. For example, the below script is
+saved as</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>circle.py</I>:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.24in"><I>from
+math import pi def area(r):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.03in; text-indent: 0.5in">
+<I>return pi*r*r*r def peri(r):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><I>return
+2*pi*r</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Following
+is the main module file named <I>test.py </I>in which we import our
+own module <I>circle </I>as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>import
+circle</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>r
+= int(input())</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>print(&quot;Area of
+circle is:&quot;, circle.area(r))</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Notice that we are
+using <I>area() </I>function which was defined in the module <I>circle</I>.
+Remember that</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.03in; line-height: 200%">
+<I>circle.py </I>and <I>test.py </I>files should be at the same
+location. Steps for creating and using our own module:</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.23in; line-height: 100%">Define the
+	variables, functions, and other elements that you want and save the
+	file as filename.py.</P>
+	<LI><P STYLE="line-height: 0.19in">The filename will server as the
+	module name.</P>
+	<LI><P STYLE="margin-right: 0.23in; margin-top: 0.06in; line-height: 100%; page-break-before: always">
+	Now, create a new file (our main module) in which we can import our
+	module by using import or from...import statement.</P>
+	<LI><P STYLE="line-height: 0.19in">Use the variables or functions in
+	the created module using dot (.) operator.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.11in"><FONT COLOR="#4f81bc">Namespace</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A namespace is a logical collection of names. Namespaces are used to
+eliminate name collisions. Python does not allow programmers to
+create multiple identifiers with same name. But, in some case we need
+identifiers having same name.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For example, consider
+two modules <I>module1 </I>and <I>module </I>have the same function
+<I>foo() </I>as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.82in; margin-top: 0in">
+<I>#Module 1 def foo():</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.4in; text-indent: 0.5in">
+<I>print(“Foo in module 1”) #Module 2</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>def
+foo():</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>print(“Foo in
+module 2”)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">When we import both
+modules into same program and try to refer <I>foo(), </I>error will
+be generated:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 5.52in">
+<I>import module1 import module2 foo()</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">To avoid the error, we
+have to use fully qualified name as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.62in"><I>module1.foo()
+module2.foo()</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Each module has its own
+namespace.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Built-in,
+Global, Local Namespaces</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The <I>built-in namespace </I>contains all the built-in functions and
+constants from the<U>  </U><I>builtin</I><I><U> </U></I><I> </I>library.
+  The <I>global namespace </I>contains all the elements in the
+current module. The <I>local namespace </I>contains all the elements
+in the current function or block. Runtime will search for the
+identifier first in the local, then in the global, then finally in
+the built-in namespace.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+{%endblock course%}

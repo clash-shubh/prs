@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>courses</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='courses.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Arvo|Cagliostro|Dancing+Script|Dosis|Gloria+Hallelujah|IBM+Plex+Sans+Condensed|Indie+Flower|Josefin+Sans|Karla|Lobster|Mina|Nanum+Gothic|Open+Sans|Pacifico|Roboto|Roboto+Condensed|Shadows+Into+Light|Signika|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='header.css') }}">
+  </head>
+  <body>
+    <nav>
+      <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+    <div class="logo">
+        <div class="logo-img">
+          <img src="{{url_for('static',filename="i.png")}}" height="60px" width="60px">
+        </div>
+    </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="index">Home</a></li>
+          <li><a href="courses">courses</a></li>
+          <li><a href="forum">forums</a></li>
+          {% if session['username'] %}
+          <li>hello, {{session['username']}}</li>
+          <li><a href="signout">signout </a></li>
+          {% endif %}
+          {% if not session['username'] %}
+          <li><a href="signup">Sign Up </a></li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </nav>
+
+
+<div class="contain">
+    <div class="box-container">
+      <a href="python_courses">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/py-logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        Python
+      </div>
+      </a>
+    </div>
+
+
+
+
+
+    <div class="box-container">
+      <a href="cpp_courses">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/cpp_logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        C++
+      </div>
+      </a>
+    </div>
+
+
+    <div class="box-container">
+      <a href="c_courses">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/c_logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        C
+      </div>
+      </a>
+    </div>
+
+    <div class="box-container">
+      <a href="java_courses">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/java_logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        java
+      </div>
+      </a>
+    </div>
+
+    <div class="box-container">
+      <a href="cpp_introduction">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/php_logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        php
+      </div>
+      </a>
+    </div>
+
+    <div class="box-container">
+      <a href="cpp_introduction">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/ruby_logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        ruby
+      </div>
+      </a>
+    </div>
+
+    <div class="box-container">
+      <a href="cpp_introduction">
+      <div class="image">
+        <img src="{{url_for('static',filename='img/js_logo.png')}}" height=200px width=200px>
+      </div>
+      <div class="name">
+        javascript
+      </div>
+      </a>
+    </div>
+
+
+<div class="box-container">
+  <a href="cpp_introduction">
+  <div class="image">
+    <img src="{{url_for('static',filename='img/kotlin_logo.png')}}" height=200px width=200px>
+  </div>
+  <div class="name">
+    kotlin
+  </div>
+  </a>
+</div>
+</div>
+
+  </body>
+</html>

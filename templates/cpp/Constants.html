@@ -1,0 +1,314 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Constants</FONT></H4>
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+While programming you might need to store certain values which do not
+change throughout the program. For example, in mathematical formulae
+for calculating the area and perimeter of a circle we need the value
+of PI to be same. Such values are maintained as constants.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">A
+constant is similar to a variable in the sense it is a placeholder in
+memory. Only difference is value of a constant cannot be changed once
+initialized. Constants in C++ can be:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Literal
+	constants (ex: 2, 5.6, 'a', &quot;hi&quot;</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>etc.)</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Declared
+	constants (using </FONT><FONT SIZE=3><I>const</I></FONT><FONT SIZE=3><I>
+	</I></FONT><FONT SIZE=3>keyword)</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constant
+	expressions (using </FONT><FONT SIZE=3><I>constexpr</I></FONT><FONT SIZE=3><I>
+	</I></FONT><FONT SIZE=3>keyword)</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Enumerated
+	constants (using </FONT><FONT SIZE=3><I>enum</I></FONT><FONT SIZE=3><I>
+	</I></FONT><FONT SIZE=3>keyword)</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; margin-top: 0.06in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Defined constants
+	(using </FONT><FONT SIZE=3><I>#define </I></FONT><FONT SIZE=3>pre-processor
+	directive. This is not recommended and is</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>deprecated)</FONT></FONT></P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Literal_Constants"></A>
+<FONT COLOR="#4f81bd">Literal Constants</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+Constants that are used directly in the programs without declaration
+are literal constants. Literal constants can be:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Integer
+	constants (ex: 5, 200, -4,</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>etc.)</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Floating
+	point constants (ex: 9.3, 0.3, 12.34343,</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>etc.)</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Character
+	constants (ex: 'd', '4', 'g', '$',</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>etc.)</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>String
+	constants(ex: &quot;a&quot;, &quot;hi&quot;, &quot;C++&quot;, &quot;my
+	name&quot;,</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>etc.)</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Declared_Constants_(const)"></A>
+<FONT COLOR="#4f81bd">Declared Constants (const)</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The most important and frequently used type of constants are
+constants which are declared using the keyword <I>const</I>. General
+syntax for declaring a constant using <I>const </I>keyword is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.79in; margin-top: 0in"><B>const data-type
+constant-name = value;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A constant should be
+initialized at the time of declaration itself. Let's look at an
+example for declaring a constant using <I>const </I>keyword.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>const
+ double  PI = 3.1415;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above example,
+<I>PI </I>is the constant name and its value is 3.1415. Following is
+a program which demonstrates the use of <I>const </I>keyword.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.65in">#include
+&lt;iostream&gt; using namespace std; const double PI = 3.1415;
+double area(int r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return PI*r*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">double peri(int r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 2*PI*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//PI = 3.142;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.48in">cout&lt;&lt;&quot;Enter
+radius of the circle: &quot;; cin&gt;&gt;radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.04in">cout&lt;&lt;&quot;Area
+of the circle is: &quot;&lt;&lt;area(radius)&lt;&lt;endl;
+cout&lt;&lt;&quot;Perimeter of the circle is: &quot;&lt;&lt;peri(radius)&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Input and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.18in">Enter
+radius of the circle: 3.6 Area of the circle is: 28.2735 Perimeter of
+the circle is: 18.849</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above example, <I>area() </I>and <I>peri() </I>are functions. We
+will look at functions later. Observe that in the above program, <I>PI
+</I>is a global constant as it is declared outside all blocks.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Also, the line after the statement <I>int radius </I>is commented. If
+you remove the comments, it will result in a compilation errors as
+constants cannot be initialized again after declaration. The error
+message will be as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">ConstDemo.cpp: In
+function ‘int main()’:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">ConstDemo.cpp:15:5:
+error: assignment of read-only variable ‘PI’</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Constants_expressions_(constexpr)"></A><FONT COLOR="#4f81bd">Constants
+expressions (constexpr)</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Using <I>constexpr </I>we can create constants whose value is
+determined by evaluating an expression at compile time. We can also
+use <I>constexpr </I>with functions, constructors and objects.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When used along with a function, it will be treated as an inline
+function which can improve the performance of the program. Following
+is an example which demonstrates the use of <I>constexpr </I>keyword:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include
+&lt;iostream&gt; using namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.31in">constexpr
+double PI = 22.0 / 7; constexpr double area(int r)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return PI*r*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">constexpr double
+peri(int r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 2*PI*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.48in">cout&lt;&lt;&quot;Enter
+radius of the circle: &quot;; cin&gt;&gt;radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.04in">cout&lt;&lt;&quot;Area
+of the circle is: &quot;&lt;&lt;area(radius)&lt;&lt;endl;
+cout&lt;&lt;&quot;Perimeter of the circle is: &quot;&lt;&lt;peri(radius)&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.76in; margin-top: 0.06in; line-height: 200%">
+Input and output for the above program is as follows:
+teja@ubuntu:~/cpp$ g++ ConstDemo.cpp -std=c++11</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+teja@ubuntu:~/cpp$ ./a.out</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.1in">Enter
+radius of the circle: 3.56 Area of the circle is: 28.2857 Perimeter
+of the circle is: 18.8571</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I><B>Note:
+</B></I></FONT><FONT SIZE=3><I>constexpr was introduced in C++11
+version. To enable g++ compiler to use C++11, we should use the flag
+&quot;</I></FONT><FONT SIZE=3>-std=c++11&quot;. Otherwise when we
+compile the program, it will raise several errors.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Enumerated_Constants_(enum)"></A>
+<FONT COLOR="#4f81bd">Enumerated Constants (enum)</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+In some scenarios we might want a variable to have a limited set of
+values like days of a week or months in a year etc. For these
+situations we can use an enumerated constant which can be declared
+using the <I>enum </I>keyword. General syntax of creating enumerated
+constants is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.47in"><B>enum constant-name{value1, value2,
+..., valueN};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">An
+example of using <I>enum </I>is as follow:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.52in"><B>enum days{Mon, Tue, Wed, Thu, Fri,
+Sat, Sun};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above example <I>days </I>is just like a variable but only
+accepts the given constant values. By default compiler assigns
+numeric value to each constant and the starting value is 0 and the
+subsequent constants are given previous value plus one. So, value of
+<I>Mon </I>is 0, <I>Tue </I>is 1, and so on. We can also assign our
+own values to the constants as demonstrated in the following program:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.36in">enum
+days{Mon = 1, Tue, Wed, Thu, Fri, Sat, Sun}; days bday = Fri;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.71in">cout&lt;&lt;&quot;Day
+is: &quot;&lt;&lt;bday&lt;&lt;endl; return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Day is: 5</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program <I>Mon </I>is assigned 1. So, value of <I>Tue </I>is
+2 and so on. We can use the enumerated constant like a type and
+declare new variables. In the above example <I>bday </I>is such
+variable declared using the enumerated constant <I>days</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Defined_Constants_(#define)"></A>
+<FONT COLOR="#4f81bd">Defined Constants (#define)</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.03in">
+Another way of declaring constants is by using the <I>#define
+</I>pre-processor directive.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.06in; page-break-before: always">
+This method of declaring constants is not recommended and is
+deprecated. Syntax for declaring a constant using <I>#define </I>is
+as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 2.12in"><B>#define Constant-Name Value</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+Notice that in the above syntax there is no semi-colon at the end of
+the statement. An example for using <I>#define </I>is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>#define
+ PI 3.1415</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.6in; margin-top: 0.04in; line-height: 0.38in">
+Following is a program which demonstrates the use of <I>#define
+</I>pre-processor directive: #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">#define
+PI 3.1415</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">using
+namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.39in">cout&lt;&lt;&quot;Value
+of PI is: &quot;&lt;&lt;PI&lt;&lt;endl; return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Value of PI is: 3.1415</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

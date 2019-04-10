@@ -1,0 +1,934 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Operators</FONT></H1>
+    
+    
+    
+    
+    
+    
+
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+An operator is a symbol that tells a computer to perform certain
+mathematical or logical operations. Operators are used in programs to
+manipulate data and variables. Operators are usually a part of the
+mathematical or logical expressions. Generally the usage of an
+operator is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.14in; left: 3.36in; width: 1.78in; height: 0.33in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><I>Operand1 </I>Op
+	<I>Operand2</I></P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.06in">
+In the above format, operand1 and operand2 can be either data or
+variables or expressions. Op is the operator. In C, based on the
+number of operands on which an operator can operate, the operators
+are divided into three types namely: unary, binary and ternary. Unary
+operators work on single operand, binary operators work on two
+operands and ternary operators work on three operands. In C, based on
+the functionality, operators are classified into 8 categories. They
+are:</P>
+<OL>
+	<OL>
+		<LI><P>Arithmetic Operators</P>
+		<LI><P STYLE="margin-top: 0in">Relational Operators</P>
+		<LI><P>Logical Operators</P>
+		<LI><P STYLE="line-height: 0.19in">Assignment Operators</P>
+		<LI><P STYLE="line-height: 0.19in">Increment and Decrement
+		Operators</P>
+		<LI><P>Conditional Operators</P>
+		<LI><P STYLE="margin-top: 0in">Bitwise Operators</P>
+		<LI><P>Special Operators</P>
+	</OL>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Arithmetic_Operators"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Arithmetic
+Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+C provides all the basic arithmetic operators as shown below. The
+arithmetic operators can operate on any built-in data type in C. The
+unary minus operator multiplies its single operand with -1. Integer
+division truncates any fractional part. The modulo division operator
+(%) produces the remainder of an integer division. The modulo
+operator cannot be used on floating point values.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=311 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=66>
+	<COL WIDTH=175>
+	<COL WIDTH=62>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Operator</P>
+		</TD>
+		<TD WIDTH=175 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Meaning</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Example</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0in">+</P>
+		</TD>
+		<TD WIDTH=175 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Addition
+			or unary plus</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">a+b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0in">-</P>
+		</TD>
+		<TD WIDTH=175 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Subtraction
+			or unary minus</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">a-b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0in">*</P>
+		</TD>
+		<TD WIDTH=175 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Multiplication</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">a*b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0in">/</P>
+		</TD>
+		<TD WIDTH=175 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Division
+			(Quotient)</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">a/b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0in">%</P>
+		</TD>
+		<TD WIDTH=175 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Modulo
+			(Remainder)</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">a%b</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Relational_Operators"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Relational
+Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In C, whenever there is a need to compare two values and make a
+decision based on the outcome of the comparison, we use relational
+operators. For example, we can compare a person’s age with a value
+and based on whether the person’s age is less than or equal or
+greater than the value, we may take a decision. The relational
+operators in C are as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<TABLE WIDTH=294 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=66>
+	<COL WIDTH=158>
+	<COL WIDTH=62>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Operator</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Meaning</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Example</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">&lt;</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Less
+			than</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&lt;b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">&lt;=</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Less
+			than or equal to</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&lt;=b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">&gt;</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Greater
+			than</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&gt;b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">&gt;=</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Greater
+			than or equal to</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&gt;=b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">==</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Equal
+			to</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a==b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">!=</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Not
+			equal to</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a!=b</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in">The
+relational operators are generally used in decision making statements
+like if, else if and in looping statements like for, while, do while
+etc. Relational operators always evaluates to 0 (false) or 1 (true).</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Logical_Operators"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Logical
+Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The relational operators are used to compare at most two values i.e.
+testing one condition. To test more than one condition, we use
+logical operators along with relational operators. The logical
+operators always evaluates to either 0 or 1 like relational
+operators. The logical operators available in C and their
+corresponding truth tables are as shown below:</P>
+<TABLE WIDTH=249 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=66>
+	<COL WIDTH=83>
+	<COL WIDTH=92>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Operator</P>
+		</TD>
+		<TD WIDTH=83 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Meaning</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Example</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">&amp;&amp;</P>
+		</TD>
+		<TD WIDTH=83 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Logical
+			AND</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">(a&gt;b)&amp;&amp;(a&gt;c)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">||</P>
+		</TD>
+		<TD WIDTH=83 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Logical
+			OR</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">(a&gt;b)||(a&gt;c)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0in">!</P>
+		</TD>
+		<TD WIDTH=83 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Logical
+			NOT</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">!(a&gt;b)</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.82in; width: 446px"><IMG SRC="{{url_for('static',filename='img/C_html_77275986.png')}}" NAME="image42.png" WIDTH=446 HEIGHT=267 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.12in"><A NAME="Assignment_Operators"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Assignment
+Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in">
+The assignment operators are used to assign value of an expression to
+a variable. The general assignment operator is = (equal). In C, there
+are some special assignment operators known as shorthand operators.
+The syntax  of shorthand operators is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 3.19in"></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: -0in">In
+the above shown syntax, <B>var </B>is a variable, <B>op </B>is an
+arithmetic operator and <B>exp </B>can be any expression or value or
+a variable. The use of shorthand operators has three advantages:</P>
+<OL>
+	<LI><P>Easier to write.</P>
+	<LI><P STYLE="line-height: 0.19in">The statement is more concise and
+	easier to read.</P>
+	<LI><P STYLE="line-height: 0.19in">The statement is more efficient.</P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">The
+assignment operators in C are as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=182 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=66>
+	<COL WIDTH=110>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Operator</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.32in">Example</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">=</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.39in; margin-right: 0.38in">a
+			= 10</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">+=</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.11in">a+=10 (a=a+10)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">-=</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.14in">a-=10 (a=a-10)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">*=</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.11in">a*=10 (a=a*10)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">/=</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.12in">a/=10 (a=a/10)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">%=</P>
+		</TD>
+		<TD WIDTH=110 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">a%=10 (a=a%10)</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Increment_and_Decrement_Operators"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Increment
+and Decrement Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The increment and decrement operators provided by C are used to
+increment or decrement the operand by a value of one. Both the
+increment and decrement operators are unary operators. These
+operators are used extensively inside for loop and while loop. There
+are two variations in how the increment and decrement operators can
+be used. They are as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.9in"><IMG SRC="{{url_for('static',filename='img/C_html_831eafab.gif')}}"></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.04in">
+In the above shown syntax, var++ is known as post increment and ++var
+is known as pre increment. Although both of them increment the
+variable by a value of one, they behave differently when they are
+used in expressions. In expressions, when post increment is applied,
+the value of the variable is used in the evaluation of the expression
+and after the expression is evaluated, the value of the variable is
+incremented by a value of one. When pre increment is applied, the
+value of the variable is incremented by one first and then that value
+is used for evaluation of the expression.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">The increment and
+decrement operators available in C are:</P>
+<P CLASS="western"><BR>
+</P>
+<TABLE WIDTH=259 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=66>
+	<COL WIDTH=107>
+	<COL WIDTH=77>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Operator</P>
+		</TD>
+		<TD WIDTH=107 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Meaning</P>
+		</TD>
+		<TD WIDTH=77 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Example</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">++</P>
+		</TD>
+		<TD WIDTH=107 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Increment
+			by 1</P>
+		</TD>
+		<TD WIDTH=77 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">A++
+			or ++A</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">--</P>
+		</TD>
+		<TD WIDTH=107 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Decrement
+			by 1</P>
+		</TD>
+		<TD WIDTH=77 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">A--
+			or --A</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Conditional_Operator"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Conditional
+Operator</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The conditional operator “? :” in C, is a ternary operator, which
+operates on three operands. This operator is used to construct
+conditional expressions of the form:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.13in; left: 3.6in; width: 1.3in; height: 0.33in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.14in; margin-top: 0.05in">exp1?exp2:exp3</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.07in"><A NAME="Bitwise_Operators"></A>
+In the above syntax, exp1, exp2 and exp3 refer to expressions. The “?
+:” works as follows: It evaluates the <B>exp1 </B>first and then
+based on the result of the <B>exp1 </B>it evaluates either <B>exp2 </B>or
+<B>exp3</B>. If the result of <B>exp1 </B>is true or non-zero, then
+<B>exp2 </B>is evaluated or if the result of <B>exp1 </B>is false or
+zero, then <B>exp3 </B>is evaluated.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Bitwise
+Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+C supports a set of operators which operate at bit-level. These
+operators are known as bitwise operators. The bitwise operators are
+used for testing a bit, setting a bit, complementing a bit or for
+shifting the bits to left or right. The bitwise operators available
+in C are as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=270 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=66>
+	<COL WIDTH=134>
+	<COL WIDTH=62>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Operator</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Meaning</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Example</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">&amp;</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Bitwise
+			AND</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&amp;b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">|</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">Bitwise
+			OR</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a|b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">^</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Bitwise
+			Exclusive OR</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a^b</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.01in">~</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Bitwise
+			NOT</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">~a</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">&lt;&lt;</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Left
+			Shift</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&lt;&lt;1</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=66 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.05in">&gt;&gt;</P>
+		</TD>
+		<TD WIDTH=134 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">Right
+			Shift</P>
+		</TD>
+		<TD WIDTH=62 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in">a&gt;&gt;1</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">The truth table for
+the bitwise operators is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.19in; width: 369px"><IMG SRC="{{url_for('static',filename='img/C_html_69894903.png')}}" NAME="image43.png" WIDTH=369 HEIGHT=118 BORDER=0></SPAN><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in; page-break-before: always"><A NAME="Bitwise_AND_(&amp;)"></A>
+<FONT COLOR="#4f81bd">Bitwise AND (&amp;)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.03in">
+The bitwise AND operator is used to test whether a bit at particular
+position is zero or one. If it is one, it returns a non-zero value.</P>
+<P CLASS="western" STYLE="margin-left: 2.3in"><IMG SRC="C_html_27e86bd3.png" NAME="image44.png" ALIGN=BOTTOM WIDTH=273 HEIGHT=140 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">In the above example,
+we are testing whether the bit at position 4 in the number 20 is set
+to one or not. Since it is zero, the result is zero.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Bitwise_OR_(|)"></A><FONT COLOR="#4f81bd">Bitwise
+OR (|)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">The
+bitwise OR operator is used to set a bit at particular position to
+one. Example usage of the bitwise OR operator is shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.25in"><IMG SRC="{{url_for('static',filename='img/C_html_5540c518.png')}}" NAME="image45.png" ALIGN=BOTTOM WIDTH=281 HEIGHT=145 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in">As
+you can see in the above example, we are trying to set the bit at
+position 4 in the number 20 to one. If the bit at the specified
+position is zero, the bitwise OR sets it to one. If it is already
+one, it leaves it as it is.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Bitwise_Exclusive_OR_(^)"></A><FONT COLOR="#4f81bd">Bitwise
+Exclusive OR (^)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">The
+bitwise Exclusive OR returns zero, if both the bits are equal.
+Otherwise, it returns one. Example usage of this operator can be seen
+below:</P>
+<P CLASS="western" STYLE="margin-left: 2.17in"><IMG SRC="{{url_for('static',filename='img/C_html_496bb11c.png')}}" NAME="image46.png" ALIGN=BOTTOM WIDTH=299 HEIGHT=154 BORDER=0></P>
+<H6 CLASS="western" STYLE="margin-top: 0.13in"><A NAME="Bitwise_NOT_(~)"></A>
+<FONT COLOR="#4f81bd">Bitwise NOT (~)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">The
+bitwise NOT operator is used to complement every bit of the operand.
+If the bit is zero, it is set to one and if it is one, the bit is set
+to zero.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.44in; width: 323px"><IMG SRC="{{url_for('static',filename='img/C_html_d2bd9a44.png')}}" NAME="image47.png" WIDTH=323 HEIGHT=105 BORDER=0></SPAN><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in; page-break-before: always"><A NAME="Left_Shift_(&lt;&lt;)"></A>
+<FONT COLOR="#4f81bd">Left Shift (&lt;&lt;)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; margin-top: 0.03in">
+The left shift operator is used to shift the bits in the operand to
+the left. The result of the left shift operation is equal to the
+operand multiplied by powers of two.</P>
+<P CLASS="western" STYLE="margin-left: 2.15in"><IMG SRC="C_html_9664907c.png" NAME="image48.png" ALIGN=BOTTOM WIDTH=301 HEIGHT=109 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">As seen in the above
+example, by left shifting the number 20 one time, we get the result
+as 40 which is 20 multiplied by 2. If we again left shift 20, we get
+the result 80 which is 20 multiplied by 4 and so on.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Right_Shift_(&gt;&gt;)"></A><FONT COLOR="#4f81bd">Right
+Shift (&gt;&gt;)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">The
+right shift operator is used to shift the bits in the operand to the
+right. The result of the right shift operation is equal to the
+operand divided by powers of two.</P>
+<P CLASS="western" STYLE="margin-left: 2.14in"><IMG SRC="{{url_for('static',filename='img/C_html_ecf4cc9a.png')}}" NAME="image49.png" ALIGN=BOTTOM WIDTH=302 HEIGHT=110 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">As seen in the above
+example, by right shifting the number 20 one time, we get the result
+as 10, which is actually dividing 20 by 2. If we again left shift 20,
+we get the result as 5 which is 20 divided by 4 and so on.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Special_Operators"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Special
+Operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; text-indent: 0.5in; margin-top: 0.03in"><A NAME="Comma_Operator"></A>
+C supports some special operators such as comma “,” operator,
+sizeof operator, address “&amp;” operator, pointer operator “*”
+and some others.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western"><FONT COLOR="#4f81bd">Comma Operator</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.03in">
+The <B>comma </B>“,” operator is used to combine multiple related
+expressions together. A comma separated list of expressions is
+evaluated from left to right and the value of the right most
+expression is the value of the combined expression.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.08in"><A NAME="sizeof_Operator"></A>
+<FONT COLOR="#4f81bd">sizeof</FONT><FONT COLOR="#4f81bd"> </FONT><FONT COLOR="#4f81bd">Operator</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.03in; margin-bottom: 0in">
+The <B>sizeof </B>operator computes the size of an expression or
+variable or constant or a data type. This operator is used
+extensively for determining the length of an array, structure or
+union when the programmer does not know their actual sizes. The
+sizeof operator is also used in dynamic memory allocation. The
+general syntax of <B>sizeof </B>operator is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 3.1in"></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">The
+operand can be either a value or variable or data type or an
+expression.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate arithmetic operators */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.19in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.81in; margin-top: 0in">
+int num1, num2; int result; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.7in; text-indent: -0in">
+printf(&quot;Enter the value of num1:&quot;); scanf(&quot;%d&quot;,&amp;num1);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.7in; text-indent: -0in">
+printf(&quot;Enter the value of num2:&quot;); scanf(&quot;%d&quot;,&amp;num2);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">result
+= num1 + num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.28in; text-indent: -0in">
+printf(&quot;Value of adding num1 and num2 is: %d\n&quot;,result);
+result = num1 - num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3in">printf(&quot;Value
+of subtracting num1 and num2 is: %d\n&quot;,result); result = num1 *
+num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.01in; margin-top: 0in">
+printf(&quot;Value of multiplying num1 and num2 is: %d\n&quot;,result);
+result = num1 / num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.22in">printf(&quot;Value
+of dividing num1 and num2 is: %d\n&quot;,result); result = num1 %
+num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.11in; text-indent: -0in">
+printf(&quot;Value of modulus on num1 and num2 is: %d&quot;,result);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.64in; text-indent: -0in">
+Enter the value of num1:20 Enter the value of num2:10</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.61in">Value
+of adding num1 and num2 is: 30 Value of subtracting num1 and num2 is:
+10 Value of multiplying num1 and num2 is: 200 Value of dividing num1
+and num2 is: 2 Value of modulus on num1 and num2 is: 0</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate relational operators */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.37in; margin-top: 0in">
+int a, b; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.98in; text-indent: -0in">
+printf(&quot;Enter the value of a:&quot;); scanf(&quot;%d&quot;,&amp;a);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.98in; text-indent: -0in">
+printf(&quot;Enter the value of b:&quot;); scanf(&quot;%d&quot;,&amp;b);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">if(a&gt;b)</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.61in; text-indent: 0.5in">
+printf(&quot;a is greater than b&quot;); else if(a&lt;b)</P>
+<P CLASS="western" STYLE="margin-left: 1.08in">printf(&quot;a is less
+than b&quot;);</P>
+<DIV ID="Section6" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.58in">else</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.58in">getch();</P>
+	<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: -0in">printf(&quot;a is equal
+	to b&quot;);</P>
+</DIV>
+<DIV ID="Section7" DIR="LTR">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in; line-height: 0.19in">
+	Output:</P>
+	<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.93in">
+	Enter the value of a:30 Enter the value of b:5</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.08in">a is greater than b</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/*C program to demonstrate logical operators */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.81in; margin-top: 0in">
+int num1, num2; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.21in">num1
+= 10, num2 = 20; if(num1&lt;20 &amp;&amp; num2&lt;30)</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.4in; text-indent: 0.5in">
+printf(&quot;Logical AND works!\n&quot;); if(num1&lt;20 || num2&lt;20)</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.5in; text-indent: 0.5in">
+printf(&quot;Logical OR works!\n&quot;); if(!(num1==20))</P>
+<P CLASS="western" STYLE="margin-left: 1.08in">printf(&quot;Logical
+NOT works!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.14in">Logical
+AND works! Logical OR works! Logical NOT works!</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate assignment operators */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.14in; margin-top: 0in">
+int num1; clrscr(); num1 = 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.01in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1); num1 += 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1); num1 -= 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1); num1 *= 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1); num1 /= 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1); num1 %= 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.68in; margin-top: 0.04in">
+Output: num1 = 10</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.19in">
+num1 = 20</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">num1
+= 10</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">num1 = 100</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">num1 = 10</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">num1 = 0</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate increment and decrement */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.14in; margin-top: 0in">
+int num1; clrscr(); num1 = 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.85in; text-indent: -0in">
+printf(&quot;num1 = %d\n&quot;,num1++); printf(&quot;num1 =
+%d\n&quot;,++num1); printf(&quot;num1 = %d\n&quot;,--num1);
+printf(&quot;num1 = %d\n&quot;,num1--); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.68in; margin-top: 0.04in">
+Output: num1 = 10</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">num1
+= 12</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">num1 = 11</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">num1 = 11</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate conditional operator */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.14in; margin-top: 0in">
+int num1; clrscr(); num1 = 15;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.75in">(num1&gt;10)?(num1=20):(num1=5);
+printf(&quot;num1 = %d&quot;,num1); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.68in; margin-top: 0.04in">
+Output: num1 = 20</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate bitwise operators */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.81in; margin-top: 0in">
+int num1, num2; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.94in">printf(&quot;Enter
+value of num1:&quot;); scanf(&quot;%d&quot;,&amp;num1);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">num2 = 8;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.33in">printf(&quot;Bitwise
+AND on num1 is: %d\n&quot;,(num1&amp;num2)); printf(&quot;Bitwise OR
+on num1 is: %d\n&quot;,(num1|num2)); printf(&quot;Bitwise Ex-OR on
+num1 is: %d\n&quot;,(num1^num2)); printf(&quot;Left shift on num1 is:
+%d\n&quot;,(num1&lt;&lt;1)); printf(&quot;Right shift on num2 is:
+%d\n&quot;,(num1&gt;&gt;1)); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Enter value of num1:20</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.54in">Bitwise
+AND on num1 is: 0 Bitwise OR on num1 is: 28 Bitwise Ex-OR on num1 is:
+28 Left shift on num1 is: 40 Right shift on num2 is: 10</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+/* C program to demonstrate the use of <B>comma </B>operator and
+<B>sizeof </B>operator */</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.81in; margin-top: 0in">
+int num1, num2; int sum;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">/*Using the comma
+operator*/</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.33in; text-indent: -0in">
+sum = (num1=5, num2=5, num1+num2); printf(&quot;Sum = %d\n&quot;,sum);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">/*Using
+the sizeof operator*/</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.21in">printf(&quot;Size
+of int is: %d bytes&quot;,sizeof(int)); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Sum = 10</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">Size
+of int is: 4 bytes</P>
+    
+    
+    
+    
+    
+    {% endblock course %}

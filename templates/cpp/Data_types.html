@@ -1,0 +1,154 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Data Types</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A data type specifies the type of data that we can work with. As C++
+is a strongly typed (not truly) language (type is specified before
+use), type of a variable must be specified before it is used. C++
+provides several pre-defined data types. They are as shown in the
+following table:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><IMG SRC="{{url_for('static',filename='img/CPP_html_7487154.png')}}"  NAME="image26.png" ALIGN=BOTTOM WIDTH=599 HEIGHT=326 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.18in"><A NAME="Character_data_type"></A>
+<FONT COLOR="#4f81bd">Character data type</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The <I>char </I>data type is used to work with single characters. An
+example of storing a character into a variable is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>char
+ch = 's';</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above statement, <I>'s' </I>is a character constant. Size of
+<I>char </I>type is 1 byte which can hold values from -127 to 127 and
+size of <I>unsigned char </I>is 1 byte which can hold values from 0
+to</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+255. Since 256 values are not enough to represent all the characters
+across the world, C++ is not suitable for developing cross-language
+applications.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Integer_data_types"></A><FONT COLOR="#4f81bd">Integer
+data types</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+An integer data type is used to work with numbers that don't have any
+fractional parts. Standard data type for working with integers is
+<I>int</I>. Size of <I>int </I>data type is generally 4 bytes. There
+are variations in <I>int </I>data type like <I>short </I>and <I>long</I>.
+All of these differ in terms of memory.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Another variation in integer types is <I>signed </I>and <I>unsigned</I>.
+In <I>signed </I>types, the Most Significant Bit (MSB) is reserved by
+specifying the sign (0 for positive and 1 for negative). In <I>unsigned
+</I>types, MSB is also used to represent data.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Floating_point_data_types"></A><FONT COLOR="#4f81bd">Floating
+point data types</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+A floating point type allows us to work with real numbers which have
+decimal point. Floating point types are <I>float </I>and <I>double</I>.
+For example to store the value of mathematical PI value, we can
+declare a variable as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>float
+PI = 3.1415;</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+For double precision floating point values, we can use <I>double
+</I>type.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Boolean_data_type"></A><FONT COLOR="#4f81bd">Boolean
+data type</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Boolean data type allows us to work with <I>true </I>and <I>false
+</I>values which are known as boolean values. These values can be
+used to maintain state, flag, available or unavailable kind of
+information. C++ in the newer versions had provided support to work
+with boolean values by including <I>bool </I>data type. Below example
+demonstrates <I>bool </I>data type:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>bool
+flag = true;</B></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><A NAME="Can_we_declare_variables_without_data_ty"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Can
+we declare variables without data type?</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+C++ allows programmers to declare variables without specifying the
+data type. Data type of such variables will be decided by the value
+that they are initialized to. Such variables should be declared using
+the keyword <I>auto </I>as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>auto
+flag = false;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+In the above statement the data type of <I>flag </I>variable will be
+assumed to be <I>bool </I>by the compiler based on the value <I>false</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="typedef_keyword"></A>
+<FONT COLOR="#4f81bd">typedef keyword</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+The <I>typedef </I>keyword can be used to create convenient names
+(types) for pre-defined data types. Consider the following example
+which demonstrates the use of <I>typedef </I>keyword:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>typedef
+float average;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above statement
+we are creating <I>average </I>as a type which is a substitute for
+the pre- defined type <I>float. </I>Now we can create variables using
+<I>average </I>type as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>average
+avg;</B></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

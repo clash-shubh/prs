@@ -1,0 +1,656 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+    
+    
+    
+<H4 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">File
+Handling</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction_(6)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A file is a collection of related data stored on a disk. It is
+advantageous to work with data stored in files rather than working
+with data given from keyboard due to following reasons:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>It
+	is difficult to read huge amount of data from</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>keyboard.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Data
+	entered from keyboard is volatile i.e., that data is cleared when
+	power goes</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>off.</FONT></FONT></P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><A NAME="File_Handling_Classes"></A>
+<FONT COLOR="#365f91">File Handling Classes</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+figure illustrates the stream classes for working with files:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.29in; width: 548px"><IMG SRC="{{url_for('static',filename='img/CPP_html_cd3f29f7.png')}}" NAME="image39.png" WIDTH=548 HEIGHT=351 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>fstreambase: </B></FONT><FONT SIZE=3>The
+</FONT><FONT SIZE=3><I>fstreambase </I></FONT><FONT SIZE=3>is the
+base class for </FONT><FONT SIZE=3><I>ifstream, ofstream, </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>fstream </I></FONT><FONT SIZE=3>classes.
+Functions such are </FONT><FONT SIZE=3><I>open() </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>close() </I></FONT><FONT SIZE=3>are defined in
+this class.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>fstream: </B></FONT><FONT SIZE=3>It
+allows simultaneous input and output operations on </FONT><FONT SIZE=3><I>filebuf</I></FONT><FONT SIZE=3>.
+This class inherits </FONT><FONT SIZE=3><I>istream </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>ostream </I></FONT><FONT SIZE=3>classes.
+Member functions of the base classes </FONT><FONT SIZE=3><I>istream
+</I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>ostream </I></FONT><FONT SIZE=3>starts
+the input and output.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>ifstream: </B></FONT><FONT SIZE=3>This
+class inherits both </FONT><FONT SIZE=3><I>fstreambase </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>istream </I></FONT><FONT SIZE=3>classes. It
+can access member functions such as </FONT><FONT SIZE=3><I>get(),
+getline(), seekg(), tellg(), </I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>read()</I></FONT><FONT SIZE=3>.
+It allows input operations and provides </FONT><FONT SIZE=3><I>open()
+</I></FONT><FONT SIZE=3>with the default input mode.</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>ofstream: </B></FONT><FONT SIZE=3>This
+class inherits both </FONT><FONT SIZE=3><I>fstreambase </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>ostream </I></FONT><FONT SIZE=3>classes. It
+can access member functions such as </FONT><FONT SIZE=3><I>put(),
+seekp(), write(), </I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>tellp()</I></FONT><FONT SIZE=3>.
+It allows output operations and provides the </FONT><FONT SIZE=3><I>open()
+</I></FONT><FONT SIZE=3>function with the default output mode.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<B>filebuf: </B>The filebuf is used for input and output operations
+on files. This class inherits <I>streambuf </I>class. It also
+arranges memory for keeping input data and for sending output. The
+I/O functions of <I>istream </I>and <I>ostream </I>invoke the filebuf
+functions to perform the insertion and extraction on the streams.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Opening_and_Closing_Files"></A><FONT COLOR="#365f91">Opening
+and Closing Files</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For reading or writing
+data into files, the general operations are: open a connection to the
+file, read or write data to file, and close the connection to the
+file.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">We
+can open a connection to the file in two ways: one way is by using
+the <I>open() </I>function and second way is by using the appropriate
+constructor.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax for opening a
+connection to a file using <I>open() </I>function in input mode is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.67in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ifstream
+object-name; object-name(&quot;filename&quot;);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above syntax, <I>filename </I>is the name of file from which you
+want to read the data. Syntax for opening a connection to a file
+using the constructor in input mode is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ifstream
+object-name(&quot;filename&quot;);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Syntax
+for opening a connection to a file using <I>open() </I>function in
+output mode is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.67in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ofstream
+object-name; object-name(&quot;filename&quot;);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above syntax, <I>filename </I>is the name of file into which you
+want to write the data. Syntax for opening a connection to a file
+using the constructor in output mode is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ofstream
+object-name(&quot;filename&quot;);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">After
+reading or writing data into file we can close the connection by
+writing the following:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>object-name.close();</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><A NAME="Reading_and_Writing_into_Files"></A>
+<FONT COLOR="#365f91">Reading and Writing into Files</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">After opening a
+connection to the file, reading and writing data to the file is an
+easy task. We can write data using the following syntax:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>opfile&lt;&lt;data;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above syntax,
+<I>opfile </I>is the object of <I>ofstream </I>and <I>data </I>is any
+variable holding data. We can read data from a file using the
+following syntax:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ipfile&gt;&gt;data;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above syntax, <I>ipfile </I>is the object of <I>ifstream </I>and
+<I>data </I>is any variable into which the data is stored to process
+in the program.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<I><B>Note: </B></I>When a file is opened for writing data into it,
+if the specified file is not there, a new file with the same name is
+created and opened for output. If the file is already available, the
+old content in the file is cleared.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.46in; margin-top: 0in; line-height: 0.38in">
+Following program demonstrates writing data into the file:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+#include&lt;fstream&gt; using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.04in">string
+name; int salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.64in">cout&lt;&lt;&quot;Enter
+name and salary: &quot;; cin&gt;&gt;name&gt;&gt;salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.69in">ofstream
+opfile(&quot;data.txt&quot;);	//Opening connection to a file using
+constructor opfile&lt;&lt;name&lt;&lt;&quot;\t&quot;&lt;&lt;salary;//Writing
+data into file</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.31in">opfile.close();	//Closing
+connection to the file cout&lt;&lt;&quot;Enter name and salary: &quot;;
+cin&gt;&gt;name&gt;&gt;salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">ofstream newopfile;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.41in">newopfile.open(&quot;data.txt&quot;);	//Opening
+connection to a file using open() function
+newopfile&lt;&lt;name&lt;&lt;&quot;\t&quot;&lt;&lt;salary;	//Writing
+data into file</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.81in">newopfile.close();	//Closing
+connection to the file return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.94in; margin-top: 0in">
+Enter name and salary: suresh 7000 Enter name and salary: ramesh 8000</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output in the file
+&quot;data.txt&quot; is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">ramesh 8000</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I><B>Note: </B></I>In
+the above program when the file is opened for the second time, the
+old data will be cleared.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.5in; line-height: 200%">
+Following program demonstrates reading data from a file:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0.06in; page-break-before: always">
+#include&lt;fstream&gt; using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.04in">string
+name; int salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.69in">ifstream
+ipfile(&quot;data.txt&quot;);	//Opening connection to a file using
+constructor ipfile&gt;&gt;name&gt;&gt;salary;	//Reading data from
+file</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.55in">cout&lt;&lt;&quot;Name
+is: &quot;&lt;&lt;name&lt;&lt;endl; cout&lt;&lt;&quot;Salary is:
+&quot;&lt;&lt;salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.31in">ipfile.close();	//Closing
+connection to the file return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+from the file &quot;data.txt&quot; for above program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">ramesh	8000</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output for the above
+program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.25in">Name
+is: ramesh Salary is: 8000</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Detecting_End-of-File"></A><FONT COLOR="#365f91">Detecting
+End-of-File</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+While reading data from a file, if the file contains multiple rows,
+it is necessary to detect the end of file. This can be done using the
+<I>eof() </I>function of <I>ios </I>class. It returns 0 when there is
+data to be read and a non-zero value if there is no data. Following
+program demonstrates writing and reading multiple rows of data into
+the file:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+#include&lt;iostream&gt; #include&lt;fstream&gt; using namespace std;
+int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.04in">string
+name; int salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.07in">ofstream
+opfile(&quot;data.txt&quot;); for(int i=1; i&lt;=3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.71in">cout&lt;&lt;&quot;Enter
+name and salary of employee &quot;&lt;&lt;i&lt;&lt;&quot;:&quot;;
+cin&gt;&gt;name&gt;&gt;salary;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">opfile&lt;&lt;name&lt;&lt;&quot;\t&quot;&lt;&lt;salary;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">opfile.close();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.11in">cout&lt;&lt;&quot;Data
+stored into file.&quot;&lt;&lt;endl; cout&lt;&lt;&quot;Reading data
+from file...&quot;&lt;&lt;endl; ifstream ipfile(&quot;data.txt&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">while(!ipfile.eof())	//Checking
+for end of file</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+ipfile&gt;&gt;name&gt;&gt;salary;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;&quot;Name:
+&quot;&lt;&lt;name&lt;&lt;&quot; Salary: &quot;&lt;&lt;salary&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.97in">ipfile.close();
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.96in">Enter
+name and salary of employee 1:suresh 7000 Enter name and salary of
+employee 2:ramesh 8000 Enter name and salary of employee 3:mahesh
+9000 Data stored into file.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.48in">Reading
+data from file... Name: suresh Salary: 7000 Name: ramesh Salary: 8000
+Name: mahesh Salary: 9000</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="File_Modes"></A><FONT COLOR="#365f91">File
+Modes</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Until now when using the constructor or <I>open() </I>function for
+reading or writing data to a file, we are passing only one argument
+i.e., the file name. We can also pass a second argument which
+specifies the file mode. The mode parameter specifies the mode in
+which the file has to be opened. We can specify one of the following
+modes available in <I>ios </I>file:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_8dfefd95.png')}}" NAME="image40.png" WIDTH=603 HEIGHT=178 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A programmer can open a
+file in append mode by writing as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>fstream
+object-name(&quot;filename&quot;, ios::app);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A programmer can
+combine multiple modes using the | symbol as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>fstream
+object-name(&quot;filename&quot;, ios::out | ios::nocreate);</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="File_Pointers_and_Manipulation"></A>
+<FONT COLOR="#365f91">File Pointers and Manipulation</FONT></H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+Every file will contain two pointers: a read pointer or also known as
+a get pointer and a write pointer also known as a put pointer. The
+read pointer or a get pointer is used to read data and the write
+pointer or put pointer is used to write data to a file. These
+pointers can be manipulated using the functions from stream classes.
+Those functions are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_b3e964f7.png')}}" NAME="image41.png" WIDTH=603 HEIGHT=136 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The seekg() and seekp()
+functions specified above can be used to move the pointers in the
+file for random access. The syntax of these functions is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.98in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>seekg(int
+offset, reference_position) seekp(int offset, reference_position)</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The	offset	is	an	integer	parameter	which	specifies	the	position	in	bytes	and</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>reference_position
+</I></FONT><FONT SIZE=3>can be any one of the following:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ios::beg
+(Moves the pointer from beginning of file)</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>ios::cur
+(Moves the pointer from current position of pointer) ios::end (Moves
+the pointer from ending of file)</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>For example if we
+give </FONT><FONT SIZE=3><I>seekg(20, ios::cur) </I></FONT><FONT SIZE=3>moves
+the get pointer by 20 bytes from the current position. If we give
+</FONT><FONT SIZE=3><I>seekg(-20, ios::end) </I></FONT><FONT SIZE=3>moves
+the get pointer by 20 bytes back from the end of file.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Types_of_Files"></A>
+<FONT COLOR="#365f91">Types of Files</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">C++ supports two types
+of files. They are text files and binary files.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="ASCII_Text_Files"></A><FONT COLOR="#4f81bd">ASCII
+Text Files</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A text file is collection of characters that can be processed
+sequentially by a computer. As text files only process characters,
+they can read or write data one character at a time. In a text file,
+each line contains zero or more characters and ends with one or more
+characters that specify the end of a line.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+a text file data of all types are stored as a sequence of characters.
+Each file ends with a special character called as end of file marker.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Binary_Files"></A><FONT COLOR="#4f81bd">Binary
+Files</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+A binary file is a file which contains any type of data, converted to
+binary format for computer storage and processing. A binary file is
+non-human readable. A binary file does not require any special
+processing of the data and each byte of data is transferred from the
+disk unprocessed. While text files can be processed sequentially,
+binary files can be processed sequentially or in a random fashion.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Binary files store data in internal representation format i.e., if we
+store an integer 51, it only occupies only one byte. Whereas in text
+file it occupies two bytes. One byte to store character 5 and another
+byte to store character 1.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Sequential_and_Random_I/O"></A><FONT COLOR="#365f91">Sequential
+and Random I/O</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+C++ allows data to be read or written from a file in sequential or
+random fashion. Reading data character by character or record by
+record is called sequential access. Reading data in any order is
+known as random access.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The </FONT><FONT SIZE=3><I>fstream
+</I></FONT><FONT SIZE=3>class provides functions like </FONT><FONT SIZE=3><I>get(),
+read() </I></FONT><FONT SIZE=3>for reading data and </FONT><FONT SIZE=3><I>put(),
+write() </I></FONT><FONT SIZE=3>for writing data to a file. The
+functions </FONT><FONT SIZE=3><I>get() </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>put() </I></FONT><FONT SIZE=3>are
+character-oriented functions. Syntax of these functions is as
+follows:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.74in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>get(char)
+put(char)</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.44in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates <I>get() </I>and <I>put() </I>functions:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">#include&lt;fstream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;string.h&gt;
+using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.88in">char
+data[50], ch; cout&lt;&lt;&quot;Enter a line of text: &quot;;
+cin.getline(data, 50);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.2in">fstream
+file(&quot;data.txt&quot;, ios::in | ios::out); int len =
+strlen(data);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=0; i&lt;len;
+i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">file.put(data[i]);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">file.seekg(0);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">for(int i=0; i&lt;len;
+i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.59in">file.get(ch);
+cout&lt;&lt;ch;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.1in">file.close();
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Input and output for
+the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.34in">Enter
+a line of text: Welcome to file handling Welcome to file handling</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Until now we working with text files. But, as mentioned previously,
+reading and writing data in binary format is more efficient. We can
+store and retrieve objects in to binary files using <I>read() </I>and
+<I>write() </I>methods whose syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>read((char
+*)&amp;var, sizeof(var)); write((char *)&amp;var, sizeof(var));</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Both functions accept to parameters. First parameter is the address
+of the variable or object and the second parameter is the size of
+variable or object. Following program demonstrates storing and
+retrieving an object from file:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+#include&lt;fstream&gt; using namespace std; class Student</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.64in">int
+regdno; int marks;</P>
+<DIV ID="Section202" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 3.93in">
+	Student(){} Student(int no, int m)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section203" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.02in">regdno
+	= no; marks = m;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">{</P>
+</DIV>
+<DIV ID="Section204" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.21in">cout&lt;&lt;&quot;Regd.No.
+	is: &quot;&lt;&lt;regdno&lt;&lt;endl; cout&lt;&lt;&quot;Marks are:
+	&quot;&lt;&lt;marks&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section205" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">Student s1(501, 100);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.27in">ofstream
+	opfile(&quot;data.txt&quot;, ios::binary); opfile.write((char *)&amp;s1,
+	sizeof(s1)); opfile.close();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Student s2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.34in">ifstream
+	ipfile(&quot;data.txt&quot;, ios::binary); ipfile.read((char *)&amp;s2,
+	sizeof(s2)); ipfile.close();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">s2.show();</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+Output (in data.txt) for above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Regd.No.
+is: 501</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Marks
+are: 100</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY><A NAME="Command_Line_Arguments"></A>
+<FONT COLOR="#365f91">Command Line Arguments</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The data or parameters provided while invoking the program are known
+as command-line parameters or arguments. Command-line arguments can
+be accessed using the variables declared in the signature of <I>main()
+</I>function as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>int
+main(int argc, char *argv[])</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above syntax,
+first parameter <I>argc </I>holds the count of command-line arguments
+and the second parameter, an array of character pointers holds the
+actual command-line arguments.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I><B>Note:
+</B></I></FONT><FONT SIZE=3><I>Remember that the first element in the
+array, i.e., argv[0] holds the filename. First command-line parameter
+will be available in argv[1], second parameter in argv[2] and so on.</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.43in; margin-top: 0.04in; line-height: 0.38in">
+Following program demonstrates working with command-line arguments:
+#include&lt;iostream&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.15in">
+#include&lt;cstdlib&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">using
+namespace std;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">int
+main(int argc, char* argv[])</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.41in">cout&lt;&lt;&quot;Arg
+count = &quot;&lt;&lt;argc&lt;&lt;endl; int x = atoi(argv[1]);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">cout&lt;&lt;&quot;First
+parameter = &quot;&lt;&lt;x;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.46in; margin-top: 0.06in; line-height: 200%">
+Input for the above program is: 10 20 Output for the above program is
+as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Arg count = 3</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">First parameter = 10</P>
+
+    
+    
+    
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

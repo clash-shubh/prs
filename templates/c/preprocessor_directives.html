@@ -1,0 +1,807 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Preprocessor Directives</FONT></H1>
+    
+    
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Preprocessor_Directives"></A>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+C provides many features like structures, unions and pointers.
+Another unique feature of the C language is the preprocessor. The C
+preprocessor provides several tools that are not present in other
+high-level languages. The programmer can use these tools to make his
+program easy to read, easy to modify, portable and more efficient.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The preprocessor is a program that processes the source code before
+it passes through the compiler. Preprocessor directives are placed in
+the source program before the main line. Before the source code
+passes through the compiler, it is examined by the preprocessor for
+any preprocessor directives. If there are any, appropriate actions
+are taken and then the source program is handed over to the compiler.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+All the preprocessor directives follow special syntax rules that are
+different from the normal C syntax. Every preprocessor directive
+begins with the symbol <B># </B>and is followed by the respective
+preprocessor directive. The preprocessor directives are divided into
+three categories. They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">Macro Substitution Directives</P>
+	<LI><P>File Inclusion Directives</P>
+	<LI><P><A NAME="Macro_Substitution_Directives"></A>Compiler Control
+	Directives</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Macro
+Substitution Directives</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Macro substitution is a process where an identifier in a program is
+replaced by a predefined string composed of one or more tokens. The
+preprocessor accomplishes this task under the direction of <B>#define
+</B>statement. This statement, usually known as a <I>macro definition
+</I>takes the following form:<SPAN DIR="LTR" STYLE="position: relative; top: 0.66in; left: 2.9in; width: 2.49in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0.05in">#define
+	identifier string</P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.1in">
+If this statement is included in the program at the beginning, then
+the preprocessor replaces every occurrence of the <B>identifier </B>in
+the source code by the string.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<B>Note: </B><I>Care should be taken that there is no space between
+the </I><I><B># </B></I><I>and the word </I><I><B>define</B></I><I>.
+Also there should be atleast a single space between </I><I><B>#define
+</B></I><I>and the </I><I><B>identifier </B></I><I>and between the
+</I><I><B>identifier </B></I><I>and the </I><I><B>string</B></I><I>.
+Also, there will be no semi-colon at the end of the</I><I> </I><I>statement.</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.19in">
+There are different forms of macro substitution. The most common are:</P>
+<OL>
+	<LI><P>Simple macro substitution</P>
+	<LI><P>Argumented macro substitution</P>
+	<LI><P>Nested macro substitution</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="Simple_Macro_Substitution"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Simple Macro
+Substitution</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in; line-height: 0.19in">
+The simple macro substitutions are generally used for declaring
+constants in a C program.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.19in">
+Some valid examples for simple macro substitution are:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=269 CELLPADDING=0 CELLSPACING=0>
+	<COL WIDTH=80>
+	<COL WIDTH=92>
+	<COL WIDTH=95>
+	<TR VALIGN=TOP>
+		<TD WIDTH=80 HEIGHT=23 STYLE="border-top: 1px solid #000001; border-bottom: none; border-left: 1px solid #000001; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">#define</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border-top: 1px solid #000001; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.27in; margin-top: 0.05in">PI</P>
+		</TD>
+		<TD WIDTH=95 STYLE="border-top: 1px solid #000001; border-bottom: none; border-left: none; border-right: 1px solid #000001; padding: 0in">
+			<P STYLE="margin-left: 0.31in; margin-top: 0.05in">3.1412</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=80 HEIGHT=18 STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000001; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.1in">#define</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border: none; padding: 0in">
+			<P STYLE="margin-left: 0.27in">MAX</P>
+		</TD>
+		<TD WIDTH=95 STYLE="border-top: none; border-bottom: none; border-left: none; border-right: 1px solid #000001; padding: 0in">
+			<P STYLE="margin-left: 0.31in">100</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=80 HEIGHT=18 STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000001; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.1in">#define</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border: none; padding: 0in">
+			<P STYLE="margin-left: 0.27in">START</P>
+		</TD>
+		<TD WIDTH=95 STYLE="border-top: none; border-bottom: none; border-left: none; border-right: 1px solid #000001; padding: 0in">
+			<P STYLE="margin-left: 0.31in">main() {</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=80 HEIGHT=27 STYLE="border-top: none; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.1in">#define</P>
+		</TD>
+		<TD WIDTH=92 STYLE="border-top: none; border-bottom: 1px solid #000001; border-left: none; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.27in">STOP</P>
+		</TD>
+		<TD WIDTH=95 STYLE="border-top: none; border-bottom: 1px solid #000001; border-left: none; border-right: 1px solid #000001; padding: 0in">
+			<P STYLE="margin-left: 0.31in">}</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; margin-top: 0.06in">
+Whenever the preprocessor comes across the simple macros, the
+identifier will be replaced with the corresponding string. For
+example, in a C program, all the occurrences of PI will be replaced
+with 3.1412.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in"><A NAME="Argumented_Macro_Substitution"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Argumented Macro
+Substitution</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in">The
+preprocessor allows us to define more complex and more useful form of
+substitutions.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-top: 0.03in">
+The Argumented macro substitution takes the following form:<SPAN DIR="LTR" STYLE="position: relative; top: 0.27in; left: 2.51in; width: 3.26in; height: 0.37in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.13in; margin-top: 0.05in">#define
+	identifier(arg1, arg2, ….. , argn) string</P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.04in">
+Care should be taken that there is no space between the identifier
+and the left parentheses. The identifiers arg1, arg2, …. , argn are
+the formal macro arguments that are analogous to the formal arguments
+in a function definition. In the program, the occurrence of a macro
+with arguments is known as a <B>macro call</B>. When a macro is
+called, the preprocessor substitutes the string, replacing the formal
+parameters with actual parameters.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">For example, if the
+Argumented macro is declared as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.61in; width: 3.04in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.29in; margin-top: 0.05in">#define	CUBE(x)	(x*x*x)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">and the macro is
+called as shown below:</P>
+<P CLASS="western"><SPAN DIR="LTR" STYLE="position: relative; top: 0.11in; left: 2.9in; width: 2.48in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.57in; margin-top: 0.05in">volume
+	= CUBE(side);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.1in">Then
+the preprocessor will expand the above statement as:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.77in; width: 2.73in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.43in; margin-top: 0.05in">volume
+	= (side * side * side);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Nested_Macro_Substitution"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Nested Macro
+Substitution</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+We can use one macro inside the definition of another macro. Such
+macros are known as nested macros. Example for a nested macro is
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=369 CELLPADDING=0 CELLSPACING=0>
+	<COL WIDTH=80>
+	<COL WIDTH=130>
+	<COL WIDTH=158>
+	<TR VALIGN=TOP>
+		<TD WIDTH=80 HEIGHT=31 STYLE="border-top: 1px solid #000001; border-bottom: none; border-left: 1px solid #000001; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.11in; margin-top: 0.05in">#define</P>
+		</TD>
+		<TD WIDTH=130 STYLE="border-top: 1px solid #000001; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.27in; margin-top: 0.05in">SQUARE(x)</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border-top: 1px solid #000001; border-bottom: none; border-left: none; border-right: 1px solid #000001; padding: 0in">
+			<P STYLE="margin-left: 0.42in; margin-top: 0.05in">x*x</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=80 HEIGHT=35 STYLE="border-top: none; border-bottom: 1px solid #000001; border-left: 1px solid #000001; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.11in; margin-top: 0.07in">#define</P>
+		</TD>
+		<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000001; border-left: none; border-right: none; padding: 0in">
+			<P STYLE="margin-left: 0.27in; margin-top: 0.07in">CUBE(x)</P>
+		</TD>
+		<TD WIDTH=158 STYLE="border-top: none; border-bottom: 1px solid #000001; border-left: none; border-right: 1px solid #000001; padding: 0in">
+			<P STYLE="margin-left: 0.42in; margin-top: 0.07in">SQUARE(x) * x</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.2in; margin-top: 0.03in">
+/* C program to demonstrate simple macro substitution */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in; text-indent: -0in">
+#include&lt;conio.h&gt; #define MAX 100 main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.24in; margin-top: 0in">
+int n; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.8in">printf(&quot;Enter
+the value of n: &quot;); scanf(&quot;%d&quot;,&amp;n);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">if(n &lt; MAX)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">printf(&quot;%d
+is less than MAX&quot;,n);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">else</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">printf(&quot;%d is
+greater than MAX&quot;,n);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.84in">/*
+C program to demonstrate argumented macro substitution */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in">#include&lt;conio.h&gt;
+#define SQUARE(x) x*x main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.24in">int
+i; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">for(i = 1; i &lt;= 10;
+i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">printf(&quot;%d\n&quot;,SQUARE(i));</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.18in; margin-top: 0.04in">
+/* C program to demonstrate nested macro substitution */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in">#include&lt;conio.h&gt;
+#define SQUARE(x) x*x</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.79in">#define
+AREA(x) 3.14*SQUARE(x) main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.24in">int
+r; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.03in">printf(&quot;Enter
+the radius: &quot;); scanf(&quot;%d&quot;,&amp;r);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.16in">printf(&quot;Area
+of the circle is: %f&quot;,AREA(r)); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="File_Inclusion_Directives"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>File
+Inclusion Directives</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The external files containing functions or macro definitions can be
+linked with our program so that there is no need to write the
+functions and macro definitions again. This can be achieved by using
+the <B>#include </B>directive. The syntax for this directive is as
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.94in; width: 2.38in; height: 0.66in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 1.09in; margin-right: 0.55in; text-indent: -0.53in; margin-top: 0.05in">
+	#include “filename” OR</P>
+	<P CLASS="western" STYLE="margin-left: 0.57in; line-height: 0.19in">#include&lt;filename&gt;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+We can use either of the above statements to link our program with
+other files. If the <B>filename </B>is included in double quotes, the
+file is searched in the local directory. If the <B>filename </B>is
+included in angular brackets, then the file is searched in the
+standard directories.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in"><A NAME="Compiler_Control_Directives"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Compiler
+Control Directives</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-top: 0.03in">
+Following are the compiler control directives:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=571 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=214>
+	<COL WIDTH=351>
+	<TR VALIGN=TOP>
+		<TD WIDTH=214 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.84in; margin-right: 0.83in">Directive</P>
+		</TD>
+		<TD WIDTH=351 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 1.57in; margin-right: 1.57in">Purpose</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=214 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#ifdef</P>
+		</TD>
+		<TD WIDTH=351 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Test for a macro definition</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=214 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#endif</P>
+		</TD>
+		<TD WIDTH=351 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Specifies the end of #if</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=214 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#ifndef</P>
+		</TD>
+		<TD WIDTH=351 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Tests whether a macro is not
+			defined</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=214 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#if</P>
+		</TD>
+		<TD WIDTH=351 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Test a compile-time condition</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=214 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#else</P>
+		</TD>
+		<TD WIDTH=351 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Specifies alternative when #if
+			fails</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in">These
+compiler control directives are used in different situations. They
+are:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in"><A NAME="Situation_1"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Situation 1</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+You have included a file containing some macro definitions. It is not
+known whether a certain macro has been defined in that header file.
+However, you want to be certain that the macro is defined.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+This situation refers to the conditional definition of a macro. We
+want to ensure that the macro TEST is always defined, irrespective of
+whether it has been defined in the header file or not. This can be
+achieved as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.11in; left: 3.37in; width: 1.55in; height: 0.86in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.2in; margin-top: 0.05in">
+	#include”DEFINE.H” #ifndef TEST #define TEST 1 #endif</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; margin-top: 0.11in">
+<B>DEFINE.H </B>is the header that is supposed to contain the
+definition of <B>TEST </B>macro. The directive <B>#ifndef TEST
+</B>searches the definition of <B>TEST </B>in the header file and if
+it is not defined, then all the lines between the <B>#ifndef </B>and
+the corresponding <B>#endif </B>directive are executed in the
+program.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Situation_2"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Situation 2</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Suppose a customer has two different types of computers and you are
+required to write a program that will run on both the systems. You
+want to use the same program, although a certain lines of code must
+be different for each system.</P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0in">The
+main concern here is to make the program portable. This can be
+achieved as shown</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">below:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 3.13in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; margin-top: 0.04in">
+If we want to run the program on a IBM PC, we include the directive
+<B>#define IBM_PC, </B>otherwise we won’t.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Situation_3"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Situation 3</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+You are developing a program for selling in the open market. Some
+customers may insist on having certain additional features. However,
+you would like to have a single program that would satisfy both types
+of customers.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in">
+This situation is similar to the above situation and therefore the
+control directives take the following form:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.11in; left: 2.9in; width: 2.48in; height: 1.04in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">#idef
+	ABC</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">Group-A
+	lines</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">#else</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">Group-B
+	lines</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">#endif</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.09in">Group-A
+lines are included if the customer ABC is defined. Otherwise, Group-B
+lines are included.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Situation_4"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Situation 4</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Suppose if you want to test a large program, you would like to
+include print calls in the program in certain places to display
+intermediate results and messages in order to trace the flow of
+execution and errors.</P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0in">For
+this purpose we can use <B>#if </B>and <B>#else </B>directive as
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.49in; height: 2.53in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">#if
+	constant expression</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">Statement
+	1;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Statement 2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">-----</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">else</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">Statement
+	1;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">Statement
+	2;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">-----</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">#endif</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Programs_(1)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.03in">/*
+C program to demostrate #undef preprocessor directive */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.55in">#include&lt;conio.h&gt;
+#define NAME &quot;teja&quot; main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.84in; margin-top: 0in">
+clrscr(); puts(NAME); #undef NAME puts(NAME); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.35in; margin-top: 0.04in">
+/* C program to demostrate #ifdef and #endif preprocessor directives
+*/ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in">#include&lt;conio.h&gt;
+#define MAX 100 main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.01in">clrscr();
+#ifdef MAX</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.55in">#define
+COUNT 10 #endif</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">printf(&quot;COUNT =
+%d&quot;,COUNT);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.27in; margin-top: 0.04in">
+/* C program to demostrate #ifndef and #endif preprocessor directives
+*/ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in; margin-top: 0in">
+#include&lt;conio.h&gt; #ifndef MAX #define MAX 100 #endif</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.13in">printf(&quot;MAX
+= %d&quot;,MAX); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.62in">/*
+C program to demostrate #if and #else preprocessor directives */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+#define MAX 100 main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.01in">clrscr();
+#ifdef MAX</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-top: 0in">printf(&quot;MAX
+is defined&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">#else</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">printf(&quot;MAX is
+not defined&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.23in">#endif
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="ANSI_Preprocessor_Directives"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>ANSI
+Preprocessor Directives</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in">The
+ANSI committee has added some more preprocessor directives to the
+existing list. They</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">are:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=547 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=196>
+	<COL WIDTH=345>
+	<TR VALIGN=TOP>
+		<TD WIDTH=196 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Directive</B></P>
+		</TD>
+		<TD WIDTH=345 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Purpose</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=196 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#elif</P>
+		</TD>
+		<TD WIDTH=345 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Provides alternative test facility</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=196 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#pragma</P>
+		</TD>
+		<TD WIDTH=345 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Specifies compiler instructions</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=196 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">#error</P>
+		</TD>
+		<TD WIDTH=345 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Stops compilation when an error
+			occurs</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="#elif___Directive"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>#elif Directive</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>#elif </B>directive enables us to establish an “if…else…if”
+sequence for testing multiple conditions. The syntax is as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.43in; width: 1.41in; height: 1.42in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in; line-height: 0.19in">
+	#if expr1</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.4in; text-indent: 0.5in">
+	Stmts; #elif expr2</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.4in; text-indent: 0.5in">
+	Stmts; #elif expr3</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">Stmts;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">#endif</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.13in"><A NAME="#pragma__Directive"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>#pragma
+Directive</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>#pragma </B>directive is an implementation oriented directive
+that allows the user to specify various instructions to be given to
+the compiler. Syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.5in; width: 1.27in; height: 0.37in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.16in; margin-top: 0.05in">#pragma
+	name</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; margin-top: 0.13in">
+Where <B>name </B>is the name of the pragma we want. For example,
+under Microsoft C, <B>#pragma loop_opt(on) </B>causes loop
+optimization to be performed.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="#error__Directive"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>#error Directive</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0in">
+The <B>#error </B>directive is used to produce diagnostic messages
+during debugging. The general format is:</P>
+<P CLASS="western" STYLE="margin-left: 2.67in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in">When
+the <B>#error </B>directive is encountered by the compiler, it
+displays the error message and terminates the program.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in; margin-bottom: 0in">
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 2.47in"></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Preprocessor_Operations"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Preprocessor
+Operations</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.17in"><A NAME="Stringizing_Operator_#"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Stringizing
+Operator #</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in">
+ANSI C provides an operator <B># </B>called stringizing operator to
+be used in the definition of macro functions. This operator converts
+a formal argument into a string. For example, if the macro is defined
+as follows:</P>
+<P CLASS="western" STYLE="margin-left: 2in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; margin-top: 0in">
+and somewhere in the program the statement is written as: <B>sum(a+b);
+</B>then the preprocessor converts this line as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.04in; width: 2.18in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.18in; margin-top: 0.05in">printf(“a+b”
+	“ = %f \n”, a+b);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="Token_Pasting_Operator_##"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Token Pasting
+Operator ##</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The token pasting operator <B>## </B>defined by ANSI enables us to
+combine two tokens within a macro definition to form a single token.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Programs_(2)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.51in; margin-top: 0.03in">
+/*C program to demonstrate Stringizing operator # */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">#include&lt;conio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.73in">#define
+sum(x) printf(#x&quot;= %d&quot;,x); main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.24in">int
+a,b; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">a = 10, b = 20;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">sum(a+b);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.36in; margin-top: 0.04in">
+/* C program to demonstrate preprocessor directives */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in">#include&lt;conio.h&gt;
+#define START main() { #define STOP }</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.83in">#define
+PRINT(x) printf(#x) #define COMBINE(x,y,z) x##y##z #define hai &quot;hai&quot;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">START</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.15in">clrscr();
+printf(COMBINE(h,a,i)); PRINT(\nhello world); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">STOP</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>forum</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='container.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='forum.css')}}">
+
+      <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Arvo|Cagliostro|Dancing+Script|Dosis|Gloria+Hallelujah|IBM+Plex+Sans+Condensed|Indie+Flower|Josefin+Sans|Karla|Lobster|Mina|Nanum+Gothic|Open+Sans|Pacifico|Roboto|Roboto+Condensed|Shadows+Into+Light|Signika|Yanone+Kaffeesatz" rel="stylesheet">
+  </head>
+  <body>
+
+
+      <nav>
+        <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="logo">
+          <div class="logo-img">
+          <img src="{{url_for('static',filename='i.png')}}" height="60px" width="60px">
+          </div>
+
+
+
+      </div>
+
+
+
+
+        <div class="menu">
+          <ul>
+            <li><a href="index">Home</a></li>
+            <li><a href="python_introduction">courses</a></li>
+            {% if session['username'] %}
+            <li>hello, {{session['username']}}</li>
+            <li><a href="signout">signout </a></li>
+            {% endif %}
+            {% if not session['username'] %}
+            <li><a href="signup">Sign Up </a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+
+      <div class="forum-container">
+        <div class="forum-inner">
+        {%block forum%}
+        {%endblock forum%}
+        </div>
+      </div>
+
+      <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+          <script src="{{url_for('static',filename='menu.js')}}"></script>
+
+
+
+</body>
+</html>

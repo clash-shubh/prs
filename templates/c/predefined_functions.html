@@ -1,0 +1,347 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Predefined
+or Library Functions</FONT></H1>
+    
+    
+    
+       
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Predefined_/_Library_Functions"></A></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A function is said to be a predefined function or library function,
+if they are already declared and defined by another developer. These
+predefined functions will be available in the library header files.
+So, if we want to use a predefined function, we have to include the
+respective header file in our program. For example, if we want to use
+<B>printf </B>function in our program, we have to include the <B>stdio.h
+</B>header file, as the function <B>printf </B>has been declared
+inside it.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Some of the header
+files in C are:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.2in; left: 1in; width: 599px"><IMG SRC="{{url_for('static',filename='img/C_html_96c71bcb.png')}}" NAME="image76.png" WIDTH=599 HEIGHT=252 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.04in">Some
+of the predefined functions available in <B>ctype.h</B><B> </B>header
+file are:</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><IMG SRC="{{url_for('static',filename='img/C_html_5a892cfd.png')}}" NAME="image77.png" ALIGN=BOTTOM WIDTH=599 HEIGHT=323 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in">Some
+of the predefined functions available in <B>math.h </B>header file
+are:</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><IMG SRC="{{url_for('static',filename='img/C_html_6f475441.png')}}" NAME="image78.png" ALIGN=BOTTOM WIDTH=594 HEIGHT=303 BORDER=0></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Some of the predefined
+functions in <B>stdio.h </B>header file are:</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><IMG SRC="{{url_for('static',filename='img/C_html_3c654bcc.png')}}" NAME="image79.png" ALIGN=BOTTOM WIDTH=599 HEIGHT=240 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Some of the predefined
+functions in <B>stdlib.h </B>header file are:</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><IMG SRC="{{url_for('static',filename='img/C_html_41f5cead.png')}}" NAME="image80.png" ALIGN=BOTTOM WIDTH=606 HEIGHT=301 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Some of the predefined
+functions in <B>string.h </B>header file are:</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><IMG SRC="{{url_for('static',filename='img/C_html_2ac4ade7.png')}}" NAME="image81.png" ALIGN=BOTTOM WIDTH=557 HEIGHT=154 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Some of the predefined
+functions available in <B>time.h </B>header file are</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><IMG SRC="{{url_for('static',filename='img/C_html_42756775.png')}}" NAME="image82.png" ALIGN=BOTTOM WIDTH=548 HEIGHT=108 BORDER=0></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs:</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.52in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to demonstrate functions */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>#include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.81in; margin-top: 0in">
+<FONT SIZE=4>int readint(); /*Function Declaration*/ main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.07in"><FONT SIZE=4>int
+x; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>x =
+readint();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;Value
+of x is: %d&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>int
+readint() /* Function Definition */</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>int n;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.16in"><FONT SIZE=4>printf(&quot;Enter
+a integer value: &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>return
+n;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.75in; margin-top: 0.14in">
+<FONT SIZE=4>/* C program to add numbers by using a function */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>int addint(); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>int
+</FONT><FONT SIZE=4>sum; </FONT><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.67in"><FONT SIZE=4>sum
+= addint(); printf(&quot;Sum is: %d&quot;,sum); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>int
+addint()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>int
+a,b;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.69in"><FONT SIZE=4>printf(&quot;Enter
+the values of a and b: &quot;); scanf(&quot;%d%d&quot;,&amp;a,&amp;b);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>return
+a+b;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.88in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to print 200 stars using a function */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>void
+printstars(); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>clrscr();
+</FONT><FONT SIZE=4>printstars(); </FONT><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+printstars()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>int i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>for(i
+= 0; i &lt; 200; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;*
+&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.04in; margin-top: 0.14in">
+<FONT SIZE=4>/* C program to add two numbers by using a function with
+parameters */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>#include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.13in"><FONT SIZE=4>int
+addint(int x, int y); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>int
+a, b, sum; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.69in"><FONT SIZE=4>printf(&quot;Enter
+the values of a and b: &quot;); scanf(&quot;%d%d&quot;,&amp;a,&amp;b);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.62in"><FONT SIZE=4>sum
+= addint(a, b); printf(&quot;Sum is: %d&quot;, sum); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>int
+addint(int x, int y)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>return x
++ y;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.2in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to print n number of stars using a function
+*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.17in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; void printstars(int n); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.07in"><FONT SIZE=4>int
+n; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.25in"><FONT SIZE=4>printf(&quot;Enter
+the value of n: &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>printstars(n);
+</FONT><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+printstars(int n)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>int
+i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i =
+0; i &lt; n; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;*
+&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.14in"><FONT SIZE=4>/*
+C program to find whether the given number is even or odd using a
+function</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.27in"><FONT SIZE=4>*/
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; void evenodd(int x);
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.07in"><FONT SIZE=4>int
+n; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.57in; margin-top: 0in">
+<FONT SIZE=4>printf(&quot;Enter a number: &quot;); scanf(&quot;%d&quot;,&amp;n);
+evenodd(n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+evenodd(int x)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>if(x
+% 2 == 0)</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0.15in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>printf(&quot;Entered
+number is even&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;Entered
+number is odd&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.23in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to find the factorial of a given number
+using a function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.3in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; void factorial(int x); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.07in"><FONT SIZE=4>int
+n; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.25in"><FONT SIZE=4>printf(&quot;Enter
+the value of n: &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>factorial(n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>void
+factorial(int x)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>int
+i, fact = 1; if(x == 0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;Factorial
+of 0 is: 1&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>for(i =
+1; i &lt;= x; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in; line-height: 0.24in"><FONT SIZE=4>fact
+= fact * i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;Factorial
+of %d is : %d&quot;, x, fact);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.11in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to generate the first n terms of the
+Fibonacci sequence using a function*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.39in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>void fib(int n); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.73in"><FONT SIZE=4>int
+number; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.69in"><FONT SIZE=4>printf(&quot;Enter
+the number of terms: &quot;); scanf(&quot;%d&quot;,&amp;number);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>fib(number);
+</FONT><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>void
+fib(int n)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>int i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.79in"><FONT SIZE=4>int
+a = 0,b = 1,temp = 0; if(n == 1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=4>printf(&quot;%d&quot;,0);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>else if(n
+== 2)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;%d
+%d &quot;,0,1);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-right: 4.86in; margin-top: 0in">
+<FONT SIZE=4>printf(&quot;%d %d &quot;,a,b); for(i = 2; i &lt; n;
+i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in; margin-right: 5.36in"><FONT SIZE=4>temp
+= a+b; a = b;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in; margin-right: 5.11in"><FONT SIZE=4>b
+= temp; printf(&quot;%d &quot;,b);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

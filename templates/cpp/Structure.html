@@ -1,0 +1,208 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+    
+
+<H4 CLASS="western"><BR CLEAR=LEFT><FONT COLOR="#17365d">Structure of a C++ Program</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+    
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><A NAME="Structure_of_a_C++_Program"></A>
+A C++ program can contain several parts or sections as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.24in; left: 3.05in; width: 211px"><IMG SRC="{{url_for('static',filename='img/CPP_html_34e2ea81.png')}}" NAME="image12.png" WIDTH=211 HEIGHT=120 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+All sections except the <B>main() </B>function section are optional.
+Every C++ program must contain a main() function section. Classes in
+C++ are similar to structures in C. Classes in C++ can contain both
+variables and functions, where as it is not possible with structures
+in C. Functions can be defined inside and outside classes in C++.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Include_Files_Section"></A>
+<FONT COLOR="#4f81bd">Include Files Section</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+A C++ program might include one or more header files using the
+<B>#include </B>directive. The syntax for including header files is
+given below:</P>
+<P STYLE="margin-left: 1.77in; margin-top: 0in"><B>#include&lt;stdio.h&gt;
+[or] #include &quot;stdio.h&quot;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The extension of header files in C++ is &quot;.h&quot;. In the above
+example, the header files <B>stdio.h</B>. is included. All the
+function declarations in that header file are available in our
+program. Header files can be included anywhere in the program. Good
+programming practice is to include them at the beginning of the
+program.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Class_Declaration_or_Definition_Section"></A>
+<FONT COLOR="#4f81bd">Class Declaration or Definition Section</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+One or more classes can be defined in this section. A class can be
+defined after the main() section. Good programming practice is to
+define classes before main() section.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A class definition must terminate with a semi-colon (;). A class
+definition contains variables, function declarations (prototypes), or
+function definitions.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Class_Function_Definitions_Section"></A><FONT COLOR="#4f81bd">Class
+Function Definitions Section</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+This contains the definitions of functions that were declared in the
+above section (class declaration section). Functions with less code
+are defined within the class. Such functions are treated as inline
+functions. Functions with large amount of code are defined outside
+the class.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="main()_Function_Section"></A><FONT COLOR="#4f81bd">main()
+Function Section</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Every C++ program must contain a <B>main() </B>function as the
+execution starts from main() function itself. A main() function might
+contain the code to create and use the objects of classes created in
+above sections.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Header Files and Libraries in C++</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Header_Files_and_Libraries_in_C++"></A>
+A library provided by a programming language consists of pre-defined
+functionality arranged in several files. These libraries can be used
+by programmers to write programs with their own logic without
+focusing on housekeeping functionality.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+C++ library provides several header files (.h files) which includes a
+lot of pre-defined functionality like reading and writing to files,
+memory management routines, console I/O routines etc.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Below are some of the
+header files and the library functions available in those header
+files in C++:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="A_Sample_C++_Program"></A><FONT COLOR="#365f91">A
+Sample C++ Program</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Let's consider the
+following C++ program which prints &quot;Hello World&quot; on to the
+console or terminal window. We will look at various elements used in
+the program.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_ca787aeb.png')}}" NAME="image13.png" WIDTH=603 HEIGHT=392 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.83in">//C++
+program to print &quot;Hello World&quot; #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">using
+namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.37in">cout&lt;&lt;&quot;Hello
+World&quot;; return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output of the above
+code is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Hello World</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program, <B>iostream </B>is the name of a header file
+which contains I/O functionality. In order to take input and print
+some output using our C++ program, we have to include that header
+file using <B>#include </B>directive. Note that writing &quot;.h&quot;
+at the end of the header file name results in an error. Such style is
+deprecated in newer versions of C++.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The </FONT><FONT SIZE=3><B>cin
+</B></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><B>cout </B></FONT><FONT SIZE=3>elements
+are declared in </FONT><FONT SIZE=3><B>std </B></FONT><FONT SIZE=3>namespace
+inside </FONT><FONT SIZE=3><B>iostream </B></FONT><FONT SIZE=3>header
+file. So, to use either </FONT><FONT SIZE=3><B>cin </B></FONT><FONT SIZE=3>or
+</FONT><FONT SIZE=3><B>cout</B></FONT><FONT SIZE=3>, we have to write
+</FONT><FONT SIZE=3><B>using namespace &lt;name&gt;</B></FONT><FONT SIZE=3>.
+If you don't want to write this line, you have to write </FONT><FONT SIZE=3><B>std::cin
+</B></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><B>std::cout </B></FONT><FONT SIZE=3>in
+your program instead of </FONT><FONT SIZE=3><B>cin </B></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><B>cout</B></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Every C++ program must contain a <B>main() </B>function which
+specifies the starting point of execution. Since return type of main
+is <B>int</B>, you should return an integer value back in your
+program.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>cout </B></FONT><FONT SIZE=3>is
+the standard output object. It is used in conjunction with </FONT><FONT SIZE=3><B>insertion
+operator (&lt;&lt;) </B></FONT><FONT SIZE=3>to print output on the
+screen.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The <B>return </B>statement returned a value 0 which tells the
+operating system that the program has completed successfully. A
+non-zero value tells that the program execution was unsuccessful.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Finally, the first line is a comment. We can write single line
+comments in C++ using // and multi-line comments using /* and */.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Differences_between_C_and_C++"></A>
+<FONT COLOR="#365f91">Differences between C and C++</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are various
+difference between C and C++:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 603px"><IMG SRC="{{url_for('static',filename='img/CPP_html_4298b1cb.png')}}" NAME="image14.png" WIDTH=603 HEIGHT=348 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

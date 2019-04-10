@@ -1,0 +1,751 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Types
+	of Inheritance</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Following
+	figure illustrates different types of inheritance in C++:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_2cb7eb46.png')}}" NAME="image37.png" WIDTH=602 HEIGHT=270 BORDER=0></SPAN><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Simple_Inheritance"></A>
+	<FONT COLOR="#4f81bd">Simple Inheritance</FONT></H6>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.06in; page-break-before: always">
+In simple inheritance, there is only one super class and one sub
+class. This is the simplest of all the types of inheritance.
+Following program demonstrates simple inheritance:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section145" DIR="LTR" GUTTER=14 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;This
+	is super class A&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section146" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section147" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">B()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;This
+	is sub class B&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section148" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">B obj;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is a follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.99in">This
+	is super class A This is sub class B</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Multi-Level_Inheritance"></A><FONT COLOR="#4f81bd">Multi-Level
+	Inheritance</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	In multi-level inheritance, a sub class inherits a super class and
+	once again that sub class is inherited by another sub class and so
+	on. At each level we have one super class and one sub class.
+	Following program demonstrates multi-level inheritance:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section149" DIR="LTR" GUTTER=14 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;This
+	is super class A&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section150" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">B()</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">cout&lt;&lt;&quot;This
+is sub class B of super class A&quot;&lt;&lt;endl;</P>
+<DIV ID="Section151" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class C : public B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section152" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">C()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;This
+	is sub class C of super class B&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section153" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">C obj;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">This is super class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.02in">This
+	is sub class B of super class A This is sub class C of super class B</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Multiple_Inheritance"></A><FONT COLOR="#4f81bd">Multiple
+	Inheritance</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	In multiple inheritance, multiple super classes will be inherited by
+	a single sub class. In multiple inheritance there might be ambiguity
+	problem in sub class. For example if super class A contains a
+	variable <I>x </I>and another super class B also contains a variable
+	<I>x</I>, then in sub class C, when <I>x</I><I> </I>is referred,
+	compiler will be confused whether it belongs to class A or class</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">B. To avoid this
+	ambiguity, we use the scope resolution operator.</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.14in; margin-top: 0in; line-height: 0.38in">
+	Following program demonstrates multiple inheritance and the solution
+	to ambiguity problem: #include&lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+	using namespace std; class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.84in">int
+	x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.84in">A(int
+	x)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;A's
+	x = &quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class B</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: -0.01in; margin-top: 0in">public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.85in; margin-top: 0in">
+int x;</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.85in">B(int
+x)</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<DIV ID="Section154" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;B's
+	x = &quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class C : public A,
+	public B //multiple inheritance</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">C(int a, int b) :
+	A(a), B(b)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+</DIV>
+<DIV ID="Section155" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">A::show();</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">B::show();</P>
+</DIV>
+<DIV ID="Section156" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">C
+	objC(10, 20);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.68in">A's
+	x = 10 B's x = 20</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Hierarchical_Inheritance"></A><FONT COLOR="#4f81bd">Hierarchical
+	Inheritance</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">In
+	hierarchical inheritance, a single super class is inherited by
+	multiple sub classes. Following program demonstrates hierarchical
+	inheritance:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section157" DIR="LTR" GUTTER=14 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Super
+	class A's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section158" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">B()</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">cout&lt;&lt;&quot;Sub
+class B's constructor&quot;&lt;&lt;endl;</P>
+<DIV ID="Section159" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class C : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section160" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">C()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Sub
+	class C's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section161" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">C objC;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.56in">Super
+	class A's constructor Sub class C's constructor</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Hybrid_Inheritance"></A><FONT COLOR="#4f81bd">Hybrid
+	Inheritance</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">This is a combination
+	of any two or more of the types of inheritance mentioned before.
+	Following program demonstrates hybrid inheritance:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section162" DIR="LTR" GUTTER=14 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Super
+	class A's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section163" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section164" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">B()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Sub
+	class B's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section165" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class C : public A</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">C()</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">cout&lt;&lt;&quot;Sub
+class C's constructor&quot;&lt;&lt;endl;</P>
+<DIV ID="Section166" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class D: public B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section167" DIR="LTR" GUTTER=14 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">D()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Sub
+	class D's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section168" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">D objD;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.56in">Super
+	class A's constructor Sub class B's constructor Sub class D's
+	constructor</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Multipath_Inheritance"></A>
+	<FONT COLOR="#4f81bd">Multipath Inheritance</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Multipath inheritance
+	is a special case of hybrid inheritance. It is a combination of
+	multiple, hierarchical, and multi-level inheritance.</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in"><A NAME="Diamond_Problem"></A>
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Diamond
+	Problem</B></FONT></FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+	In multipath we encounter an ambiguous situation which is also known
+	as diamond problem. For example, let the super class A contains a
+	variable x, which is inherited by sub classes B and C. Now, sub
+	class D of super classes B and C will be able to access the variable
+	x. So, whose x is it? Is it B's x or C's x? To avoid this ambiguous
+	situation and to maintain only one copy of x, we mark the base class
+	A as virtual class. Syntax for making A as virtual base  class is as
+	follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.3in">class
+	B : virtual public A { ... } class C : virtual public A { ... }</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Following program
+	demonstrates multipath inheritance and virtual base class solution
+	for the diamond problem:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; class A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section169" DIR="LTR" GUTTER=3 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; margin-top: 0.16in">cout&lt;&lt;&quot;Super
+	class A's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section170" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in">void read()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.05in">cout&lt;&lt;&quot;Enter
+	value of x: &quot;; cin&gt;&gt;x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : virtual
+	public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section171" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">B()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Sub
+	class B's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section172" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">class
+	C : virtual public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+</DIV>
+<DIV ID="Section173" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">C()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Sub
+	class C's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section174" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class D: public B,
+	public C</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section175" DIR="LTR" GUTTER=14 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">D()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;Sub
+	class D's constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section176" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.05in">D
+	objD; objD.read();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.98in">objD.show();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is as follows:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.56in; margin-top: 0.06in">
+Super class A's constructor Sub class B's constructor Sub class C's
+constructor Sub class D's constructor Enter value of x: 20</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">x = 20</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<I><B>Note: </B></I>The constructor of a virtual base class is
+invoked before any non-virtual base class. If there are multiple
+virtual base classes, then they are invoked in the order in which
+they are declared.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

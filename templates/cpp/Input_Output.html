@@ -1,0 +1,499 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Input
+and Output in C++</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+Any program in a given programming language needs significant amount
+of input from the user and also needs to display to the output
+several times. To support such I/O operations, C++ provides a library
+which contains several classes and functions.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Streams_in_C++"></A><FONT COLOR="#365f91">Streams
+in C++</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+In C++, standard library maintains input and output as streams. A
+stream is a flow of data, measured in bytes, in sequence. If data is
+received from input devices, it is called a source stream and if the
+data is to be sent to output devices, it is called a destination
+stream.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The data in the source stream can be used as input to the program.
+Then it is called an input stream. The destination stream can be used
+by the program to send data to the output devices. Then it is called
+an output stream.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Pre-Defined Streams</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Pre-Defined_Streams"></A>
+C++ contains number of pre-defined streams. They are also called as
+standard I/O objects. These streams are available automatically when
+the execution of a program starts. The pre- defined streams available
+in C++ are:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+<B>cin: </B>Standard input, usually keyboard. It handles input
+devices. It is analogous to <B>stdin </B>in C. <B>cout: </B>Standard
+output, usually monitor. It handles output devices. It is analogous
+to <B>stdout </B>in C.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><B>cerr: </B>Standard
+error output, usually screen. It handles the unbuffered output data.
+It is analogous to <B>stderr </B>in C.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><B>clog:
+</B>A fully buffered version of <B>cerr</B>. It handles error
+messages that are sent from buffer to the standard error device.
+There is no equivalent of <B>clog </B>in C.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Stream_Classes"></A>
+<FONT COLOR="#365f91">Stream Classes</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">C++
+provides several classes to work with stream based I/O. Such classes
+are known as stream classes and they are arranged in a hierarchy
+shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.23in; left: 1.59in; width: 490px"><IMG SRC="{{url_for('static',filename='img/CPP_html_aecbaf18.png')}}" NAME="image15.png" WIDTH=490 HEIGHT=376 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+All these classes are declared in <B>iostream.h </B>header file. So,
+we have to include this header file in order to use the stream
+classes. As shown in the above figure, <B>ios </B>is the base class
+for all the stream classes from which <B>istream </B>and <B>ostream
+</B>classes are derived. The <B>iostream </B>class is derived from
+both <B>istream </B>and <B>ostream</B><B> </B>classes.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+table lists out some of the stream classes and their contents:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><IMG SRC="{{url_for('static',filename='img/CPP_html_165c4562.png')}}" NAME="image16.png" ALIGN=BOTTOM WIDTH=602 HEIGHT=390 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Formatted_and_Unformatted_Data"></A>
+<FONT COLOR="#365f91">Formatted and Unformatted Data</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Data which is received by the program without any modifications and
+sent to the output device without any modifications is known as
+unformatted data. On the other hand, sometimes we may want to apply
+some modifications to the actual data that is being received or sent.
+For example, we might want to display an integer in hexadecimal
+format in the output, leave some whitespace when printing a number
+and adjustments in the decimal point. Such modified data in known as
+formatted data.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">As an example for
+formatted data, if we want to display a decimal number in hexadecimal
+format, we can use the <B>hex manipulator </B>as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">cout&lt;&lt;hex&lt;&lt;15</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Above
+line displays 15 in hexadecimal format as F.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><A NAME="Unformatted_Console_I/O"></A>
+<FONT COLOR="#365f91">Unformatted Console I/O</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">The input
+stream uses <B>cin </B>object of <B>istream </B>class to read data
+and the output stream uses <B>cout</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">object of
+<B>ostream </B>class to display data on output devices.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The cin statement uses
+&gt;&gt; (extraction operator) to read data from keyboard. Syntax of
+cin statement is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P STYLE="margin-left: 0.1in; margin-top: 0.06in"><B>cin&gt;&gt;variable-name;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.84in; margin-top: 0in">
+int a; float f; char ch;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">cin&gt;&gt;a&gt;&gt;f&gt;&gt;ch;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above example, cin is used in cascading fashion. This is
+helpful for reading values into multiple variables in a single
+statement. No need of any format specifiers like %d, %f etc. The &gt;&gt;
+(extraction) operator will take care of that automatically.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">If
+the data provided is greater than the number of variables in the cin
+statement, extra data will remain in the input stream.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in">The
+cout statement uses &lt;&lt; (insertion operator) to display data to
+the output device. Syntax of cout statement is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in"><B>cout&lt;&lt;variable-name;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">cout&lt;&lt;a&lt;&lt;b&lt;&lt;c;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above example,
+a, b, and c are variables. No need to specify format specifiers like
+%d,</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">%f, etc. The &lt;&lt;
+(insertion) operator will take care of that automatically. All escape
+sequences like &quot;\n&quot;, &quot;\t&quot;, etc, can be used in
+cout statement.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.66in">//C++
+program to read two numbers and print their sum #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">using
+namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int a, b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.45in">cin&gt;&gt;a&gt;&gt;b;
+//Reading values into variables a and b cout&lt;&lt;&quot;Sum is:
+&quot;&lt;&lt;(a+b);  //Printing the sum return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Sum is: 30</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">To read a single
+character, we can use <B>get() </B>function of <B>istream </B>class
+and to print a single character, we can use <B>put() </B>function of
+<B>ostream </B>class. Syntax of these methods is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 5.7in"><B>get(char)
+get(void) put(char)</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.68in; margin-top: 0.06in; page-break-before: always">
+//C++ program to demonstrate get() and put() functions #include
+&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">using
+namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.83in">char
+ch1,ch2,ch3; cin.get(ch1).get(ch2).get(ch3);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.72in">cout.put(ch1).put(ch2).put(ch3);
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input:
+xyz</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output of the above
+program is: xyz</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">To read a string or a
+line of text, we can use <B>getline() </B>function and to print a
+string we can use</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><B>write() </B>function.
+Syntax of both of these methods is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; margin-right: 5.03in"><B>getline(string,
+size) write(string, size)</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The <I>size </I>in the
+above syntax specifies the number of characters to read and print in
+the given string.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.3in">//C++
+program to demonstrate getline() and write() functions #include
+&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">using
+namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.37in">char
+str[30]; cin.getline(str, 10);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout.write(str, 10);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input:
+C++ rocks</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.23in; line-height: 200%">
+Output of the above program is: C++ rocks</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="istream_Class_Functions"></A>
+<FONT COLOR="#365f91">istream Class Functions</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">The
+<B>istream </B>class is derived from <B>ios </B>class. The istream
+class contains the following functions:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_9f3d900e.png')}}" NAME="image17.png" WIDTH=602 HEIGHT=340 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in"><A NAME="Formatted_Console_I/O"></A>
+<FONT COLOR="#365f91">Formatted Console I/O</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">C++ provides various
+console I/O functions for formatted input and output. The three ways
+to display formatted input and output are:</P>
+<P CLASS="western"><BR>
+</P>
+<OL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>ios
+	</B></FONT><FONT SIZE=3>class functions and</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>flags</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Standard</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>manipulators</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>User-defined
+	manipulators</FONT></FONT></P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="ios_Class"></A>
+<FONT COLOR="#4f81bd">ios Class</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">The
+<B>ios </B>class is the base class for all input and output classes
+in C++. Following are some of the functions available in <B>ios
+</B>class:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 594px"><IMG SRC="{{url_for('static',filename='img/CPP_html_45959b99.png')}}" NAME="image18.png" WIDTH=594 HEIGHT=154 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+The <B>width() </B>function can be used in two ways as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>int
+width() </B></FONT><FONT SIZE=3>: Returns the current width setting.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><B>int width(int) </B>:
+Sets the specified width and returns the previous width setting.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The <B>precision()
+</B>function can be used in two ways as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>int
+precision() </B></FONT><FONT SIZE=3>: Returns the current precision
+setting.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>int
+precision(int) </B></FONT><FONT SIZE=3>: Sets the specified precision
+and returns the previous precision setting.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The <B>fill() </B>function
+can be used in two ways as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>char
+fill() </B></FONT><FONT SIZE=3>: Returns the current fill character.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><B>char fill(char) </B>:
+Sets the fill character and returns the previous fill character.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The <B>setf() </B>function
+can be used in two ways as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>long
+setf(long sb, long f) </B></FONT><FONT SIZE=3>: The bits specified by
+the variable </FONT><FONT SIZE=3><I>f </I></FONT><FONT SIZE=3>are
+removed from data member </FONT><FONT SIZE=3><I>x_flags </I></FONT><FONT SIZE=3>in
+</FONT><FONT SIZE=3><B>ios </B></FONT><FONT SIZE=3>and set according
+the value specified by</FONT><FONT SIZE=3> </FONT><FONT SIZE=3><I>sb</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>long
+setf(long) </B></FONT><FONT SIZE=3>: Sets the flags in </FONT><FONT SIZE=3><I>x_flags
+</I></FONT><FONT SIZE=3>based on the given value.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Bit_Fields"></A>
+<FONT COLOR="#4f81bd">Bit Fields</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">The
+<B>ios </B>class contains several flags and bit fields to adjust or
+format the output displayed on the screen. Available bit fields and
+flags in <B>ios </B>class are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 593px"><IMG SRC="{{url_for('static',filename='img/CPP_html_5c18f591.png')}}" NAME="image19.png" WIDTH=593 HEIGHT=252 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>ios::adjustfield
+</B></FONT><FONT SIZE=3>is used with </FONT><FONT SIZE=3><B>setf()
+</B></FONT><FONT SIZE=3>function to set the alignment of padding to
+left, right, or internal.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>ios::floatfield
+</B></FONT><FONT SIZE=3>is used with </FONT><FONT SIZE=3><B>setf()
+</B></FONT><FONT SIZE=3>function to set the floating point notation
+to scientific or fixed.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>ios::basefield
+</B></FONT><FONT SIZE=3>is used with </FONT><FONT SIZE=3><B>setf()
+</B></FONT><FONT SIZE=3>function to set the display notation to
+decimal, octal or hexadecimal.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Flags_without_Bit_Fields"></A>
+<FONT COLOR="#4f81bd">Flags without Bit Fields</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+Some flags does not contain any bit fields. Such flags are listed
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 608px"><IMG SRC="{{url_for('static',filename='img/CPP_html_9eaae4c1.png')}}" NAME="image20.png" WIDTH=608 HEIGHT=246 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.14in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Note: In the above
+table replace </FONT><FONT SIZE=3><I>Ios </I></FONT><FONT SIZE=3>with
+</FONT><FONT SIZE=3><I>ios (sorry for the typo)</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Manipulators"></A><FONT COLOR="#4f81bd">Manipulators</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+Manipulators are helper functions which can be used for formatting
+input and output data. The <B>ios </B>class and <B>iomanip.h </B>header
+file has several pre-defined manipulators.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Below table lists
+out several pre-defined manipulators. The manipulators </FONT><FONT SIZE=3><B>hex,
+oct, dec, ws, endl, and flush </B></FONT><FONT SIZE=3>are defined in
+</FONT><FONT SIZE=3><B>iostream.h</B></FONT><FONT SIZE=3>. The
+manipulators </FONT><FONT SIZE=3><B>setbase(), width(), fill(), </B></FONT><FONT SIZE=3>etc.,
+that require an argument are defined in </FONT><FONT SIZE=3><B>iomanip.h</B></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="User-Defined_Manipulators"></A><FONT COLOR="#4f81bd">User-Defined
+Manipulators</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Sometimes, to satisfy custom requirements, we have to create our own
+manipulator. Such manipulators which are created by the programmer or
+user are known as user-defined manipulators.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+Syntax for creating a user-defined manipulator is as follows:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><IMG SRC="{{url_for('static',filename='img/CPP_html_34dbdbbc.png')}}" NAME="image21.png" ALIGN=BOTTOM WIDTH=602 HEIGHT=371 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; margin-top: 0.06in"><B>ostream &amp;
+m_name(ostream &amp;os)</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>{</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.92in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>Statement(s);
+return os;</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>}</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">In
+the above syntax, <I>m_name </I>is our user-defined manipulator name.
+As an example for user- defined manipulator let's create a
+manipulator which prints a new line.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">ostream &amp;
+newl(ostream &amp; os)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.22in">os&lt;&lt;&quot;\n&quot;;
+return os;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">After
+creating the manipulator named <I>newl</I>, we can use it our program
+as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.07in">cout&lt;&lt;&quot;Hello&quot;&lt;&lt;newl&lt;&lt;&quot;World&quot;&lt;&lt;newl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

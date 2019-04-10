@@ -1,0 +1,483 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Functions</FONT></H1>
+        
+ 
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in"><A NAME="Functions"></A>
+Until now, in all the C programs that we have written, the program
+consists of a <B>main </B>function and inside that we are writing the
+logic of the program. The disadvantage of this method is, if the
+logic/code in the <B>main </B>function becomes huge or complex, it
+will become difficult to debug the program or test the program or
+maintain the program. So, generally while writing the programs, the
+entire logic is divided into smaller parts and each part is treated
+as a function. This type of approach for solving the given problems
+is known as <B>Top Down </B>approach. The top-down approach of
+solving the given problem can be seen below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 600px"><IMG SRC="{{url_for('static',filename='img/C_html_d6f78902.png')}}" NAME="image73.png" WIDTH=600 HEIGHT=341 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<B>Definition: </B>A function is a self contained block of code that
+performs a certain task/job. For example, we can write a function for
+reading an integer or we can write a function to add numbers from 1
+to 100 etc.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+Generally a function can be imagined like a <B>Black Box</B>, which
+accepts data input and transforms the data into output results. The
+user knows only about the inputs and outputs. User has no knowledge
+of the process going on inside the box which converts the given input
+into output. This can be seen diagrammatically as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.22in; left: 1in; width: 596px"><IMG SRC="{{url_for('static',filename='img/C_html_a4b6a83.png')}}" NAME="image74.png" WIDTH=596 HEIGHT=153 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Types_of_Functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Types
+of Functions</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in">Based
+on the nature of functions, they can be divided into two categories.
+They are:</P>
+<OL>
+	<OL>
+		<LI><P>Predefined functions / Library functions</P>
+		<LI><P>User defined functions</P>
+	</OL>
+</OL>
+<P CLASS="western" STYLE="margin-left: 1.03in"><IMG SRC="{{url_for('static',filename='img/C_html_4f369629.png')}}" NAME="image75.png" ALIGN=BOTTOM WIDTH=516 HEIGHT=277 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.14in"><A NAME="Predefined_functions_/_Library_functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Predefined
+functions / Library functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A predefined function or library function is a function which is
+already written by another developer. The users generally use these
+library functions in their own programs for performing the desired
+task. The predefined functions are available in the header files. So,
+the user has to include the respective header file to use the
+predefined functions available in it.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in"><A NAME="User_defined_functions"></A>
+For example, the <B>printf </B>function which is available in the
+<B>stdio.h </B>header file is used for printing information onto the
+console. Other examples of predefined functions are: scanf, gets,
+puts, getchar, putchar, strlen, strcat etc.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>User
+defined functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A user defined function is a function which is declared and defined
+by the user himself. While writing programs, if there are no
+available library functions for performing a particular task, we
+write our own function to perform that task. Example for user defined
+function is <B>main</B><B> </B>function.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="Need_for_functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Need
+for functions</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Functions have many advantages in programming. Almost all the
+languages support the concept of functions in some way. Some of the
+advantages of writing/using functions are:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in">Functions support top-down modular
+	programming.</P>
+	<LI><P>By using functions, the length of the source code decreases.</P>
+	<LI><P STYLE="line-height: 0.19in">Writing functions makes it easier
+	to isolate and debug the errors.</P>
+	<LI><P STYLE="line-height: 0.19in">Functions allow us to reuse the
+	code.</P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Functions_Terminology"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Functions
+Terminology</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.17in"><A NAME="Creating_functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Creating
+functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+For creating functions in C programs, we have to perform two steps.
+They are: 1) Declaring the function and 2) Defining the function.</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Declaring_functions"></A>
+<FONT COLOR="#4f81bd">Declaring functions</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The function declaration is the blue print of the function. The
+function declaration can also be called as the function’s
+prototype. The function declaration tells the compiler and the user
+about what is the function’s name, inputs and output(s) of the
+function and the return type of the function. The syntax for
+declaring a function is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.15in; left: 2.66in; width: 2.96in; height: 0.32in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">return-type
+	function-name(parameters list);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.06in">Example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in"><A NAME="Defining_functions"></A>
+In the above example, <B>readint </B>is the name of the function, <B>int
+</B>is the return type of the function. In our example, <B>readint
+</B>function has no parameters. The parameters list is optional. The
+functions are generally declared in the global declaration section of
+the program.<SPAN DIR="LTR" STYLE="position: relative; top: -0.38in; left: 3.69in; width: 1.09in; height: 0.32in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.13in; margin-top: 0.05in">int
+	readint( );</P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT COLOR="#4f81bd">Defining
+functions</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The function definition specifies how the function will be working
+i.e the logic of the function will be specified in this step. The
+syntax of function definition is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.71in; width: 2.84in; height: 2.51in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">return-type
+	func-name(parameters list…)</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">local variable
+	declarations;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">-----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">-----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return(expression);</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.11in">
+In the above syntax the <B>return-type </B>can be any valid data type
+in C like: int, float, double, char etc. The <B>func-name </B>is the
+name of the function and it can be any valid identifier. The
+<B>parameters list </B>is optional. The <B>local variables </B>are
+the variables which belong to the function only. They are used within
+the body of the function, not outside the function. The <B>return </B>is
+a keyword in</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">C. It is an
+unconditional branch statement. Generally, the <B>return </B>statement
+is used to return a value.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-bottom: 0in">Example:</P>
+<P CLASS="western" STYLE="margin-left: 2.47in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in">
+In the above example, <B>readint </B>is the name of the function, <B>int
+</B>is the return type. The identifier <B>num </B>is a local variable
+with respect to <B>readint </B>function. The above function is
+reading an integer from the keyboard and returning that value back
+with the help of the <B>return </B>statement.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: -0in">
+<B>Note: </B><I>Care must be taken that the return type of the
+function and the data type of the value returned by the return
+statement must match with one another.</I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="Using_Functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Using Functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+After declaring and defining the functions, we can use the functions
+in our program. For using the functions, we must <B>call </B>the
+function by its name. The syntax for calling a function is as shown
+below:<SPAN DIR="LTR" STYLE="position: relative; top: 0.57in; left: 2.9in; width: 2.49in; height: 0.34in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.25in; margin-top: 0.05in">function-name(parameters
+	list);</P>
+</SPAN>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The function name along with the parameters list is known as the
+<B>function signature. </B>Care must be taken that while calling the
+method, the syntax of the function call must match with the function
+signature. Let’s see an example for function call:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Example:<SPAN DIR="LTR" STYLE="position: relative; top: 0.17in; left: 3.59in; width: 1.09in; height: 0.34in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.23in; margin-top: 0.05in">readint(
+	);</P>
+</SPAN>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+Whenever the compiler comes across a function call, it takes the
+control of execution to the first statement in the function’s
+definition. After the completion of function i.e., whenever the
+compiler comes across the <B>return </B>statement or the closing
+brace of the function’s body, the control will return back to the
+next statement after the function call. Let’s see this in the
+following example:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.23in; left: 0.77in; width: 588px"><IMG SRC="{{url_for('static',filename='img/C_html_fc9db260.gif')}}" ALIGN=LEFT><BR CLEAR=LEFT></SPAN><SPAN DIR="LTR" STYLE="position: relative; top: 4.68in; left: 2.54in; width: 3.1in; height: 0.37in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.27in; margin-top: 0.05in">printf
+	and scanf are predefined functions</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Calling_function_and_Called_function"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Calling function
+and Called function</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The point at which the function is being invoked or called is known
+as the <B>calling function</B>. The function which is being executed
+due to the function call is known as the <B>called function. </B>Example
+for both calling function and the called function is given in the
+above example.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Formal_Parameters_and_Actual_Parameters"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Formal
+Parameters and Actual Parameters</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A parameter or argument is data which is taken as input or considered
+as additional information by the function for further processing.
+There are two types of parameters or arguments. The parameters which
+are passed in the function call are known as <B>actual parameters or
+actual arguments. </B>The parameters which are received by the called
+function are known as <B>formal parameters or formal arguments.
+</B>Example is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.49in; height: 3.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">main(
+	)</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.82in; line-height: 188%">
+	int x = 10, y = 20; add(x, y);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">void add(int a, int b)</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">printf(“Sum is:
+	%d”,(a+b));</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+In the above example, <B>x and y </B>are known as actual parameters
+and <B>a and b </B>are known as formal parameters. In the above code,
+we can see that the return type of the function <B>add </B>is <B>void.
+</B>This is a keyword in C. The <B>void </B>keyword is a datatype. If
+the function does not return any value, we specify the data type
+<B>void. </B>Generally <B>void </B>means nothing / no value.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<B>Note: </B>The formal parameters and actual parameters can have the
+same names i.e., if the actual parameters are x and y, then the
+formal parameters can also be x and y. But, it is recommended to use
+different names for actual and formal parameters.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in"><A NAME="Classification_of_Functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Classification
+of Functions</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in">Based
+on the parameters and return values, functions can be categorized
+into four types.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.19in">
+They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">Function without arguments and
+	without return value.</P>
+	<LI><P STYLE="margin-top: 0in">Function without arguments and with
+	return value.</P>
+	<LI><P>Function with arguments and with return value.</P>
+	<LI><P>Function with arguments and without return value.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Function_without_arguments_and_without_r"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Function without
+arguments and without return value</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+In this type of functions there are no parameters/arguments in the
+function definition and the function does not return any value back
+to the calling function. Generally, these types of functions are used
+to perform housekeeping tasks such as printing some characters etc.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.48in; height: 3.17in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">void
+	printstars( )</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">int i;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">for(i = 0; i &lt; 20;
+	i++)</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">printf(“ * ”);</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in"><A NAME="Function_without_arguments_and_with_retu"></A>
+In the above example, <B>printstars </B>function does not have any
+parameters. Its task is to print 20 stars whenever it is called in a
+program. Also <B>printstars </B>function does not return any value
+back.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Function
+without arguments and with return value</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+In this type of functions, the function definition does not contain
+arguments. But the function returns a value back to the point at
+which it was called. An example for this type of function is given
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in">Example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.48in; height: 2.41in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">int
+	readint( )</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">int num;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.2in; text-indent: -0in; line-height: 188%">
+	printf(“Enter a number: “); scanf(“%d”,&amp;num);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">return
+	num;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in">
+In the above example, <B>readint </B>function has no
+parameters/arguments. The task of this function is to read a integer
+from the keyboard and return back to the point at which the function
+was called.</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Function_with_arguments_and_with_return_"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Function with
+arguments and with return value</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+In this type of functions, the function definition consists of
+parameters/arguments. Also, these functions returns a value back to
+the point at which the function was called. These types of functions
+are the most frequently used in programming. An example for this type
+of function can be seen below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-bottom: 0.01in">
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 2.8in"></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; margin-top: 0in">
+In the above example, the function <B>add </B>consists of two
+arguments or parameters <B>x </B>and <B>y</B>. The function adds both
+<B>x </B>and <B>y </B>and returns that value stored in the local
+variable <B>result </B>back to the point at which the function was
+called.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

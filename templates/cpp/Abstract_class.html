@@ -1,0 +1,185 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Abstract
+Class</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A class which contains at least one pure virtual function is called
+an abstract class. Since abstract class is incomplete, another class
+should derive it and provide definitions for the pure virtual
+functions in the abstract class.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+features of an abstract class:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Abstract
+	class must contain at least one pure virtual</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>function.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Objects
+	cannot be created for an abstract class. But pointers can be</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>created.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Classes
+	inheriting an abstract class must provide definitions for all pure
+	virtual functions in the abstract class. Otherwise, the sub class
+	also becomes an abstract</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>An
+	abstract class can have non-virtual functions and data</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>members.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+are the uses of an abstract class:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Abstract
+	class provides a common standard interface for all the sub</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>classes.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Abstract
+	classes allow new features to be easily added to an existing</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>application.</FONT></FONT></P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.16in">
+Following program demonstrates pure virtual functions, late binding
+and an abstract class:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0.06in">
+#include &lt;iostream&gt; using namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Shape	//Abstract
+class</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<DIV ID="Section189" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 3.86in">
+	virtual void area() = 0; virtual void peri() = 0;</P>
+</DIV>
+<DIV ID="Section190" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Rectangle :
+	public Shape	//Concrete class</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 5.02in">int
+	l; int b;</P>
+</DIV>
+<DIV ID="Section191" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Rectangle(int l, int
+	b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section192" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.1in">this-&gt;l
+	= l; this-&gt;b = b;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void area()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Area
+	of rectangle: &quot;&lt;&lt;(l*b)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void peri()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.19in">cout&lt;&lt;&quot;Perimeter
+	of rectangle: &quot;&lt;&lt;2*(l+b)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Circle : public
+	Shape	//Concrete class</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int r;</P>
+</DIV>
+<DIV ID="Section193" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Circle(int r)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section194" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;r = r;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void area()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Area
+	of circle: &quot;&lt;&lt;(3.14*r*r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void peri()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Perimeter
+	of circle: &quot;&lt;&lt;(2*3.14*r)&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Shape *s;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.53in; margin-top: 0.06in; page-break-before: always">
+Rectangle r(10, 20); Circle c(4);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">s = &amp;r;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 3.99in">
+s-&gt;area(); //late binding s-&gt;peri();       //late binding s =
+&amp;c;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 3.99in">
+s-&gt;area(); //late binding s-&gt;peri(); //late binding return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.63in">Area
+of rectangle: 200 Perimeter of rectangle: 60 Area of circle: 50.24
+Perimeter of circle: 25.12</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+
+
+
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

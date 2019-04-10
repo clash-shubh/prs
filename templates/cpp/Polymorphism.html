@@ -1,0 +1,487 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">POLYMORPHISM</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction_(5)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Polymorphism is one of the key features of object orientation. It
+means many forms or single interface multiple implementations.
+Polymorphism is of two types: 1) Compile-time polymorphism and 2)
+Run-time polymorphism as illustrated in the following figure:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_fd4e1690.png')}}" NAME="image38.png" WIDTH=602 HEIGHT=230 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in"><A NAME="Function_Overriding"></A>
+<FONT COLOR="#365f91">Function Overriding</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When a base class and sub class contains a function with the same
+signature, and the function is called with base class object, then
+the function in derived class executes and the function in base class
+is said to be overridden. This is known as function overriding.
+Following program demonstrates function overriding:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class A</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+&quot;&lt;&lt;x&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+B(int x, int y)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.1in">this-&gt;x
+= x; this-&gt;y = y;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<DIV ID="Section181" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.2in">cout&lt;&lt;&quot;x
+	= &quot;&lt;&lt;x&lt;&lt;endl; cout&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section182" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">A objA;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">B objB(30, 20);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.99in">objB.show();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	for the above program is:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 30</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">y = 20</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	In the above program, both super class A and sub class B contains
+	the same function <I>show() </I>with same signature (function name
+	plus parameters). So, when sub class object is used to call <I>show(),
+	</I>function in sub class B executes overriding the function in
+	super class A.</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><I><B>Note:
+	</B></I>Overloading of functions is not supported across classes (in
+	inheritance) in C++.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Virtual_Functions"></A>
+	<FONT COLOR="#365f91">Virtual Functions</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	We know that when a base class pointer refers to a derived class
+	object, the extra features in derived class are not available. To
+	access the extra features in the derived class, we make the
+	functions in the base class as virtual. Syntax for creating a
+	virtual function is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">virtual
+	return-type function-name(params-list)</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">A
+	class which contains one or more virtual functions is known as a
+	polymorphic class. Following program demonstrates accessing derived
+	class features using virtual functions:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+	using namespace std; class A</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section183" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">virtual void
+	show()	//virtual function</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section184" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int y;</P>
+</DIV>
+<DIV ID="Section185" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">B(int x, int y)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section186" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.1in">this-&gt;x
+	= x; this-&gt;y = y;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+</DIV>
+<DIV ID="Section187" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.19in">
+	int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.2in">cout&lt;&lt;&quot;x
+	= &quot;&lt;&lt;x&lt;&lt;endl; cout&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section188" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in">A *bptr;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">B objB(30, 20);</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 4.93in">
+	bptr = &amp;objB; bptr-&gt;show(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 30</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">y = 20</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Rules_for_Virtual_Functions"></A>
+	<FONT COLOR="#4f81bd">Rules for Virtual Functions</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Following points must
+	be remembered while working with virtual functions:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Virtual
+		functions must be members of a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Virtual
+		functions must be created in public section so that objects can
+		access</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>them.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+		virtual function is defined outside the class, virtual keyword is
+		required only in the function declaration. Not necessary in the
+		function</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>definition.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Virtual
+		functions cannot be static</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>members.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Virtual
+		functions must be accessed using a pointer to the</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>object.</FONT></FONT></P>
+	</UL>
+</DIV>
+<UL>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 0.2in; page-break-before: always">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A virtual function
+	cannot be declared as a friend of another</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Virtual
+	functions must be defined in the base class even though it does not
+	have any significance.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	signature of virtual function in base class and derived class must
+	be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>same.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>A
+	class must have a virtual destructor but it cannot have a virtual</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>constructor.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Pure_Virtual_Functions"></A>
+<FONT COLOR="#4f81bd">Pure Virtual Functions</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When the code for virtual function in a base class is insignificant,
+we can make such virtual functions as pure virtual functions. A pure
+virtual function is a virtual function without any definition. Syntax
+for creating a pure virtual functions is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>virtual
+return-type function-name(params-list) = 0;</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in">A
+class which contains at least one pure virtual function is called a
+abstract class and the class which provides the definition for the
+pure virtual function is called a concrete class.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Late_Binding_(Dynamic_Polymorphism)"></A>
+<FONT COLOR="#4f81bd">Late Binding (Dynamic Polymorphism)</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In inheritance when a derived class object is assigned to a base
+class pointer, and a polymorphic function is invoked, the function
+call is linked to the function definition at run- time. Such
+postponement of linkage to run-time instead of compile-time is called
+as late binding or dynamic polymorphism.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<H5 CLASS="western"><A NAME="Virtual_Constructors_and_Destructors"></A>
+<FONT COLOR="#365f91">Virtual Constructors and Destructors</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+C++ allows programmers to create virtual destructors. But, it doesn't
+allow virtual constructors to be created because of various reasons.
+To know why a virtual destructor is needed, consider the following
+program:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class A</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+{</P>
+<DIV ID="Section195" DIR="LTR" GUTTER=5 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">~A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;A's
+	constructor&quot;&lt;&lt;endl;</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.16in">cout&lt;&lt;&quot;A's
+	destructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section196" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section197" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: -0.01in">
+	public: B()</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">~B()</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0.16in">cout&lt;&lt;&quot;B's
+	constructor&quot;&lt;&lt;endl;</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0.16in">cout&lt;&lt;&quot;B's
+	destructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.59in">A
+*bptr = new B(); delete bptr;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+Output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 5.37in">
+A's constructor B's constructor A's destructor</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+From the above output you can see that derived class destructor
+didn't execute. This might lead to problems like memory leakage. To
+avoid such problems we make destructor in base class as virtual
+destructor.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Virtual destructor instructor ensures that the derived class
+destructor is executed. To create a virtual destructor, precede the
+destructor definition with <I>virtual </I>keyword. Following program
+demonstrates a virtual destructor:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class A</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.19in">
+{</P>
+<DIV ID="Section198" DIR="LTR" GUTTER=3 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.24in; margin-top: 0.16in">cout&lt;&lt;&quot;A's
+	constructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section199" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in">virtual ~A()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;A's
+	destructor&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<DIV ID="Section200" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: -0.01in">
+	public: B()</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">~B()</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.21in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0.16in">cout&lt;&lt;&quot;B's
+	constructor&quot;&lt;&lt;endl;</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0.16in">cout&lt;&lt;&quot;B's
+	destructor&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section201" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.59in">A
+*bptr = new B(); delete bptr;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.36in">A's
+constructor B's constructor B's destructor A's destructor</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Now you can see that
+derived class constructor is also executed.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

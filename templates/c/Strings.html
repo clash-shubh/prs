@@ -1,0 +1,962 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Strings</FONT></H1>
+    
+    
+    
+    
+    
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Strings"></A>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+A string is a collection of characters which is treated as a single
+data item. A group of characters enclosed in double quotes is known
+as a string constant. Some of the examples of string constants are:</P>
+<OL>
+	<LI><P>“hai”</P>
+	<LI><P>“hello world”</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">“My name is
+	suresh”</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In C programming, there is no predefined data type to declare and use
+strings. So, we use character arrays to declare strings in C
+programs. The common operations that can be performed on a string
+are:</P>
+<UL>
+	<LI><P>Reading and writing strings</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Combining
+	strings together</P>
+	<LI><P STYLE="line-height: 0.19in">Copying one string to another</P>
+	<LI><P STYLE="line-height: 0.19in">Comparing strings for equality</P>
+	<LI><P STYLE="line-height: 0.19in"><A NAME="Declaring_and_Initializing_Strings"></A>
+	Extracting a portion of the string (substring)</P>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0.14in">
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Declaring and
+Initializing Strings</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in">
+Like variables, we should declare strings before using them in the
+program. Since we already known that strings are implemented as
+character arrays, the syntax for declaring a string is as shown
+below:</P>
+<P CLASS="western" STYLE="margin-left: 2.27in"></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.14in">
+The <B>size </B>refers to the number of characters in the string.
+When the compiler assigns a character string to a character array, it
+appends a <B>‘\0’ </B>to the end of the array. So, the <B>size </B>of
+the character array should always be number of characters plus 1.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; text-indent: 0.5in">
+Like numeric arrays and variables, character arrays can also be
+initialized when they are declared. Some of the examples for
+initializing the string are as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.45in; width: 3.36in; height: 1.03in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">char
+	str[10] = {‘N’,’E’,’W’,’ ‘,’D’,’E’,’L’,’H’,’I’,’\0’};</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">or</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">char str[10] = “NEW
+	DELHI”;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+If less number of characters are provided than the size of the
+string, the rest of the characters are initialized to <B>‘\0’. </B>If
+we try to assign more characters then the size of the string,
+compiler gives an error.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+<B>Note: </B><I>The string termination character </I><I><B>‘\0’</B></I><I>,
+is used to terminate a string. In C, there is no data type provided
+available. We maintain strings using character arrays. A string is a
+variable length structure stored inside a fixed size array. The size
+of the array is often larger than the number of characters in the
+string. So, the compiler must have some means to detect the end of
+the string. For this purpose we use </I><I><B>‘\0’</B></I><I>.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+<B>Note: </B><I>If ‘\0’ is not provided then the compiler will
+treat the array as a normal character array. Only when we provide the
+‘\0’ character, compiler treats it as a string.</I></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs:</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.27in; margin-top: 0.14in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/*C program to declare a string
+*/ #include&lt;stdio.h&gt; #include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.09in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">str[6]; </FONT><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();
+str[0] =</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">'h';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">str[1]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">'e';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">str[2] =</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">'l';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">str[3]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">'l';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">str[4] = 'o';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">str[5]
+= '\0';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.72in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%s&quot;,str);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.27in; margin-top: 0.03in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/*C program to declare a string
+*/ #include&lt;stdio.h&gt; #include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">char str1[6] =
+{'h','e','l','l','o','\0'};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.29in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str2[] = {'h','e','l','l','o','\0'}; char str3[] = &quot;hello
+world&quot;; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.15in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%s&quot;,str1);
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\n%s&quot;,str2);
+printf(&quot;\n%s&quot;,str3); </FONT><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.5in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/*C program to print a string */
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.17in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str1[6] = {'h','e','l','l','o','\0'}; int</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.41in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();
+printf(&quot;%s\n&quot;,str1);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.78in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\nPrinting the
+string using for loop...\n&quot;); for(i = 0; i &lt; 5; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%c&quot;,str1[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.93in; margin-top: 0.14in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/*C program to calculate the
+length of a string */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.29in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str[6] = {'h','e','l','l','o','\0'}; int length;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">length
+= sizeof(str) - 1;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.3in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Length
+of the string is: %d&quot;,length); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.93in; text-indent: -0in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/*C program to calculate the
+length of a string */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.29in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str[6] = {'h','e','l','l','o','\0'}; int length, i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.46in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();
+i = 0;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">while(str[i]
+!= '\0')</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">i++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">length
+= i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.3in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Length
+of the string is: %d&quot;,length); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.75in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/*C program to search for a
+character in a string */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.64in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.97in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str[6] = {'h','e','l','l','o','\0'}, ch; int</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.72in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter
+a character to search: &quot;); scanf(&quot;%c&quot;,&amp;ch);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 5; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">if(str[i]
+== ch)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; margin-right: 2.59in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Character
+found at position %d&quot;,(i+1)); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Reading_Strings"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Reading Strings</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Using_scanf_function"></A><FONT COLOR="#4f81bd">Using
+scanf function</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Strings can be read from the terminal by using the familiar <B>scanf
+</B>function. The format specifier to read strings is <B>%s</B>. An
+example of reading a string using <B>scanf </B>function is shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.47in; width: 1.32in; height: 0.68in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">char
+	str[10];</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">scanf(“%s”, str);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in"><A NAME="Reading_and_printing_a_line_of_text"></A>
+There is a downside of using <B>scanf </B>function for reading
+strings. The downside is, <B>scanf </B>cannot read strings with white
+spaces. For example, if we provide “New Delhi” as the string,
+<B>scanf </B>will read only “New” and the rest of the characters
+are neglected or not processed. So, to read “New Delhi”, we have
+to declare two character arrays and read “New” and “Delhi”
+separately.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Reading
+and printing a line of text</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Reading_Text_(getchar_and_gets)"></A><FONT COLOR="#4f81bd">Reading
+Text (getchar and gets)</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+As we have learned that <B>scanf </B>function cannot be used for
+reading a line of text, we have to search for other alternatives for
+reading a line of text which has white spaces embedded in it. One
+alternative is to read the line of text character by character until
+the enter key (\n) is pressed. Here we will use a predefined function
+called <B>getchar(</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in"><B>)
+</B>which reads a single character from the terminal.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3.64in; margin-top: 0in">
+/* C program to read a line of text using getchar function */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.2in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 6.16in">char
+line[20], ch; int i;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; line-height: 0.19in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.25in">printf(&quot;Enter
+the line of text: &quot;); i = 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in">do</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.36in; margin-right: 6.17in">ch
+= getchar(); line[i] = ch; i++;</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-top: 0.04in; line-height: 0.19in">
+}while(ch != '\n');</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; line-height: 0.19in">line[i]
+= '\0';</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.91in">printf(&quot;%s&quot;,line);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.04in">
+In the above program we are reading characters until a new line
+character (\n) is encountered. So, by using the above approach we can
+read a line of text. There is a more efficient way for reading a line
+of text with white spaces. We can use the <B>gets </B>function which
+is available in the <B>stdio.h </B>header file. The purpose of <B>gets
+</B>function is to read a line of text from the terminal/keyboard.
+The usage of <B>gets </B>function is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.69in; width: 2.88in; height: 0.36in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.9in; margin-top: 0.05in">gets(arrayname);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+The arrayname in the above piece of code is the array in which we are
+going to store the string. By using the <B>gets</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in">function the above
+program can be rewritten as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3.85in">/*
+C program to read a line of text using gets function */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.2in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 6.16in">char
+line[20], ch; int i;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-top: 0in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.25in">printf(&quot;Enter
+the line of text: &quot;); gets(line);</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.91in">printf(&quot;%s&quot;,line);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.15in"><A NAME="Printing_Text_(putchar_and_puts)"></A>
+<FONT COLOR="#4f81bd">Printing Text (putchar and puts)</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+We can print strings in multiple ways. First is by using <B>printf
+</B>function. We can use the format specifier <B>%s </B>to print a
+string. Let us consider the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.21in; left: 3.15in; width: 1.98in; height: 0.68in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">char
+	str[4] = {‘h’,’a’,’i’,’\0’};</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">printf(“%s”, str);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+The output of the above piece of code is “hai”. The second way is
+to print the string character by character. For this purpose we can
+use the format specifier <B>%c </B>for printing each character or we
+can use the predefined function <B>putchar</B>. The usage of this
+function is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.24in; width: 1.78in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.5in; margin-top: 0.05in">putchar(ch);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in">In
+the above code, <B>ch </B>is the character that we want to print on
+the screen. By using the <B>putchar </B>function we can print a line
+of text or string as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3.92in">/*
+C program to print a string using putchar function */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.2in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 6.38in">char
+line[20]; int i;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; line-height: 0.19in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.25in">printf(&quot;Enter
+the line of text: &quot;); gets(line);</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-top: 0in">i =
+0;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; line-height: 0.19in">while(line[i]
+!= '\0')</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.36in; margin-right: 6.09in">putchar(line[i]);
+i++;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-top: 0in; page-break-before: always">
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">The
+last alternative for printing a string or a line of text is by using
+the predefined function pu<B>ts</B>. This function is available in
+the <B>stdio.h </B>header file. By using the <B>puts </B>function we
+can rewrite the above program as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.13in">/*
+C program to print a string using puts function */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.2in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 6.38in; margin-top: 0in">
+char line[20]; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.25in">printf(&quot;Enter
+the line of text: &quot;); gets(line);</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 6.57in">puts(line);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<H4 CLASS="western" STYLE="page-break-before: always"><A NAME="String_Manipulations"></A>
+<FONT COLOR="#365f91">String Manipulations</FONT></H4>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; text-indent: 0.5in; margin-top: 0.03in">
+As we have already seen in the previous unit, a string is a
+collection of characters and strings are maintained as character
+arrays in C programs. The common operations or manipulations that can
+be performed on strings are:</P>
+<OL>
+	<LI><P>Reading and writing strings</P>
+	<LI><P>Concatenating/combining/joining strings</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Comparing
+	strings</P>
+	<LI><P STYLE="line-height: 0.19in">Copying one string into another
+	string</P>
+	<LI><P>Extracting a portion of the string (substring)</P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.08in">C provides predefined
+functions for performing all the above operations or manipulations on
+strings. Most of these predefined functions are available in <B>string.h
+</B>header file. The list of predefined functions is given below:</P>
+<P CLASS="western"><BR>
+</P>
+<TABLE WIDTH=591 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=190>
+	<COL WIDTH=395>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Functions</B></P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><B>Purpose</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">scanf, gets, getchar</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To read a string</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">printf, puts, putchar</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To print a string</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strcat</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To concatenate two strings</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strcmp</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To compare two strings</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strcpy</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To copy one string into another
+			string</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strstr</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To locate a substring in the string</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strlen</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To calculate the length of the
+			string</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=190 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strrev</P>
+		</TD>
+		<TD WIDTH=395 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To reverse the given string</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: -0in"><B>Note:
+</B><I>The difference between </I><I><B>scanf </B></I><I>and </I><I><B>gets
+</B></I><I>is, </I><I><B>scanf </B></I><I>can read strings which does
+not contain any white spaces. Whereas </I><I><B>gets </B></I><I>can
+read strings both without spaces and with spaces.</I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="strcat(_)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>strcat( )</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in">The
+<B>strcat </B>predefined function is used to concatenate/join two
+strings together. The syntax of the <B>strcat</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">function
+is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.13in; left: 2.78in; width: 1.72in; height: 0.28in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.17in; margin-top: 0.05in">strcat(string1,
+	string2)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.12in">
+The <B>strcat </B>function accepts two parameters which are strings.
+The <B>string2 </B>parameter can be either a character array or a
+string constant. The <B>strcat </B>function takes the content of
+<B>string2 </B>and merges it with the content in <B>string1 </B>and
+the final result will be stored in <B>string1. </B>Let us see an
+example:</P>
+<P CLASS="western" STYLE="margin-left: 1.84in"><IMG SRC="{{url_for('static',filename='img/C_html_2b04c3ea.png')}}" NAME="image67.png" ALIGN=BOTTOM WIDTH=361 HEIGHT=239 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.13in"><A NAME="strcmp(_)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>strcmp( )</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>strcmp </B>predefined function is used to compare two strings.
+After comparison, if the two strings are equal, then the function
+returns a <B>0</B>. Otherwise if the first string comes before the
+second string in alphabetical</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; margin-bottom: 0.01in; page-break-before: always">
+order, the function returns a <B>-1. </B>If the first string comes
+after the second string in alphabetical order, the function returns a
+<B>1 </B>as the return value. The syntax of <B>strcmp </B>function is
+as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.63in"></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.06in">Let
+us consider an example:</P>
+<P CLASS="western" STYLE="margin-left: 1.74in"><IMG SRC="{{url_for('static',filename='img/C_html_4eb5fdc1.png')}}" NAME="image68.png" ALIGN=BOTTOM WIDTH=380 HEIGHT=264 BORDER=0></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+As seen from the above example, the <B>strcmp </B>function the first
+letter in both the strings and since they are equal, now it compares
+the second letter in both the strings, which are <B>e </B>and a.
+Since, <B>e </B>comes after <B>a </B>according to dictionary order,
+the result will be <B>1 </B>which means, the string <B>hello </B>comes
+after (greater than) the string <B>hai</B>.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in"><A NAME="strcpy(_)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>strcpy( )</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>strcpy </B>function is used to copy one string into another
+string. This function can be used for creating a copy of an existing
+string. The syntax of <B>strcpy </B>function is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.05in; width: 2.17in; height: 0.32in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.38in; margin-top: 0.05in">strcpy(string1,
+	string2)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.02in">In
+the above syntax, the <B>string2 </B>can be either a string or string
+constant. The string in <B>string2 </B>is copied into <B>string1</B></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">and
+the result will be stored in <B>string1. </B>Let us consider an
+example:</P>
+<P CLASS="western" STYLE="margin-left: 2.02in"><IMG SRC="{{url_for('static',filename='img/C_html_e6bf8161.png')}}" NAME="image69.png" ALIGN=BOTTOM WIDTH=327 HEIGHT=266 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.13in"><A NAME="strlen(_)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>strlen( )</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>strlen </B>function is used to retrieve the length of a given
+string. The return type of this function will be an integer. The
+syntax of <B>strlen </B>function is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.2in; width: 1.87in; height: 0.34in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.53in; margin-top: 0.05in">strlen(string)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+The parameter <B>string </B>can be either a character array or a
+string constant. The function returns the length of the</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>string </B>which
+will be the number of characters in the string excluding the ‘\0’
+character. Let us consider an example:</P>
+<P CLASS="western" STYLE="margin-left: 1.73in"><IMG SRC="{{url_for('static',filename='img/C_html_dc7d9d81.png')}}" NAME="image70.png" ALIGN=BOTTOM WIDTH=385 HEIGHT=164 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.13in"><A NAME="strtstr(_)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>strtstr( )</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>strstr </B>function returns a character pointer of the first
+occurrence of the given substring in the string. If the substring is
+not found in the string, the function <B>strstr </B>returns NULL. The
+syntax for <B>strstr </B>function is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.14in; left: 2.68in; width: 1.91in; height: 0.33in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0.05in">strstr(string1,
+	string2)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; margin-top: 0.07in">
+In the above syntax, <B>strstr </B>searches for string2 in the
+string1. If found, it returns a pointer to the first occurrence of
+the string2 in string1. If not found, it returns NULL. Let us
+consider an example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.06in; width: 397px"><IMG SRC="{{url_for('static',filename='img/C_html_2142eca8.png')}}" NAME="image71.png" WIDTH=397 HEIGHT=273 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.12in"><A NAME="strrev(_)"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>strrev( )</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in">
+The <B>strrev </B>function is used to reverse a given string. We can
+use this predefined function to check whether a given string is a
+palindrome or not. The syntax for using the <B>strrev </B>function is
+as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.87in"></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.06in">In
+the above syntax, the <B>strrev </B>function reverses the given
+<B>string </B>and returns it back. The content of the string also
+changes. Let us see an example:</P>
+<P CLASS="western" STYLE="margin-left: 1.59in; page-break-before: always">
+<IMG SRC="{{url_for('static',filename='img/C_html_75abb5a8.png')}}" NAME="image72.png" ALIGN=BOTTOM WIDTH=409 HEIGHT=180 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.07in"><A NAME="Other_predefined_functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Other predefined
+functions</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in">Some
+of the other predefined functions available in the <B>string.h </B>header
+file are shown in the below table:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=582 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=93>
+	<COL WIDTH=322>
+	<COL WIDTH=159>
+	<TR VALIGN=TOP>
+		<TD WIDTH=93 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Function</P>
+		</TD>
+		<TD WIDTH=322 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Purpose</P>
+		</TD>
+		<TD WIDTH=159 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Syntax</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=93 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strncat</P>
+		</TD>
+		<TD WIDTH=322 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To concatenate n number of left
+			most characters</P>
+		</TD>
+		<TD WIDTH=159 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strncat(str1, str2, n)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=93 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strncmp</P>
+		</TD>
+		<TD WIDTH=322 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To compare n number of left most
+			characters</P>
+		</TD>
+		<TD WIDTH=159 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strncmp(str1, str2, n)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=93 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strncpy</P>
+		</TD>
+		<TD WIDTH=322 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">To copy n number of left most
+			characters</P>
+		</TD>
+		<TD WIDTH=159 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">strncpy(str1, str2, n)</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs:</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.94in; margin-top: 0.14in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to concatenate two
+strings without using any functions*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str1[20] = {'h','e','l','l','o','\0'};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.65in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str2[4] = {'h','a','i','\0'}; char result[10];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.46in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+i, j; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; strlen(str1); i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">result[i] = str1[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">result[i]
+= ' ';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= strlen(str1)+1, j = 0; j &lt; strlen(str2); i++,j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">result[i]
+= str2[j];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">result[i]
+= '\0';</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.31in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Concatenated String
+is: %s&quot;,result); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.54in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to concatenate two
+strings using strcat function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str1[20] = {'h','e','l','l','o',' ','\0'};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.1in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str2[6] = {'w','o','r','l','d','\0'}; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">strcat(str1,
+str2);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.49in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Concatenated
+string is: %s&quot;,str1); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.75in; margin-top: 0.03in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to compare two
+strings using strcmp function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">char str1[20] =
+{'h','e','l','l','o',' ','\0'};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.1in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str2[6] = {'w','o','r','l','d','\0'}; int result;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.56in"><FONT SIZE=4 STYLE="font-size: 16pt">result
+= strcmp(str1, str2); printf(&quot;Result is: %d&quot;,result);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.55in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to copy one string
+into another string using strcpy function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str1[20] = {'h','e','l','l','o',' ','\0'};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.1in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str2[6] = {'w','o','r','l','d','\0'}; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">strcpy(str1,
+str2);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.12in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Copied
+string is: %s&quot;,str1); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.41in; margin-top: 0.02in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to print the length
+of strings using strlen function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str1[] = {'h','e','l','l','o','\0'};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.77in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str2[] = {'h','a','i','\0'}; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.18in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Length
+of str1 is: %d\n&quot;,strlen(str1)); printf(&quot;Length of str2 is:
+%d&quot;,strlen(str2)); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.49in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to locate a
+substring in the given string using strstr function */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.29in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str1[] = {'h','e','l','l','o','\0'}; char str2[] = &quot;llo&quot;;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.3in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+index; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">if(strstr(str1,
+str2) != NULL)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Substring
+str2 is present in str1&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Substring
+str2 is not present in str1&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.31in; margin-top: 0.03in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to reverse a string
+using strrev function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.31in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+str[6] = &quot;hello&quot;; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.9in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Reverse
+of the string is: %s&quot;,strrev(str)); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.97in; margin-top: 0.03in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to check for a
+string palindrome */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.68in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+#include&lt;string.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.16in"><FONT SIZE=4 STYLE="font-size: 16pt">char
+org[10], dup[10]; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.95in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter
+a string: &quot;); gets(org);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.37in"><FONT SIZE=4 STYLE="font-size: 16pt">strcpy(dup,
+org); strrev(org); if(strcmp(org, dup))</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Entered
+string is not a palindrome!&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Entered
+string is a palindrome&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

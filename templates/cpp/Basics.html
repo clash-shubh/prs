@@ -1,0 +1,322 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">C++
+BASICS</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Tokens"></A><FONT COLOR="#365f91">Tokens</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Smallest indivisible parts of a program are called lexemes and groups
+of similar lexemes are called tokens. C++ program contains several
+items and those are identified as tokens by a compiler. C++ tokens
+are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Keywords</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Identifiers</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Constants</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Strings</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Operators</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.96in; width: 421px"><IMG SRC="{{url_for('static',filename='img/CPP_html_4a9497d4.png')}}" NAME="image22.png" WIDTH=421 HEIGHT=134 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.16in">
+Keywords are words which are reserved by the compiler for specific
+purpose. Keywords cannot be used as identifiers in programs. Keywords
+available in C++ are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/CPP_html_bed35d2f.gif ')}}" ALIGN=LEFT><BR CLEAR=LEFT></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.16in">
+Identifiers are names given to variables, arrays, classes, functions,
+structures, etc.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Variables</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="What_is_a_variable?"></A><A NAME="Variables"></A>
+<FONT COLOR="#4f81bd">What is a variable?</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+A variable is a placeholder or container in memory (RAM) for storing
+values. We can store different values in a variable at different
+points of execution. To use variables in a C++ program, we have to
+declare and initialize them.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Declaring_a_variable"></A>
+<FONT COLOR="#4f81bd">Declaring a variable</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+Before using a variable in a program, we need to declare it. Syntax
+for declaring a variable is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>data_type
+variable_name;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above syntax,
+<I>data_type </I>tells the compiler about the type of data (ex:
+integer, character etc..) that will be stored in the variable with
+the name <I>variable_name</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Quite often we hear the term called <B>definition</B>. Defining a
+variable means specifying the amount of memory that the variable
+occupies. Above declaration syntax also defines the memory that will
+be allocated (based on data type) to <I>variable_name</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">An
+example for variable declaration is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>int
+x;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">In the
+above syntax, <I>x </I>is the variable name and <I>int </I>is a data
+type which tells the compiler that</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>x </I>can
+store integer values.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">We can't write variable
+names as we like. There are some restrictions that apply to writing
+variable names. They are:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Variable
+	name must start with a letter or an</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>underscore.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Variable
+	names must not contain white spaces.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Variable
+	names must not contain any special symbols like $, @, #</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>etc.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Variable
+	names must not be same as any keyword like </FONT><FONT SIZE=3><I>if,
+	while, struct</I></FONT><FONT SIZE=3><I> </I></FONT><FONT SIZE=3>etc.</FONT></FONT></P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><A NAME="Initializing_a_variable"></A>
+<FONT COLOR="#4f81bd">Initializing a variable</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">After
+declaring a variable, we can assign or store a value in it. This is
+known as variable initialization. Syntax for initializing a variable
+is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0in">
+<B>variable_name = value;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">An
+example for initializing a variable is as follows:</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0.06in; page-break-before: always">
+<B>x = 10;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">We can
+combine variable declaration and initialization in to a single line
+as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>data_type
+variable_name = value;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">An
+example for declaring and initializing a variable in a single line is
+as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0in">
+<B>int x = 10;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Note:
+If we don't initialize a variable, it will contain garbage value. It
+is a good practice to initialize a variable to a default value when
+we declare it.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A small C++ program
+demonstrating the use of variables is given below. In this program we
+add two values by storing them in two variables.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.1in">int
+num1, num2; cout&lt;&lt;&quot;Enter a number: &quot;; cin&gt;&gt;num1;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.67in">cout&lt;&lt;&quot;Enter
+another number: &quot;; cin&gt;&gt;num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.71in">cout&lt;&lt;&quot;Sum
+of &quot;&lt;&lt;num1&lt;&lt;&quot; and &quot;&lt;&lt;num2&lt;&lt;&quot;
+is: &quot;&lt;&lt;(num1+num2)&lt;&lt;endl; return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Enter a number: 10</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.66in">Enter
+another number: 29 Sum of 10 and 29 is: 39</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above program,
+<I>endl </I>is a manipulator to print a new line.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Scope_of_a_variable"></A><FONT COLOR="#4f81bd">Scope
+of a variable</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+The scope of a variable tells the compiler in which statements of the
+program can a variable be accessed. Based on where the variable is
+declared, variables are divided into two types: local variables and
+global variables.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A local variable is a variable which is declared within a block (a
+block is a set of statements enclosed in between braces i.e { and }).
+The scope of a local variable is within the block in which it is
+declared. A block cannot have two or more local variables with the
+same name.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.18in; line-height: 200%">
+To demonstrate the scope of a local variable, consider the following
+program: #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.91in; margin-top: 0.06in; page-break-before: always">
+using namespace std; int dosum(int x, int y)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return x+y;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.1in">int
+num1, num2; cout&lt;&lt;&quot;Enter a number: &quot;; cin&gt;&gt;num1;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.67in">cout&lt;&lt;&quot;Enter
+another number: &quot;; cin&gt;&gt;num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Sum
+of &quot;&lt;&lt;num1&lt;&lt;&quot; and &quot;&lt;&lt;num2&lt;&lt;&quot;
+is: &quot;&lt;&lt;dosum(num1, num2)&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.21in">//cout&lt;&lt;&quot;Sum
+of &quot;&lt;&lt;num1&lt;&lt;&quot; and &quot;&lt;&lt;num2&lt;&lt;&quot;
+is: &quot;&lt;&lt;(x+y)&lt;&lt;endl; return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Enter a number: 4</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.74in">Enter
+another number: 6 Sum of 4 and 6 is: 10</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program, <I>dosum() </I>is a function. Functions will be
+explained later. In <I>dosum() </I>function, variables <I>x </I>and <I>y
+</I>are local to that function. In <I>main() </I>function, variables
+<I>num1 </I>and <I>num2 </I>are local to that function. Notice that
+in the above program the statement before <I>return 0 </I>line has
+been commented. If the comments are removed and compiled, you will
+see the following error messages:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.02in; width: 596px"><IMG SRC="{{url_for('static',filename='img/CPP_html_147cf7ac.jpg ')}}" NAME="image25.jpeg" WIDTH=596 HEIGHT=353 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+Above error messages are displayed as the variables <I>x </I>and <I>y
+</I>are local to <I>dosum() </I>function and cannot be accessed in
+<I>main() </I>function.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Global_Variables"></A><FONT COLOR="#4f81bd">Global
+Variables</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+A variable that is declared outside all blocks is called a global
+variable. The scope of a global variable is the entire program from
+the point at which it is declared. To demonstrate the scope of a
+global variable, consider the following program:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.92in">
+#include &lt;iostream&gt; using namespace std; int dosum(int x, int
+y)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.44in">//cout&lt;&lt;&quot;global
+= &quot;&lt;&lt;global&lt;&lt;endl; return x+y;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.34in">int
+global = 10; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.1in">int
+num1, num2; cout&lt;&lt;&quot;Enter a number: &quot;; cin&gt;&gt;num1;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.67in">cout&lt;&lt;&quot;Enter
+another number: &quot;; cin&gt;&gt;num2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.27in">cout&lt;&lt;&quot;Sum
+of &quot;&lt;&lt;num1&lt;&lt;&quot; and &quot;&lt;&lt;num2&lt;&lt;&quot;
+is: &quot;&lt;&lt;dosum(num1, num2)&lt;&lt;endl; cout&lt;&lt;&quot;global
+= &quot;&lt;&lt;global&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Enter
+a number: 3</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.74in">Enter
+another number: 8 Sum of 3 and 8 is: 11</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">global = 10</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program, <I>global </I>is a global variable and observe
+that it is declared after the <I>dosum() </I>function. The variable
+<I>global </I>is not accessible above the line at which it is
+declared. That is why the print statement inside the <I>dosum() </I>is
+commented out. Removing the comments will produce compilation error.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

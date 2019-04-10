@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Testing</FONT></H1>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0in"><FONT COLOR="#4f81bc">Introduction</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Testing is the practice of writing code that helps to find if there
+are any errors in the actual logic of the program. It does not prove
+that our logic is correct. It only reports if the conditions given by
+the tester are handled correctly or not. Testing is generally used to
+find out <I>logical errors</I>, as <I>syntax errors </I>will be
+reported by the Python runtime itself.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Unit testing is about specifically testing a <I>unit</I>. A unit in a
+Python program or script can be an entire module, a single class, a
+single class, or almost anything in between. Following are some of
+the reasons why testing is needed:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Testing makes sure that our codes
+	work properly under a given set of conditions.</P>
+	<LI><P STYLE="line-height: 0.19in">Testing allows us to make sure
+	that changes to the code did not break existing functionality.</P>
+	<LI><P STYLE="margin-right: 0.23in; line-height: 100%">Testing
+	forces us to think about the code under unusual conditions, possibly
+	revealing errors in the process.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Unit
+Testing in Python</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Python's standard library provides <I>unittest </I>module for
+performing unit testing on our Python code. A unit test consists of
+one or more assertions. Assertion is statement which is supposed to
+be always true. The <I>unittest </I>module contains many assert
+functions. These functions are available in <I>unittest. TestCase
+</I>class. One such function is <I>assertTrue( ) </I>which takes an
+argument and asserts it to be <I>True</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Writing
+Test Cases</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Consider the following
+program which contains two functions for printing the next prime
+number:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT FACE="Courier New, serif"><FONT SIZE=2>def
+is_prime(number):</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-right: 2.9in"><FONT FACE="Courier New, serif"><FONT SIZE=2>&quot;&quot;&quot;Return
+True if *number* is prime.&quot;&quot;&quot; for element in
+range(number):</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.73in; text-indent: -0.33in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>if number % element ==
+0: return False</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT FACE="Courier New, serif"><FONT SIZE=2>return
+True</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT FACE="Courier New, serif"><FONT SIZE=2>def
+print_next_prime(number):</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-right: 1.31in"><FONT FACE="Courier New, serif"><FONT SIZE=2>&quot;&quot;&quot;Print
+the closest prime number larger than *number*.&quot;&quot;&quot;
+index = number</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-top: 0in; line-height: 0.16in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>while True:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.16in"><FONT FACE="Courier New, serif"><FONT SIZE=2>index
++= 1</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.23in; text-indent: -0.33in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>if is_prime(index):
+print(index)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+We have two functions, <I>is_prime </I>and <I>print_next_prime</I>.
+If we wanted to test <I>print_next_prime</I>, we would need to be
+sure that <I>is_prime </I>is correct, as <I>print_next_prime </I>makes
+use of it. In this case, the function <I>print_next_prime </I>is one
+unit, and <I>is_prime </I>is another.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Let's assume that the above Python code is saved in a file named
+<I>primes.py</I>. Now, let's write our test code inside another file
+named <I>test_primes.py</I>. The test case for checking the function
+<I>is_prime </I>is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.07in"><FONT FACE="Courier New, serif"><FONT SIZE=2>import
+unittest</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT FACE="Courier New, serif"><FONT SIZE=2>from
+primes import is_prime</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-right: 3.15in; text-indent: -0.33in; margin-top: 0in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>class
+PrimesTestCase(unittest.TestCase): &quot;&quot;&quot;Tests for
+`primes.py`.&quot;&quot;&quot;</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-top: 0in; line-height: 0.16in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>def
+test_is_five_prime(self):</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 1.65in"><FONT FACE="Courier New, serif"><FONT SIZE=2>&quot;&quot;&quot;Is
+five successfully determined to be prime?&quot;&quot;&quot;
+self.assertTrue(is_prime(5))</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-right: 4.44in; text-indent: -0.33in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>if</FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2>name</FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+	</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2>== '</FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2>main</FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2>':
+unittest.main()</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The file creates a unit test with a single test case:
+<I>test_is_five_prime</I>. Using Python's built-in <I>unittest
+</I>framework, any member function whose name begins with <I>test </I>in
+a class deriving from <I>unittest.TestCase </I>will be run, and its
+assertions checked, when <I>unittest.main() </I>is called.</P>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western"><FONT COLOR="#4f81bc">Running Test Cases</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+We can run the test cases by running the Python code which contains
+the test cases. In out example  we will use the command <I>python
+test_primes.py </I>to run the test cases. We'll see the output of the
+<I>unittest </I>framework printed on the console:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.56in; margin-top: 0in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>$ python test_primes.py
+E</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT FACE="Courier New, serif"><FONT SIZE=2>======================================================================</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT FACE="Courier New, serif"><FONT SIZE=2>ERROR:
+test_is_five_prime (</FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2>main</FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2><U>
+</U></FONT></FONT><FONT FACE="Courier New, serif"><FONT SIZE=2>.PrimesTestCase)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.15in">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>----------------------------------------------------------------------</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.17in">...</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+single &quot;E&quot; represents the results of our single test (if it
+was successful, a &quot;.&quot; would have been printed). We can see
+that our test failed, the line that caused the failure, and any
+exceptions raised.</P>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{%endblock course%}

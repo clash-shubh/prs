@@ -1,0 +1,546 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">INHERITANCE</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction_(4)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+One of the main advantages of object oriented programming is
+reusability. Using already existing code is known as reusability. C++
+supports reusability through inheritance which is creating a new
+class from already existing class.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Inheritance is defined as deriving properties and behavior from one
+class to another class.  The existing class from which properties and
+behavior are derived is known as a base class or super class. The new
+class into which the properties and behavior are derived is known as
+a derived class or sub class.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Inheritance is also known as <I>is-a </I>relationship between
+classes. For example a <I>Employee </I>is a <I>Person </I>and
+similarly <I>Programmer </I>is a <I>Person</I>. Common properties and
+behavior of Employee and Programmer will be available in Person class
+and specific properties and behavior are present in Employee and
+Programmer class. Inheritance or is-a relationship between a base
+class and derived class is represented as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 3.54in; width: 116px"><IMG SRC="{{url_for('static',filename='img/CPP_html_c7e78eaf.png')}}" NAME="image35.png" WIDTH=116 HEIGHT=183 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Defining_a_derived_class"></A>
+<FONT COLOR="#4f81bd">Defining a derived class</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.08in; margin-top: 0.03in; line-height: 0.38in">
+Syntax for creating a derived class is as follows: class DerivedClass
+: [access-specifier] BaseClass</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//body of derived class</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In the above syntax
+</FONT><FONT SIZE=3><I>access-specifier </I></FONT><FONT SIZE=3>is
+optional and the valid values for it are </FONT><FONT SIZE=3><I>private,
+protected, </I></FONT><FONT SIZE=3>or </FONT><FONT SIZE=3><I>public</I></FONT><FONT SIZE=3>.
+If access specifier is not provided, by default it is </FONT><FONT SIZE=3><I>private
+</I></FONT><FONT SIZE=3>mode.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Access_Specifiers"></A><FONT COLOR="#4f81bd">Access
+Specifiers</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In C++ there are
+three access specifiers: </FONT><FONT SIZE=3><I>private, protected,
+</I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>public. </I></FONT><FONT SIZE=3>Let's
+look at each one of them in detail.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>private:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Private is the most restrictive access specifier. Class members which
+are declared as <I>private </I>cannot be accessed outside the class
+(except in friend classes and friend functions). In private
+derivation, <I>protected </I>and <I>public </I>members become <I>private
+</I>members in the derived class and cannot be inherited further.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>protected:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Protected is less restrictive than private. Class members which are
+declared as <I>protected </I>are accessible only within the class and
+in the direct child classes of that class. In protected derivation,
+protected and public members of base class become protected members
+of derived class.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.1in; line-height: 0.19in"><B>public:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Public is the least restrictive access specifier. Class members which
+declared as <I>public </I>are accessible from anywhere. In public
+derivation, protected and public members of base class become
+protected and public members of derived class respectively.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Accessibility of the
+three visibility modes is as shown in the following table:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 605px"><IMG SRC="{{url_for('static',filename='img/CPP_html_23741873.png')}}" NAME="image36.png" WIDTH=605 HEIGHT=137 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.81in; line-height: 0.38in">
+Following program demonstrates inheritance in C++: #include
+&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class Base</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.02in; text-indent: 0.5in">
+int x; protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int y;</P>
+<DIV ID="Section135" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">int z;</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void show_x()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section136" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_y()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;y =
+	&quot;&lt;&lt;y&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+void show_z()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;z =
+&quot;&lt;&lt;z&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class Derived : public
+Base</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<DIV ID="Section137" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section138" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">cout&lt;&lt;&quot;This
+	is derived class&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section139" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.1in">Derived
+	d; d.display(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">This is derived class</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">In the above program
+	variables y and z along with the three public functions are
+	accessible in the <I>Derived </I>class. In main class, only z of
+	<I>Base </I>class is accessible directly.</P>
+	<H6 CLASS="western" STYLE="margin-top: 0.14in"><A NAME="Constructors_and_Destructors_in_Inherita"></A>
+	<FONT COLOR="#4f81bd">Constructors and Destructors in Inheritance</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">In inheritance
+	following points should be remembered while working with
+	constructors and destructors:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="margin-top: 0in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+		a base class contains a constructor, derived class must also have a</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>constructor.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+		a base class constructor contains one or more parameters, the
+		derived class constructor have to pass one or more constructors to
+		the base</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+		an object for derived class is created, base class constructors is
+		executed first and then derived class constructor gets</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>executed.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		execution of destructors is in reverse order of constructors
+		execution. Derived class destructor executes first and then base
+		class destructor gets</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>executed.</FONT></FONT></P>
+	</UL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.24in; margin-top: 0.04in; line-height: 0.38in">
+	Following example demonstrates constructors and destructors in
+	inheritance: #include &lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+	namespace std;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Base</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.02in; text-indent: 0.5in">
+	int x; protected:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int y;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+public:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: -0.01in">
+int z; Base()</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.04in; margin-top: 0in">cout&lt;&lt;&quot;Base
+class constructor is called&quot;&lt;&lt;endl;</P>
+<DIV ID="Section140" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_x()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_y()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;y =
+	&quot;&lt;&lt;y&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_z()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;z =
+	&quot;&lt;&lt;z&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">~Base()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Base
+	class destructor is called&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Derived : public
+	Base</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in; line-height: 0.19in">
+	public:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">Derived()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Derived
+	class constructor is called&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;This
+	is derived class&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">~Derived()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;Derived
+	class destructor is called&quot;&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.1in">Derived
+	d; d.display(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.08in">Base
+	class constructor is called Derived class constructor is called</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+This is derived class</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.17in">Derived
+class destructor is called Base class destructor is called</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Invoking_Base_Class_Constructor_with_Par"></A>
+<FONT COLOR="#4f81bd">Invoking Base Class Constructor with</FONT><FONT COLOR="#4f81bd">
+</FONT><FONT COLOR="#4f81bd">Parameters</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When a base class constructor contains one or more parameters, it is
+the responsibility of derived class constructor to pass the required
+parameters to the base class constructor. Syntax for passing
+parameters to base class constructor is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+DerivedClass(params-list) : BaseClas(params-list)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//body of derived class
+constructor</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program demonstrates invoking base class constructor with parameters
+from a derived class constructor:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in; margin-top: 0in">
+#include &lt;iostream&gt; using namespace std; class Base</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.02in; text-indent: 0.5in">
+int x; protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int y;</P>
+<DIV ID="Section141" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">int z;</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Base(int x, int y,
+	int z)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section142" DIR="LTR">
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.6in; margin-right: 4.1in">
+	this-&gt;x = x; this-&gt;y = y; this-&gt;z = z;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_x()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_y()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;y =
+	&quot;&lt;&lt;y&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_z()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;z =
+	&quot;&lt;&lt;z&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Derived : public
+	Base</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 2.49in">Derived(int
+x, int y, int z) : Base(x, y, z){ } void display()</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-top: 0in">{</P>
+<DIV ID="Section143" DIR="LTR" GUTTER=28 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">cout&lt;&lt;&quot;This
+	is derived class&quot;&lt;&lt;endl;</P>
+</DIV>
+<DIV ID="Section144" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.83in">Derived
+	d(10, 20, 30); d.show_x();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">d.show_y();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">d.show_z();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.1in">d.display();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 10</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">y = 20</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">z = 30</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">This is derived class</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	
+<H5 CLASS="western"><A NAME="Object_Slicing"></A><FONT COLOR="#365f91">Object
+Slicing</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In inheritance we can assign a derived class object to a base class
+object. But, a base class object cannot be assigned to a derived
+class object. When a derived class object is assigned to a base class
+object, extra features provided by the derived class will not be
+available. Such phenomenon is called object slicing.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.17in; margin-top: 0in; line-height: 0.38in">
+Following program demonstrates object slicing: #include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class A</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-top: 0in">cout&lt;&lt;&quot;x
+= &quot;&lt;&lt;x&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int y;</P>
+<DIV ID="Section177" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">B(int x, int y)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section178" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.1in">this-&gt;x
+	= x; this-&gt;y = y;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.2in">cout&lt;&lt;&quot;x
+	= &quot;&lt;&lt;x&lt;&lt;endl; cout&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">A objA;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">B objB(30, 20);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.18in">objA
+= objB; //Assign derived class object to base class object
+objA.show();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">x = 30</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above program, when objA.show() is called, even though class B
+has variable <I>y</I>, we were not able to access it; which is
+treated as object slicing.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Pointer_to_Derived_Class"></A><FONT COLOR="#4f81bd">Pointer
+to Derived Class</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+A base class pointer can point to a derived class object. But, a
+derived class pointer can never point to a base class object.
+Following program demonstrates object slicing using a base class
+pointer:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; class A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+&quot;&lt;&lt;x&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class B : public A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">protected:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">int y;</P>
+<DIV ID="Section179" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">B(int x, int y)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section180" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.1in">this-&gt;x
+	= x; this-&gt;y = y;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.2in">cout&lt;&lt;&quot;x
+	= &quot;&lt;&lt;x&lt;&lt;endl; cout&lt;&lt;&quot;y = &quot;&lt;&lt;y&lt;&lt;endl;</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">A *bptr;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">B objB(30, 20);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.58in">bptr
+= &amp;objB; //Assign derived class object to base class pointer
+bptr-&gt;show();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.51in; margin-top: 0.06in; line-height: 200%">
+Output of the above program is as follows: x = 30</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

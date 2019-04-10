@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Packages</FONT></H1>
+
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.19in">
+A package is a directory structure which can contain modules and sub
+packages. Every package in Python is a directory which must contain a
+special file called<U>  </U>init.py<U>  </U>. The file<U>   </U>init.py<U>
+  </U>can be  empty. To allow only certain modules to be imported, we
+can use the <U>    </U>all<U>     </U>variable in <U>    </U>init.py<U>
+ </U> file as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><U>
+</U><U>   </U><I>all</I><I><U> 	</U></I><I>=</I><I> </I><I>[“Stat”]</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The above line says
+that only <I>Stat </I>module in the package can be imported.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; margin-top: 0.06in; page-break-before: always">
+Every package must be a folder in the system. Packages should be
+placed in the path which is pointed by <I>sys.path</I>. If the
+package is not available, then <I>ImportError </I>is raised.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">Creating a Package</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A package (folder) named <I>CustomMath </I>is created with an empty<U>
+</U>init<U>  </U>.py file inside it.  In the  package <I>CustomMath</I>,
+a single module named <I>BasicMath </I>is created which contains
+three functions as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>def
+prod(x, y):</I></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.08in; margin-right: 4.84in; margin-top: 0in">
+<I>return x*y</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>def
+rem(x, y):</I></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.08in; margin-right: 4.79in">
+<I>return x%y</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>def
+lastdigit(x):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>return x%10</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">A new
+Python script is written which uses our custom package named
+<I>CustomMath </I>as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.42in; margin-top: 0in">
+<I>from CustomMath.BasicMath import * print(prod(4,3))</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.32in"><I>print(rem(4,3))
+print(lastdigit(99))</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">PyPI
+and</FONT><FONT COLOR="#4f81bc"> </FONT><FONT COLOR="#4f81bc">Pip</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Third party packages are available in Python Package Index (PyPI). We
+can import the modules available in the third party packages by using
+the <I>pip </I>tool. <I>Pip </I>is a command line tool for maintaing
+Python packages.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">To
+install a package using pip we write:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<I>pip install</I><I> </I><I>package-name</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">To see
+the list of existing packages, we write:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">pip
+list</SPAN></I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Standard
+Library Modules</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Python
+comes with several built-in modules. We can use them when necessary.
+These built-in modules forms the Python’s standard library. Some of
+the modules in standard library are:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.18in">string</P>
+	<LI><P STYLE="line-height: 100%">re</P>
+	<LI><P STYLE="line-height: 0.18in">datetime</P>
+	<LI><P STYLE="line-height: 0.18in">math</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 100%">random</P>
+	<LI><P STYLE="line-height: 100%">os</P>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 100%; page-break-before: always">
+	multiprocessing</P>
+	<LI><P STYLE="line-height: 0.18in">subprocess</P>
+	<LI><P STYLE="line-height: 0.18in">email</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.18in">json</P>
+	<LI><P STYLE="line-height: 0.18in">doctest</P>
+	<LI><P STYLE="line-height: 100%">unittest</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.18in">pdb</P>
+	<LI><P STYLE="line-height: 0.18in">argparse</P>
+	<LI><P STYLE="line-height: 100%">socket</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 100%">sys</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">globals(),
+locals(), and reload()</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+<I>globals() </I>function returns all the names in the global
+namespace that can be accessed from inside a function.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+<I>locals() </I>function returns all the names in the local namespace
+i.e., within the function. Both the above functions returns the names
+as a dictionary.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.91in; line-height: 200%">
+The <I>reload() </I>function can be used to reload a module again the
+program if need as follows: reload(module_name)</P>
+{%endblock course%}

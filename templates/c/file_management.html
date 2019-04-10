@@ -1,0 +1,445 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>File Management</FONT></H1>
+    
+    
+    
+
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in"><A NAME="File_Management"></A>
+So far we have been using scanf and printf functions for reading and
+writing data to the console. This is fine as long as the data is
+less. However, many real world problems involve large amounts of
+data. In such situations, the console oriented I/O pose two major
+problems. They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">It becomes difficult and time
+	consuming to handle large volumes of data through console.</P>
+	<LI><P>The entire data is lost when either the program is terminated
+	or the computer is turned off.</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.25in; margin-top: 0in">
+It is therefore necessary to have a more flexible approach where data
+can be stored on the disks and read whenever necessary, without
+destroying the data. This is achieved by using the concept of files.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; text-indent: 0.5in">
+A file is a collection of related data stored on a disk. C supports a
+wide range of functions that have the ability to perform basic file
+operations, which include:</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Naming a file</P>
+	<LI><P STYLE="line-height: 0.19in">Opening a file</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Reading data
+	from a file</P>
+	<LI><P STYLE="line-height: 0.19in">Writing data to a file</P>
+	<LI><P STYLE="line-height: 0.19in">Closing a file</P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">C
+library provides various pre-defined functions for handling files.
+Some of them are listed below:</P>
+<P CLASS="western" STYLE="margin-left: 1.06in"><IMG SRC="{{url_for('static',filename='img/C_html_af52608e.png')}}" NAME="image85.png" ALIGN=BOTTOM WIDTH=511 HEIGHT=303 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.13in"><A NAME="Defining_and_Opening_a_File"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Defining
+and Opening a File</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; text-indent: 0.5in; margin-top: 0.03in">
+If the user wants to store data or read data from a file in the
+secondary memory, the user must specify certain things about the file
+to the operating system. They are:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Filename</P>
+	<LI><P STYLE="line-height: 0.19in">Data Structure</P>
+	<LI><P>Purpose</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<I>Filename </I>is the name of the file. It is a collection of
+characters that make up a valid filename for the operating system. It
+may contain two parts: a primary name and optional period with the
+etxtension. Some valid file names are:</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.1in">abc.txt
+prog.c sample.java store</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><I>Data</I><I>
+</I><I>Structure</I><I> </I>of a file is defined a <B>FILE</B><B> </B>in
+the C library. Therefore, all files should be declared as type</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><B>FILE</B><B> </B>before
+they are used. <B>FILE</B><B> </B>is a predefined data type. When we
+open a file, we must specify the</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<I>purpose</I>. For example, we may want to write data or read data
+from a file. The syntax for declaring and opening a file is:<SPAN DIR="LTR" STYLE="position: relative; top: 0.34in; left: 2.85in; width: 2.5in; height: 0.82in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">FILE
+	*fp;</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">fp =
+	fopen(“filename”,”mode”);</P>
+</SPAN>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+The first statement declares the variable <B>fp </B>as a pointer to
+the data type <B>FILE</B>. The second statement opens the file whose
+name is <B>filename </B>and assigns an identifier to the <B>FILE </B>type
+pointer <B>fp</B>. This pointer, which contains all the information
+about the file is subsequently used as a communication link between
+the system and the program. The <B>mode </B>specifies the purpose of
+opening the file. Mode can be one of the following:</P>
+<UL>
+	<LI><P><B>r	</B>opening the file for reading data from it</P>
+	<LI><P STYLE="margin-top: 0in"><B>w	</B>opening the file for writing
+	data to it</P>
+	<LI><P STYLE="line-height: 0.19in"><B>a	</B>opening the file for
+	appending data to it</P>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+Note that both <B>filename </B>and <B>mode </B>are specified as
+string. So, both of them must be enclosed within double quotes. Some
+compilers support the following additional modes:</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in"><B>r+	</B>Open
+	the existing file for both reading and writing</P>
+	<LI><P STYLE="line-height: 0.19in"><B>w+	</B>Open the file for both
+	reading and writing</P>
+	<LI><P STYLE="line-height: 0.19in"><B>a+	</B>Open the file for both
+	appending and reading</P>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+<B>Note: </B><I>When a file is opened in </I><I><B>r </B></I><I>mode,
+the compiler searches for the file and if the file does not exist,
+nothing happens or some compilers might generate an error. When a
+file is opened in </I><I><B>w </B></I><I>mode, the compiler searches
+for the file and if the file does not exist, it creates a new file
+with the specified name. If the file already exists, the file is
+opened with the all the previous data in the file erased.</I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Closing_a_File"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Closing
+a File</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A file must be closed as soon as all the operations on it have been
+finished. This ensures that all information associated with the file
+is flushed out from the buffers and all links to the file with the
+program are broken. It also prevents the accidental misuse of the
+file. Another case in which we might want to close the connection
+with the file is, when we want to reopen the same file in a different
+mode. The syntax for closing a file is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.08in; width: 2.11in; height: 0.28in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.45in; margin-top: 0.05in">fclose(file-pointer);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="Input/Output_Operations_on_Files"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Input/Output
+Operations on Files</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.17in"><A NAME="getc_and_putc_Functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>getc and putc
+Functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The simplest I/O functions are <B>getc </B>and <B>putc</B>. These are
+analogous to <B>getchar </B>and <B>putchar </B>functions and handle
+one character at a time. The <B>putc </B>function writes a character
+to the file associated with a file pointer. The syntax is as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.34in; width: 1.59in; height: 0.3in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.13in; margin-top: 0.05in">putc(ch,
+	file-pointer);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; margin-top: 0.04in">
+Similarly the function <B>getc </B>is used to read a character from a
+file associated with a file-pointer. The syntax is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.48in; width: 1.32in; height: 0.32in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.13in; margin-top: 0.05in">getc(file-pointer)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.08in">The file pointer moves
+by one character position for every operation of <B>getc </B>or <B>putc</B>.
+The</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><B>getc </B>will
+return an end-of-file marker EOF, when end of the file has been
+reached.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="getw_and_putw_Functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>getw and putw
+Functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>getw </B>and <B>putw </B>are integer oriented functions. They
+are similar to <B>getc </B>and <B>putc </B>functions and are used to
+read and write integers to and from files. These functions would be
+useful when the user is dealing with integer data. The syntax for
+these functions is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.16in; width: 1.96in; height: 0.7in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">putw(integer,
+	file-pointer);</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">getw(file-pointer);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="fprintf_and_fscanf_Functions"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>fprintf and
+fscanf Functions</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+When the user need to work with mixed data, C provides two functions
+namely: <B>fprintf </B>and <B>fscanf. </B>These functions are used to
+read and write mixed data to and from files. These two functions are
+similar to <B>printf </B>and <B>scanf </B>except these two functions
+work on files. The syntax for these functions is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.88in; width: 2.51in; height: 0.68in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">fprintf(fp,
+	“control strings”, var list);</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">fscanf(fp, “control
+	strings”, var list);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Error_Handling_During_I/O_Operations"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Error
+Handling During I/O Operations</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+While writing programs which involve accessing files, certain errors
+might occur while performing I/O operations on a file. Some of the
+error situations include the following:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">Trying to read beyond the
+	end-of-file mark.</P>
+	<LI><P>Device overflow.</P>
+	<LI><P>Trying to use a file that has not been opened.</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Trying to
+	perform an operation on a file, when the file is being use by
+	another application.</P>
+	<LI><P STYLE="line-height: 0.19in">Opening a file with invalid name.</P>
+	<LI><P>Attempting to write to write-protected file.</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+If such errors are unchecked, it may lead to abnormal termination of
+the program or may lead to incorrect output. C library provides two
+functions namely <B>feof </B>and <B>ferror </B>for handling the above
+mentioned situations.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The <B>feof </B>function is used to test for the end-of-file
+condition. It takes a file-pointer as a parameter and returns a
+<B>non-zero </B>integer value if all of the data from the specified
+file has been read, and returns <B>zero </B>otherwise. The syntax is
+as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.33in; width: 1.61in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.18in; margin-top: 0.05in">Int
+	feof(file-pointer)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The <B>ferror </B>function reports the status of the file. It takes a
+file-pointer as its argument and returns a <B>non-zero </B>integer if
+an error has been detected up to that point, or returns <B>zero
+</B>otherwise. The syntax is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.88in"></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; margin-top: 0.06in">
+Whenever a file is opened using <B>fopen </B>function, a file pointer
+is returned. If the file cannot be opened for some reason, the
+function returns a <B>NULL </B>pointer. This can be used to test
+whether the file has been opened successfully or not. It can be used
+as shown below:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.55in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Random_Access_to_Files"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Random
+Access to Files</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+All the functions that we have seen so far are useful for reading and
+writing data  sequentially to and from a file. Sometimes the user
+might want to access data at random locations from a file. For this
+purpose, C library provides functions namely: <B>ftell</B>, <B>fseek
+</B>and <B>rewind.</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The <B>ftell </B>function lets the user to know the current location
+of the file pointer. It takes a file- pointer as a parameter and
+returns a long integer that corresponds to the current position of
+the pointer. Syntax is a shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.34in; width: 1.59in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">long
+	ftell(file-pointer)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in">
+The <B>rewind </B>function lets the user to move the file pointer
+again to the beginning of the file. This function accepts a
+file-pointer as a parameter and resets the position to the start of
+the file.  This helps us in reading a file more than once, without
+having to close and reopen the file. Syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 2.98in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The <B>fseek </B>function is used to move the pointer to any position
+within the file. This function takes three parameters: <I>file-pointer,
+offset and position. </I>When the operation is successful, <B>fseek
+</B>returns a non-zero value. If we attempt to move the file pointer
+beyond the file boundaries, an error occurs and <B>fseek </B>returns
+a -1. Syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.93in; width: 2.42in; height: 0.32in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.14in; margin-top: 0.05in">fseek(file-pointer,
+	offset, position)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0in">
+The <I>offset </I>is a number of the type long, and position is an
+integer number. The <I>offset </I>represents the number of positions
+to be moved from the location specified by <I>position. </I>The
+<I>position </I>can take one of the following values:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=288 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=129>
+	<COL WIDTH=153>
+	<TR VALIGN=TOP>
+		<TD WIDTH=129 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Value</P>
+		</TD>
+		<TD WIDTH=153 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Meaning</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=129 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">0</P>
+		</TD>
+		<TD WIDTH=153 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Beginning of the file</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=129 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">1</P>
+		</TD>
+		<TD WIDTH=153 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Current Position</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=129 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">2</P>
+		</TD>
+		<TD WIDTH=153 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">End of file</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+A positive value for the <I>offset </I>specifies that the pointer
+moves forward and a negative value for the <I>offset </I>specifies
+that the pointer moves backward from the current position. Following
+are some of the example usages of the <B>fseek </B>function:</P>
+<P CLASS="western"><BR>
+</P>
+<TABLE WIDTH=507 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=183>
+	<COL WIDTH=318>
+	<TR VALIGN=TOP>
+		<TD WIDTH=183 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Statement</P>
+		</TD>
+		<TD WIDTH=318 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Meaning</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=183 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fseek(fp,0L,0);</P>
+		</TD>
+		<TD WIDTH=318 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Go to the beginning. (Similar to
+			rewind)</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=183 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fseek(fp,0L,1);</P>
+		</TD>
+		<TD WIDTH=318 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Stay at the current position</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=183 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fseek(fp,0L,2);</P>
+		</TD>
+		<TD WIDTH=318 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Go to the end of file</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=183 HEIGHT=16 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fseek(fp,-m,1);</P>
+		</TD>
+		<TD WIDTH=318 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Move backward by m bytes from
+			current position</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=183 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">fseek(fp,m,1);</P>
+		</TD>
+		<TD WIDTH=318 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in">Move forward by m bytes</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

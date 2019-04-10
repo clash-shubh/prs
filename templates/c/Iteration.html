@@ -1,0 +1,569 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Iteration Statements</FONT></H1>
+    
+    
+    
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Decision_Making_Looping_Statements"></A>
+
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+While writing C programs, the programmer might want a set of
+instructions to be repeated again and again until some condition is
+satisfied. For this purpose, C provides decision making looping
+statements. The looping statements provided by C are:</P>
+<OL>
+	<LI><P>while</P>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">do…while</P>
+	<LI><P STYLE="line-height: 0.19in">for</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+All the looping statements in C essentially consist of two parts
+namely: <B>control statement </B>and <B>body of the loop. </B>The
+control statement decides when the loop will be stopped and the body
+of the loop contains the instructions that are to be repeated. Based
+on where the control statement is placed in the loop, the looping
+statements are categorized to two categories. They are:</P>
+<OL>
+	<LI><P>Entry controlled loops</P>
+	<LI><P>Exit controlled loops</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Entry_controlled_loops"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Entry
+controlled loops</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The looping statements in which the control statement is placed
+before the body of the loop are known as entry controlled loops. Ex:
+while and for loops. In entry controlled loops, the condition is
+checked first and if the value is true, then the body of the loop is
+executed. Otherwise the body is never executed. An entry controlled
+loop can be represented diagrammatically as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.98in; width: 226px"><IMG SRC="{{url_for('static',filename='img/C_html_bb9c385c.png')}}" NAME="image59.png" WIDTH=226 HEIGHT=405 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.09in"><A NAME="Exit_controlled_loops"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Exit
+controlled loops</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The looping statements in which the control statement is placed after
+the body of the loop are known as exit controlled loops. Ex: do…while
+loop. In exit controlled loops, the body of the loop is executed once
+and then the condition is checked. If the value is true, the body of
+the loop is executed again. Otherwise, the execution of the loop
+stops. An exit controlled loop is represented diagrammatically as
+shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.44in; page-break-before: always">
+<IMG SRC="{{url_for('static',filename='img/C_html_f46f2eca.png')}}" NAME="image60.png" ALIGN=BOTTOM WIDTH=249 HEIGHT=389 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Based
+on the nature of the loops, the loops can be categorized into two
+types namely:</P>
+<OL>
+	<LI><P>Definite loops (Ex: for)</P>
+	<LI><P STYLE="margin-top: 0in">Indefinite loops (Ex: while and
+	do…while)</P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>Definite loops: </B>If
+the programmer exactly knows how many times he/she is going to repeat
+the set of instructions (loop), such loops are known as definite
+loops.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>Indefinite loops:
+</B>If the programmer does not know exactly how many times he/she is
+going to repeat the set of instructions (loop), such loops are known
+as indefinite loops.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+The variable used in the condition inside of a definite loop is known
+as a counter and such loops are also known as <B>counter controlled
+loops. </B>The variable used in the condition inside of a indefinite
+loop is known as sentinel and such loops are also known as <B>sentinel
+loops.</B></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="while_Loop"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>while
+Loop</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In C, the <B>while </B>loop is an entry controlled loop. The body of
+the <B>while </B>loops is only executed when the condition evaluates
+to true. If the condition evaluates to false, the body of the loop is
+not executed. The <B>while </B>loops are generally used when there is
+a need for repeating a set of instructions for indefinite amount of
+times. The syntax of a <B>while </B>loop is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.29in; width: 1.69in; height: 2.23in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">while(cond/expr)</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.59in; margin-right: 0.83in">
+	-----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.59in; margin-right: 0.83in">
+	-----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.59in; margin-right: 0.83in; margin-top: 0in">
+	-----</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="do…while_Loop"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>do…while
+Loop</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In C, the <B>do…while </B>loop is an exit controlled loop. The body
+of the <B>do…while </B>loop is executed first and then the
+condition is evaluated. If the value is true, the body of the loop is
+executed again and if the value is false, the execution of the body
+of the loop stops. The difference between <B>while </B>and <B>do…while
+</B>is, unlike the <B>while </B>loop, the body of the <B>do…while
+</B>loop is guaranteed to be executed atleast once (&gt;=1). The
+syntax of the <B>do…while </B>loop is as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.21in; left: 3.39in; width: 1.49in; height: 2.23in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">do</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.17in; margin-top: 0in">
+	----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.17in">
+	----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.17in">
+	----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.2in; margin-top: 0in">
+	}while(cond/expr);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="for_Loop"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>for
+Loop</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In C, the <B>for </B>loop is an entry controlled loop. The <B>for </B>is
+generally used while implementing definite loops in C programs. The
+<B>for </B>loop’s syntax is a little bit different from the other
+loops. In the syntax of the <B>for </B>loop, first the counter is
+initialized, and then the condition is evaluated. If the value of the
+condition is true, the body of the <B>for </B>loop is executed.
+Otherwise, the body of the loop is not executed. After the execution
+of the <B>for </B>loop’s body, the counter is either incremented or
+decremented. Then the condition is evaluated again and so on. The
+syntax of the <B>for </B>loop is as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.22in; left: 3.04in; width: 2.19in; height: 2.11in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">for(init;
+	cond; incr/decr)</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">----</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">The
+flowchart of the <B>for </B>loop is as shown below:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.68in"><IMG SRC="{{url_for('static',filename='img/C_html_bd02acad.png')}}" NAME="image61.png" ALIGN=BOTTOM WIDTH=394 HEIGHT=667 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.3in; page-break-before: always">
+<FONT SIZE=5>/*Program to demonstrate while loop*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.42in"><FONT SIZE=5>/*Program
+which prompts the user to enter a number and performs the</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.2in; line-height: 0.3in"><FONT SIZE=5>sum
+of those numbers. The program terminates when the user enters</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.84in; text-indent: 0.11in; margin-top: 0in">
+<FONT SIZE=5>-1 and prints the sum*/ #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.64in; margin-top: 0in">
+<FONT SIZE=5>int number = 0, sum = 0; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>while(number!=-1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 4.2in"><FONT SIZE=5>printf(&quot;Enter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number); if(number!=-1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=5>sum = sum
++ number;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in; line-height: 0.3in">
+<FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.42in"><FONT SIZE=5>printf(&quot;Sum
+is: %d&quot;,+sum); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.3in; page-break-before: always">
+<FONT SIZE=5>/*Program to demonstrate do...while loop*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.42in"><FONT SIZE=5>/*Program
+which prompts the user to enter a number and performs the</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.2in; line-height: 0.3in"><FONT SIZE=5>sum
+of those numbers. The program terminates when the user enters</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 4.84in; text-indent: 0.11in; margin-top: 0in">
+<FONT SIZE=5>-1 and prints the sum*/ #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.64in; margin-top: 0in">
+<FONT SIZE=5>int number = 0, sum = 0; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>do</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 4.2in"><FONT SIZE=5>printf(&quot;Enter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number); if(number!=-1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=5>sum = sum
++ number;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.42in"><FONT SIZE=5>}while(number!=-1);
+printf(&quot;Sum is: %d&quot;,+sum); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.3in; page-break-before: always">
+<FONT SIZE=5>/*Program to demonstrate for loop*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.51in"><FONT SIZE=5>/*Program
+to print the sum of the numbers from 1 to 5*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.75in"><FONT SIZE=5>int
+i, sum = 0; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>for(i
+= 1; i &lt;= 5; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-top: 0in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>sum
++= i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.42in"><FONT SIZE=5>printf(&quot;Sum
+is: %d&quot;,+sum); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="break_and_continue"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>break
+and continue</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+C provides two unconditional branching statements which are
+extensively used inside the looping statements. They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">break</P>
+	<LI><P STYLE="line-height: 0.19in">continue</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="break_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>break Statement</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>break </B>statement is used inside the looping statements to
+break the execution of the loop. When the <B>break </B>statement is
+encountered inside the loop, the execution of the body of the loop
+stops and the control is given to the next instruction after the body
+of the loop. The syntax of the <B>break </B>statement is as shown
+below:</P>
+<P CLASS="western" STYLE="margin-left: 2.67in"><IMG SRC="{{url_for('static',filename='img/C_html_66c07567.png')}}" NAME="image62.png" ALIGN=BOTTOM WIDTH=201 HEIGHT=276 BORDER=0></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.13in"><A NAME="continue_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>continue
+Statement</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>continue </B>statement is used inside the looping statements
+to skip the execution of a set of instructions and return the control
+back to the loop. When a <B>continue </B>statement is encountered
+within the body of the loop, the statements after the <B>continue
+</B>statement are skipped and the control is passed back to the loop.
+The syntax of the <B>continue </B>statement is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.99in; width: 216px"><IMG SRC="{{url_for('static',filename='img/C_html_e6ffe284.png')}}" NAME="image63.png" WIDTH=216 HEIGHT=274 BORDER=0></SPAN><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.3in; page-break-before: always">
+/*Program to demonstrate break inside a loop*/</H3>
+<P CLASS="western" STYLE="margin-left: 0.2in; margin-right: 0.77in; text-indent: -0.11in">
+<FONT SIZE=5>/*Program which asks the number to enter a number
+repeatedly and prints out the entered number. Program must terminate
+when the user enters 0 or negative number*/</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.49in">
+<FONT SIZE=5>#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.91in"><FONT SIZE=5>int
+number; clrscr(); while(1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 4.19in"><FONT SIZE=5>printf(&quot;Enter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number); if(number&lt;=0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.48in"><FONT SIZE=5>printf(&quot;Program
+Terminated!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>printf(&quot;You
+enetered: %d\n&quot;,number);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; line-height: 0.3in; page-break-before: always">
+<FONT SIZE=5>/*Program to demonstrate continue inside a loop*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.9in"><FONT SIZE=5>/*Program
+which prints the odd numbers between 1 and 100*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 6.35in"><FONT SIZE=5>int
+i; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>for(i
+= 1; i &lt;= 100; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-top: 0in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>if(i%2==0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>continue;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>printf(&quot;%d
+&quot;,i);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.02in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/*Program to calculate the sum of digits in the given
+integer*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.11in"><FONT SIZE=5>int
+number, sum=0; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.42in"><FONT SIZE=5>printf(&quot;Enter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number); while(number&gt;0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 3.98in; text-indent: 0in">
+<FONT SIZE=5>sum = sum + (number % 10); number = number / 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 1.18in"><FONT SIZE=5>printf(&quot;Sum
+of the digits in the given number is: %d&quot;,sum); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3.16in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/*Program to reverse the given integer*/
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5in"><FONT SIZE=5>int
+number, sum = 0; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.42in"><FONT SIZE=5>printf(&quot;Enter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 2.63in; text-indent: -0in">
+<FONT SIZE=5>printf(&quot;\nReverse of the given number is: &quot;);
+while(number&gt;0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 3.61in; text-indent: 0in">
+<FONT SIZE=5>sum = sum*10 + (number % 10); number = number / 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.33in"><FONT SIZE=5>printf(&quot;%d&quot;,sum);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.96in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/*Program to count the number of digits in the given
+integer*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.96in"><FONT SIZE=5>int
+number, count=0; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 3.86in"><FONT SIZE=5>printf(&quot;Enter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number);
+printf(&quot;\nNumber of digits is: &quot;); while(number&gt;0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>count++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in; line-height: 0.3in">
+<FONT SIZE=5>number = number / 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.17in"><FONT SIZE=5>printf(&quot;%d&quot;,count);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.15in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/*Program to accept an arithmetic operator and perform
+the corresponding operation.</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.12in; text-indent: 0.11in">
+<FONT SIZE=5>Program should prompt the user to proceed with the
+execution of the program</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.2in"><FONT SIZE=5>again or
+not. Using do while*/</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.49in">
+<FONT SIZE=5>#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>int
+n1,n2;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.55in"><FONT SIZE=5>char
+op,option; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>n1
+= 3, n2 = 2;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>do</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 3.88in"><FONT SIZE=5>printf(&quot;Enter
+the operator: &quot;); scanf(&quot;%c&quot;,&amp;op); fflush(stdin);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>switch(op)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>case
+'+':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.99in; margin-right: 2.17in"><FONT SIZE=5>printf(&quot;Sum
+of n1 and n2 is: %d&quot;,(n1+n2)); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>case
+'-':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.99in; margin-right: 1.3in"><FONT SIZE=5>printf(&quot;Subtracting
+n2 from n1 gives: %d&quot;,(n1-n2)); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>case
+'*':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.99in; margin-right: 0.84in; margin-top: 0in">
+<FONT SIZE=5>printf(&quot;Multiplication of n1 and n2 gives:
+%d&quot;,(n1*n2)); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>case
+'/':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.99in"><FONT SIZE=5>printf(&quot;Dividing
+n1 by n2 gives: %d&quot;,(n1/n2));</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.79in; text-indent: 0.23in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>break; case</FONT><FONT SIZE=5> </FONT><FONT SIZE=5>'%':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.99in; margin-right: 2.45in"><FONT SIZE=5>printf(&quot;n1
+mod n2 gives: %d&quot;,(n1%n2)); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.81in; line-height: 0.3in"><FONT SIZE=5>default:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-right: 3.61in"><FONT SIZE=5>printf(&quot;Invalid
+Operator!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 2.2in; text-indent: -0in">
+<FONT SIZE=5>printf(&quot;\n\nDo you want to proceed (y/n)?: &quot;);
+scanf(&quot;%c&quot;,&amp;option);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>fflush(stdin);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 3.94in"><FONT SIZE=5>}while(option=='y');
+printf(&quot;Program Terminated!&quot;); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.74in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/* C program to print the smallest number in a set of
+numbers */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.58in"><FONT SIZE=5>int
+numbers[10], small, i; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 3.34in; text-indent: -0in; margin-top: 0in">
+<FONT SIZE=5>printf(&quot;Enter the value %d: &quot;,(i+1));
+scanf(&quot;%d&quot;,&amp;numbers[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.09in"><FONT SIZE=5>small
+= numbers[0]; for(i = 1; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>if(small
+&gt;</FONT><FONT SIZE=5> </FONT><FONT SIZE=5>numbers[i])</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>small
+=</FONT><FONT SIZE=5> </FONT><FONT SIZE=5>numbers[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in; line-height: 0.3in">
+<FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 2.72in; text-indent: -0in">
+<FONT SIZE=5>printf(&quot;\n\nSmallest number is: %d&quot;,small);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.89in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/* C program to print the largest number in a set of
+numbers */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 4.61in"><FONT SIZE=5>int
+numbers[10], large, i; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-right: 3.34in; text-indent: -0in; margin-top: 0in">
+<FONT SIZE=5>printf(&quot;Enter the value %d: &quot;,(i+1));
+scanf(&quot;%d&quot;,&amp;numbers[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 5.12in"><FONT SIZE=5>large
+= numbers[0]; for(i = 1; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>if(large
+&lt;</FONT><FONT SIZE=5> </FONT><FONT SIZE=5>numbers[i])</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>large
+=</FONT><FONT SIZE=5> </FONT><FONT SIZE=5>numbers[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in; line-height: 0.3in">
+<FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 2.86in; text-indent: -0in">
+<FONT SIZE=5>printf(&quot;\n\nLargest number is: %d&quot;,large);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.3in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.13in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=5>/* C program to print the alphabets along with ascii
+values */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.48in"><FONT SIZE=5>#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; margin-right: 6.35in"><FONT SIZE=5>int
+i; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>for(i
+= 65; i &lt;= 122; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; margin-top: 0in; line-height: 0.3in">
+<FONT SIZE=5>if(i &gt; 90 &amp;&amp; i &lt; 97)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.3in"><FONT SIZE=5>continue;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.54in; line-height: 0.3in"><FONT SIZE=5>printf(&quot;%c
+- %d\t&quot;,i,i);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.31in; line-height: 0.3in"><FONT SIZE=5>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=5>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

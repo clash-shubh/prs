@@ -1,0 +1,824 @@
+{% extends "layout.html" %}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Object Oriented Programming</FONT></H1>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0.07in"><FONT COLOR="#365f91">Introduction
+to Classes and Objects</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Classes and objects are the two basic concepts in object oriented
+programming. An object is an instance of a class. A class creates a
+new type and provides a blueprint or a template using for creating
+objects. In Python we already know that everything is an object of
+some class. In Python, the base class for all classes is <I>object</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><FONT COLOR="#4f81bc">Creating or
+Defining a Class</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">The
+syntax for a class is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>class</I><I>
+</I><I>class_name:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><I>&lt;statement_1&gt;</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>&lt;statement_2&gt;</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>...</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>...</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>&lt;statement_n&gt;</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The statements in the syntax can be variables, control statements, or
+function definitions. The variables in a class are known as <I>class
+variables</I>. The functions defined in a class are known as <I>class
+methods</I>. Class variables and class methods are together called as
+<I>class</I><I> </I><I>members</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">The
+class methods can access all class variables. The class members can
+be accessed outside the class by using the object of that class. A
+class definition creates a new namespace.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">Creating Objects</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Once a class is
+defined, we can create objects for it. Syntax for creating an object
+is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>object_name =
+class_name( )</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Creating
+an object for a class is known as instantiation. We can access the
+class members using an object along with the dot (.) operator as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.17in"><I>object_name.variable_name
+object_name.method_name(args_list)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; margin-top: 0in">
+Following code creates a student class and one object <I>s </I>which
+is used to access the members of student class:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>class</I><I>
+</I><I>Student:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.32in"><I>#branch
+is a class variable branch = &quot;CSE&quot;</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><I>def
+read_student_details(self, rno, n):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.94in"><I>#regdno
+and name are instance variables self.regdno = rno</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in"><I>self.name = n</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+<I>def</I><I> </I><I>print_student_details(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in"><I>print(&quot;Student
+regd.no. is&quot;, self.regdno) print(&quot;Student name is&quot;,
+self.name) print(&quot;Student branch is&quot;, Student.branch)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.37in"><I>s
+= Student( ) #s is an object of class Student
+s.read_student_details(&quot;16PA1A0501&quot;, &quot;Ramesh&quot;)
+s.print_student_details( )</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Class
+Variables and Instance Variables</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Variables which are created inside a class and outside methods are
+known as class variables. Class variables are common for all objects.
+So, all objects share the same value for each class variable. Class
+variables are accessed as <I>ClassName.variable_name.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Variables created inside the class methods and accessed using the
+<I>self </I>variable are known as instance variables. Instance
+variable value is unique to each object. So, the values of instance
+variables differ from one object to the other. Consider the following
+class:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>class</I><I>
+</I><I>Student:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.32in"><I>#branch
+is a class variable branch = &quot;CSE&quot;</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>def
+read_student_details(self, rno, n):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.94in"><I>#regdno
+and name are instance variables self.regdno = rno</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in; line-height: 0.18in">
+<I>self.name = n</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>def</I><I>
+</I><I>print_student_details(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in"><I>print(&quot;Student
+regd.no. is&quot;, self.regdno) print(&quot;Student name is&quot;,
+self.name) print(&quot;Student branch is&quot;, Student.branch)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above <I>Student
+</I>class, <I>branch </I>is a class variable and <I>regdno </I>and
+<I>name </I>are instance variables.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Public
+and Private Instance Variables</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+By default instance variables are public. They are accessible
+throughout the class and also outside the class. An instance variable
+can be made private by using _ _ (double underscore) before the
+variable name. Private instance variables can be accessed only inside
+the class and not outside the class. Following example demonstrates
+private instance variable:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>class Student:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.32in"><I>#branch
+is a class variable branch = &quot;CSE&quot;</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>def
+read_student_details(self, rno, n):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in"><I>#regdno and name are
+instance variables</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.25in; margin-top: 0in">
+<FONT COLOR="#00af50"><I>self.</I></FONT><FONT COLOR="#00af50"><I><U>
+</U></I></FONT><FONT COLOR="#00af50"><I>regdno = rno #regdno is
+private variable </I></FONT><I>self.name = n</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>def
+print_student_details(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in"><I>print(&quot;Student
+regd.no. is&quot;, </I><FONT COLOR="#00af50"><I>self.</I></FONT><FONT COLOR="#00af50"><I><U>
+</U></I></FONT><FONT COLOR="#00af50"><I>regdno</I></FONT><I>)
+print(&quot;Student name is&quot;, self.name) print(&quot;Student
+branch is&quot;, Student.branch)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.37in; margin-top: 0in">
+<I>s = Student() s.read_student_details(&quot;16PA1A0501&quot;,
+&quot;Ramesh&quot;)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<I>s.print_student_details()</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT COLOR="#ff0000"><I>print(s.</I></FONT><FONT COLOR="#ff0000"><I><U>
+   </U></I></FONT><FONT COLOR="#ff0000"><I>regdno)  #This line gives</I></FONT><FONT COLOR="#ff0000"><I>
+</I></FONT><FONT COLOR="#ff0000"><I>error</I></FONT><FONT COLOR="#ff0000"><I>
+</I></FONT><FONT COLOR="#ff0000"><I>as</I></FONT><FONT COLOR="#ff0000"><I><U>
+	</U></I></FONT><FONT COLOR="#ff0000"><I>regdno is</I></FONT><FONT COLOR="#ff0000"><I>
+</I></FONT><FONT COLOR="#ff0000"><I>private.</I></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><FONT COLOR="#4f81bc"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><I><B>self
+</B></I></FONT></FONT></FONT><FONT COLOR="#4f81bc"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Argument</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The <I>self </I>argument is used to refer the current object (like
+<I>this </I>keyword in C and Java). Generally, all class methods by
+default should have at least one argument which should be the <I>self
+</I>argument. The <I>self </I>variable or argument is used to access
+the instance variables or object variables of an object.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.16in"><FONT COLOR="#4f81bc">__init__()
+Method (Constructor)</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The<U> </U>init<U>  </U>() is a special method  inside a class.  It
+serves as the constructor. It is automatically  executed when an
+object of the class is created. This method is used generally to
+initialize the instance variables, although any code can be written
+inside it.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax of<U> </U>init<U>
+</U>() method is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.44in; text-indent: -0.5in; margin-top: 0in">
+<I>def</I><I><U> </U></I><I>init</I><I><U> </U></I><I>(self, arg1,
+arg2, ...): statement1</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>statement2</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>...</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>statementN</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For our <I>Student
+</I>class, the<U> </U>init<U> </U>() method will be as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>def
+ </I><I><U>    </U></I><I>init</I><I><U>    </U></I><I>(self, rno,</I><I>
+</I><I>n):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.44in"><I>#regdno
+and name are instance variables self.regdno =</I><I> </I><I>rno</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>self.name = n</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.15in"><FONT COLOR="#4f81bc">__del__()
+Method (Destructor)</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The<U> </U>del<U> </U>() method is a special method inside a class.
+It serves as the destructor. It is executed automatically when an
+object is going to be destroyed. We can explicitly make the<U>   </U>del<U>
+  </U>() method   to execute by deleting an object using <I>del</I><I>
+</I>keyword.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax of<U> </U>del<U>
+</U>() method is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>def</I><I><U> </U></I><I>del</I><I><U>
+</U></I><I>(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.32in"><I>statement1
+statement2</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>...</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>statementN</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">For our <I>Student
+</I>class,<U> </U>del<U> </U>() method can be used as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>def</I><I><U> </U></I><I>del</I><I><U>
+</U></I><I>(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>print(&quot;Student
+object is being destroyed&quot;);</I></P>
+<H3 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#4f81bc">Other Special Methods</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=595 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=106>
+	<COL WIDTH=484>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Method</B></P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>repr<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.09in; margin-top: 0.05in">
+			This method returns the string representation of an object. It
+			works on any object, not just user class instances. It can be
+			called as <I>repr(object)</I>.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>cmp<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.09in; margin-top: 0.05in">
+			This method can be used to override the behavior of == operator
+			for comparing objects of a class. We can also write our own
+			comparison logic.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>len<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method is
+			used to retrieve the length of an object. It can be called as</P>
+			<P STYLE="margin-left: 0.1in; margin-top: 0in"><I>len(object).</I></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>call<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.09in; margin-top: 0.05in">
+			This method allows us to make a class behave like a function. Its
+			instance can be called as <I>object(arg1,arg2,...)</I></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>hash<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.1in; margin-top: 0.05in">
+			While working with sets and dictionaries in Python, the objects
+			are stored based on hash value. This value can be generated using
+			this method.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>   </U>lt<U>
+			</U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method
+			overrides the behavior of &lt; operator.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>   </U>le<U>
+			</U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method
+			overrides the behavior of &lt;= operator.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>   </U>eq<U>
+			</U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method
+			overrides the behavior of = operator.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>   </U>ne<U>
+			</U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method
+			overrides the behavior of != operator.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>   </U>gt<U>
+			</U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method
+			overrides the behavior of &gt; operator.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>   </U>ge<U>
+			</U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method
+			overrides the behavior of &gt;= operator.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>
+			</U>iter<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method can
+			be used to override the behavior of iterating over objects.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>getitem<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.1in; margin-top: 0.05in">
+			This method is used for indexing, i.e., for accessing a value at a
+			specified index.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=106 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>
+			</U>setitem<U> </U>()</P>
+		</TD>
+		<TD WIDTH=484 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This method is
+			used to assign an item at a specified index.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT COLOR="#4f81bc"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Private
+Methods</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Like private variables,
+we can also created private methods. When there is a need to hide the
+internal implementation of a class, we can mark the method as
+private.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">It
+is not recommended to access a private method outside the class. But
+if needed, we can access a private method outside the class as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>objectname._classname</I><I><U>
+</U></I><I>privatemethod(arg1, arg2, ...)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.05in; line-height: 200%">
+If needed, we can access private variables using similar syntax as
+above. Following example demonstrates a private method:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>class
+Box:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>def</I><I><U> </U></I><I>init</I><I><U>
+</U></I><I>(self, l, b):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.5in; margin-top: 0in">
+<I>self.length = l self.breadth = b</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>#Private
+method</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+<I>def</I><I><U> </U></I><I>printdetails(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.05in"><I>print(&quot;Length
+of box is:&quot;, self.length) print(&quot;Breadth of box is:&quot;,
+self.breadth)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>def</I><I>
+</I><I>display(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in"><I>self.</I><I><U>
+</U></I><I>printdetails()</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<I>b = Box(10,20)</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>b.
+display() #recommended</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>b._Box
+printdetails() #not recommended</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Built-in
+Functions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+are some of the built-in functions to work with objects:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=595 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=125>
+	<COL WIDTH=464>
+	<TR VALIGN=TOP>
+		<TD WIDTH=125 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Function</B></P>
+		</TD>
+		<TD WIDTH=464 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=125 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">hasattr(obj,
+			name)</P>
+		</TD>
+		<TD WIDTH=464 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This function
+			checks whether the specified attribute belongs to the object or
+			not.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=125 HEIGHT=58 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">getattr(obj,
+			name[,default])</P>
+		</TD>
+		<TD WIDTH=464 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.09in; margin-top: 0.05in">
+			This function retrieves the value of the attribute on an object.
+			If the default value is given it returns the that if no attribute
+			is present. Otherwise, this function raises an exception.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=125 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">setattr(obj,
+			name, value)</P>
+		</TD>
+		<TD WIDTH=464 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">This function is
+			used to set the value of an attribute on a given object.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=125 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">delattr(obj,
+			name)</P>
+		</TD>
+		<TD WIDTH=464 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">This function
+			deletes an attribute on the given object.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Built-in
+Class Attributes</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Every
+class in Python by default has some attributes. Those attributes can
+be accessed using dot (.) operator. These attributes are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=595 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=130>
+	<COL WIDTH=460>
+	<TR VALIGN=TOP>
+		<TD WIDTH=130 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Attribute</B></P>
+		</TD>
+		<TD WIDTH=460 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=130 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>
+			</U>dict<U> 	</U></P>
+		</TD>
+		<TD WIDTH=460 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Gives the
+			dictionary containing the namespace of a class.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=130 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>doc<U> 	</U></P>
+		</TD>
+		<TD WIDTH=460 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.07in; margin-top: 0.05in">
+			Gives the documentation string of the class if specified.
+			Otherwise, it returns None.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=130 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>
+			</U>name<U> 	</U></P>
+		</TD>
+		<TD WIDTH=460 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Gives the name
+			of the class</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=130 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><U> </U><U>
+			</U>module<U> 	</U></P>
+		</TD>
+		<TD WIDTH=460 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Gives the name
+			of the module in which the class is defined</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=130 HEIGHT=40 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in"><U> </U><U>
+			</U>bases<U> </U><U>	</U></P>
+		</TD>
+		<TD WIDTH=460 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Gives the base
+			classes in inheritance as a tuple. Otherwise, it returns an empty
+			tuple.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Garbage
+Collection</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+Python runs a process in the background which frees an object from
+memory when it is no longer needed or if it goes out of scope. This
+process is known as garbage collection. Python maintains a reference
+count for each object in the memory.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0.06in; page-break-before: always">
+The reference count increases when we create aliases or when we
+assign an object a new name or place it in a list or other data
+structure. Reference count decreases when an object goes out of scope
+and it becomes zero when the object is deleted using <I>del </I>keyword.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.13in"><FONT COLOR="#4f81bc">Class
+Methods</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+A class method is a method which is marked with <I>classmethod
+</I>decorator and the first argument to the method is <I>cls</I>. A
+class method is called using the class name. Class methods are
+generally used as a factory method to create instances of the class
+with the specified arguments. Example of a class method is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>class Box:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>def</I><I><U> </U></I><I>init</I><I><U>
+</U></I><I>(self, l, b):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.5in"><I>self.length
+= l self.breadth = b</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>def</I><I>
+</I><I>display(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.05in"><I>print(&quot;Length
+of box is:&quot;, self.length) print(&quot;Breadth of box is:&quot;,
+self.breadth)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in; line-height: 0.18in">
+<I>@classmethod</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.05in; text-indent: -0.5in">
+<I>def CreateInstance(cls, l, </I><I>b): </I><I>return cls(l,</I><I>
+</I><I>b)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>b =</I><I>
+</I><I>Box.CreateInstance(10,20)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>b. display()</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Static
+Methods</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+A static method is a method marked with <I>staticmethod </I>decorator.
+Code that manipulates information or data of a class is placed in a
+static method. Static method does not depend on the state of the
+object. Static method can be called using class name. Static method
+does not have any additional arguments like <I>self </I>and <I>cls</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+example demonstrates a static method:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<I>class Box:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>sides
+= None</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>def</I><I><U>
+</U></I><I>init</I><I><U> </U></I><I>(self, l, b):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.5in"><I>self.length
+= l self.breadth = b</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><I>def</I><I>
+</I><I>display(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.05in"><I>print(&quot;Length
+of box is:&quot;, self.length) print(&quot;Breadth of box is:&quot;,
+self.breadth)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.93in"><I>@staticmethod
+def </I><I> </I><I>init_sides(s):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in"><I>sides =</I><I> </I><I>s</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.69in; text-indent: 1in">
+<I>print(&quot;Sides of box =&quot;, sides) Box.init_sides(4)</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.18in">
+<I>b = Box(10,20)</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><I>b.
+display()</I></P>
+<H2 CLASS="western" STYLE="page-break-before: always"><FONT COLOR="#365f91">Inheritance</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Creating a new class from existing class is known as inheritance. The
+class from which features are inherited is known as base class and
+the class into which features are derived into is called derived
+class. Inheritance promotes reusability of code by reusing already
+existing classes. Inheritance is used to implement <I>is-a
+</I>relationship between classes.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+hierarchy is an example representing inheritance between classes:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.18in; left: 1.99in; width: 411px"><IMG SRC="{{url_for('static',filename='img/PYTHON_html_e9565327.png')}}" NAME="image1.png" WIDTH=411 HEIGHT=192 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Syntax
+for creating a derived class is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.44in; text-indent: -0.5in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">class DerivedClass(BaseClass):</SPAN></I><I>
+statement1</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><I>statement2</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	...</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statementN</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following example
+demonstrates inheritance in Python:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>class</I><I> </I><I>Shape:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.18in"><I>def</I><I><U>
+ </U></I><I>init</I><I><U>   </U></I><I>(self): print(&quot;Shape
+Constructor&quot;) def area(): print(&quot;Area of</I><I> </I><I>shape&quot;)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.42in; text-indent: 0.5in">
+<I>def peri(): print(&quot;Perimeter of shape&quot;) class</I><I>
+</I><I>Circle(Shape):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>def</I><I><U> </U></I><I>init</I><I><U>
+</U></I><I>(self, r):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.25in"><I>Shape.</I><I><U>
+</U></I><I>init</I><I><U> </U></I><I>(self) #Calling parent
+constructor self.radius = r</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.18in"><I>print(&quot;Circle
+Constructor&quot;)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.62in; text-indent: 0.5in">
+<I>def area(self): print(&quot;Area of circle is:&quot;,
+3.142*self.radius*self.radius) c = Circle(5)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>c.area()</I></P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Polymorphism</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+Polymorphism means having different forms. Based on the context, a
+variable, function, or an object can have different meaning. As
+inheritance is related to classes, polymorphism is related to
+methods. In Python, method overriding is one way of implementing
+polymorphism.</P>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Method
+Overriding</FONT></H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0.06in; page-break-before: always">
+In method overriding, a base class and the derived class will have a
+method with the same signature. The derived class method can provide
+different functionality when compared to the base class method.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+When a derived class method is created and the method is invoked, the
+derived class method executes overriding the base class method.
+Following example demonstrates method overriding:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>class</I><I> </I><I>Shape:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.18in; margin-top: 0in">
+<I>def</I><I><U>  </U></I><I>init</I><I><U>   </U></I><I>(self):
+print(&quot;Shape Constructor&quot;) def area(self): print(&quot;Area
+of</I><I> </I><I>shape&quot;)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.34in; text-indent: 0.5in">
+<I>def peri(self): print(&quot;Perimeter of shape&quot;) class</I><I>
+</I><I>Circle(Shape):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>def</I><I><U> </U></I><I>init</I><I><U>
+</U></I><I>(self, r):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.25in"><I>Shape.</I><I><U>
+</U></I><I>init</I><I><U> </U></I><I>(self) #Calling parent
+constructor self.radius = r</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.68in; text-indent: 0.5in">
+<I>print(&quot;Circle </I><I>Constructor&quot;) </I><I>def</I><I>
+</I><I>area(self):</I></P>
+<P CLASS="western" STYLE="margin-left: 1.1in"><I>print(&quot;Area of
+circle is:&quot;, 3.142*self.radius*self.radius)</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.18in">
+<I>c = Circle(5)</I></P>
+<OL TYPE=a START=3>
+	<OL>
+		<LI><P ALIGN=JUSTIFY STYLE="line-height: 0.18in"><I>rea() #Circle
+		class area method overrides Shape class area</I><I> </I><I>method</I></P>
+	</OL>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+{%endblock course%}

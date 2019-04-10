@@ -1,0 +1,478 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Functions</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">While
+writing large programs, <I>main() </I>function will become quite
+complex to maintain and soon you will lose track of what is
+happening. This is where functions will aid programmers.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Functions allows the programmer to divide a large program into
+logical chunks. Each function is a self contained block that does a
+non-trivial task. The <I>main() </I>function will call other
+functions which in turn solves the problem. This model of programming
+using functions is known as modular programming or structured
+programming.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Consider the following
+program which calculates the area and perimeter of a circle using
+functions.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.66in">#include&lt;iostream&gt;
+double area(double); double peri(double); const double PI = 3.1415;
+using namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">double radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.72in">cout&lt;&lt;&quot;Enter
+radius of cricle: &quot;; cin&gt;&gt;radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.04in">cout&lt;&lt;&quot;Area
+of the circle is: &quot;&lt;&lt;area(radius)&lt;&lt;endl;
+cout&lt;&lt;&quot;Perimeter of the circle is: &quot;&lt;&lt;peri(radius)&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">double area(double r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return PI*r*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">double peri(double r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 2*PI*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Input and output of the
+above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Enter radius of cricle:
+5</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.18in">Area
+of the circle is: 78.5375 Perimeter of the circle is: 31.415</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+the above program, following two lines are known as </FONT><FONT SIZE=3><I>function
+prototypes:</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.98in">double
+area(double); double peri(double);</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">A
+function prototype tells the compiler that there is a function with
+the specified name, with the specified type and parameters.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.25in; margin-top: 0in; line-height: 0.38in">
+Following two lines are function calls to respective functions:
+area(radius)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">peri(radius)</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following two code
+segments are called function definitions of respective functions:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.9in">//Function
+definition of function area double area(double r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">return
+PI*r*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.91in; margin-top: 0.06in">
+//Function definition of function peri double peri(double r)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 2*PI*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Function_Prototype"></A>
+<FONT COLOR="#365f91">Function Prototype</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+A function prototype tells the compiler what is the function name,
+how many parameters a function accepts and the types of those
+parameters and the type of value that a function returns to its
+caller. General syntax of function prototype (declaration) is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.53in"><B>return-type function-name(type,
+type, ..., type);</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above syntax, parameters are optional. When the function does
+not return any value, the return type must be specified as <I>void</I>.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Function Definition</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Function_Definition"></A>
+The body or implementation of a function is known as function
+definition. A function definition always consists of a block made up
+of braces. General syntax of a function definition is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><B>return-type
+function-name(type var1, type var2, ..., type varN)</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>{</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>//Statements
+to execute</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>...</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>...</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>[return
+value / expression;]</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>}</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+If the return type of the function is <I>void</I>, there is no need
+to write the <I>return </I>statement. Remember that a function can
+return only one value using the <I>return </I>statement.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Function_Call"></A>
+<FONT COLOR="#365f91">Function Call</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Invoking or calling a function is known as a function call. General
+syntax of a function call is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.94in"><B>function-name(arg1, arg2, ...,
+argN);</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+A function call starts the execution of corresponding function
+definition. The arguments in the function call are known as <I>actual
+parameters </I>and the parameters in the function definition are
+known as <I>formal</I><I> </I><I>parameters</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Function parameters (in general) are like local variables. Their
+scope is within the function block. Each time a function executes,
+memory is allocated for parameters and when  execution goes back to
+the caller, memory is deallocated and they are no longer accessible.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Function_Parameters_with_Default_Values"></A>
+<FONT COLOR="#365f91">Function Parameters with Default Values</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The parameters in a
+function declaration can be assigned a default value as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.63in"><B>double area(double radius, double
+Pi = 3.14);</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+We can declare multiple parameters with default values. But, all suck
+kind of parameters must be at the last of the parameters list. We can
+assign our custom value for the parameter as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>area(2.5,
+3.1415);</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">For the
+above function call, Pi value will be taken as 3.1415 instead of the
+default value 3.14.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Following program demonstrates parameters with default values:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">#include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.35in">double
+area(double radius, double Pi = 3.14); using namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">double radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.72in">cout&lt;&lt;&quot;Enter
+radius of cricle: &quot;; cin&gt;&gt;radius;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.81in">cout&lt;&lt;&quot;Area
+of the circle is: &quot;&lt;&lt;area(radius)&lt;&lt;endl; cout&lt;&lt;&quot;Area
+of the circle is: &quot;&lt;&lt;area(radius, 3.1415)&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">double area(double r,
+double Pi)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return Pi*r*r;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.42in">Enter
+radius of cricle: 2.5 Area of the circle is: 19.625 Area of the
+circle is: 19.6344</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Recursion"></A><FONT COLOR="#365f91">Recursion</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">A
+function invoking itself is known as recursion. Recursion is an
+alternative to iteration. Recursion is very close to mathematical way
+of solving a given problem.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Advantages of recursion
+are, it is straight forward and easy. Disadvantage of recursion is,
+it occupies more memory on the stack when compared to iteration.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in"><I><B>Note:
+</B></I>Remember to write an exit condition while using recursion. If
+there is no exit condition, then the function will call itself
+infinitely.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.28in; margin-top: 0in; line-height: 0.38in">
+Consider the following program which calculates the factorial of a
+number using recursion: #include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; int fact(int n)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.18in">if(n==0
+|| n==1) return 1; else return n*fact(n-1);</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int num;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.1in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;Enter a number: &quot;; cin&gt;&gt;num;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.03in">cout&lt;&lt;&quot;Factorial
+of &quot;&lt;&lt;num&lt;&lt;&quot; is: &quot;&lt;&lt;fact(num)&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.98in">Enter
+a number: 5 Factorial of 5 is: 120</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+the above program the exit condition is </FONT><FONT SIZE=3><I>if(n==0
+|| n==1) return 1;</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+recursive call is </FONT><FONT SIZE=3><I>fact(n-1).</I></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<I><B>Note: </B></I>In the above program there is no function
+declaration (prototype) for the function <I>fact()</I>. If the
+function definition is written before <I>main()</I>, there is no need
+of writing function declaration.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Passing_an_Array_as_a_Parameter"></A><FONT COLOR="#365f91">Passing
+an Array as a Parameter</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Like we are able to
+pass variables, we can also pass arrays as arguments to a function. A
+function prototype which accepts an array and its size as parameters
+is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.89in"><B>void PrintArray(int nums[ ], int
+size);</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Consider the following
+program which contains a function that takes an array and its size as
+arguments and calculates the largest element in the array:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int largest(int nums[],
+int size)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.23in">int
+max = nums[0]; for(int i=1; i&lt;size; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">if(max&lt;nums[i])</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">max = nums[i];</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return max;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int nums[5] =
+{1,2,5,3,4};</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.35in">cout&lt;&lt;&quot;Largest
+element in the array is: &quot;&lt;&lt;largest(nums, 5)&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Output of
+the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Largest
+element in the array is: 5</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Note that
+in the above program there is no need to write square brackets in the
+function call</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>largest(nums,
+5)</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Inline_Functions"></A><FONT COLOR="#365f91">Inline
+Functions</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A normal function call would involve stack operations and processor
+to shift to the first instruction in the function definition which
+might take significant time. For small functions with one or two
+lines this time is unnecessary. Such functions can be declared as
+inline functions using the keyword <I>inline</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In general, inline functions are faster than normal functions. When
+the compiler comes across a call to a inline function, it directly
+substitutes the function definition in the place of function which
+might increase the size of code. So, the use of <I>inline </I>keyword
+in programs should be minimal. Consider the following inline function
+that demonstrates the use of <I>inline </I>keyword:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+inline int square(int x)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return x*x;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+Rules for declaring a function as inline are as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<OL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	should not use</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>recursion.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	should not use static</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>variables.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	should not return a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>value.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Function
+	should not contain any go to, switch, or iterative</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>statements.</FONT></FONT></P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><A NAME="Function_Overloading"></A>
+<FONT COLOR="#365f91">Function Overloading</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Two or more functions with the same name but different set of
+parameters or different number of parameters are said to be
+overloaded and this concept is known as function overloading.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+It is common to create functions which does the same thing but on
+different parameters. For example, we might have to create functions
+to add integers as well as floating-point numbers. In C, to do this,
+we have to create two functions with different names. But in C++ we
+can use the same function name to create multiple functions.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.68in; margin-top: 0in; line-height: 0.38in">
+Consider the following program which demonstrates the use of function
+overloading: #include&lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; int sum(int x, int y)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return x+y;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">double sum(double x,
+double y)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return x+y;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.03in">cout&lt;&lt;&quot;Sum
+of 3 and 5 is: &quot;&lt;&lt;sum(3,5)&lt;&lt;endl; cout&lt;&lt;&quot;Sum
+of 2.55 and 6.5 is: &quot;&lt;&lt;sum(2.55,6.5)&lt;&lt;endl; return
+0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Sum of 3 and 5 is: 8</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Sum of 2.55 and 6.5 is:
+9.05</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

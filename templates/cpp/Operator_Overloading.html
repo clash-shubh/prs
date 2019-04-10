@@ -1,0 +1,1133 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">OPERATOR
+OVERLOADING</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Introduction_(3)"></A>
+<FONT COLOR="#365f91">Introduction</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The feature of C++
+which allows programmers to redefine the meaning of operators to make
+them work with classes and objects is <I>operator overloading</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+While evaluating expressions, C++ compiler checks whether the
+operands are of normal types or user-defined types. If the operands
+are of built-in or normal type, it performs the regular operation. If
+the operands are of user-defined type, compiler checks if there is a
+function available with an operator or not. If no such function is
+available, it throws an error.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Operator overloading is another type of compile-time polymorphism
+like function overloading and constructor overloading. Operator
+overloading is provided by the language, programmer, or both.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Advantages_of_Operator_Overloading"></A><FONT COLOR="#4f81bd">Advantages
+of Operator Overloading</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+advantages of operator overloading:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-right: 0.11in; margin-top: 0in; line-height: 100%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Operator
+	overloading enables programmers to use notation closer to the target
+	domain. For example we can add two matrices by writing M1 + M2
+	rather than writing</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>M1.add(M2).</FONT></FONT></P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-right: 0.11in; line-height: 100%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Operator
+	overloading provides similar syntactic support of built-in types to
+	user- defined</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>types.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Operator
+	overloading makes the program easier to</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>understand.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Syntax_for_Operator_Overloading"></A>
+<FONT COLOR="#4f81bd">Syntax for Operator Overloading</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+An operator that is to be overloaded is declared in the public
+section. The syntax for an operator overloading function is as
+follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">class
+ClassName</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">...</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">return-type operator
+op(params-list)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<DIV ID="Section103" DIR="LTR" GUTTER=24 STYLE="column-count: 2">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.07in">}</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">//body of the function</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">...</P>
+</DIV>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in; page-break-before: always">
+In the above syntax, <I>op </I>is the operator to be overloaded and
+<I>operator </I>is a keyword. For example, the function for
+overloading + operator for adding two complex numbers will be as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Complex
+operator +(Complex &amp;c2)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">Complex temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.89in">temp.real
+= real + c2.real; temp.imag = imag + c2.imag; return temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.14in; margin-top: 0.06in; line-height: 200%">
+Now, if c1 and c2 are two objects of <I>Complex </I>class, we can add
+them by writing c3 = c1+ c2. Complete program for adding two complex
+numbers is as follows:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Complex</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.64in">float
+real; float imag;</P>
+<DIV ID="Section104" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 3.71in">
+	Complex() {} Complex(float a, float b)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; line-height: 0.19in">{</P>
+</DIV>
+<DIV ID="Section105" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.23in; margin-top: 0in">
+	real = a; imag = b;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Complex operator
+	+(Complex &amp;c2)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">Complex temp;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.66in">temp.real
+	= real + c2.real; temp.imag = imag + c2.imag; return temp;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void show_details()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;real&lt;&lt;&quot;+i&quot;&lt;&lt;imag;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Complex c1(5, 4);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.34in">Complex
+	c2(3, 1); Complex c3 = c1 + c2; c3.show_details(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Output of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">8+i5</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Operators_that_cannot_be_Overloaded"></A>
+<FONT COLOR="#4f81bd">Operators that cannot be Overloaded</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Although most of the operators in C++ can be overloaded, there are
+some operators which cannot be overloaded. They are: scope resolution
+operator (::), member selection operator (.) and ternary operator
+(?:). Following are some points to remember about operator
+overloading:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Operator
+	overloading extends the semantics without changing its</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>syntax.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Some
+	operators like assignment operator (=) and address operator (&amp;)
+	are already overloaded by</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>C++.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Operator
+	overloading does not alter the precedence and associativity of</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>operators.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>New
+	operators cannot be created using operator</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>overloading.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>When
+	operators such as &amp;&amp;, || are overloaded, they lose their
+	special properties of short-circuit evaluation and</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>sequencing.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Overloaded
+	operators cannot have default</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>arguments.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>All
+	overloaded operators except the assignment operator are inherited by
+	the derived class.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Number
+	of operands cannot be changed for an operator using operator</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>overloading.</FONT></FONT></P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in"><A NAME="Implementing_Operator_Overloading"></A>
+<FONT COLOR="#365f91">Implementing Operator Overloading</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Operator overloading
+can be implemented in two ways. They are:</P>
+<P CLASS="western"><BR>
+</P>
+<OL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Using
+	a member</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>function</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Using
+	a friend</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>function</FONT></FONT></P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Differences between
+using a member function and a friend function to implement operator
+overloading are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=298>
+	<COL WIDTH=301>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=15 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.92in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>Member
+			Function</B></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=301 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><B>Friend
+			Function</B></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=53 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-right: 0.46in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Number
+			of parameters to be passed is reduced by one, as the calling
+			object is implicitly supplied as an operand.</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=301 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.06in; margin-right: 0.13in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Number
+			of parameters to be passed is more.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=35 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-right: 0.83in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Unary
+			operators takes no explicit parameters.</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=301 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in; margin-right: 0.78in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Unary
+			operators takes one explicit parameter.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=35 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Binary
+			operators takes only one explicit</FONT></FONT></P>
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>parameter.</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=301 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Binary
+			operators takes two explicit</FONT></FONT></P>
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>parameters.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=35 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Left-hand
+			operand has to be the calling</FONT></FONT></P>
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>object.</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=301 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Left-hand
+			operand need not be an object of</FONT></FONT></P>
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>the
+			class.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=34 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Writing
+			Obj2 = Obj1 + 10 is allowed but</FONT></FONT></P>
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Obj2
+			= 10 + Obj1 is not allowed</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=301 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Writing
+			either Obj2 = Obj + 10 or Obj2 = 10</FONT></FONT></P>
+			<P STYLE="margin-left: 0.07in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>+
+			Obj1 is allowed.</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#365f91">Overloading Unary Operators</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Overloading_Unary_Operators"></A>
+Operators which work on a single operand are known as unary
+operators. Examples are: increment operator(++), decrement
+operator(--), unary minus operator(-), logical not operator(!) etc.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Using_a_member_function_to_overload_an_u"></A>
+<FONT COLOR="#4f81bd">Using a member function to overload an unary
+operator</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.1in; margin-top: 0.03in; line-height: 0.38in">
+Following program demonstrates overloading unary minus operator using
+a member function: #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class Number</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section106" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section107" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void operator -()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">x = -x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">Number
+	n1(10);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">-n1;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.02in">n1.display();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = -10</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+	the above program the value of <I>x </I>is changed and printed using
+	the function <I>display()</I>. We can return an object of class
+	<I>Number </I>after modifying <I>x </I>as shown in the following
+	program:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Number</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.19in">
+	{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section108" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section109" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Number operator -()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">x = -x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return Number(x);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.67in">Number
+	n1(10); Number n2 = -n1; n2.display(); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = -10</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western"><A NAME="Using_a_friend_function_to_overload_an_u"></A>
+	<FONT COLOR="#4f81bd">Using a friend function to overload an unary
+	operator</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">When a friend function
+	is used to overload an unary operator following points must be taken
+	care of:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		function will take one operand as a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>parameter.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		operand will be an object of a</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>class.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		function can access the private members only though the</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>object.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		function may or may not return any</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>value.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+		friend function will not have access to the </FONT><FONT SIZE=3><I>this</I></FONT><FONT SIZE=3><I>
+		</I></FONT><FONT SIZE=3>pointer.</FONT></FONT></P>
+	</UL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.5in; margin-top: 0.04in; line-height: 0.38in">
+	Following program demonstrates overloading an unary operator using a
+	friend function: #include &lt;iostream&gt;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.15in">using
+	namespace std;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">class Number</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+Number(int x)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.81in">friend
+Number operator -(Number &amp;); void display()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+&quot;&lt;&lt;x&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Number operator
+-(Number &amp;n)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return Number(-n.x);</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.67in">Number
+n1(20); Number n2 = -n1; n2.display(); return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">x = -20;</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Overloading_prefix_operators"></A>
+<FONT COLOR="#4f81bd">Overloading prefix operators</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.82in; margin-top: 0.03in; line-height: 0.38in">
+The syntax for overloading prefix increment and decrement operators
+is as follows: return-type operator ++( )</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of the function</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program demonstrates overloading prefix increment and decrement
+operators:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Number</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section110" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section111" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.06in; page-break-before: always">
+Number operator ++()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">x = x + 1;</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">return Number(x);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">Number operator --()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">x = x - 1;</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">return Number(x);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+&quot;&lt;&lt;x&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.54in">Number
+n1(20); Number n2 = ++n1; n2.display(); Number n3(20); Number n4 =
+--n3; n4.display();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+Output of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">x = 21</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">x = 19</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Overloading_postfix_operators"></A>
+<FONT COLOR="#4f81bd">Overloading postfix operators</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+When overloading postfix increment and decrement operators we have to
+include an extra integer parameter to avoid confusion with prefix
+operators. Syntax for overloading postfix increment operator is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">return-type
+operator ++(int)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.06in">
+The <I>int </I>parameter is a dummy parameter and there is no need to
+give any name for it. Following program demonstrates overloading
+postfix increment and decrement operators:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Number</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section112" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section113" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Number operator
+	++(int)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return Number(x++);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Number operator
+	--(int)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return Number(x--);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.37in">Number
+	n1(20); Number n2 = n1++; n1.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.6in">n2.display();
+	Number n3 = n2--; n3.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.02in">n2.display();
+	return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">x =
+	21</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 20</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 20</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 19</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Overloading_Binary_Operators"></A>
+	<FONT COLOR="#365f91">Overloading Binary Operators</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">As unary operators can
+	be overloaded, we can also overload binary operators. Syntax for
+	overloading a binary operator using a member function is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">return-type operator
+	op(ClassName &amp;)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Syntax
+for overloading a binary operator using a friend function is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">return-type operator
+op(ClassName &amp;, ClassName &amp;)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+program demonstrates overloading the binary operator + using a member
+function:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Number</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section114" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.41in">
+	Number() {} Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section115" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">Number
+	operator +(Number &amp;n)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.72in; margin-top: 0in">
+	Number temp; temp.x = x + n.x; return temp;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.38in">Number
+	n1(20); Number n2(10); Number n3 = n1 + n2; n3.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.51in; margin-top: 0.06in; line-height: 200%">
+	Output of the above program is as follows: x = 30</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Following program demonstrates overloading the binary operator +
+using a friend function:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Number</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section116" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.41in">
+	Number() {} Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section117" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.97in">friend
+	Number operator +(Number &amp;, Number &amp;); void display()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+	&quot;&lt;&lt;x&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Number operator
+	+(Number &amp;n1, Number &amp;n2)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.43in">Number
+	temp; temp.x = n1.x + n2.x; return temp;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">int
+	main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.38in">Number
+	n1(20); Number n2(10); Number n3 = n1 + n2; n3.display();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 30</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><I><B>Note: </B></I>Operators
+	such as =, ( ), [ ], and -&gt; cannot be overloaded using friend
+	functions.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Overloading_Special_Operators"></A>
+	<FONT COLOR="#365f91">Overloading Special Operators</FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Some of the special
+	operators in C++ are:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<UL>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>new
+		- used to allocate memory</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>dynamically</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>delete
+		- used to free memory</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>dynamically</FONT></FONT></P>
+		<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>(
+		) and [ ] - subscript</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>operators</FONT></FONT></P>
+	</UL>
+</DIV>
+<UL>
+	<LI><P STYLE="margin-right: 3.98in; margin-top: 0.06in; line-height: 192%; page-break-before: always">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>-&gt; - member
+	access </FONT><FONT SIZE=3>operator </FONT><FONT SIZE=3>Let's see
+	how to overload</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>them.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.15in"><A NAME="Overloading_new_and_delete_operators"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>Overloading
+</B></FONT></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><I><B>new
+</B></I></FONT></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>and
+</B></FONT></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><I><B>delete
+</B></I></FONT></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>operators</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">C++ allows programmers
+to overload <I>new </I>and <I>delete </I>operators due to following
+reasons:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>To
+	add more functionality when allocating or deallocating</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>memory.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>To
+	allow users to debug the program and keep track of memory allocation
+	and deallocation in their</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>programs.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax for overloading
+new operator is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>void*
+operator new(size_t size);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+Parameter <I>size </I>specifies the size of memory to be allocated
+whose data type is <I>size_t</I>. It returns a pointer to the memory
+allocated.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax for overloading
+delete operator is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>void
+operator delete(void*);</I></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+The function receives a parameter of type <I>void* </I>and returns
+nothing. Both functions for new and delete are <I>static </I>by
+default and can't access <I>this </I>pointer. To delete an array
+objects, the operator <I>delete[ ] </I>must be overloaded.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.24in; margin-top: 0in; line-height: 0.38in">
+Following program demonstrates overloading both <I>new </I>and <I>delete
+</I>operators: #include &lt;iostream&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in; margin-top: 0in">
+using namespace std; class Number</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x;</P>
+<DIV ID="Section118" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">Number(int x)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section119" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void* operator
+	new(size_t size)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.01in">void
+	*ptr = ::new int[size];	//Using global new operator cout&lt;&lt;&quot;Memory
+	allocated of size: &quot;&lt;&lt;size&lt;&lt;endl;</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return ptr;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">void operator
+	delete(void *ptr)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">::delete(ptr);	//Using
+	global delete operator</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-top: 0.06in; page-break-before: always">
+cout&lt;&lt;&quot;Memory deallocated&quot;&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">void display()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;&quot;x =
+&quot;&lt;&lt;x&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.31in">Number
+*n = new Number(10); //Invokes overloaded new operator n-&gt;display();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.44in">delete
+n;	//Invokes overloaded delete operator return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+of the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.5in">Memory
+allocated of size: 4 x = 10</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Memory deallocated</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above program, ::new and ::delete refers to the global new and
+delete operators. When <I>new </I>is called, compiler executes the
+overloaded function for new and also automatically calls the
+constructor.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in"><A NAME="Advantages_of_overloading_new_and_delete"></A>
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Advantages
+of overloading </B></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><I><B>new
+</B></I></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>and
+</B></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><I><B>delete
+</B></I></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>operators</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>The
+	overloaded </FONT><FONT SIZE=3><I>new </I></FONT><FONT SIZE=3>operator
+	function can receive one or more parameters. This allows flexibility
+	in customizing memory</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>allocation.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Overloaded
+	</FONT><FONT SIZE=3><I>delete </I></FONT><FONT SIZE=3>operator
+	provides garbage collection for objects of</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>classes.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Programmers
+	can add exception handling code while allocating</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>memory.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Programmers</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>can</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>use</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>memory</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>management</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>functions</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>like</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3><I>malloc(),</I></FONT><FONT SIZE=3><I>
+	</I></FONT><FONT SIZE=3><I>realloc(),</I></FONT><FONT SIZE=3><I> </I></FONT><FONT SIZE=3>and</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3><I>free()
+</I></FONT><FONT SIZE=3>inside the overloaded functions of </FONT><FONT SIZE=3><I>new
+</I></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><I>delete </I></FONT><FONT SIZE=3>operators.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Overloading_subscript_operators_[_]_and_"></A>
+<FONT COLOR="#4f81bd">Overloading subscript operators [ ] and ( )</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The subscript operator [ ] is used to access array elements. The
+function declared for overloading [ ] or ( ) should be non-static
+member function of a class. Syntax for overloading [ ] operator is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+int&amp; operator [ ](int x)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">The
+overloaded function must return an integer value by reference.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Following example demonstrates overloading [ ] operator:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+#include &lt;iostream&gt; using namespace std; class Number</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x[5];</P>
+<DIV ID="Section120" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void read(int n)</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section121" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.51in">cout&lt;&lt;&quot;Enter
+	&quot;&lt;&lt;n&lt;&lt;&quot; numbers: &quot;; for(int i=0; i&lt;n;
+	i++)</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">cin&gt;&gt;x[i];</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int&amp; operator
+	[](int i)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return x[i];</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.07in">Number
+	n1; n1.read(5);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.87in">cout&lt;&lt;&quot;Element
+	is: &quot;&lt;&lt;n1[2]; return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+	and Output of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Enter 5 numbers: 1 2 3
+	4 5</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Element is: 3</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">In
+	case of multiple subscripts, we can overload ( ) operator instead of
+	[ ] operator. Syntax for overloading ( ) operator is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int&amp; operator ( )
+	(int i, int j,...)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Example
+	for overloading ( ) operator is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Matrix</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.06in; page-break-before: always">
+private:</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">int x[2][2];</P>
+<DIV ID="Section122" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">void read()</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+</DIV>
+<DIV ID="Section123" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.36in">cout&lt;&lt;&quot;Enter
+	2x2 matrix elements: &quot;; for(int i=0; i&lt;2; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">{</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in">for(int j=0; j&lt;2;
+	j++)</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.88in; margin-right: 1.33in">
+	cin&gt;&gt;x[i][j];</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">int&amp; operator
+	()(int i, int j)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return x[i][j];</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.2in">Matrix
+	m; m.read();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.78in">cout&lt;&lt;&quot;Element
+	is: &quot;&lt;&lt;m(1,1); return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+	Input and output for the above program is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Enter
+	2x2 matrix elements:</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">1 2</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">3 4</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Element
+	is: 4</P>
+	<P CLASS="western"><BR>
+	</P>
+	<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Overloading_class_member_access_operator"></A>
+	<FONT COLOR="#4f81bd">Overloading class member access operator</FONT></H6>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+	Class member access can be controlled by overloading the class
+	member access operator (-&gt;). It is an unary operator as it
+	operates on only operand, the object. The overloaded function must
+	be a non-static function and its syntax is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+	ClassName * operator -&gt;(void)</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">//Body of function</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">...</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+	program demonstrates overloading the member access operator (-&gt;):</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.96in">
+	#include &lt;iostream&gt; using namespace std; class Number</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">public:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.42in">int
+x;</P>
+<P CLASS="western" STYLE="margin-left: 0.01in; margin-right: 4.42in; margin-top: 0in">
+Number(int x)</P>
+<P CLASS="western" STYLE="margin-left: 0.01in">{</P>
+<DIV ID="Section124" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.6in">this-&gt;x = x;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">Number * operator -&gt;()</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in">return this;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.36in">Number
+	n1(30); cout&lt;&lt;&quot;x = &quot;&lt;&lt;n1-&gt;x; return 0;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+	of the above program is as follows:</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">x = 30</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

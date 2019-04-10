@@ -1,0 +1,121 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Union</FONT></H1>
+    
+    
+    
+    <P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+Unions have the same syntax as that of a structure since both of them
+are similar. However, there is a major difference between them in
+terms of memory allocation. A structure is allocated memory for all
+the members of the structure whereas a union is allocated memory only
+for largest member of the union. This implies that, although a union
+may contain many members of different types, it can handle only one
+member at a time. Like structure, a union can be declared using the
+<B>union </B>keyword as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 2.89in; width: 2.5in; height: 1.23in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">union
+	student</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 0.93in; text-indent: -0in">
+	char name[20]; char grade;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">};</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">union
+	student s1,s2;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in"><A NAME="Program"></A>
+In the above code <B>student </B>is the name of the union. Also <B>s1
+</B>and <B>s2 </B>are union variables. Memory is allocated only for
+<B>name </B>member of the union. So, the limitation on unions is:
+<I>only one member can be used at a time. </I>Unions can be used in
+all places where a structure is allowed.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Program</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.53in; margin-top: 0.03in">
+/* C program to demostrate union */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.7in; margin-top: 0in">
+#include&lt;conio.h&gt; #include&lt;string.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.19in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">union student</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.62in">char
+name[20]; char grade;</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">int marks;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">};</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.62in">union
+student s1; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.83in">strcpy(s1.name,&quot;siva
+kumar&quot;); s1.grade = 'A';</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">s1.marks = 98;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.72in; margin-right: 4.61in; text-indent: -0in">
+printf(&quot;Name is: %s \n&quot;,s1.name); printf(&quot;Grade is: %c
+\n&quot;,s1.grade); printf(&quot;Marks are: %d&quot;,s1.marks);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; margin-top: 0.04in">
+In the above program we will only get the correct value <B>98 </B>for
+the member s1.marks as in a union only one value can b e used and
+stored at a time. We will get unexpected values for other members:
+name and grade.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H1 CLASS="western" ALIGN=LEFT><BR>
+</H1>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

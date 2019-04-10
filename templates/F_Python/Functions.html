@@ -1,0 +1,713 @@
+{% extends "layout.html" %}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Functions</FONT></H1>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0.07in"><FONT COLOR="#365f91">Introduction
+to Functions</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A function is a block of organized and reusable program code that
+performs a specific, single, and well-defined task. A function
+provides an interface for communication in terms of how information
+is transferred to it and how results are generated.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">Need for Functions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Simplifies
+	program development by making it easy to test separate functions.</P>
+	<LI><P STYLE="line-height: 0.19in">Understanding programs becomes
+	easier.</P>
+	<LI><P STYLE="margin-right: 0.22in; line-height: 100%">Libraries
+	contain several functions which can be used in our programs to
+	increase the productivity.</P>
+	<LI><P STYLE="margin-right: 0.23in; line-height: 100%">By dividing a
+	large program into smaller functions, different programmers can work
+	on different functions.</P>
+	<LI><P STYLE="line-height: 0.19in">Users can create their own
+	functions and use them in various locations in the main program.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.11in"><FONT COLOR="#4f81bc">Defining
+Functions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A function definition consists of a function header that identifies
+the function, followed by the body of the function. The body of a
+function contains the code that is to be executed when a function is
+called. To define a function, we have to remember following points:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Function definition starts with
+	the keyword def</P>
+	<LI><P STYLE="line-height: 0.19in">The keyword def is followed by
+	the function name and parentheses.</P>
+	<LI><P STYLE="line-height: 0.19in">After parentheses, a colon (:)
+	should be placed.</P>
+	<LI><P STYLE="line-height: 0.19in">Parameters or arguments that the
+	function accepts should be placed inside the parentheses.</P>
+	<LI><P STYLE="line-height: 0.19in">A function might have a return
+	statement.</P>
+	<LI><P STYLE="line-height: 0.19in">The function code should indented
+	properly.</P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">A
+function definition contains two parts:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Function header</P>
+	<LI><P STYLE="line-height: 0.19in">Function body</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">The
+syntax of a function definition is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">def
+function_name(arg1, arg2, ...):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><SPAN STYLE="background: #ffff00">	</SPAN><I><SPAN STYLE="background: #ffff00">[“””documentation</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">string”””]</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	statement</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">block</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	return</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">[expression]</SPAN></I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Example for defining a
+function without arguments is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">def</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">printstars():</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	for i in</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">range(1,101):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><SPAN STYLE="background: #ffff00">	</SPAN><I><SPAN STYLE="background: #ffff00">print(“*”,
+end=„</SPAN></I><I><SPAN STYLE="background: #ffff00"> </SPAN></I><I><SPAN STYLE="background: #ffff00">„)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.41in; margin-top: 0.06in; line-height: 200%; page-break-before: always">
+In the above function definition, <I>printstars </I>is the function
+name. It prints 100 stars in the same line. Example for defining a
+function with arguments is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I><SPAN STYLE="background: #ffff00">def</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">printstars(n):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	for i in</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">range(1,n+1):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><SPAN STYLE="background: #ffff00">	</SPAN><I><SPAN STYLE="background: #ffff00">print(“*”,
+end=„</SPAN></I><I><SPAN STYLE="background: #ffff00"> </SPAN></I><I><SPAN STYLE="background: #ffff00">„)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Above
+function prints n number of stars when called. In Python, a function
+can be defined multiple times.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Calling
+a Function</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; margin-top: 0in">
+Before calling a function, it should be defined. We call a function
+to execute the code inside the function. Syntax for a function call
+is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>function_name(
+[arg1, arg2, ...] )</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The arguments or parameters passed in a function call are called
+actual parameters. The arguments used in the function header of a
+function definition are called formal parameters. When a function is
+called, control moves to the first line inside the function
+definition. After the body of function definition is executed,
+control returns back to the next statement after the function call.
+Points to remember while calling a function:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.22in; line-height: 100%">The function
+	name and number of parameters must be same in the function call and
+	function definition.</P>
+	<LI><P STYLE="margin-right: 0.22in; line-height: 100%">When the
+	number parameters passed doesn’t match with the parameters in the
+	function definition, error is generated.</P>
+	<LI><P STYLE="line-height: 0.19in">Names of arguments in the
+	function call and function definition can be different.</P>
+	<LI><P STYLE="margin-right: 0.22in; line-height: 100%">Arguments can
+	be passed as expressions. The expression will get executed first and
+	then the value is passed to the formal parameter.</P>
+	<LI><P STYLE="line-height: 0.19in">The parameter list must be
+	separated by commas.</P>
+	<LI><P STYLE="line-height: 0.19in">If the function returns a value
+	it must be assigned to some variable in the calling function.</P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Let’s consider the
+following example which demonstrates function definition and function
+call:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.23in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">#Function definition</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">def prod(x,y):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	return</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">x*y</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.54in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">a = int(input())</SPAN></I><I> </I><I><SPAN STYLE="background: #ffff00">b
+= int(input())</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.3in"><I><SPAN STYLE="background: #ffff00">c
+= prod(a,b) #Function call</SPAN></I><I> </I><I><SPAN STYLE="background: #ffff00">print(&quot;Product
+of&quot;,a,&quot;and&quot;,b,&quot;is&quot;,c)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above example, a
+and b are actual parameters, while x and y are formal parameters.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Functions
+Returning Value</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+A function may or may not return a value. To return a value, we must
+use <I>return </I>statement in the function definition. Every
+function by default contains an implicit <I>return </I>statement as
+the last line which returns <I>None </I>object to the calling
+function. A return statement is used for two reasons:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Return
+a value to the caller.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.77in; line-height: 200%">
+To end the execution of a function and give control to caller. The
+syntax of <I>return </I>statement is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>return
+[expression]</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Example of a function
+returning a value is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">def cube(x):</SPAN></I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	return</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">x*x*x</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">In the
+above example, the function cube is returning the <I>cube </I>of
+value passed to it from caller.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Passing
+Arguments</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+If a function definition contains arguments, then in a function call
+there is a need to pass arguments. For example, in the previous
+function definition of <I>cube</I>, there is a single argument. So,
+while calling this function we need to pass a single parameter. The
+<I>cube </I>function can be called as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>cube(10)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above function
+call, 10 is the actual parameter.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Default
+Arguments</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+The formal parameters in a function definition can be assigned a
+default value. Such parameters to which default values are assigned
+are called default arguments. Default arguments allows a function
+call to pass less parameters than the number of parameters in the
+function definition.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Default value can be assigned to a parameter by using the assignment
+( = ) operator. A function definition can have one or more default
+arguments. All the default arguments should be at the end of the
+arguments list. Following example demonstrates a function with
+default arguments and its usage:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.05in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">#Function to calculate simple
+interest</SPAN></I><I> </I><I><SPAN STYLE="background: #ffff00">def
+si(p, n, r=1): #r is default argument</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	prod =</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">p*n*r</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	return</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">prod/100</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.54in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">p = int(input())</SPAN></I><I> </I><I><SPAN STYLE="background: #ffff00">n
+= int(input())</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.37in"><I><SPAN STYLE="background: #ffff00">print(&quot;Simple
+interest with default rate is:&quot;,si(p,n))</SPAN></I><I>
+</I><I><SPAN STYLE="background: #ffff00">print(&quot;Simple interest
+with 5% rate is:&quot;,si(p,n,5))</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">In
+the example program, si(p,n) call takes the default value of 1 for r.
+For si(p,n,5) call, it takes the value 5 for r.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">Keyword Arguments</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0.06in; page-break-before: always">
+In general, when parameters are passed in a function call, they are
+assigned to formal parameters based on their position. Such
+parameters are called positional parameters. We can also pass the
+parameters based on the name (keyword) of the parameter in the
+function definition. Such parameters are called keyword arguments.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+In the case of keyword arguments, the actual parameters are assigned
+to formal parameters based on their name. Keyword arguments can be
+used if you don’t want to pass the parameters based on position of
+formal parameters. Points to remember when using keyword arguments:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">All keyword parameters must match
+	one of the parameters in the function definition.</P>
+	<LI><P STYLE="line-height: 0.19in">Order of keyword arguments is not
+	important.</P>
+	<LI><P STYLE="line-height: 0.19in">A value should not be passed more
+	than once to a keyword parameter.</P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+example demonstrates keyword arguments and their use:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.16in; margin-top: 0.06in">
+<I><SPAN STYLE="background: #ffff00">#Function to calculate simple
+interest</SPAN></I><I> </I><I><SPAN STYLE="background: #ffff00">def
+si(p, n, r):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	prod =</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">p*n*r</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	return</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">prod/100</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">print(&quot;Simple
+interest is:&quot;,si(r=2, n=2, p=5000))</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above example,
+we can see in the function call that we are passing using names
+(keywords) of formal parameters.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western"><FONT COLOR="#4f81bc">Variable-length Arguments</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+In some cases we cannot exactly tell how many parameters are needed
+in a function definition. In  such cases we can use variable length
+arguments. Variable length arguments allows to pass random number of
+arguments in a function call. While creating a variable-length
+argument, the argument name must be preceded with * symbol. Points to
+remember when working with variable-length arguments:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">The random arguments passed to
+	the function forms a tuple.</P>
+	<LI><P STYLE="line-height: 0.19in">A for loop can be used to iterate
+	over and access the elements in the variable-length argument.</P>
+	<LI><P STYLE="margin-right: 0.23in; line-height: 100%">A
+	variable-length argument should be at the end of the parameters list
+	in the function definition.</P>
+	<LI><P STYLE="margin-right: 0.22in; line-height: 100%">Other formal
+	parameters written after variable-length argument must be keyword
+	arguments only.</P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+example demonstrates variable-length argument:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">def
+fun(name, *friendslist):</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	print(&quot;Friends
+of&quot;,name,&quot;are:</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">&quot;)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	for x in</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">friendslist:</SPAN></I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><SPAN STYLE="background: #ffff00">
+</SPAN><I><SPAN STYLE="background: #ffff00">	print(x, end = '</SPAN></I><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><I><SPAN STYLE="background: #ffff00">')</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I><SPAN STYLE="background: #ffff00">fun(&quot;Ramesh&quot;,
+&quot;Mahesh&quot;, &quot;Suresh&quot;)</SPAN></I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output of the above
+example is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.04in"><I>Friends
+of Ramesh are:</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.04in"><I>Mahesh
+Suresh</I></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.07in"><FONT COLOR="#4f81bc">Scope
+of Variables</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">Variables
+in a program has two things:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Scope: Parts of the program in
+	which it is accessible.</P>
+	<LI><P STYLE="line-height: 0.19in">Lifetime: How long a variable
+	stays in the memory.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Based on scope of a
+variable, there are two types of variables:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<OL>
+	<LI><P STYLE="line-height: 100%">Global variables</P>
+	<LI><P STYLE="line-height: 100%">Local variables</P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+differences between a global variable and local variable:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=595 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=298>
+	<COL WIDTH=292>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=45 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P STYLE="margin-left: 1.04in"><B>Global Variable</B></P>
+		</TD>
+		<TD WIDTH=292 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 1.03in; margin-right: 1.02in"><B>Local
+			Variable</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.04in; margin-top: 0.07in">
+			Variable which is defined in the main body of the program file.</P>
+		</TD>
+		<TD WIDTH=292 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">Variable which is defined inside a
+			function.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">Accessible throughout the program
+			file.</P>
+		</TD>
+		<TD WIDTH=292 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.03in; margin-top: 0.07in">
+			Accessible from the point it is defined to the end of the block it
+			is defined in.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=298 HEIGHT=45 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in; margin-top: 0in">Accessible to all
+			functions in the program.</P>
+		</TD>
+		<TD WIDTH=292 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.07in">They are not
+			related in any way to other variables outside the function.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following example
+demonstrates local and global variables:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>x = 20</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>def fun():</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in"><I>x =
+10</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>print(&quot;Local x
+=&quot;,x)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>fun()</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>print(&quot;Global
+x =&quot;,x)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output of above code is
+as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.62in; margin-top: 0in">
+<I>Local x = 10 Global x = 20</I></P>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">Global
+Statement</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+A local variable inside a function can be made <I>global </I>by using
+the global keyword. If a local variable which is made global using
+the <I>global </I>statement have the same name as another global
+variable, then changes on the variable will be reflected everywhere
+in the program.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax of global
+statement is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>global</I><I>
+</I><I>variable-name</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following example
+demonstrates global keyword:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><I>x
+= 20</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>def
+fun():</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.48in"><I>global
+x x = 10</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><I>print(&quot;Local x
+=&quot;,x)</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>fun()</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>print(&quot;Global x
+=&quot;,x)</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Output of the above
+program is:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.62in"><I>Local
+x = 10 Global x = 10</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">In case
+of nested functions:</P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Inner function can access
+	variables n both outer and inner functions.</P>
+	<LI><P STYLE="line-height: 0.19in">Outer function can access
+	variables defined only in the outer function.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.11in"><FONT COLOR="#4f81bc">Anonymous
+Functions or LAMBDA Functions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Functions that don’t have any name are known as lambda or anonymous
+functions. Lambda functions are created using the keyword <I>lambda</I>.
+Lambda functions are one line functions that can be created and used
+anywhere a function is required. Lambda is simply the name of letter
+‘L’ in the Greek alphabet. A lambda function returns a function
+object.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A lambda function can
+be created as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>lambda
+arguments-list : expression</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+The arguments-list contains comma separated list of arguments.
+Expression is an arithmetic expression that uses the arguments in the
+arguments-list. A lambda function can be assigned to a variable to
+give it a name.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following is an example
+for creating lambda function and using it:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.87in"><I>power
+= lambda x : x*x*x print(power(3))</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in; margin-top: 0in">
+In the above example the lambda function is assigned to power
+variable. We can call the lambda function by writing power(3), where
+3 is the argument that goes in to formal parameter x. Points to
+remember when creating lambda functions:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions doesn’t have
+	any name.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions can take
+	multiple arguments.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions can returns only
+	one value, the value of expression.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda function does not have any
+	return statement.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions are one line
+	functions.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions are not
+	equivalent to inline functions in C and C++.</P>
+	<LI><P STYLE="line-height: 0.19in">They cannot access variables
+	other than those in the arguments.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions cannot even
+	access global variables.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions can be passed as
+	arguments in other functions.</P>
+	<LI><P STYLE="line-height: 0.19in">Lambda functions can be used in
+	the body of regular functions.</P>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 0.19in; page-break-before: always">
+	Lambda functions can be used without assigning it to a variable.</P>
+	<LI><P STYLE="line-height: 0.19in">We can pass lambda arguments to a
+	function.</P>
+	<LI><P STYLE="line-height: 0.19in">We can create a lambda function
+	without any arguments.</P>
+	<LI><P STYLE="line-height: 0.19in">We can nest lambda functions.</P>
+	<LI><P STYLE="line-height: 0.19in">Time taken by lambda function to
+	execute is almost similar to regular functions.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.11in"><FONT COLOR="#4f81bc">Recursive
+Functions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Recursion
+is another way to repeat code in our programs. A recursive functions
+is a function which calls itself. A recursive functions should
+contain two major parts:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">base condition part: A condition
+	which terminates recursion and returns the result.</P>
+	<LI><P STYLE="line-height: 0.19in">recursive part: Code which calls
+	the function itself with reduced data or information.</P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Recursion uses divide
+and conquer strategy to solve problems. Following is an example for
+recursive function which calculates factorial of a number:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><I>def
+fact(n):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.75in"><I>&quot;&quot;&quot;Returns
+the factorial of a number using recursion.&quot;&quot;&quot;</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.34in"><I>if
+n==0 or n==1: return 1 else: return n*fact(n-1)</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>print(fact(4))</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">In
+the above example test inside triple quotes is called docstring or
+documentation string. The docstring of function can be printed by
+writing <I>function_name.</I><I><U>  </U></I><I><U> </U></I><I>doc</I><I><U>
+	</U></I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Following
+is an example for recursive function which calculates GCD of two
+numbers:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><I>def
+gcd(x,y):</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.18in"><I>rem
+= x%y</I></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.53in"><I>if
+rem == 0: return y else: return gcd(y, rem)</I></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><I>print(gcd(6,40))</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+{%endblock course%}

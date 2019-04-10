@@ -1,0 +1,537 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Storage Classes</FONT></H1>
+    
+    
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Storage_Classes"></A></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The storage classes specify the scope and lifetime of a variable in a
+C program. The <B>scope (active) </B>specifies in which parts of the
+program is the variable accessible and the <B>lifetime (alive)
+</B>specifies how long a variable is available in the memory so that
+the program will be able to access that variable. There are four
+storage classes in C. They are:</P>
+<OL>
+	<LI><P>auto</P>
+	<LI><P>register</P>
+	<LI><P>extern</P>
+	<LI><P STYLE="line-height: 0.19in">static</P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in">The
+storage classes’ <B>auto</B>, <B>register and static </B>can be
+applied to local variables and the storage classes’ <B>extern </B>and
+<B>static </B>can be applied to global variables.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="auto"></A><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>auto</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+When a variable is declared with the storage class <B>auto, </B>the
+variable’s scope is within the function or block in which it is
+declared and the lifetime is until the function or block in which it
+is declared completes. Syntax for declaring <B>auto </B>variable is
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.48in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.34in; margin-top: 0.05in">auto
+	datatype variablename;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">In any program, if a
+local variable is declared without any storage class then it is
+automatically set to</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><B>auto </B>storage
+class.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><A NAME="register"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>register</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+When a variable is declared with the storage class <B>register</B>,
+the variable will be stored inside one of the registers of the CPU.
+The registers are under the direct control of CPU. So, data inside
+the register can be processed at a faster rate than the data that
+resides in the main memory. For a program to execute faster, it is
+always best to store the most frequently used data inside register.
+The scope and lifetime of a <B>register </B>variable is same as that
+of a <B>auto </B>variable. Syntax for declaring a <B>register
+</B>variable is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.48in"></P>
+<DIV ID="Section8" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.04in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>extern</B></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.01in">The <B>extern </B>storage
+	class specifies that the variable is declared in some part of the
+	program.</P>
+</DIV>
+<DIV ID="Section9" DIR="LTR">
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+	Generally this storage class is used to refer global variables in a
+	program. Note that <B>extern </B>variables cannot be initialized.
+	The scope of a <B>extern </B>variable is throughout the entire
+	program and the lifetime is until the program completes its
+	execution.</P>
+	<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; text-indent: 0.5in">
+	In a multi-file program, a global variable in one file can be
+	accessed from another file by using the storage class <B>extern.
+	</B>Syntax for declaring a <B>extern </B>variable is as shown below:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.48in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+		<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0.05in">extern
+		datatype variablename;</P>
+	</SPAN><BR CLEAR=LEFT><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+</DIV>
+<DIV ID="Section10" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="static"></A>
+	<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>static</B></FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.09in; margin-top: 0.1in">The
+	<B>static </B>storage class can be applied to both local variables
+	and global variables. The <B>static</B></P>
+</DIV>
+<DIV ID="Section11" DIR="LTR">
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+	local variables are accessible only within the function or block in
+	which they are declared, but their lifetime is throughout the
+	program. The <B>static </B>global variables are accessible
+	throughout the file in which they are declared but not in other
+	files. Syntax for declaring <B>static </B>variable is shown below:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.89in; width: 2.48in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+		<P CLASS="western" STYLE="margin-left: 0.31in; margin-top: 0.05in">static
+		datatype variablename;</P>
+	</SPAN><BR CLEAR=LEFT><BR>
+	</P>
+</DIV>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">The four storage
+classes can be summarized as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=579 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=100>
+	<COL WIDTH=154>
+	<COL WIDTH=154>
+	<COL WIDTH=162>
+	<TR VALIGN=TOP>
+		<TD WIDTH=100 HEIGHT=33 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.1in; margin-top: 0.09in">
+			<B>Storage Class</B></P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in"><B>Declaration</B></P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in"><B>Location</B></P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in"><B>Scope</B></P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in"><B>(Visibility)</B></P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.09in"><B>Lifetime</B></P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.09in"><B>(Alive)</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=100 HEIGHT=34 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.1in; margin-top: 0.09in">
+			auto</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in; margin-top: 0.09in">
+			Inside a function/block</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in">Within
+			the</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in">function/block</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.09in">Until
+			the function/block</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.09in">completes</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=100 HEIGHT=34 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.1in; margin-top: 0.09in">
+			register</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in; margin-top: 0.09in">
+			Inside a function/block</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.36in; margin-right: 0.07in; text-indent: 0.12in">
+			Within the function/block</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.53in; margin-right: 0.09in; text-indent: -0.42in">
+			Until the function/block completes</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=100 HEIGHT=52 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.1in; margin-right: 0.1in">extern</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in">Outside
+			all functions</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.09in; margin-right: 0.07in; text-indent: 0.09in">
+			Entire file plus other files where the variable</P>
+			<P STYLE="margin-left: 0.18in">is declared as extern</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.52in; margin-right: 0.28in; text-indent: -0.22in; margin-top: 0.09in">
+			Until the program terminates</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=100 HEIGHT=44 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.34in; margin-right: 0.01in; text-indent: 0.02in; margin-top: 0.05in">
+			static (local)</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in">Inside
+			a function/block</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.36in; margin-right: 0.34in; text-indent: 0.12in; margin-top: 0.05in">
+			Within the function/block</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.52in; margin-right: 0.28in; text-indent: -0.22in; margin-top: 0.05in">
+			Until the program terminates</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=100 HEIGHT=42 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.3in; margin-right: 0.01in; text-indent: 0.07in; margin-top: 0.05in">
+			static (global)</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.09in; margin-right: 0.08in">Outside
+			all functions</P>
+		</TD>
+		<TD WIDTH=154 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.54in; margin-right: 0.09in; text-indent: -0.43in; margin-top: 0.05in">
+			Entire file in which it is declared</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.52in; margin-right: 0.28in; text-indent: -0.22in; margin-top: 0.05in">
+			Until the program terminates</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><I><B>Note: </B></I><I>The
+</I><I><B>extern </B></I><I>variables cannot be initialized. The
+default value for </I><I><B>static </B></I><I>variables is zero.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Programs:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.94in"><FONT SIZE=4>/*
+C program to demostrate auto storage class */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>void
+func1(); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 2.52in"><FONT SIZE=4>/*
+x is local variable with respect to main function */ auto int x;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.07in"><FONT SIZE=4>clrscr();
+x = 20;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.3in"><FONT SIZE=4>printf(&quot;\nValue
+of x is: %d&quot;,x); func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+func1()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.85in; margin-right: 1.48in; text-indent: -0.09in; margin-top: 0in">
+<FONT SIZE=4>/*Since x is a auto or local variable of function main,
+it is not accessible in func1*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x
+= 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>printf(&quot;\nValue
+of x is: %d&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.7in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to demostrate register storage class */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>void
+printx(); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>printx();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+printx()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>register
+int i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i =
+1;i &lt;= 10000;i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;%d
+&quot;,i);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.13in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to demostrate global variables */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>int x;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.85in">
+<FONT SIZE=4>void func1(); void func2(); void func3(); main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 6.07in"><FONT SIZE=4>clrscr();
+x = 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); func2();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); func3();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); getch();</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.15in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>void
+func1()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+func2()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>func3()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>int x =</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.8in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to demostrate extern storage class */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>void
+func1();</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.85in">
+<FONT SIZE=4>void func2(); void func3(); main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.72in"><FONT SIZE=4>extern
+int x; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x
+= 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); func2();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in; margin-top: 0in">
+<FONT SIZE=4>printf(&quot;x = %d\n&quot;,x); func3();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>void
+func1()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.72in"><FONT SIZE=4>extern
+int x; x++;</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.15in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>int
+x;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>void
+func2()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+func3()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.89in; margin-top: 0in">
+<FONT SIZE=4>int x = 10; x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.54in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to demostrate extern storage class in
+multiple files */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>#include&quot;extf2.c&quot; int x;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>main()</FONT><SPAN DIR="LTR" STYLE="position: relative; top: 0.02in; left: 4.94in; width: 1.08in; height: 0.42in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P STYLE="margin-left: 0.27in; margin-top: 0.05in"><FONT SIZE=4>extf1.c</FONT></P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x
+= 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>func2();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.54in; margin-top: 0.14in">
+<FONT SIZE=4>/* C program to demostrate extern storage class in
+multiple files */ void func1()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>extern
+int x; printf(&quot;\nx = %d&quot;,x);</FONT><SPAN DIR="LTR" STYLE="position: relative; top: 0.36in; left: 4.89in; width: 1.08in; height: 0.42in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P STYLE="margin-left: 0.27in; margin-top: 0.05in"><FONT SIZE=4>extf2.c</FONT></P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>void
+func2()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>int
+x = 20; printf(&quot;\nx = %d&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.62in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to demostrate static storage class - local
+variables */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>int count();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.76in; margin-right: 4.16in">
+<FONT SIZE=4>printf(&quot;Value is: %d\n&quot;,count());
+printf(&quot;Value is: %d\n&quot;,count()); printf(&quot;Value is:
+%d\n&quot;,count()); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>int
+count()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.52in"><FONT SIZE=4>static
+int x = 0; x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>return
+x;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.51in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to demostrate static storage class - global
+variables */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.4in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; #include&quot;statg2.c&quot;
+static int x;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.85in"><FONT SIZE=4>void
+func1(); main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT><SPAN DIR="LTR" STYLE="position: relative; top: 0.07in; left: 4.53in; width: 0.81in; height: 0.3in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.16in; margin-top: 0.05in">statg1.c</P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x
+= 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.08in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x); func1();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>func2();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+func1()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.14in"><FONT SIZE=4>/*
+C program to demonstrate static storage class - global variables */</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+func2()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT><SPAN DIR="LTR" STYLE="position: relative; top: 0.06in; left: 4.53in; width: 0.81in; height: 0.3in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.16in; margin-top: 0.05in">statg2.c</P>
+</SPAN>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>x++;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>printf(&quot;x
+= %d\n&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

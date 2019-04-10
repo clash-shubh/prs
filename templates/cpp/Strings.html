@@ -1,0 +1,108 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Strings</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in"><A NAME="Strings"></A>
+It is common in many programs to work with strings. A string is a
+collection of characters. Those who are familiar with C language know
+that strings are maintained using character arrays. Also people face
+many problems with the string termination character '\0' in C
+strings.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0in">
+C++ eliminates such difficulties altogether by providing pre-defined
+<I>string </I>class. It is available in the header file <I>string</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.12in"><A NAME="Creating_strings"></A>
+<FONT COLOR="#4f81bd">Creating strings</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in; margin-top: 0.03in">
+We can create strings in two ways using the <I>string </I>class.
+First way is create a variable with type <I>string </I>and assign a
+string literal to it as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 2.5in"><B>string  str = &quot;hello&quot;;</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">Second
+way is to use the <I>string </I>constructor which accepts a single
+string parameter to initialize the <I>string </I>variable as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 2.54in; margin-top: 0in"><B>string
+str(&quot;hello&quot;);</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Consider the following
+program which demonstrates reading strings as well as concatenating,
+copying, and finding the size of the string.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+#include&lt;string&gt; using namespace std; int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">string str1;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.03in">cout&lt;&lt;&quot;Enter
+first string: &quot;; getline(cin, str1);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">string str2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.84in">cout&lt;&lt;&quot;Enter
+second string: &quot;; getline(cin, str2);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.14in">cout&lt;&lt;&quot;First
+string is: &quot;&lt;&lt;str1&lt;&lt;endl; cout&lt;&lt;&quot;Second
+string is: &quot;&lt;&lt;str2&lt;&lt;endl; string catstr;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">catstr = str1+&quot;
+&quot;+str2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.62in">cout&lt;&lt;&quot;Concatenated
+string is: &quot;&lt;&lt;catstr&lt;&lt;endl; string copystr;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">copystr = catstr;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">cout&lt;&lt;&quot;Copied
+string is: &quot;&lt;&lt;copystr&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.69in">cout&lt;&lt;&quot;Length
+of copied string is: &quot;&lt;&lt;copystr.length()&lt;&lt;endl;
+cout&lt;&lt;&quot;Size of copied string is: &quot;&lt;&lt;copystr.size()&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.6in; margin-top: 0.06in; page-break-before: always">
+Enter first string: hello Enter second string: world First string is:
+hello Second string is: world</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.03in">Concatenated
+string is: hello world Copied string is: hello world</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.59in">Size
+of copied string is: 11 Size of copied string is: 11</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

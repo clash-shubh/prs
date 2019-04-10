@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{%block course%}
+
+{{python[46][1]|safe}}
+{{python[46][3]|safe}}
+{{python[46][7]|safe}}
+{%for i in range(19, 400, 2):%}
+    {{  python[46][i]|safe}}
+{%endfor%}
+{%endblock course%}

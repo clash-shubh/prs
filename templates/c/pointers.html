@@ -1,0 +1,462 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Pointers</FONT></H1>
+    
+
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in"><A NAME="Pointers"></A>
+A pointer is a derived data type in C. It is built from one of the
+fundamental data types available in C. Pointers contain memory
+addresses as their values. Since these memory addresses are the
+locations in the computer memory where program instructions and data
+are stored, pointers can be used to access and manipulate data stored
+in the memory.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Advantages_of_Pointers"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Advantages of
+Pointers</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.08in; margin-top: 0.03in; line-height: 0.19in">
+Pointers are used frequently in C, as they offer a number of benefits
+to the programmers.</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">They
+include the following:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in">Pointers are more efficient in
+	handling arrays and data tables.</P>
+	<LI><P>Pointers can be used to return multiple values from a
+	function via function arguments.</P>
+	<LI><P>Pointers allow passing a function as argument to other
+	functions.</P>
+	<LI><P STYLE="margin-right: 0.58in">The use of pointer arrays to
+	character strings results in saving of data storage space in memory.</P>
+	<LI><P STYLE="line-height: 0.19in">Pointers allow C to support
+	dynamic memory management.</P>
+	<LI><P STYLE="margin-right: 0.58in; margin-top: 0in">Pointers
+	provide an efficient way for manipulating dynamic data structures
+	such as structures, linked lists, queues, stacks and trees.</P>
+	<LI><P>Pointers increase the execution speed and thus reduce the
+	program execution time.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Understanding_Pointers"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Understanding
+Pointers</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The computer’s memory is a sequential collection of storage cells.
+Each cell, commonly known as a byte, has a number called <I>address
+</I>associated with it. Typically, the addresses are numbered
+consecutively, starting from zero. The last address depends on the
+memory size. A computer system having 64k memory will have its last
+address as 65,535.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+Whenever we declare a variable in our programs, the system allocates
+somewhere in the memory, an appropriate location to hold the value of
+the variable. This location will have its own address number.
+Consider the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.69in; width: 473px"><IMG SRC="{{url_for('static',filename='img/C_html_5c2f0504.png')}}" NAME="image83.png" WIDTH=473 HEIGHT=214 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+The above statement <B>int var </B>creates a location in the memory
+to hold integer value. That location will have an address for example
+assume it is 5000. The statement <B>var = 200 </B>stores the value
+200 at the location whose address is 5000. So, in our example, <B>var
+</B>is the variable name, <B>200 </B>is the value stored in var and
+<B>5000</B><B> </B>is the address of the memory location containing
+the variable <B>var</B>.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+So, we can access the value <B>200 </B>either by using the variable
+name <B>var </B>or by using the address of the memory location which
+is <B>5000</B>. We can access using the second method by storing the
+address in another variable. <I><B>This concept of storing memory
+address in a variable and accessing the value available at that
+address is known as a pointer variable. </B></I>Since the pointer is
+also variable, it will also have a memory address just like any other
+variable.</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Pointer_Constants"></A>
+<FONT COLOR="#4f81bd">Pointer Constants</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in"><A NAME="Pointer_Values"></A>
+The memory addresses within a computer are referred to as <I>pointer
+constants</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd">Pointer
+Values</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; margin-top: 0.03in">
+We cannot assign the memory addresses directly to a variable. We can
+only get the address of a variable by using the address operator (&amp;).
+The value thus obtained is known as <I>pointer value</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Pointer_Variables"></A>
+<FONT COLOR="#4f81bd">Pointer Variables</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; margin-top: 0.03in">
+Once we obtain the pointer value, we can store it in a variable. Such
+variable which stores the memory address is known as a <I>pointer
+variable</I>.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Accessing_the_Address_of_a_Variable"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Accessing the
+Address of a Variable</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+The actual location of a variable in memory is system dependent. A
+programmer cannot know the address of a variable immediately. We can
+retrieve the address of a variable by using the <I>address of </I>(&amp;)
+operator. Let’s look at the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.59in; width: 1.08in; height: 1.06in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.34in; margin-top: 0.05in; line-height: 188%">
+	int a = 10; int *p;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">p =
+	&amp;a;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: -0in">
+In the above example, let the variable <B>a </B>is stored at memory
+address 5000. This can be retrieved by using the address of operator
+as <B>&amp;a</B>. So the value stored in variable <B>p </B>is 5000
+which is the memory address of variable <B>a</B>. So, both the
+variable <B>a, </B>and <B>p </B>point to the same memory location.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Declaring_and_Initializing_Pointer_Varia"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Declaring and
+Initializing Pointer Variables</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Declaration"></A>
+<FONT COLOR="#4f81bd">Declaration</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+In C, every variable must be declared for its type. Since pointer
+variables contain addresses that belong to a specific data type, they
+must be declared as pointers before we use them. The syntax for
+declaring a pointer is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.12in; width: 2.03in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.19in; margin-top: 0.05in">datatype
+	*pointer-name;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">This tells the
+compiler three things about the variable <B>pointer-name</B>. They
+are:</P>
+<OL>
+	<LI><P>The asterisk (*) tells that the variable <B>pointer-name </B>is
+	a pointer variable.</P>
+	<LI><P><B>pointer-name </B>needs a memory location.</P>
+	<LI><P STYLE="margin-top: 0in"><B>pointer-name </B>points to a
+	variable of type <B>datatype</B>.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Consider the following
+example for declaring pointers:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.71in; width: 0.85in; height: 0.74in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">int
+	*p;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">float *p;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<H6 CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Initialization"></A>
+<FONT COLOR="#4f81bd">Initialization</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+After declaring a pointer variable we can store the memory address
+into it. This process is known as initialization. All uninitialized
+pointers will have some unknown values that will be interpreted as
+memory addresses. Since compilers do not detect these errors, the
+programs with uninitialized pointers will produce erroneous results.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in">
+Once the pointer variable has been declared, we can use the
+assignment operator to initialize the variable. Consider the
+following example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.56in; width: 1.16in; height: 1.07in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.16in; margin-top: 0.05in; line-height: 188%">
+	int var = 20; int *p;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">p =
+	&amp;var;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+In the above example, we are assigning the address of variable <B>var
+</B>to the pointer variable <B>p </B>by using the assignment
+operator. We can also combine the declaration and initialization into
+a single line as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.56in; width: 1.14in; height: 0.7in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">int
+	var = 20;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">int
+	*p = &amp;var;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Accessing_a_Variable_Using_Pointer"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Accessing a
+Variable Using Pointer</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in; line-height: 115%">
+After declaring and initializing a pointer variable, we can access
+the value of the variable pointed by the pointer variable using the *
+operator. The * operator is also known as <I>indirection operator </I>or
+<I>dereferencing operator</I>. Consider the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.15in; left: 3.31in; width: 1.65in; height: 1.05in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.69in; margin-top: 0.05in; line-height: 188%">
+	int var = 20; int *p = &amp;var;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">printf(”Var
+	= %d”, *p);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">In the above example,
+we are printing the value of the variable <B>var </B>by using the
+pointer variable <B>p</B></P>
+<P CLASS="western" STYLE="margin-left: 0.58in">along with the *
+operator.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Programs</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.84in; margin-top: 0.03in">
+/* C program to print the address of variables */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in; margin-top: 0in">
+#include&lt;conio.h&gt; main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.72in; margin-right: 6.25in">
+int a,b; clrscr(); a = 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">b
+= 20;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.72in; margin-right: 3.43in">
+printf(&quot;Value of a is: %d and address is: %u\n&quot;,a,&amp;a);
+printf(&quot;Value of b is: %d and address is: %u\n&quot;,b,&amp;b);
+getch();</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.3in">/*
+C program to demonstrate pointers */ #include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">int a, b;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.64in; margin-top: 0in">
+int *p1, *p2; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">a
+= 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">b
+= 20;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.18in">p1
+= &amp;a; p2 = &amp;b;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 3.92in; margin-top: 0in">
+printf(&quot;a's value - %d, address - %u\n&quot;,a,&amp;a);
+printf(&quot;b's value - %d, address - %u\n&quot;,b,&amp;b);
+printf(&quot;Value at p1: %d\n&quot;,*p1); printf(&quot;Value at p2:
+%d\n&quot;,*p2);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.15in"><A NAME="Pointers_and_Arrays"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Pointers
+and Arrays</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+When an array is declared in a program, the compiler allocates a base
+address and sufficient amount of storage to contain all the elements
+of the array in contiguous (continuous) memory locations. The base
+address is the location of the first element (index 0) of the array.
+The compiler also defines the array name as a constant pointer to the
+first element. Suppose array x is declared as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.34in; width: 1.59in; height: 0.34in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">int
+	x[5] = {1,2,3,4,5};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in">Suppose
+the array is allocated memory as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1in; width: 606px"><IMG SRC="{{url_for('static',filename='img/C_html_b637d9d.png')}}" NAME="image84.png" WIDTH=606 HEIGHT=213 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; margin-top: 0in">
+The name <B>x </B>is defined as a constant pointer pointing to the
+first element, <B>x[0] </B>and therefore the value of <B>x </B>is
+2000, the location where <B>x[0] </B>is stored.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in">If
+we declare <B>p </B>as an integer pointer, then we can make the
+pointer <B>p </B>point to the array <B>x </B>by the following
+assignment:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.88in; width: 0.51in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">p
+	= x</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in">In
+a one dimensional array the address of element <B>n </B>can be
+calculated by using the below expression:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.58in; width: 3.1in; height: 0.3in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">address
+	= base address + (index * scale factor)</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.58in">In
+a two dimensional array with m rows and n columns the address of an
+element can be calculated as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.49in; width: 3.29in; height: 0.31in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">address
+	= base address + [(i * n + j) * scale factor]</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">Where i represents ith
+row and j represents jth column.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Programs</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.98in; margin-top: 0.03in">
+/* C program to access one dimensional array using pointer */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 5.88in; margin-top: 0in">
+int a[5], *p, i; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">p = a;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 4.99in">printf(&quot;Enter
+5 numbers: &quot;); for(i = 0; i &lt; 5; i++,p++)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-top: 0in">scanf(&quot;%d&quot;,p);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-right: 6.36in">p
+= a; i = 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">while(i
+&lt; 5)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-right: 5.51in; margin-top: 0in">
+printf(&quot;%d &quot;, *p); p++;</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">i++;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.98in">/*
+C program to access two dimensional array using pointer */
+#include&lt;stdio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.7in">#include&lt;conio.h&gt;
+main()</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">int a[3][3] =
+{{1,2,3},{4,5,6},{7,8,9}}, *p, i, j;</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">p
+= &amp;a[0][0];</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; line-height: 0.19in">for(i
+= 0; i &lt; 3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">for(j = 0; j &lt; 3;
+j++)</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 1in; line-height: 0.19in">printf(&quot;%d
+&quot;, *(p+(i*3+j)));</P>
+<P CLASS="western" STYLE="margin-left: 0.86in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.86in">printf(&quot;\n&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.72in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.72in; margin-top: 0in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.15in"><A NAME="Pointers_and_Strings"></A>
+
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.14in"><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

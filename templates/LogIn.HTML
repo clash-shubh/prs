@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-signin-client_id" content="673968642533-d5lm5vn2mhtdn9bah4oqolgtl7dphj79.apps.googleusercontent.com">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+    body {
+      font-family: 'Source Sans Pro', "Roboto", Arial;
+      font-size: 1em;
+}
+.input-container {
+    padding-top:20px;
+    position: relative;
+    height: 2.9em;
+    border: 0px solid #ECECEC;
+    border-bottom-color: white;
+  }
+
+      .inp{
+          outline: none;
+	        border:none;
+
+          width:100%;
+          height:30px;
+          padding-top:10px;
+          padding-left:30px;
+          border: 0px solid #ECECEC;
+          border-bottom-width: 2px !important;
+      }
+      .inp:focus{
+  	     border-color: #4acc30;
+
+  	      border-bottom-width: medium medium 2px;
+  }
+
+
+  .placeholder{
+    padding-top:10px;
+    position:absolute;
+    top :18px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    opacity: 0.5;
+    padding-left:30px;
+  }
+  .inp:focus + .placeholder{
+  	font-size: 13px;
+    transform: translate3d(0, -100%, 0);
+  	opacity: 1;
+    padding-left:30px;
+  }
+  .inp:valid + .placeholder{
+    font-size: 13px;
+    transform: translate3d(0, -100%, 0);
+  	opacity: 1;
+    padding-left:30px;
+  }
+
+
+.container-box{
+  padding-top:5%;
+  padding-left:40%;
+  width:20%;
+
+}
+.inp:valid{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 10px;
+}
+.btn{
+  margin-top: 20px;
+  margin-left: 30%;
+  padding: 15px 60px;
+  background-color: white;
+  border-none;
+  border-radius: 50px;
+  color:#4acc30;
+  font-size: 20px;
+
+  border:1px solid #4acc30;
+
+}
+.btn:hover{
+  color:white;
+  background-color: #4acc30;
+  transition: background-color .3s,color .3s,background .3s ease-in-out;
+}
+#g-btn{
+  margin:0;
+}
+#g-signout{
+  visibility:hidden;
+}
+#fb-signout{
+  visibility:hidden;
+}
+.hr1{
+  width:24%;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left:39%;
+  opacity:0.3;
+}
+.fb-g{
+  padding-top:1%;
+  padding-left:44%;
+  width:20%;
+}
+.heading{
+  font-weight:lighter;
+  margin-left:44%;
+  margin-top:10%;
+  font-size: 100px;
+}
+    </style>
+
+  </head>
+  <body>
+    <div class="heading">Log In</div>
+    <div class="container-box">
+
+    <form class="Login" action="login" method="POST">
+      <div class="input-container" id="email-container">
+            <input type="text" name="username" id="email" class="inp" required>
+            <label for="email" class="placeholder">username</label>
+      </div>
+      <div class="input-container" id="password-container">
+        <input type="password" name="password" class="inp" required>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+      <input type="submit" value="Log In" class="btn">
+    </form>
+    </div>
+    <hr class="hr1">
+
+    <div class="fb-g">
+
+
+<div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id="g-btn" data-width="260" data-height="40"></div>
+
+<div id="g-status"></div>
+<div id="g-signout" ><a href="#" onclick="signOut();">Sign out</a></div>
+
+<fb:login-button
+  scope="public_profile,email"
+  onlogin="checkLoginState();" id="fb-btn" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="true">
+</fb:login-button>
+  </div>
+  <div id="fb-status"></div>
+  <div id="fb-signout"><a href="#" onclick="logout();">Sign out</a></div>
+
+</div>
+  <script>
+  function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  var name=profile.getName();
+  document.getElementById('g-btn').style.visibility="hidden";
+  document.getElementById('g-status').innerHTML ='google: Thanks for logging in, '+name + '!';
+  document.getElementById('g-signout').style.visibility="visible";
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
+
+  function signOut() {
+     var auth2 = gapi.auth2.getAuthInstance();
+     auth2.signOut().then(function () {
+       console.log('User signed out.');
+       document.getElementById('g-btn').style.visibility="visible";
+       document.getElementById('g-status').innerHTML ='';
+       document.getElementById('g-signout').style.visibility="hidden";
+     });
+}
+  </script>
+
+  <script>
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '2229388870481145',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v3.2'
+  });
+
+  FB.AppEvents.logPageView();
+
+  };
+
+  (function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "https://connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
+
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+  });
+  }
+  function statusChangeCallback(response) {
+             console.log('statusChangeCallback');
+             console.log(response);
+             // The response object is returned with a status field that lets the
+             // app know the current login status of the person.
+             // Full docs on the response object can be found in the documentation
+             // for FB.getLoginStatus().
+             if (response.status === 'connected') {
+                 // Logged into your app and Facebook.
+                 console.log('Welcome!  Fetching your information.... ');
+                 FB.api('/me', function (response) {
+                     console.log('Successful login for: ' + response.name);
+                     document.getElementById('fb-btn').style.display="none";
+                     document.getElementById('fb-status').innerHTML ='facebook: Thanks for logging in, ' + response.name + '!';
+                     document.getElementById('fb-signout').style.visibility="visible";
+                 });
+             } else {
+                 // The person is not logged into your app or we are unable to tell.
+                 document.getElementById('status').innerHTML = 'Please log ' +
+                   'into this app.';
+             }
+         }
+      function logout(){
+         FB.logout(function(response) {
+  // user is now logged out
+});
+    document.getElementById('fb-btn').style.display="block";
+    document.getElementById('fb-status').innerHTML ='';
+    document.getElementById('fb-signout').style.visibility="hidden";
+}
+  </script>
+  </body>
+</html>

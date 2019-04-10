@@ -1,0 +1,208 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Types of Variables</FONT></H1>
+    
+    <P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Types_of_Variables"></A>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A variable is a memory location inside memory which is referred using
+a name. The value inside a variable changes throughout the execution
+of the program. Based on where the variable is declared in the
+program, variables can be divided into two types. They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">Local Variables</P>
+	<LI><P>Global Variables</P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Local_Variables"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Local Variables</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A variable is said to be a local variable if it is declared inside a
+function or inside a block. The scope of the local variable is within
+the function or block in which it was declared. A local variable
+remains in memory until the execution of the function or block in
+which it was declared in completes. Let’s see the following
+example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.08in; width: 2.11in; height: 1.76in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">main()</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">int
+	x;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">printf(“x = %d”,x);</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+In the above example, the variable <B>x </B>is a local variable with
+respect to the <B>main </B>function. Variable <B>x </B>is not
+accessible outside main function and <B>x </B>remains in the memory
+until the execution of the <B>main </B>function completes.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Global_Variables"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Global Variables</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: 0.5in; margin-top: 0.03in">
+A variable is said to be a global variable if it is declared outside
+all the functions in the program. A global variable can be accessed
+throughout the program by any function. A global variable remains in
+the memory until the program terminates. In a multi-file program, a
+global can be accessed in other files wherever the variable is
+declared with the storage class <B>extern</B>.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.04in">Types
+of variables and their scope and lifetime can be summarized as shown
+below:</P>
+<P CLASS="western"><BR>
+</P>
+<TABLE WIDTH=581 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=142>
+	<COL WIDTH=162>
+	<COL WIDTH=137>
+	<COL WIDTH=130>
+	<TR VALIGN=TOP>
+		<TD WIDTH=142 HEIGHT=33 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=RIGHT STYLE="margin-right: 0.23in; margin-top: 0.09in"><B>Type
+			of Variable</B></P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.58in; text-indent: -0.1in"><B>Declaration
+			</B><B>Location</B></P>
+		</TD>
+		<TD WIDTH=137 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.4in; margin-right: 0.38in; text-indent: 0.13in">
+			<B>Scope (Visibility)</B></P>
+		</TD>
+		<TD WIDTH=130 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.48in; margin-right: 0.41in; text-indent: -0.05in">
+			<B>Lifetime (Alive)</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=142 HEIGHT=52 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.33in">Local Variable</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.07in; margin-right: 0.06in">Inside
+			a function/block</P>
+		</TD>
+		<TD WIDTH=137 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.27in; text-indent: 0.12in; margin-top: 0.09in">
+			Within the function/block</P>
+		</TD>
+		<TD WIDTH=130 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.24in; text-indent: 0.18in">Until the
+			function/block</P>
+			<P STYLE="margin-left: 0.37in">completes</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=142 HEIGHT=51 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=RIGHT STYLE="margin-right: 0.28in">Global Variable</P>
+		</TD>
+		<TD WIDTH=162 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-top: 0.01in"><BR>
+			</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.07in; margin-right: 0.07in">Outside
+			a function/block</P>
+		</TD>
+		<TD WIDTH=137 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P ALIGN=CENTER STYLE="margin-left: 0.15in; margin-right: 0.14in">Within
+			the file and other files marked</P>
+			<P ALIGN=CENTER STYLE="margin-left: 0.14in; margin-right: 0.14in">with
+			extern</P>
+		</TD>
+		<TD WIDTH=130 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+			<P STYLE="margin-left: 0.35in; margin-right: 0.11in; text-indent: -0.22in; margin-top: 0.09in">
+			Until the program terminates</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Program</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 2.28in; margin-top: 0.14in">
+<FONT SIZE=4>/* C program to demonstrate local and global variables
+*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.42in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>int g = 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.89in"><FONT SIZE=4>int
+x = 20; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.08in"><FONT SIZE=4>printf(&quot;Inside
+main, g = %d&quot;,g); printf(&quot;\nInside main, x = %d&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>int y =
+30;</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.93in; margin-right: 3.87in">
+<FONT SIZE=4>printf(&quot;\nInside block, g =</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>%d&quot;,g); printf(&quot;\nInside block, y =
+%d&quot;,y); printf(&quot;\nInside block, x =</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>%d&quot;,x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>printf(&quot;\nOutside
+block, g =</FONT><FONT SIZE=4> </FONT><FONT SIZE=4>%d&quot;,g);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.73in"><FONT SIZE=4>/*printf(&quot;Outside
+block, y = %d&quot;,y);*/ printf(&quot;\nOutside block, x = %d&quot;,x);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in; text-indent: -0in; margin-top: 0.04in">
+In the above example, <B>g </B>is a global variable and <B>x </B>is a
+local variable with respect to main and <B>y </B>is a local variable
+within the block. The variable <B>y </B>cannot be accessed outside
+the block. That is why the <B>printf </B>statement outside the block
+accessing the value of the variable <B>y </B>has been commented out.</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

@@ -1,0 +1,52 @@
+.container{
+  padding-top:60px;
+  font-family: roboto;
+  
+}
+.sidebar{
+  float: left;
+  width:20%;
+  background-color: rgba( 49, 53, 65,1);
+  min-height:100vh;
+  color:rgba(255,255,255,.4);
+  text-decoration: none;
+
+}
+a{
+    text-decoration: none;
+    color:rgba(255,255,255,.4);
+}
+.topic{
+
+  padding-left:60px;
+  padding-top: 20px;
+  padding-bottom:20px;
+  font-size: 20px;
+}
+.topic:hover{
+background-color: rgba(63, 89, 109,1);
+}
+
+.course{
+  padding-left:3%;
+  width:70%;
+  float:left;
+
+
+}
+
+@media(max-width:900px){
+  .sidebar{
+    width:0%;
+    visibility: hidden;
+  }
+
+  .course{
+    padding-left:3%;
+    width:94%;
+    float:left;
+    padding-right:3%;
+
+  }
+
+  }

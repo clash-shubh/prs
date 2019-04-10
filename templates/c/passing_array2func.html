@@ -1,0 +1,390 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Passing Arrays to Functions</FONT></H1>
+    
+    <P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Passing_arrays_to_functions"></A>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.17in"><A NAME="Passing_one-dimensional_arrays"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Passing
+one-dimensional</B></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>
+</B></FONT></FONT><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>arrays</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; text-indent: 0.5in; margin-top: 0.03in">
+We can also pass arrays as parameters to the called function. While
+passing one-dimensional array to a function, you should follow three
+rules. They are:</P>
+<OL>
+	<LI><P STYLE="margin-right: 0.58in">In the function declaration you
+	should write a pair of square brackets [ ] beside the name of the
+	array. No need to specify the size of the array.</P>
+	<LI><P STYLE="margin-right: 0.58in">In the function definition you
+	should write a pair of square brackets [ ] beside the name of the
+	array. Again no need to specify the size of the array.</P>
+	<LI><P STYLE="margin-right: 0.58in">In the function call, it is
+	enough to just pass the array name as the actual parameter. No need
+	to write the square brackets after the array name.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 0.58in">
+When an array is passed as an actual parameter, the formal parameter
+also refers to the same array which is passed as an actual parameter.
+When passing an array as a parameter, you are passing the address of
+the array, not the values in the array. So, if you make changes in
+the array using the formal name of the array, the changes are also
+reflected on the actual array.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><A NAME="Programs:"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Programs:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>/* C
+program to find the largest number in a group of numbers using a
+function</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.39in; margin-top: 0in">
+<FONT SIZE=4>*/ #include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.84in"><FONT SIZE=4>void
+largest(int a[], int n); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>int
+a[5], i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>for(i
+= 0; i &lt; 5; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>printf(&quot;Enter
+a[%d]: &quot;,i+1);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>scanf(&quot;%d&quot;,&amp;a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=4>largest(a,5);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+largest(int a[], int n)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.78in"><FONT SIZE=4>int
+i, max; max = a[0];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>for(i
+= 1; i &lt; n; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>if(max&lt;a[i])</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.11in; margin-top: 0.15in"><FONT SIZE=4>max
+= a[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;The
+largest number is: %d&quot;,max);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.77in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to find the smallest number in a group of
+numbers using a function */</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.72in"><FONT SIZE=4>void
+smallest(int a[], int n); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>int a[5],
+i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i =
+0; i &lt; 5; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;Enter
+a[%d]: &quot;,i+1);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>scanf(&quot;%d&quot;,&amp;a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.6in"><FONT SIZE=4>smallest(a,5);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>void
+smallest(int a[], int n)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.81in; margin-top: 0in">
+<FONT SIZE=4>int i, min; min = a[0];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i =
+1; i &lt; n; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>if(min&gt;a[i])</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>min =
+a[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>printf(&quot;The
+smallest number is: %d&quot;,min);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.07in"><A NAME="Passing_two-dimensional_arrays"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Passing
+two-dimensional arrays</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.11in; text-indent: 0.5in; margin-top: 0.03in">
+We can also pass two-dimensional arrays as parameters to a function.
+While passing two- dimensional arrays as parameters you should keep
+in mind the following things:</P>
+<OL>
+	<LI><P STYLE="margin-right: 0.58in">In the function declaration you
+	should write two sets of square brackets after the array name. You
+	should specify the size of the second dimension i.e., the number of
+	columns.</P>
+	<LI><P STYLE="margin-right: 0.58in">In the function call you should
+	write two sets of square brackets after the array name. Also you
+	should specify the size of the second dimension i.e., the number of
+	columns.</P>
+	<LI><P STYLE="margin-right: 0.58in"><A NAME="Program:"></A>In the
+	function call, it is enough to pass the name of the array as a
+	parameter. No need to mention the square brackets.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Program:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.74in"><FONT SIZE=4>/*
+C program to pass a two dimensional array as a parameter to a
+function */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>#include&lt;conio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.84in; margin-top: 0in">
+<FONT SIZE=4>void printmatrix(int a[][3],int m,int n); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>int
+a[3][3],i,j; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i =
+0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>printf(&quot;Enter
+a[%d][%d]: &quot;,i,j);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>scanf(&quot;%d&quot;,&amp;a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.15in"><FONT SIZE=4>printmatrix(a,3,3);
+</FONT><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+printmatrix(int a[][3],int m,int n)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>int
+i, j;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>for(i
+= 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-top: 0in"><FONT SIZE=4>for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>printf(&quot;%d
+&quot;,a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 1.23in; margin-top: 0.15in">
+<FONT SIZE=4>/*C program to insert a sub-string into a string at a
+specified position*/ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>#include&lt;string.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.98in"><FONT SIZE=4>void
+strinst(char x[],char y[], int loc); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.8in"><FONT SIZE=4>char
+str[20], substr[20]; int</FONT><FONT SIZE=4> </FONT><FONT SIZE=4>pos;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.58in"><FONT SIZE=4>printf(&quot;Enter
+the string: &quot;); gets(str);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.3in"><FONT SIZE=4>printf(&quot;Enter
+the substring: &quot;); gets(substr);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 3.71in"><FONT SIZE=4>printf(&quot;Enter
+the position number: &quot;); scanf(&quot;%d&quot;,&amp;pos);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.83in"><FONT SIZE=4>strinst(str,
+substr, pos); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+strinst(char x[],char y[], int loc)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.45in"><FONT SIZE=4>char
+result[40]; int i, j, k;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i=0;
+i&lt;loc; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>result[i]
+= x[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>for(j=0,
+k=i; j&lt;strlen(y); j++, k++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>result[k]
+= y[j];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(k=i+strlen(y);
+k&lt;strlen(x)+strlen(y); k++,i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>result[k]
+= x[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.51in"><FONT SIZE=4>result[k]
+= '\0'; puts(result);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.82in; margin-top: 0.15in">
+<FONT SIZE=4>/* C program to delete n characters from the specified
+position in a string */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>#include&lt;string.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.05in"><FONT SIZE=4>void
+strdel(char x[],int num,int loc); main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.7in"><FONT SIZE=4>char
+str[20]; int n, pos; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.75in"><FONT SIZE=4>printf(&quot;Enter
+a string: &quot;); gets(str);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 2.51in"><FONT SIZE=4>printf(&quot;How
+many characters you want to delete? &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.38in"><FONT SIZE=4>printf(&quot;Enter
+the position: &quot;); scanf(&quot;%d&quot;,&amp;pos);
+strdel(str,n,pos);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+strdel(char x[],int num,int loc)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.45in"><FONT SIZE=4>char
+result[20]; int i,j;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>for(i=0;
+i&lt;loc; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>result[i]
+= x[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>for(j=i,i=i+num;
+j&lt;(strlen(x)-num); j++,i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>result[j]
+= x[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.55in"><FONT SIZE=4>result[j]
+= '\0'; puts(result);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 0.42in; margin-top: 0.15in">
+<FONT SIZE=4>/*C program to replace a character at beginning or
+ending or at the specified location in a string */</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; margin-right: 5.39in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;stdio.h&gt; #include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>#include&lt;string.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.55in"><FONT SIZE=4>void
+strrepb(char x[], char c); void strrepe(char x[], char c);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.95in"><FONT SIZE=4>void
+strrep(char x[], char c, char loc); main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.58in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.42in"><FONT SIZE=4>char
+str[10], ch; int choice, pos;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 4.75in"><FONT SIZE=4>/*clrscr();*/
+printf(&quot;Enter a string: &quot;); gets(str);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>while(1)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-right: 1.57in"><FONT SIZE=4>printf(&quot;1.
+Replace a character at the begining of the string\n&quot;);
+printf(&quot;2. Replace a character at the ending of the string\n&quot;);
+printf(&quot;3. Replace a cahracter at specific position\n&quot;);
+printf(&quot;4. Exit\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; margin-right: 4.24in"><FONT SIZE=4>printf(&quot;Enter
+your choice: &quot;); scanf(&quot;%d&quot;,&amp;choice);
+switch(choice)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>case 1:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; line-height: 0.24in"><FONT SIZE=4>fflush(stdin);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 3.75in"><FONT SIZE=4>printf(&quot;Enter
+the character: &quot;); scanf(&quot;%c&quot;,&amp;ch);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 4.9in"><FONT SIZE=4>strrepb(str,
+ch); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in; margin-top: 0in"><FONT SIZE=4>case
+2:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; line-height: 0.24in"><FONT SIZE=4>fflush(stdin);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 3.75in"><FONT SIZE=4>printf(&quot;Enter
+the character: &quot;); scanf(&quot;%c&quot;,&amp;ch);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 4.91in"><FONT SIZE=4>strrepe(str,
+ch); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>case 3:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 3.86in"><FONT SIZE=4>printf(&quot;Enter
+the position: &quot;); scanf(&quot;%d&quot;,&amp;pos);</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-top: 0.15in"><FONT SIZE=4>fflush(stdin);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 3.75in; margin-top: 0in">
+<FONT SIZE=4>printf(&quot;Enter the character: &quot;);
+scanf(&quot;%c&quot;,&amp;ch);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 4.63in"><FONT SIZE=4>strrep(str,
+ch, pos); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in"><FONT SIZE=4>case 4:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.11in; margin-right: 5.58in; text-indent: 0.18in">
+<FONT SIZE=4>exit(0); default:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.29in; margin-right: 3.15in"><FONT SIZE=4>printf(&quot;Invalid
+option. Try again...\n&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.93in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+strrepb(char x[], char c)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x[0]
+= c;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.64in"><FONT SIZE=4>puts(x);
+</FONT><FONT SIZE=4>printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+strrepe(char x[], char c)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; margin-right: 5.33in"><FONT SIZE=4>x[strlen(x)-1]
+= c; puts(x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>void
+strrep(char x[], char c, char loc)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>x[loc-1]
+= c;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.76in; line-height: 0.24in"><FONT SIZE=4>puts(x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

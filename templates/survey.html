@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>survey</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='survey.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Arvo|Cagliostro|Dancing+Script|Dosis|Gloria+Hallelujah|IBM+Plex+Sans+Condensed|Indie+Flower|Josefin+Sans|Karla|Lobster|Mina|Nanum+Gothic|Open+Sans|Pacifico|Roboto|Roboto+Condensed|Shadows+Into+Light|Signika|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <form class="" action="recommend" method="POST">
+
+
+      <div class="contain">
+        <div class="survey-title">
+            Survey
+        </div>
+        <div class="question-wrapper">
+          <div class="question-title">
+            Q.1 How experienced are you at programming?
+          </div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="experience" value="1" required> beginner
+            </div>
+            <div class="option">
+            <input type="radio" name="experience" value="2"> intermediate
+            </div>
+            <div class="option">
+            <input type="radio" name="experience" value="3"> advanced
+            </div>
+            <div class="option">
+            <input type="radio" name="experience" value="4"> expert
+            </div>.
+          </div>
+        </div>
+
+        <div class="question-wrapper">
+          <div class="question-title">
+            Q.2 Which activity had a major impact on you, starting your learning journey?
+          </div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="influence" value="1" required> Internet Diving
+            </div>
+            <div class="option">
+            <input type="radio" name="influence" value="2"> Reasoning and problem solving
+            </div>
+            <div class="option">
+            <input type="radio" name="influence" value="3"> Playing with Machines
+            </div>
+            <div class="option">
+            <input type="radio" name="influence" value="4"> Discipline Coding
+            </div>.
+          </div>
+        </div>
+
+        <div class="question-wrapper">
+          <div class="question-title">
+            Q.3 No. of days you can devote to one course
+          </div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="days" value="1" required> less than 10 Days
+            </div>
+            <div class="option">
+            <input type="radio" name="days" value="2"> 10-15 Days
+            </div>
+            <div class="option">
+            <input type="radio" name="days" value="3"> 16-30 Days
+            </div>
+            <div class="option">
+            <input type="radio" name="days" value="4"> More than A month
+            </div>.
+          </div>
+        </div>
+
+        <div class="question-wrapper">
+          <div class="question-title">
+            Q.4 Amount of time you devote to learning per day
+          </div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="time" value="1" required> less than 30 Minutes
+            </div>
+            <div class="option">
+            <input type="radio" name="time" value="2"> 30 Minutes - 1 Hour
+            </div>
+            <div class="option">
+            <input type="radio" name="time" value="3"> 1-2 Hours
+            </div>
+            <div class="option">
+            <input type="radio" name="time" value="4"> More than 2 Hours
+            </div>.
+          </div>
+        </div>
+
+        <div class="question-wrapper">
+          <div class="question-title">
+            Q.5 Which modern technology you look forward to work on
+          </div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="tech" value="1" reuired> Cloud Computing
+            </div>
+            <div class="option">
+            <input type="radio" name="tech" value="2"> Internet of Things (I.O.T)
+            </div>
+            <div class="option">
+            <input type="radio" name="tech" value="3"> Atrificial Intelligence (A.I.)
+            </div>
+            <div class="option">
+            <input type="radio" name="tech" value="4"> Blockchain
+            </div>.
+          </div>
+        </div>
+
+<div class="button-area">
+  <div class="submit">
+      <input type="submit" name="submit" class="btn-success">
+  </div>
+    <div class="skip">
+        <a href="index">
+        <button type="button" class="btn btn-warning" > skip</button>
+        </a>
+    </div>
+</div>
+</form>
+      </div>
+  </body>
+</html>

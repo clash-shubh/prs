@@ -1,0 +1,336 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR CLEAR=LEFT><FONT COLOR="#17365d">Arrays</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+<H6 CLASS="western" STYLE="margin-top: 0.17in"><FONT COLOR="#4f81bd">Introduction</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>An
+array is </FONT><FONT SIZE=3><I>a group of elements forming a
+complete unit</I></FONT><FONT SIZE=3>. Characteristics of an array
+are as follows:</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-top: 0in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>An
+	array is a collection of</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>elements.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>All
+	elements in an array are of the same</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>type.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Collection
+	of elements forms a complete</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>set.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Elements in an array
+are stored in order and sequentially inside the memory.</P>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Need_for_arrays"></A>
+<FONT COLOR="#4f81bd">Need for arrays</FONT></H6>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.03in">Think
+that we have to store five values in a program. We can declare five
+variables to store those five values as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 5.82in">
+int var1; int var2; int var3; int var4; int var5;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.18in; line-height: 200%">
+We can declare an array which can store five integers to solve the
+above problem as follows: int numbers[5] = {0};</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above statement, <I>numbers </I>is the array name and 5 is the
+number of elements we can store in the array. All the 5 elements in
+the array will have an initial value of 0 which is specified by {0}.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Now, let's think that we have to store 5000 values. It is
+inappropriate to declare 5000 variables to store those values.
+Instead we can declare a single array which can store 5000 values as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">int
+numbers[5000] = {0};</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The arrays which you
+have seen above are called as <I><B>static arrays </B></I>because the
+number of elements the array contains and its memory is fixed at the
+compilation time.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Declaring_and_initializing_static_arrays"></A>
+<FONT COLOR="#4f81bd">Declaring and initializing static arrays</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.03in">
+In C++ the syntax for declaring a static array is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>type
+array-name[no. of elements];</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Consider
+the following example for array declaration:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>int
+nums[10];</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above statement
+<I>nums </I>is the name of the array which is capable to store 10
+integers and the data type of all the elements is <I>int</I>.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">We can declare and
+initialize all the elements in the array as shown in the below
+example.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0in">
+<B>int  nums[5] = {1, 4, 2, 3, 6};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">We
+can initialize all the elements in an array to a default value as
+shown in the below example:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>int
+ nums[5] = {10};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">We can
+initialize only some of the elements in an array as shown below:</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0.06in; page-break-before: always">
+<B>int  nums[5] = {2, 6};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above statement,
+the first two elements are initialized to 2 and 6. Remaining elements
+contain garbage value or some compilers might initialize them to 0.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">We can
+also leave out the size of array in its declaration. But we have to
+specify the values as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in"><B>int
+ nums[ ] = {2, 4, 6, 8, 10};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+the above statement compiler automatically deduces the size of array
+<I>nums </I>as 5 based on the number of values.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.13in; margin-top: 0in; line-height: 0.38in">
+We can also initialize array elements individually as shown in below
+example: int nums[3];</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+nums[0] = 10;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">nums[1] =
+20;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">nums[2] =
+30;</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Accessing_and_modifying_array_elements"></A>
+<FONT COLOR="#4f81bd">Accessing and modifying array elements</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Elements of an array can be accessed using the <I>index </I>or
+<I>subscript</I>. The index value of arrays starts from 0. The index
+of Nth element is N-1. For example index of 5th element is 4. Syntax
+for accessing an array element is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-left: 1.32in; margin-right: 1.33in; margin-top: 0in">
+<B>array-name[index]</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.23in; margin-top: 0.04in; line-height: 0.38in">
+Consider the following program which demonstrates reading and
+displaying array elements: #include&lt;iostream&gt;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.15in">
+using namespace std;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">int
+main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.99in">int
+nums[5] = {0}; cout&lt;&lt;&quot;Enter five values: &quot;; for(int
+i=0;i&lt;5;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cin&gt;&gt;nums[i];</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.46in">cout&lt;&lt;&quot;Elements
+in the array are: &quot;; for(int i=0;i&lt;5;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;nums[i]&lt;&lt;&quot;
+&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in">cout&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Enter five values: 2 4 1 5 8</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Elements in the array
+are: 2 4 1 5 8</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+<I><B>Note: </B></I>Remember that while accessing elements outside
+the array bounds does not give any errors. Such access might lead to
+undesirable behavior and often might lead to program crash. So, it is
+a good practice to check whether the array access is within the
+bounds or not.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Multidimensional_Arrays"></A><FONT COLOR="#4f81bd">Multidimensional
+Arrays</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Until now the arrays we discussed are one-dimensional arrays. C++
+also supports storing data in multiple dimensions. A two-dimensional
+array can represent tabular data i.e., in rows and columns. Syntax
+for declaring a two-dimensional array is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.96in; margin-top: 0in"><B>type
+array-name[rows][coulumns];</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">We can initialize a
+two-dimensional array at the time of declaration itself as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P STYLE="margin-left: 1.82in"><B>int data[3][3] =
+{{1,2,3},{4,5,6},{7,8,9}};</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+In the above statement, <I>data </I>is a two-dimensional array having
+three rows and three columns. We can imagine a two-dimensional array
+as an array of arrays. Consider the following program which
+demonstrates reading and displaying elements in a two-dimensional
+array:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int data[3][3];</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.2in">cout&lt;&lt;&quot;Enter
+data for three rows and three columns: &quot;; for(int i=0;i&lt;3;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">for(int j=0;j&lt;3;j++)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cin&gt;&gt;data[i][j];</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.98in; margin-top: 0in">
+cout&lt;&lt;&quot;Elements in the array are: &quot;&lt;&lt;endl;
+for(int i=0;i&lt;3;i++)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">for(int j=0;j&lt;3;j++)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in">cout&lt;&lt;data[i][j]&lt;&lt;&quot;
+&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in">cout&lt;&lt;endl;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in">cout&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Enter data for three rows and three columns:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">1 2 3</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">4 5 6</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">7 8 9</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Elements
+in the array are:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">1 2 3</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">4 5 6</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">7 8 9</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Observe
+how nested for loops are used to read and print the array elements
+effectively.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Dynamic_Arrays"></A><FONT COLOR="#4f81bd">Dynamic
+Arrays</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Consider you are writing a program to store student records which are
+bound to increase over time. There is now way to assume the size of
+the array before hand. In such cases static arrays are a bad choice.
+Instead, use dynamic arrays.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Dynamic arrays can be created in C++ programs using <I>vector </I>class
+which is available in the header file <I>vector</I>. Since <I>vector
+</I>uses template syntax and they are not at discussed, let's look at
+a program which demonstrates creating and using a <I>vector</I>:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.95in">#include&lt;iostream&gt;
+#include&lt;vector&gt; using namespace std; int main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.37in">vector&lt;int&gt;
+nums(3); nums[0] = 1;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">nums[1] = 2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">nums[2] = 3;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.44in">cout&lt;&lt;&quot;Size
+of the array is: &quot;&lt;&lt;nums.size()&lt;&lt;endl; cout&lt;&lt;&quot;Enter
+a number to store in the array: &quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.35in">int
+n; cin&gt;&gt;n;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">nums.push_back(n);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.11in">cout&lt;&lt;&quot;New
+size of the array is: &quot;&lt;&lt;nums.size()&lt;&lt;endl; return
+0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Input
+and output for the above program is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Size of the array is: 3</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.75in">Enter
+a number to store in the array: 10 New size of the array is: 4</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above program,
+<I>size() </I>function returns the size of the vector (array) and
+<I>push_back()</I></P>
+<P CLASS="western" STYLE="margin-left: 0.1in">function inserts the
+given element at the end of the vector (array).</P>
+
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

@@ -1,0 +1,911 @@
+{% extends "layout.html" %}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+<H1 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Data
+Structures</FONT></H1>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0.07in"><FONT COLOR="#365f91">Introduction</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+A data structure is a construct to store data and organize that data
+efficiently to perform computations. In Python, data structures can
+be created using the following types:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">Lists</P>
+	<LI><P STYLE="line-height: 0.19in">Tuples</P>
+	<LI><P STYLE="line-height: 0.19in">Sets</P>
+	<LI><P STYLE="line-height: 0.19in">Dictionaries</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.13in"><FONT COLOR="#365f91">Lists</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+List is an ordered collection of objects. Lists are mutable.
+Individual elements in a list are accessed through offset (index).
+Starting index is zero. Lists are variable-length, heterogeneous, and
+can be nested. Lists are maintained as arrays inside Python
+interpreter. Not as linked lists. Following are various examples of
+list literals and functions that can be applied on a list:</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=176>
+	<COL WIDTH=422>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Operation</B></P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L = [ ]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Empty list</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L =
+			[1,3.8,’hai’,[1,2]]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">A list with four
+			items. Last item is nested list.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L=list(‘Python’)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">List of iterable
+			items</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L=list(range(10))</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">List of
+			successive integers</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L[i]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Item at index i</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L[i][j]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Index of index</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L[i:j]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Slice from i to
+			j-1</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">len(L)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Length of list L</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L1 + L2</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Concatenate</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L*4</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Repeat</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">8 in L</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Membership</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.append(10)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Appending
+			element at end</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.extend([3, 7,
+			1])</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Extending the
+			list L</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.insert(i, X)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Insert element X
+			at index i</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.index(X)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Find the index
+			of element X</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.count(X)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Count the
+			occurrences of X in the list</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.sort()</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Sort the list</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=176>
+	<COL WIDTH=422>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.reverse()</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Reverse the list</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.copy()</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Copying the list</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.clear()</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Empty the list</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">L.pop(i)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.07in; margin-top: 0.05in">
+			Remove and print an item at index i. If index i is not given, it
+			removes and returns the last element.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L.remove(X)</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Remove an item X
+			from the list</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">del L[i]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Remove an item
+			at index i in list L</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">del L[i:j]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Remove all
+			elements from index i to j-1 in list L</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L[i:j] = [ ]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Remove all
+			elements from index i to j-1 in list L</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L[i] = 10</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Index assignment</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">L[i:j] = [2,5,8]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Slice assignment</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.09in; margin-top: 0.05in">
+			L	=	[x**2	for	x	in range(5)]</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">List
+			comprehension</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=176 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">list(map(ord,
+			'spam'))</P>
+		</TD>
+		<TD WIDTH=422 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">List maps</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0.17in"><FONT COLOR="#365f91">Tuples</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Tuple is an ordered collection of items. Tuples are immutable. Tuples
+are fixed in length, heterogeneous, and can be nested. Individual
+elements can be accessed through offset (index). Following are
+various examples of tuple literals and functions that can be applied
+on a tuple:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=178>
+	<COL WIDTH=420>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Operation</B></P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">( )</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Empty tuple</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T = (1,)</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Tuple with
+			one-item</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T = (1,4,6,2)</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Tuple with four
+			items</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T = 1,4,6,2</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Same as above.
+			Creates a tuple with four items</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T = (2, 6,
+			(4,8))</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Nested tuples</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T =
+			tuple(‘Python’)</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Tuple of items
+			in an iterable</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T[i]</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Access tuple
+			item at index i</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T[i][j]</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Access tuple at
+			row index i and column index j</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T[i:j]</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Access a slice
+			of elements in the tuple</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">len(T)</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Length of tuple</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=25 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T1 + T2</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Concatenate two
+			tuples</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T*3</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Repeat tuple
+			elements 3 times</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">‘hi’ in T</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Finding
+			membership of ‘hi’ in the tuple</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T.index(‘Py’)</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Returns the
+			index of substring. Otherwise error.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=178>
+	<COL WIDTH=420>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">T.Count(‘Py’)</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Returns the no.
+			of occurences of a item in tuple</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=178 HEIGHT=40 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.57in; margin-top: 0.05in">
+			namedtuple(‘Emp’, [‘name’, ‘jobs’])</P>
+		</TD>
+		<TD WIDTH=420 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">Named tuple
+			extension type</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in; margin-top: 0.06in">
+The main difference between a list and tuple is, a list is not write
+protected; i.e., we can add or remove elements from a list. But, a
+tuple is write protected. Once a tuple is created it is not possible
+to add or remove elements from it.</P>
+<P CLASS="western"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0.14in"><FONT COLOR="#365f91">Sets</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Set is an unordered collection of unique and immutable objects, i.e.,
+a set cannot contain lists or byte arrays etc. Set itself is mutable.
+Sets are useful for performing operations corresponding to
+mathematical set theory. Following are examples of different
+operations that can be performed on sets:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Consider
+two sets s1 and se:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+s1 = {'a','b','c','d'}</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+s2 = {'c','d','e'}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Set
+difference operation can be performed on sets s1 and s2 as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+s1-s2</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{'a',
+'b'}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Union
+operation can be performed on sets s1 and s2 as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+&gt;&gt;&gt; s1|s2</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{'a',
+'b', 'c', 'e', 'd'}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Intersection
+operation can be performed on sets s1 and s2 as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+s1&amp;s2</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{'d',
+'c'}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Symmetric
+difference can be performed on sets s1 and s2 as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+s1^s2</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+{'a', 'b', 'e'}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Using the
+<I>intersection </I>function, we can find the common elements between
+two sets as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;s1.intersection(s2)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{'d',
+'c'}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">We can
+add an element to the set using <I>add </I>function as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;s2.add('f')</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{'f','c','d','e'}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">An
+important property of set is, it doesn't allow duplicate elements.
+Whenever there is a requirement of storing unique values, we can
+always use a set.</P>
+<H2 CLASS="western" STYLE="page-break-before: always"><FONT COLOR="#365f91">Dictionaries</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+Dictionary is an unordered collection of objects. Objects in a
+dictionary are accessed through keys instead of by position (like in
+a list). Dictionaries are mutable, heterogeneous, and nestable. Each
+key can have only one object associated to it. Internally
+dictionaries are implemented as hash tables. Following are various
+examples of dictionary literals and functions that can be applied on
+dictionaries:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=605 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=247>
+	<COL WIDTH=352>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Operation</B></P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in"><B>Description</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D = { }</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Empty dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D = {‘id’:101,
+			‘name’:‘Ramesh’}</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Dictionary with
+			two items</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=41 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-right: 0.09in; margin-top: 0.05in">
+			D	=	{‘name’:{‘fname’:’Ramesh’, ‘lname’:’Kumar’}}</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.14in">Nested
+			dictionaries</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D = dict(id=101,
+			name=‘Ramesh’)</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Alternative way
+			for creating a dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D[‘name’]</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Indexing by key</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D[‘name’][‘lname’]</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Accessing
+			element in nested dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">‘name’ in D</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Membership test
+			for key</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.keys()</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Returns all the
+			keys in dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.values()</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Returns all
+			values in dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.items()</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Returns all
+			key-value tuples</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.copy()</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Copies a
+			dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.clear()</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Empties a
+			dictionary</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.update(D2)</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Merge by keys</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D.popitem()</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Remove or
+			returns any (key, value) pair</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">len(D)</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Returns number
+			of items</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D[key] = value</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Adding/changing
+			keys</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=24 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">del D[key]</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Deleting entries
+			by key</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=247 HEIGHT=23 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">D={x:x+2 for x
+			in range(10)}</P>
+		</TD>
+		<TD WIDTH=352 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.05in">Dictionary
+			comprehension</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+A dictionary is unique when compared to other types in Python. In a
+dictionary each element is made of two things: a <I>key </I>and a
+<I>value</I>. A dictionary is represented using braces.</P>
+<P CLASS="western"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0.14in"><FONT COLOR="#365f91">Sequences</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+A sequence is a positionally ordered collection of objects. Sequences
+maintain a left-to-right order. Items (objects) are fetched based on
+their relative position from the left end. Sequences support
+operations like indexing and slicing. Examples of sequences in Python
+are: strings, lists, and tuples.</P>
+<H2 CLASS="western" STYLE="page-break-before: always"><FONT COLOR="#365f91">Comprehensions</FONT></H2>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Python
+comprehensions are constructs that create sequences from existing
+sequences in a clear and concise manner. Comprehensions are of three
+types:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.19in">list comprehensions</P>
+	<LI><P STYLE="line-height: 0.19in">set comprehensions</P>
+	<LI><P STYLE="line-height: 0.19in">dict comprehensions</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">List comprehensions
+were introduced in Python 2.0; while set and dict comprehensions have
+been introduced in Python 2.7.</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" STYLE="margin-top: 0.12in"><FONT COLOR="#4f81bc">List
+Comprehensions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.22in">
+List comprehension is the most popular Python comprehension. It
+allows us to create a new list of elements that satisfy a condition
+from an iterable. An iterable is any Python construct that can be
+looped over like lists, strings, tuples, sets. In list comprehensions
+we use square brackets.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">General syntax of a
+list comprehension is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.87in; margin-right: 3.87in; text-indent: -0.77in">
+[expression for item1 in iterable1 if cond1 for item2 in iterable2 if
+cond2</P>
+<P CLASS="western" STYLE="margin-left: 0.87in; line-height: 0.18in">...</P>
+<P CLASS="western" STYLE="margin-left: 0.87in; margin-top: 0in">for
+itemN in iterableN if condN]</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; line-height: 200%">
+Following is an example of list comprehension for creating a list of
+squares of numbers in range 1-10: s=[x*x for x in range(1,11)]</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; line-height: 200%">
+In the previous example, we can also use if condition to generate
+only squares of even numbers: s=[x*x for x in range(1,11) if x%2==0]</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">Result
+of above comprehension will be:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">[4,
+16, 36, 64, 100]</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.64in; line-height: 200%">
+List comprehensions can be useful to perform matrix computations.
+Consider following matrix: m=[[1,1,1],[2,2,2],[3,3,3]]</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">We can
+print the diagonal elements as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">[m[i][i] for i in
+range(0,3)] which prints [1 2 3]</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.24in; line-height: 200%">
+We can calculate sum of elements in each row in a matrix as follows:
+[sum(row) for row in m] which prints [3 6 9]</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.44in; line-height: 200%">
+Let our matrix be: m=[[1,2,3],[4,5,6],[7,8,9]]</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+We can perform transpose of above matrix by writing:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">[[row[i]
+for row in m] for i in range(0,3)] which gives:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+[[1, 4, 7], [2, 5, 8], [3, 6, 9]]</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><FONT COLOR="#4f81bc">Set</FONT><FONT COLOR="#4f81bc">
+</FONT><FONT COLOR="#4f81bc">Comprehensions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.23in">
+Set comprehensions were added to python in version 2.7. In set
+comprehensions, we use the braces rather than square brackets. For
+example, to create the set of the squares of all numbers between 0
+and 10 the following set comprehension can be used:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+x = {i**2 for i in range(10)}</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.18in">
+&gt;&gt;&gt; x</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.18in">
+set([0, 1, 4, 81, 64, 9, 16, 49, 25, 36])</P>
+<P CLASS="western"><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><FONT COLOR="#4f81bc">Dict
+Comprehensions</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">Just
+like set comprehensions, dict comprehensions were added to python in
+version 2.7. Below we create a mapping of a number to its square
+using dict comprehension:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+x = {i:i**2 for i in range(10)}</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">&gt;&gt;&gt;
+x</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{0: 0, 1:
+1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}</P>
+
+{%endblock course%}

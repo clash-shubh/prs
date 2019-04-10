@@ -1,0 +1,151 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Type Conversion and Casting</FONT></H1>
+    
+    
+          
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Converting a data type of an expression to another data type is known
+as type conversion. Here expression refers to either a variable or
+value or sub expression. There are two types of conversions. They
+are:</P>
+<OL>
+	<LI><P>Implicit conversion or Coercion</P>
+	<LI><P>Explicit conversion or Casting</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Implicit_Conversion"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Implicit
+Conversion</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+While evaluating expressions, it is common to have operands of
+different data types. C automatically converts the data type of
+operands or any intermediate values to the proper type so that
+expression can be evaluated without losing any significance. This
+automatic conversion performed by C is known as <B>implicit
+conversion</B>.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0in">
+In C, the expression on the right hand side of an assignment
+statement is evaluated first. So, C evaluates the expression based on
+the conversion hierarchy as shown in the below diagram. Finally, the
+type of the result acquired from the expression is again converted to
+match the type of variable on the left hand side. The conversion
+hierarchy is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 1.63in"><IMG SRC="{{url_for('static',filename='img/C_html_12e387c3.png')}}" NAME="image51.png" ALIGN=BOTTOM WIDTH=403 HEIGHT=355 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.07in"><A NAME="Example"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Example</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in; line-height: 0.19in">
+Let’s try to evaluate the following expression:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 0.19in"><B>x = l
+/ i + i * f – d</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: -0in">
+where, i and x are of the type <B>int</B>, f is of type <B>float</B>,
+d is of type <B>double </B>and l is of type <B>long int</B>. When the
+above expression is evaluated, the operand i in the sub expression
+l/i, is converted to long int since, l is a long int. In the sub
+expression i*f, i is converted into float, since f is of the type
+float. The result of the sub expression l/i is converted to float, as
+it will be added to the result of i*f which is already a float.
+Finally the result of the sub expression l/i+i*f is converted into
+double, as d is a double. After obtaining the final result which is
+of the type double, it is again converted into int as the variable x
+is of the type int.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Explicit_Conversion_or_Casting"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Explicit
+Conversion or Casting</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In C programming, there will be instances where a programmer wants to
+change the type of an expression into another type which is not
+possible by the implicit conversion. In such cases, the programmer
+himself/herself specifies the type conversion. Such conversion is
+known as <B>explicit conversion or type casting</B>.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+For example, let num1 and num2 are variables of integer type and
+value of num1 is 3 and value of num2 is 2. For the purpose of
+calculating the average of num1 and num2, let us declare another
+variable result of the type float. So the statement for calculating
+the average will be as shown below:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0in; margin-top: 0in">
+<B>result =( num1+num2)/2</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0in; page-break-before: always">
+Mathematically the result of the above expression should be 2.5. But
+when we execute the above statement in a C program, we get the result
+2.000000. Even though C applies implicit conversion from int to
+float, the result we obtained is wrong. In such case we apply
+explicit casting. The statement will be as follows:</P>
+<P CLASS="western" STYLE="margin-left: 2.74in; line-height: 0.19in"><B>result
+= (float)(num1+num2)/2</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+Now, the result of num1+num2 is converted into float. Since one
+operand is of type float, 2 will also be converted to float. The
+result of the whole expression on the right hand side is a float.
+Now, we obtain the correct value in the variable result which will be
+2.500000.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">The
+general syntax for explicit type casting is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.24in; left: 3.02in; width: 2.45in; height: 0.35in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.5in; margin-top: 0.05in">(type-name)expression</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>/* C program to
+demonstrate implicit and explicit conversion */</B></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 6.1in; margin-top: 0in">
+int num1,num2; float average; num1=3,num2=2;</P>
+<P CLASS="western" STYLE="margin-left: 0.22in; margin-right: 5.12in; text-indent: -0.04in">
+/*Type casting from int to float*/ average = (float)(num1+num2)/2;
+printf(&quot;Average is: %f&quot;,average);</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Output:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Average is: 2.500000</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H1 CLASS="western" ALIGN=LEFT STYLE="margin-top: 0.04in"><BR>
+</H1>
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

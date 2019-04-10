@@ -1,0 +1,528 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Decision Making Statements</FONT></H1>
+    
+    
+    
+     
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in"><A NAME="Decision_Making_Statements_/_Control_Sta"></A>
+In C, until so far, in all the programs, the control is flowing from
+one instruction to next instruction. Such flow of control from one
+instruction to next instruction is known as sequential flow of
+control. But, in most of the C programs, while writing the logic, the
+programmer might want to skip some instructions or repeat a set of
+instructions again and again. This is can be called as non-sequential
+flow of control. The statements in C, which allows the programmers to
+make such decisions, are known as decision making statements or
+control statements.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+In C, there are two types of decision making statements. One type is
+used to branch the control into different ways and the other type is
+used to repeat a set of instructions again and again. The two types
+of decision making statements are:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0in; line-height: 0.19in">Selection
+	statements or Branching statements</P>
+	<LI><P STYLE="line-height: 0.19in">Looping statements</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in"><A NAME="Selection_Statements_or_Branching_Statem"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Selection
+Statements or Branching Statements</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The selection statements in C enable the programmer to select a set
+of instructions to be executed by the CPU. This selection is based on
+a condition. C also supports a set of unconditional branching
+statements which transfers the control to some other place in the
+program. The selection statements in C are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">if statement</P>
+	<LI><P>switch statement</P>
+	<LI><P>Conditional operator statement</P>
+	<LI><P>goto</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="if_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>if
+Statement</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>if </B>statement allows the programmer to select a set of
+instructions to be executed, based on a condition. If the condition
+is evaluated to <B>true, </B>then one set of instructions will be
+executed or if the condition is evaluated to <B>false, </B>another
+set of instructions will be executed. The general from of <B>if
+</B>statement is as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.2in; left: 1.22in; width: 553px"><IMG SRC="{{url_for('static',filename='img/C_html_66a47c99.png')}}" NAME="image52.png" WIDTH=553 HEIGHT=423 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+There are four variations of the <B>if </B>statement. They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">Simple if or null else</P>
+	<LI><P STYLE="line-height: 0.19in">if…else</P>
+	<LI><P STYLE="margin-top: 0in">Nested if</P>
+	<LI><P>else if Ladder</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Simple_if_or_null_else"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Simple if or
+null else</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>simple if </B>allows the programmer to execute or skip a set
+of instructions based on the value of a condition. The <B>simple if
+</B>is a one way selection statement. If the condition is true, a set
+of statements will be executed. If the condition is false, the
+control will continue with the next statement after the <B>if
+</B>statement. The <B>simple if </B>can be represented
+diagrammatically as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.69in; width: 280px"><IMG SRC="{{url_for('static',filename='img/C_html_4b1e8e3d.png')}}" NAME="image53.png" WIDTH=280 HEIGHT=268 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-bottom: 0in">Syntax
+for <B>simple if </B>is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 3.1in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="if…else_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>if…else
+Statement</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>if…else </B>is a two way decision making selection
+statement. If the condition evaluates to true, one set of
+instructions will be executed. If the condition evaluates to false,
+another set of instructions will be executed. The <B>if…else
+</B>statement can be represented diagrammatically as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.4in; width: 330px"><IMG SRC="{{url_for('static',filename='img/C_html_4d94956b.png')}}" NAME="image54.png" WIDTH=330 HEIGHT=252 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; margin-bottom: 0.01in; page-break-before: always">
+Syntax of <B>if…else </B>statement is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 3.06in"></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.13in"><A NAME="Nested_if"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Nested if</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>nested if </B>can also be called as <B>cascaded if</B>. In
+<B>nested if </B>statement, one <B>if </B>statement is nested within
+another <B>if </B>statement. A <B>nested if </B>statement can be used
+as an alternative to logical AND operator. If the condition is
+evaluated to true in the first <B>if </B>statement, then the
+condition in the second <B>if </B>statement is evaluated and so on.
+The <B>nested if </B>statement can be represented diagrammatically as
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.05in; width: 401px"><IMG SRC="{{url_for('static',filename='img/C_html_9aa105d0.png')}}" NAME="image55.png" WIDTH=401 HEIGHT=367 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-bottom: 0in">Syntax
+of <B>nested if </B>statement is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.84in"></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="else_if_Ladder"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>else if Ladder</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The <B>else if </B>ladder in C is a multi way selection operator. It
+allows the programmer to select one set of instructions among various
+other sets of instructions. The <B>else if </B>ladder is similar to
+the logical OR operator. If first condition is <B>true</B>, then
+corresponding set of instructions will be executed. If the condition
+is <B>false</B>, then the next condition is checked and so on. If all
+the conditions fail, the statements in the default block will be
+executed. The  <B>else if </B>ladder can be represented
+diagrammatically as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.95in; width: 426px"><IMG SRC="{{url_for('static',filename='img/C_html_85596a78.png')}}" NAME="image56.png" WIDTH=426 HEIGHT=390 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.13in">Syntax
+of <B>else if </B>statement is as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.19in; left: 3.19in; width: 1.42in; height: 3.47in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">if(cond/expr)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">Stmt(s);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">else if(cond/expr)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">Stmt(s);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">else
+	if(cond/expr)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Stmt(s);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.04in">….
+	else</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in">Stmt(s);</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">Stmt(s);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0.03in"><FONT FACE="Calibri, serif">/*
+Program to demostrate if statement */</FONT></H4>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.9in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>int a,b;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.8in"><FONT SIZE=4>printf(&quot;Enter
+the value of a:&quot;); scanf(&quot;%d&quot;,&amp;a);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.79in"><FONT SIZE=4>printf(&quot;Enter
+the value of b:&quot;); scanf(&quot;%d&quot;,&amp;b);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>if(a&gt;b)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;a
+is greater than b!&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.14in"><FONT SIZE=4><B>/*
+Program to demostrate if...else statement */</B></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.9in">
+<FONT SIZE=4>#include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-top: 0in"><FONT SIZE=4>int
+a,b;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.8in"><FONT SIZE=4>printf(&quot;Enter
+the value of a:&quot;); scanf(&quot;%d&quot;,&amp;a);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.79in"><FONT SIZE=4>printf(&quot;Enter
+the value of b:&quot;); scanf(&quot;%d&quot;,&amp;b);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>if(a&gt;b)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;a
+is greater than b!&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;b
+is greater than a!&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.14in"><FONT SIZE=4><B>/*
+Program to demostrate nested if statement */</B></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.9in">
+<FONT SIZE=4>#include&lt;stdio.h&gt; </FONT><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.24in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>int
+a,b,c;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.8in"><FONT SIZE=4>printf(&quot;Enter
+the value of a:&quot;); scanf(&quot;%d&quot;,&amp;a);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.79in"><FONT SIZE=4>printf(&quot;Enter
+the value of b:&quot;); scanf(&quot;%d&quot;,&amp;b);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.81in"><FONT SIZE=4>printf(&quot;Enter
+the value of c:&quot;); scanf(&quot;%d&quot;,&amp;c);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>if(a&gt;b)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>if(a&gt;c)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in"><FONT SIZE=4>printf(&quot;a
+is greater than b and c&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in"><FONT SIZE=4>printf(&quot;a
+is not greater than c&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;a
+is not greater than b&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in; line-height: 0.24in">
+<FONT SIZE=4><B>/*Program to demonstrate else if ladder*/</B></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.64in"><FONT SIZE=4>#include&lt;stdio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>int
+marks;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 5.04in; margin-top: 0in">
+<FONT SIZE=4>printf(&quot;Enter the marks: &quot;);
+scanf(&quot;%d&quot;,&amp;marks); if(marks&gt;90)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;\nGarde
+- A&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else
+if(marks&gt;75&amp;&amp;marks&lt;=90)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;\nGrade
+- B&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else
+if(marks&gt;60&amp;&amp;marks&lt;=75)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;\nGrade
+- C&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else
+if(marks&gt;45&amp;&amp;marks&lt;=60)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;\nGrade
+- D&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;\nFAIL!&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="switch_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>switch Statement</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Although, C provides a multi way selection statement like <B>else if</B>,
+when the number of conditions increases, the program will become less
+readable. To solve this problem, C provides an easy to understand
+multi way selection statement called <B>switch </B>statement. The
+<B>switch </B>statement to easy to understand when there are more
+than 3 alternatives. The <B>switch </B>statement can be represented
+diagrammatically as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.85in; width: 441px"><IMG SRC="{{url_for('static',filename='img/C_html_510469c0.png')}}" NAME="image57.png" WIDTH=441 HEIGHT=290 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0in">
+As seen in the above diagram, the <B>switch </B>statement switches
+between the blocks based on the value of the expression. Each block
+will have a value associated with it. The expression in the <B>switch
+</B>statement must always reduce to an integer value. So the
+expression in the <B>switch </B>statement can be either an integer
+value or a character constant or an expression which reduces to an
+integer value. The label for each block can be either an integer
+value or a character constant.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-bottom: 0in">Syntax
+for the <B>switch </B>statement is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.68in"></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: -0in; margin-top: 0.03in">
+As seen in the above syntax, each block is represented using the <B>case
+</B>keyword and the <B>case </B>keyword follows with the label of the
+block. In a <B>switch </B>statement, both the <B>default </B>block
+and the <B>break </B>statement are optional. If none of the blocks
+are matched, then the statements in the <B>default </B>block are
+executed. Every block is ended with a <B>break </B>statement. If we
+remove the <B>break </B>statement from a particular block, all the
+subsequent blocks are also executed until the next <B>break </B>statement
+is encountered.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0.14in"><FONT FACE="Calibri, serif">/*Program
+to demonstrate switch statement*/</FONT></H4>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.9in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>char
+ch;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.77in"><FONT SIZE=4>printf(&quot;\nEnter
+a character: &quot;); scanf(&quot;%c&quot;,&amp;ch);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>switch(ch)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>case</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>'a':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in; margin-right: 3.75in"><FONT SIZE=4>printf(&quot;Entered
+character is a vowel!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>case 'e':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in; margin-right: 3.75in"><FONT SIZE=4>printf(&quot;Entered
+character is a vowel!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=4>case 'i':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in; margin-right: 3.75in"><FONT SIZE=4>printf(&quot;Entered
+character is a vowel!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>case 'o':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in; margin-right: 3.75in; text-indent: -0in">
+<FONT SIZE=4>printf(&quot;Entered character is a vowel!&quot;);
+break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>case
+'u':</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in; margin-right: 3.75in"><FONT SIZE=4>printf(&quot;Entered
+character is a vowel!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>default:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.61in; margin-right: 3.43in"><FONT SIZE=4>printf(&quot;Entered
+character is not a vowel!&quot;); break;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Conditional_Operator_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Conditional
+Operator Statement</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in">
+C language provides an unusual operator called conditional operator
+which is represented as <B>? : </B>. The conditional operator is a
+two way selection operator. The syntax for conditional operator
+statement is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.27in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+As shown in the above syntax, when the condition evaluates to true,
+<B>expr1 </B>is executed. Otherwise, if the condition is false, <B>expr2
+</B>is executed. The conditional operator statement can be
+represented diagrammatically as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 1.79in"><IMG SRC="{{url_for('static',filename='img/C_html_4cbaa824.png')}}" NAME="image58.png" ALIGN=BOTTOM WIDTH=373 HEIGHT=285 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Every conditional
+operator statement can be converted into an <B>if…else </B>statement.
+But the vice versa is not true.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0.17in; margin-right: 1.68in; text-indent: -0.09in; margin-top: 0in">
+<FONT FACE="Calibri, serif">/*Program to calculate the value of y by
+using the following equations y = -x, if x &lt;= 0</FONT></H4>
+<P CLASS="western" STYLE="margin-left: 0.17in; line-height: 0.24in"><FONT SIZE=4><B>y
+= x+1, if x &gt; 0</B></FONT></P>
+<H5 CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.91in">
+<B>*/ </B>#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</H5>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>int
+x,y;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.76in"><FONT SIZE=4>printf(&quot;Enter
+the value of x: &quot;); scanf(&quot;%d&quot;,&amp;x);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>y =
+(x&lt;=0) ? (-x) : (x+1);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>printf(&quot;y
+= %d&quot;,y);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="goto_Statement"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>goto Statement</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Unlike other selection or branching statements that we have seen so
+far which branches based on a condition, the <B>goto </B>statement
+branches unconditionally. That is why the <B>goto </B>statement is
+also referred to as unconditional jump statement. There are two more
+unconditional branch statements in C. They are: <B>break </B>and
+<B>continue. </B>We have already seen the <B>break </B>statement in
+<B>switch </B>statement. But both <B>break </B>and <B>continue </B>are
+extensively used inside loops. So, we will discuss about these two
+unconditional branch statements later. By using the <B>goto </B>branch
+statement, we can either skip some instructions and jump forward in
+the program or jump back and again repeat a set of instructions. So
+there are two ways in which we can use the <B>goto </B>statement.
+They are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">Forward jump</P>
+	<LI><P STYLE="line-height: 0.19in">Backward jump.</P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.08in">Syntax of forward jump
+and backward jump is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.86in; width: 1.04in; height: 1.6in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">goto
+	label;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">label:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">---</P>
+</SPAN><BR CLEAR=LEFT>
+<SPAN DIR="LTR" STYLE="position: relative; top: 0.22in; left: 4.12in; width: 1.11in; height: 1.6in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">label:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">goto
+	label;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">---</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.19in">---</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.2in; margin-top: 0.04in">
+Forward jump	Backward jump</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in; margin-top: 0.04in">
+As shown in the above syntax, if the label is after the <B>goto
+</B>statement, then it is known as forward jump and if the label is
+before the <B>goto </B>statement, it is known as backward jump.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0in"><FONT FACE="Calibri, serif">/*Program
+to demonstrate goto Statement*/</FONT></H4>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 5.9in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0in">
+<FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 6.23in"><FONT SIZE=4>int
+number; read:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.89in"><FONT SIZE=4>printf(&quot;\nEnter
+a number: &quot;); scanf(&quot;%d&quot;,&amp;number); if(number&gt;0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;Number
+is +ve\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else
+if(number&lt;0)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>printf(&quot;Number
+is -ve\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>else</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>goto end;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 6.35in; margin-top: 0in">
+<FONT SIZE=4>goto read; end:</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;You
+entered zero!&quot;);</FONT></P>
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

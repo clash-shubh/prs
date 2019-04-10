@@ -1,0 +1,422 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western"><BR CLEAR=LEFT><FONT COLOR="#17365d">Introduction
+to C++</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="Object-Oriented_Technology"></A>
+<FONT COLOR="#365f91">Object-Oriented Technology</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+This world is made up off several objects and objects communicate
+with each other. Similar objects can be grouped together. For
+example, take a college. It can have two working sections like
+<I>teaching </I>and <I>non-teaching</I>. These two groups can be
+further sub divided.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+We can also group the people in a college into several departments.
+Generally a college will have several lecturers in each department. A
+college can have one or more laboratories and there might be separate
+lab technicians to assist in conducting practical. A college will
+have a Principal for managing the entire college. Each department
+might have its own head who is responsible for managing their own
+department. Like this the entire world can be viewed as a collection
+of objects that communicate with each other to perform activities.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">This
+theory of objects can be applied to software to solve complex
+problems.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="Disadvantages_of_Conventional_Programmin"></A>
+<FONT COLOR="#365f91">Disadvantages of Conventional Programming</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Traditional programming languages like COBOL, FORTRAN etc are known
+as procedural languages. In these languages the program is written as
+a set of statements which contains the logic and control that
+instructs the compiler or interpreter how to perform a certain task.
+It becomes difficult to manage the code when the program is quite
+large.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+To reduce complexity, functions or modules were introduced which
+divides a large program into a set of cohesive units. Each unit is
+called a function and each function can call other functions as shown
+below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.12in; left: 1.57in; width: 485px"><IMG SRC="{{url_for('static',filename='img/CPP_html_cfe849e6.png')}}" NAME="image1.png" WIDTH=485 HEIGHT=304 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Even though functions reduces complexity, with a lot of functions
+sharing a common set of global data may lead to logical errors.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are the
+disadvantages of procedural or structured languages:</P>
+<OL>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Programs
+	are divided into a set of functions which can share data. Hence, no
+	data security.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Focus
+	is on the code to perform the task but not on the data</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>needed.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Data
+	is shared globally by several functions which might lead to logical</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>errors.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>No
+	restrictions on which functions can share the global</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>data.</FONT></FONT></P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY><A NAME="Concepts_of_Object-Oriented_Programming"></A>
+<FONT COLOR="#365f91">Concepts of Object-Oriented Programming</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+are the key concepts in object-oriented programming:</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" ALIGN=JUSTIFY><A NAME="Objects"></A><FONT COLOR="#4f81bd">Objects</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0in">
+Object is a real world entity or a prime run-time entity in
+object-oriented programming. Object occupies space in memory. Every
+object has its own properties and behavior. An object is an instance
+or specimen of a class. Every object is unique. Each object contains
+state, which is the collection of data values associated with the
+properties of an object.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Some of the real world
+examples for objects are shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.72in; width: 466px"><IMG SRC="{{url_for('static',filename='img/CPP_html_17c288fe.jpg')}}" NAME="image2.jpeg" WIDTH=466 HEIGHT=186 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Classes"></A><FONT COLOR="#4f81bd">Classes</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A class is a collection of similar objects that have similar
+properties and exhibit similar behavior. A class is a template or
+blueprint for creating objects. After a class is created, we can
+create any number of objects. A class does not occupy any memory like
+an object.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Real
+world examples of classes are shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.36in"><IMG SRC="{{url_for('static',filename='img/CPP_html_4c534774.jpg')}}" NAME="image3.jpeg" ALIGN=BOTTOM WIDTH=554 HEIGHT=234 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Methods"></A><A NAME="/"></A>
+<FONT COLOR="#4f81bd">Methods</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+An operation represents the behavior of an object. When an operation
+is coded in a class, it is called a method. All objects in a class
+perform certain common actions or operations. Following figure shows
+a class, its data members, and methods written in different styles:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.03in; width: 566px"><IMG SRC="{{url_for('static',filename='img/CPP_html_2d843f46.jpg')}}" NAME="image4.jpeg" WIDTH=566 HEIGHT=277 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Data_Abstraction"></A>
+<FONT COLOR="#4f81bd">Data Abstraction</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Abstraction refers to the process of presenting essential features
+without including any complex background details. A class uses this
+abstraction to represent only essential properties and behavior.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A powerful way to achieve abstraction is by manipulating hierarchical
+classifications. This allows us to divide the system into several
+logical layers which can be maintained separately.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Real world example for abstraction is a computer which is a single
+unit made up of several units (parts) as shown below:</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.56in"><IMG SRC="{{url_for('static',filename='img/CPP_html_d7dd2e1a.jpg')}}" NAME="image5.jpeg" ALIGN=BOTTOM WIDTH=517 HEIGHT=126 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.17in"><A NAME="Encapsulation"></A>
+<FONT COLOR="#4f81bd">Encapsulation</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Wrapping up of code and data together into a single unit is known as
+encapsulation. Encapsulation is implemented by classes. A class
+contains data which is generally private and is accessible to the
+outside world only through public methods.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+A side effect of encapsulation is data hiding which allows the users
+to use an object without knowing its internal details. Following
+figure represents different sections of encapsulation:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.59in; width: 490px"><IMG SRC="{{url_for('static',filename='img/CPP_html_a8148d84.jpg')}}" NAME="image6.jpeg" WIDTH=490 HEIGHT=229 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Inheritance"></A>
+<FONT COLOR="#4f81bd">Inheritance</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Deriving properties of an object from one class to object of an
+another class is known as inheritance. Inheritance promotes the
+feature of object-oriented programming, reusability.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Using inheritance a new class can be created without effecting the
+existing class. We can use already available functionality of the
+existing class and add new functionality in the new class based on
+the requirements.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+As a real world example, consider the following colour hierarchy,
+where Red, Yellow and Blue are existing classes and all other classes
+are derived classes:</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Polymorphism"></A><FONT COLOR="#4f81bd">Polymorphism</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Single method exhibiting different behaviours in the same class or
+different classes is known as polymorphism. We can code a generic
+interface (set of methods) to a set of associated actions.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in"><IMG SRC="{{url_for('static',filename='img/CPP_html_7efc8a68.jpg')}}" NAME="image7.jpeg" ALIGN=BOTTOM WIDTH=331 HEIGHT=284 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>As a real world
+example for polymorphism consider a generic </FONT><FONT SIZE=3><B>Line
+</B></FONT><FONT SIZE=3>class which contains a method </FONT><FONT SIZE=3><B>Display()</B></FONT><FONT SIZE=3>.
+Now consider three specific classes: </FONT><FONT SIZE=3><B>DottedObject,
+SingleObject, </B></FONT><FONT SIZE=3>and </FONT><FONT SIZE=3><B>DashObject
+</B></FONT><FONT SIZE=3>which in turn also contains the same
+</FONT><FONT SIZE=3><B>Display() </B></FONT><FONT SIZE=3>method as
+shown below:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.74in; width: 464px"><IMG SRC="{{url_for('static',filename='img/CPP_html_a6bd263c.jpg')}}" NAME="image8.jpeg" WIDTH=464 HEIGHT=207 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Dynamic_Binding"></A>
+<FONT COLOR="#4f81bd">Dynamic Binding</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The process of associating an action to a message at run-time is
+known as dynamic binding which is also known as late binding. The
+action to be associated is recognized when the object is created
+which is done at run-time.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">As an example, consider
+the above hierarchy in which a <B>Line </B>object can call the
+<B>Display()</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>method
+in any of the three child classes: </FONT><FONT SIZE=3><B>DottedObject,
+SingleObject, </B></FONT><FONT SIZE=3>or </FONT><FONT SIZE=3><B>DashObject</B></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Message_Passing"></A><FONT COLOR="#4f81bd">Message
+Passing</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Objects communicate through messages. A message is a request for an
+action. Object sending the message can also pass data (parameters).
+Object which receives the message invokes a corresponding member
+function (action).</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+Consider the following example which represents message passing:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.13in; width: 384px"><IMG SRC="{{url_for('static',filename='img/CPP_html_c4a1f735.jpg')}}" NAME="image9.jpeg" WIDTH=384 HEIGHT=158 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Reusability"></A>
+<FONT COLOR="#4f81bd">Reusability</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Using the code available in an existing class to create new classes
+is known as reusability which is an important feature of
+object-orientation. In the below example, class <B>A </B>is an
+already existing class from which class <B>B </B>is created and from
+class <B>B</B>, class <B>C </B>is created:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.43in; width: 332px"><IMG SRC="{{url_for('static',filename='img/CPP_html_44f3970a.jpg')}}" NAME="image10.jpeg" WIDTH=332 HEIGHT=122 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0in"><A NAME="Delegation"></A><FONT COLOR="#4f81bd">Delegation</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.15in">In
+object-oriented programming, two classes can be joined either by
+inheritance or delegation. Both of them promotes reusability of code.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">As shown in the below
+figure (a), class <B>Y </B>is derived from class <B>X</B>. Here class
+Y is a <B>kind of</B></P>
+<OL TYPE=I START=10>
+	<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>This
+	kind of relationship between Y and X classes is known as
+	inheritance. Inheritance is also known as </FONT><FONT SIZE=3><B>is
+	a</B></FONT><FONT SIZE=3><B> </B></FONT><FONT SIZE=3>relationship.</FONT></FONT></P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Also as shown in figure (b) below, objects of classes <B>A </B>and <B>B
+</B>are members of class <B>C</B>. This kind of relationship is known
+as <B>has a </B>relationship and is also called as delegation or
+composition.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.06in; width: 594px"><IMG SRC="{{url_for('static',filename='img/CPP_html_afe5e7bd.jpg')}}" NAME="image11.jpeg" WIDTH=594 HEIGHT=179 BORDER=0></SPAN><BR>
+</P>
+<H6 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always"><A NAME="Genericity"></A>
+<FONT COLOR="#4f81bd">Genericity</FONT></H6>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+The software components (like classes) can have more than one
+implementation based on the data type of arguments. Programmer can
+create a generic class or function which can work with different
+types of arguments. The <B>template </B>feature in C++ allows generic
+programming.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+For example, a list data structure can operate on integers,
+characters, strings, floats or any other types of objects. So, a
+programmer can create a generic <B>List </B>class which can accept
+any kind of data.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western"><A NAME="Advantages_of_OOP"></A><FONT COLOR="#365f91">Advantages
+of OOP</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in">
+Object-oriented programming offers many advantages to the programmers
+and users. This technology allows programmers to create high quality
+software at an affordable price. Following are the advantages of OOP:</P>
+<OL TYPE=I START=10>
+	<OL>
+		<LI><P STYLE="line-height: 0.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Object-oriented
+		programs can be upgraded</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>easily.</FONT></FONT></P>
+		<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Using
+		inheritance, code redundancy can be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>eliminated.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Data
+		hiding allows the programmers to develop safe programs that do not
+		disturb code in other parts of the</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>program.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Encapsulation
+		allows programmers to create classes with several features and only
+		few public methods to be</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>exposed.</FONT></FONT></P>
+		<LI><P STYLE="margin-top: 0in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>All
+		object-oriented languages can create, extend and reuse existing</FONT><FONT SIZE=3>
+		</FONT><FONT SIZE=3>programs.</FONT></FONT></P>
+		<LI><P STYLE="margin-right: 0.11in; line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Object-oriented
+		programming enhances the thought process of a programmer leading to
+		rapid development of</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>software.</FONT></FONT></P>
+	</OL>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in"><A NAME="History_of_C++"></A>
+<FONT COLOR="#365f91">History of C++</FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 100%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>C++
+	was developed by Bjarne Stroustrup in 1979 at AT&amp;T Bell</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>Labs.</FONT></FONT></P>
+	<LI><P STYLE="margin-right: 0.11in; margin-top: 0in; line-height: 100%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>C++ is an
+	object-oriented language which includes imperative as well as
+	generic programming</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>features.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>C++
+	was developed with features inherited from SIMULA 67 and ALGOL</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>68.</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>C++
+	was initially called &quot;C with</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>classes&quot;.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">Following
+are various applications of C++ language:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Systems</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>programming</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Embedded
+	systems</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>programming</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Weather
+	control</FONT><FONT SIZE=3> </FONT><FONT SIZE=3>systems</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Defence</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>systems</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Web</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>applications</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Server</FONT><FONT SIZE=3>
+	</FONT><FONT SIZE=3>programming</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Databases</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Web
+	search</FONT></FONT></P>
+	<LI><P STYLE="line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>e-commerce</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

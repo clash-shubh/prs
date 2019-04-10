@@ -1,0 +1,172 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 2.59in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>Module
+		1 : </FONT><FONT FACE="Calibri, serif">Introduction to C++</FONT></FONT></P>
+	</SPAN>
+
+	</P>
+</DIV>
+<P CLASS="western"><BR>
+</P>
+
+<H4 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Parameter Passing Techniques</FONT></H4>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=3>In
+C++ we have three ways for passing arguments to a function. They are:
+</FONT><FONT SIZE=3><I>pass-by-value, pass-by-reference, </I></FONT><FONT SIZE=3>and
+</FONT><FONT SIZE=3><I>pass-by-address</I></FONT><FONT SIZE=3>.</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Pass-by-value"></A><FONT COLOR="#4f81bd">Pass-by-value</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+Generally used way to pass arguments is pass-by-value. In this
+method, the arguments passed in the function call are copied to
+formal parameters in the function definition. So, any changes made to
+the formal parameters are not reflected on the actual parameters.
+Consider the following swap function which demonstrates
+pass-by-value:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">void
+swap(int x, int y)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.01in">int
+temp = x; x = y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">y = temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Let's
+assume that in the <I>main() </I>function we are writing the
+following code:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.18in; margin-top: 0in">
+int a = 10, b = 20; swap(a, b);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Although the values of
+<I>x </I>and <I>y </I>are being interchanged, since they are copies
+of <I>a </I>and <I>b</I>, the values of <I>a </I>and <I>b </I>remains
+the same i.e., 10 and 20 respectively.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Pass-by-reference"></A><FONT COLOR="#4f81bd">Pass-by-reference</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+To make the changes on formal parameters reflect on actual
+parameters, we can use pass-by- reference. In pass-by-reference
+method we pass reference to argument instead of a copy. So, both
+actual and formal parameters refer to the same memory location. Using
+this method, our swap function will be as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+void swap(int &amp;x, int &amp;y)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.01in">int
+temp = x; x = y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">y = temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Remember to precede the
+formal parameters with &amp;.</P>
+<P CLASS="western"><BR>
+</P>
+<H6 CLASS="western"><A NAME="Pass-by-address"></A><FONT COLOR="#4f81bd">Pass-by-address</FONT></H6>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.11in; margin-top: 0.03in">
+In pass-by-address, we pass address of the argument to formal
+parameters. Both pass-by- reference and pass-by-address are
+semantically same. The only difference is, in pass-by- reference, the
+formal parameters are guaranteed to alias valid memory locations.
+Whereas in pass-by-address, the formal parameters are pointers and
+can even point to null.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.21in; margin-top: 0in; line-height: 0.38in">
+Our swap function using pass-by-address will look as follows: void
+swap(int *x, int *y)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int temp = *x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">*x
+= *y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.19in">*y
+= temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">and
+the code for calling our swap function will be as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.34in">int
+a=10, b=20; swap(&amp;a, &amp;b);</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">The complete program
+which demonstrates all the three methods to pass arguments is as
+follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.81in">#include&lt;iostream&gt;
+using namespace std; int swapval(int x, int y)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.01in">int
+temp = x; x = y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">y =
+temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int swapref(int &amp;x,
+int &amp;y)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.01in">int
+temp = x; x = y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">y = temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int swapadd(int *x, int
+*y)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">int temp = *x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">*x = *y;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in">*y = temp;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">int main()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.37in; margin-top: 0.06in; page-break-before: always">
+int a=10, b=20; swapval(a,b);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.66in">cout&lt;&lt;&quot;After
+swap (call by value): a=&quot;&lt;&lt;a&lt;&lt;&quot;,b=&quot;&lt;&lt;b&lt;&lt;endl;
+swapref(a,b);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.4in">cout&lt;&lt;&quot;After
+swap (call by reference): a=&quot;&lt;&lt;a&lt;&lt;&quot;,b=&quot;&lt;&lt;b&lt;&lt;endl;
+swapadd(&amp;a,&amp;b);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 1.52in">cout&lt;&lt;&quot;After
+swap (call by address): a=&quot;&lt;&lt;a&lt;&lt;&quot;,b=&quot;&lt;&lt;b&lt;&lt;endl;
+return 0;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in">Output
+for the above program is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.56in">After
+swap (call by value): a=10,b=20 After swap (call by reference):
+a=20,b=10 After swap (call by address): a=10,b=20</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-left: 0in; page-break-before: always">
+<BR>
+</H4>
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+{% endblock course %}

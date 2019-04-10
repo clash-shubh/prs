@@ -1,0 +1,729 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Arrays</FONT></H1>
+    
+    
+    <P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+In all the programs we have done until now, to store and operate on
+values we have used variables. But at a point in time, a variable can
+hold only a single value. For example, in the following syntax: <B>int
+a = 10; </B>we are able to store only <B>10 </B>in the variable <B>a,
+</B>which is a single value. It is normal in programming to work with
+a list of values or a group of values at once. For such purposes,
+variables cannot be used. So, C language provides the construct <B>array
+</B>for holding multiple values at once.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+<B>Definition: “</B><I>An array is a sequential collection/group of
+homogeneous (same type) elements which are referred by the same
+name”. </I>The <B>type </B>refers to the data types like int, char,
+float etc. All the elements/values in the array are of the same type
+(data type). We cannot store values of different data types in the
+same array.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in"><B>Uses:</B></P>
+<OL>
+	<LI><P>To maintain a list of values.</P>
+	<LI><P>To maintain a table of values.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in"><A NAME="One_Dimensional_Array"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>One
+Dimensional Array</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.04in; line-height: 97%">
+For maintaining a list of items in C, we can declare an array with a
+single subscript like <FONT SIZE=4 STYLE="font-size: 16pt"><B>a</B></FONT><SUB><FONT SIZE=2 STYLE="font-size: 10pt"><B>i
+</B></FONT></SUB>. Such arrays with only a single subscript are known
+as one dimensional arrays. Common uses of one dimensional arrays are:
+to maintain a list of numbers, to maintain the list of marks, to
+maintain a list of student names etc.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Declaration_of_one_dimensional_array"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Declaration of
+one dimensional array</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in">
+For using arrays in C programs, just like we are declaring variables
+before using them, we should declare arrays before using them. The
+syntax for declaring a one dimensional array is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 2.27in"></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.02in; margin-bottom: 0in">
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 2.81in"></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.04in">
+In the above example, <B>int </B>is the data type, <B>a </B>is the
+array name and <B>size </B>is the number of elements that we can
+store in the array. So, in the above example <B>a </B>is an integer
+array, which can hold 10 integer values. All the 10 elements in the
+array will be stored sequentially one after another inside the main
+memory (RAM). The one dimensional array declared above will be
+maintained in the memory as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.09in; width: 394px"><IMG SRC="{{url_for('static',filename='img/C_html_60e06400.png')}}" NAME="image64.png" WIDTH=394 HEIGHT=195 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0.11in"><A NAME="Initialization_of_one_dimensional_array"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Initialization
+of one dimensional array</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0.03in">Initialization
+means assigning values. To assign values to the elements in the
+array, we use the following</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; margin-bottom: 0in">
+syntax:</P>
+<P CLASS="western" STYLE="margin-left: 2.27in"></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in; margin-bottom: 0.01in">
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 3.29in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0in">
+In the above syntax, <B>index </B>refers to the element in the array.
+The <B>index </B>of an array always starts with zero. So, the index
+values for the array <B>a </B>in the above example are: 0, 1, 2, 3,
+4. If we want to access <B>nth </B>element in the array, the <B>index
+</B>value will be <B>n-1</B>. For example, if we want to refer <B>first
+</B>element in the array, the <B>index </B>value will be 1-1=0. In,
+the above example, we are assigning value <B>10 </B>to the first
+element of the array.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><I>Note: If the array
+elements are not initialized, the values stored in the elements of
+the array will be garbage values.</I></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+Generally, there are two types of initializing an array. They are: 1)
+Static Initialization (at compile time) and 2) Dynamic Initialization
+(at run time). In static initialization, the elements of an array are
+assigned values when the program is compiled. In dynamic
+initialization, the elements of an array are assigned values when the
+program is executed (runtime). The above way of initialization is
+static initialization. We can also perform static initialization in
+other ways as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.32in; width: 3.62in; height: 1.05in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">type
+	arrayname[size] = {value1, value2, …. , valueN};</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">Or</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">type arrayname[ ] =
+	{value1, value2, …. , valueN};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-bottom: 0in">Example:</P>
+<P CLASS="western" STYLE="margin-left: 2.47in"></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+In the above example, in the first line, the size is specified as <B>10</B>.
+But, in the second line, the size was not specified. In such cases,
+the size is automatically calculated. In this example, the size is
+automatically computed as <B>10 </B>by the compiler. The array will
+be represented in the memory as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 1.97in"><IMG SRC="{{url_for('static',filename='img/C_html_75ffc7b2.png')}}" NAME="image65.png" ALIGN=BOTTOM WIDTH=336 HEIGHT=166 BORDER=0></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+In dynamic initialization, the values are assigned to the elements of
+the array during the execution of the program. Let’s see the
+following piece of code:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.38in; margin-top: 0.04in"><IMG SRC="{{url_for('static',filename='img/C_html_4b5ef05e.gif')}}" ALIGN=LEFT>int
+a[10], i;</P>
+<P CLASS="western" STYLE="margin-left: 2.38in">for(i = 0; i &lt; 10;
+i++)</P>
+<P CLASS="western" STYLE="margin-left: 2.38in; margin-top: 0in">{</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.56in">scanf(“%d”,&amp;a[i]);</P>
+<P CLASS="western" STYLE="margin-left: 2.38in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.04in; page-break-before: always">
+In the above example, the user will be storing the values into the
+array while executing the program. Until then, garbage values will be
+stored in the array.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in"><I>Note:
+If we use braces i.e., { and }, for initializing the array, the
+default values for all the elements in the array will be zero.</I></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><B>Programs:</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">/*
+C program to declare an integer array and initialize the elements in
+the array</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in; margin-top: 0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">*/ #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[5];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">a[0]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">1;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">a[1] =</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">2;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">a[2]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">3;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">a[3]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">4;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">a[4] =</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">5;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[0]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[0]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[1]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[1]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[2]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[2]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[3]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[3]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.11in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[4]:
+%d&quot;,a[4]); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">/*
+C program to declare an integer array and initialize the elements in
+the array</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">*/
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[5] = {1,2,3,4,5};</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; line-height: 0.27in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[0]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[0]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[1]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[1]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[2]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[2]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[3]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[3]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.11in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[4]:
+%d&quot;,a[4]); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in"><FONT SIZE=4 STYLE="font-size: 16pt">/*
+C program to declare an integer array and initialize the elements in
+the array</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">*/
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[ ] = {5,2,1,9,10};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[0]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[0]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[1]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[1]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[2]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[2]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[3]:</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">%d\n&quot;,a[3]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 5.11in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[4]:
+%d&quot;,a[4]); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to print the
+capacity of an array */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[] = {5,2,1,9,10};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.45in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+size; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">size
+= sizeof(a);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.3in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Size
+of the array is: %d bytes&quot;,size); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.75in; margin-top: 0.03in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to print no of
+elements in an array */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[] = {5,2,1,9,10};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+count; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">count
+= sizeof(a)/sizeof(int);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.16in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Number
+of elements in the array is: %d&quot;,count); getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.44in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to initialize array
+elements at runtime */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[10], i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-right: 4.14in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter value %d:
+&quot;,(i+1)); scanf(&quot;%d&quot;,&amp;a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.29in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;The elements in the
+array are: \n&quot;); for(i = 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;a[%d]:
+%d\n&quot;,i,a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.29in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to search for a
+number n in a group of 10 numbers */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[10], i, n;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">/*clrscr();*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-right: 4.14in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter value %d:
+&quot;,(i+1)); scanf(&quot;%d&quot;,&amp;a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter
+the value you want to search: &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">if(n==a[i])</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Number
+found at index %d&quot;,i);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.95in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4>/* C program to calculate the average of 10 numbers */
+#include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.64in"><FONT SIZE=4>#include&lt;conio.h&gt;
+</FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 6in"><FONT SIZE=4>int
+a[10], i; float sum, avg;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>/*clrscr();*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; margin-right: 4.54in"><FONT SIZE=4>printf(&quot;Enter
+value %d: &quot;,(i+1)); scanf(&quot;%d&quot;,&amp;a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in"><FONT SIZE=4>sum +=
+a[i];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-top: 0in"><FONT SIZE=4>avg
+= sum / 10;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 3.67in; text-indent: -0in">
+<FONT SIZE=4>printf(&quot;Average of 10 numbers is: %f&quot;, sum);
+getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 2.53in; margin-top: 0.03in">
+<FONT SIZE=4>/* C program to print the multiplication table of number
+n */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.64in; margin-top: 0in">
+<FONT SIZE=4>#include&lt;conio.h&gt; </FONT><FONT SIZE=4>main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>int
+i, n;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>/*clrscr();*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-right: 4.75in"><FONT SIZE=4>printf(&quot;Enter
+the value of n: &quot;); scanf(&quot;%d&quot;,&amp;n);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>for(i =
+1; i &lt;= 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; margin-top: 0in"><FONT SIZE=4>{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.43in; line-height: 0.24in"><FONT SIZE=4>printf(&quot;%d\t*\t%d\t=\t%d\n”,
+n, i, (n*i));</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in; line-height: 0.24in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.26in"><FONT SIZE=4>getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4>}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.55in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to print the
+elements in a array in reverse order */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[10], i;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 10; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-right: 3.79in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter the value %d:
+&quot;,(i+1)); scanf(&quot;%d&quot;,&amp;a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.83in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Elements in reverse
+order: &quot;); for(i = 9; i &gt;= 0; i--)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%d
+&quot;,a[i]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Two_Dimensional_Array"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Two
+Dimensional Array</B></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.04in; line-height: 97%"><A NAME="Declaration_of_a_two_dimensional_array"></A>
+An array that has two subscripts, for example: <FONT SIZE=4 STYLE="font-size: 16pt"><B>a</B></FONT><SUB><FONT SIZE=2 STYLE="font-size: 10pt"><B>ij
+</B></FONT></SUB>is known as a two dimensional. A two dimensional
+array is used to store a table of values which has rows and columns.
+Some of the uses/applications of the two dimensional arrays are: to
+maintain the marks of students, to maintain prices of items etc…</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Declaration
+of a two dimensional array</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Like a one dimensional array, the two dimensional array must also be
+declared before using it in the program. The syntax for declaring a
+two dimensional array is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.69in; width: 2.88in; height: 0.4in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.42in; margin-top: 0.05in">type
+	arrayname[rows][columns];</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.1in; margin-bottom: 0.01in">
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 3.19in"></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: -0in">
+In the above example, <B>int </B>refers to the data type, <B>a </B>refers
+to the array name, first set of square brackets represents the number
+of rows and the second set of square brackets represents the number
+of columns. So, our two dimensional array contains 9 elements in
+total.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Initialization_of_a_two_dimensional_arra"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Initialization
+of a two dimensional array</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+A two dimensional array can be initialized in different ways either
+statically at compile time or dynamically at run time. The syntax for
+initializing a two dimensional array statically is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.13in; width: 4in; height: 1.17in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.61in; margin-right: 0.61in; margin-top: 0.05in; line-height: 188%">
+	arrayname[rowindex][columnindex] = value; (or)</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.33in; margin-right: 0.33in; margin-top: 0in">
+	type arrayname[rows][columns] = {val1,val2,….,valn};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; margin-bottom: 0in">
+Example:</P>
+<P CLASS="western" STYLE="margin-left: 2.27in"></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">The
+memory representation of the two dimensional array will be as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 2.81in; width: 254px"><IMG SRC="{{url_for('static',filename='img/C_html_4dc3513e.png')}}" NAME="image66.png" WIDTH=254 HEIGHT=149 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+The values will be assigned starting with the first element in the
+first row and so on. If insufficient values are provided, then the
+remaining elements will be initialized to zero. There is another way
+of initializing a two dimensional array in which we can specify the
+values for each row separately. We can see the example below:</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.2in; margin-right: 0.2in; margin-top: 0.12in; line-height: 0.16in">
+<IMG SRC="{{url_for('static',filename='img/C_html_a1021165.gif')}}" ALIGN=LEFT>int a[3][3] =
+{{1,1,1},{2,2,2},{3,3,3}};</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.16in"><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.07in"><FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><FONT SIZE=3 STYLE="font-size: 18pt"><B>Programs:</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.35in; margin-top: 0.14in">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to declare a two
+dimensional array and initialize it */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.09in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[2][3]; int i,j; clrscr(); a[0][0] =</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">1;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">a[0][1]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">2;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">a[0][2]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">3;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">a[1][0]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">4;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">a[1][1]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">5;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">a[1][2]
+=</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">6;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 2; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%d
+&quot;,a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 1.35in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to declare a two
+dimensional array and initialize it */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[2][3] = {1,2,3,4,5,6};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">/*
+int a[2][3] = {{1,2,3},{4,5,6}}; */</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.46in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+i,j; clrscr();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 2; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">for(j = 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%d &quot;,a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.22in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to declare a two
+dimensional array and initialize it dynamically */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 6.18in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[3][3]; int i,j;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">/*clrscr();*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter
+a[%d][%d]: &quot;,i,j);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">scanf(&quot;%d&quot;,&amp;a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.29in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;The elements in the
+array are: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%d
+&quot;,a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3.43in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to perform matrix
+addition */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt; main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[3][3], b[3][3], c[3][3];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+i,j;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">/*clrscr();*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.2in; text-indent: -0in; margin-top: 0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter the elements
+of matrix a: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter a[%d][%d]:
+&quot;,i,j);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">scanf(&quot;%d&quot;,&amp;a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.19in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter the elements
+of matrix b: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter
+b[%d][%d]: &quot;,i,j);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">scanf(&quot;%d&quot;,&amp;b[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">c[i][j]
+= a[i][j] + b[i][j];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.29in; text-indent: -0in; margin-top: 0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;The elements in the
+array are: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">for(j = 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%d
+&quot;,c[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">getch();</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 3.64in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">/* C program to multiply two
+matrices */ #include&lt;stdio.h&gt;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.68in"><FONT SIZE=4 STYLE="font-size: 16pt">#include&lt;conio.h&gt;
+main()</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+a[3][3], b[3][3], c[3][3] = {};</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">int
+i, j, k;</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">/*clrscr();*/</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.2in; text-indent: -0in; margin-top: 0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter the elements
+of matrix a: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter a[%d][%d]:
+&quot;,i,j);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">scanf(&quot;%d&quot;,&amp;a[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.19in; text-indent: -0in">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter the elements
+of matrix b: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;Enter
+b[%d][%d]: &quot;,i,j);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">scanf(&quot;%d&quot;,&amp;b[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-top: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(i
+= 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(k
+= 0; k &lt; 3; k++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.89in"><FONT SIZE=4 STYLE="font-size: 16pt">c[i][j]
++= a[i][k] * b[k][j];</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; margin-top: 0in; line-height: 0.27in">
+<FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.15in; text-indent: -0in; margin-top: 0in; page-break-before: always">
+<FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;The elements in the
+array c are: \n&quot;); for(i = 0; i &lt; 3; i++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">for(j
+= 0; j &lt; 3; j++)</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">{</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.69in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;%d\t&quot;,c[i][j]);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.48in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">printf(&quot;\n&quot;);</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.27in"><FONT SIZE=4 STYLE="font-size: 16pt">}</FONT></P>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

@@ -1,0 +1,732 @@
+{% extends "layout.html"%}
+{%block course%}
+<DIV ID="TextSection" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+</DIV>
+<H1 CLASS="western" STYLE="margin-left: 0in; margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91" size=10>Data Types</FONT></H1>
+    
+    
+<P CLASS="western" STYLE="margin-left: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+A data type specifies the type of value that we use in our programs.
+A data type is generally specified when declaring variables, arrays,
+functions etc. In ANSI C, the data types are divided into three
+categories. They are:</P>
+<OL>
+	<LI><P ALIGN=JUSTIFY>Primitive or Fundamental data types</P>
+	<LI><P ALIGN=JUSTIFY>User-defined data types</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-top: 0in">Derived data types</P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in"><A NAME="Primitive_or_Fundamental_data_types"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Primitive or
+Fundamental data types</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-top: 0.03in">
+The primitive data types in ANSI C are as shown in the below diagram:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.56in; width: 496px"><IMG SRC="{{url_for('static',filename='img/C_html_c3ed6e1e.png')}}" NAME="image39.png" WIDTH=496 HEIGHT=280 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+The most fundamental data types that every C compiler supports are:
+int, char, float and double. Other compilers support the extended
+versions of these fundamental data types like: short int, long int,
+long double etc. The signed data types are used for storing both
+positive and negative values where as the unsigned data types are
+used to store only positive values. The memory capacity of these data
+types are based on the hardware. The memory capacity of all the
+fundamental data types on a 16-bit machine is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.19in; left: 1.31in; width: 534px"><IMG SRC="{{url_for('static',filename='img/C_html_ee304f33.png')}}" NAME="image40.png" WIDTH=534 HEIGHT=294 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="User-Defined_data_types"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>User-Defined
+data types</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+ANSI C allows the users to define identifiers as their own data
+types, based on the already existing primitive or fundamental data
+types. This concept is known as “type definition” and the data
+types thus created are known as user-defined data types. We can
+create user-defined data types in two ways:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.19in">By using the “typedef”
+	keyword</P>
+	<LI><P><A NAME="typedef__Keyword"></A>By using the “enum”
+	keyword</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western"><FONT COLOR="#4f81bd" SIZE=6>typedef Keyword</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The “typedef” keyword can be used to declare an identifier as a
+user-defined data type. The syntax for using typedef is as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.21in; left: 3.19in; width: 1.71in; height: 0.65in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">typedef
+	int rollno;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">typedef float average;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in">
+In the above example, rollno and average are new user-defined data
+types. Now we can use rollno and average as data types as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.18in; left: 3.19in; width: 1.71in; height: 0.65in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">rollno
+	r1, r2;</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">average a1, a2;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western"><A NAME="enum_Keyword"></A><FONT COLOR="#4f81bd" SIZE=6>enum
+Keyword</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The “enum” is used to declare identifiers as user-defined data
+types. Such data types are also called as enumerations. The “enum”
+keyword can be used to declare an identifier as data type which can
+store a limited set of integer values. The syntax of using “enum”
+keyword is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.22in; left: 2.51in; width: 3.1in; height: 0.28in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">enum
+	identifier {value1, value2,….., value n};</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">Example
+usage of enum is as shown below:<SPAN DIR="LTR" STYLE="position: relative; top: 0.28in; left: 2.51in; width: 3.1in; height: 0.28in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">enum
+	days {Mon, Tue, Wed, Thu, Fri, Sat};</P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.12in">
+In the above example, “days” is a new user-defined type. All the
+variables created using the “days” data type can only contain
+values in the range Mon to Sat as shown in the above example. We can
+declare variables by using the “days” data type as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.1in; left: 3.19in; width: 1.83in; height: 0.28in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">enum
+	days day1 = Mon;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.13in">
+If we display “day1” in the printf() statement, it will display
+it as zero. Generally, the value of a first element in an enumeration
+always starts with zero and the next element’s value is previous
+element’s value plus 1. So, the value of “Tue” will be one and
+so on.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in"><A NAME="Derived_data_types"></A>
+<FONT COLOR="#4f81bd"><FONT FACE="Cambria, serif"><B>Derived data
+types</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The data types which are created using the already existing primitive
+or fundamental types are known as derived data types. Like
+user-defined data types we cannot declare new variables using the
+derived data types. Examples of derived data types in C are: arrays,
+functions, structures, unions and pointers.</P>
+<H4 CLASS="western" STYLE="page-break-before: always"><A NAME="Constants_(1)"></A>
+<FONT COLOR="#365f91">Constants</FONT></H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Constants in C are fixed values which cannot be changed during the
+execution of the program. In C, we can declare variables as constants
+in two ways. They are:</P>
+<OL>
+	<LI><P>By using “const” keyword</P>
+	<LI><P>By using “#define” preprocessor directive</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western"><A NAME="const_Keyword"></A><FONT COLOR="#4f81bd" SIZE=6>const
+Keyword</FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.03in">We
+can declare a variable as a constant by using the <B>const </B>qualifier.
+A variable that is declared using <B>const </B>cannot change its
+value once it is initialized. The syntax of using the <B>const </B>is
+as shown below:</P>
+<P CLASS="western"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 2.98in; width: 2.4in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">const
+	type variable-name = value;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Example of using the
+<B>const </B>keyword is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.22in; left: 3.4in; width: 1.54in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">const
+	int max = 200;</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western"><A NAME="#define_Preprocessor_Directive"></A><FONT COLOR="#4f81bd" SIZE=6>#define
+Preprocessor Directive</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.03in">
+We can also declare constants in a program by using the <B>#define
+</B>preprocessor directive. Such constants declared using the <B>#define
+</B>preprocessor directive are known as <B>symbolic constants. </B>The
+syntax of using <B>#define </B>is as shown below:<SPAN DIR="LTR" STYLE="position: relative; top: 0.55in; left: 3.4in; width: 1.54in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">#define
+	NAME value</P>
+</SPAN>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">Example of using
+<B>#define </B>is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.12in; left: 3.52in; width: 1.26in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">#define
+	PI 3.142</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0.1in">
+Take care that there is no semi-colon (;) at the end of <B>#define
+</B>statement. In the above example we have assigned the value 3.142
+to the symbol PI. Now, whenever PI is encountered in the program, it
+will be replaced with the value 3.142.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">Following
+are the rules that apply to a <B>#define </B>statement:</P>
+<OL>
+	<LI><P STYLE="margin-right: 0.08in">All rules that apply to
+	variables also apply to symbolic name. Generally symbolic names are
+	written in CAPTIAL LETTERS, to distinguish them from the normal
+	variable names.</P>
+	<LI><P STYLE="margin-top: 0in">No blank space between # and define
+	is allowed.</P>
+	<LI><P STYLE="line-height: 0.19in"># must be the first character in
+	the <B>#define</B><B> </B>statement.</P>
+	<LI><P STYLE="line-height: 0.19in">A blank space is required between
+	<B>#define </B>and the symbolic name and between symbolic name and
+	the value.</P>
+	<LI><P><B>#define </B>statements must not end with a semi-colon.</P>
+	<LI><P STYLE="margin-top: 0in">After declaring a symbolic constant,
+	we must not use it in an assignment statement.</P>
+	<LI><P>Symbolic names are not declared for data types. Its data type
+	depends on the type of the constant value.</P>
+	<LI><P STYLE="margin-right: 0.08in"><A NAME="const_Vs_#define"></A><B>#define
+	</B>statements may appear anywhere in the program, but before they
+	are referenced in the program. Generally they are placed at the top
+	of the program after the <B>#include</B><B> </B>statements.</P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western"><FONT COLOR="#4f81bd" SIZE=6>const Vs #define</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+The purpose of both <B>const </B>and <B>#define </B>is to declare
+constants in a C program. The difference between them is: when we
+declare a variable as a constant using <B>const</B>, it is still
+treated as a variable but the value will be fixed and cannot be
+changed. But, when we use <B>#define, </B>we are declaring symbolic
+constants, which are not treated as variables. Instead the compiler
+searches for the symbol throughout the program and replaces the
+symbol with the value. Another difference is, <B>const </B>is a
+keyword, where as <B>#define </B>is a preprocessor directive.</P>
+<H4 CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<FONT COLOR="#365f91">volatile Keyword</FONT></H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in; margin-bottom: 0.01in"><A NAME="volatile_Keyword"></A>
+ANSI standard defines another qualifier <B>volatile </B>that could be
+used to tell the compiler that a variable’s value may be changed at
+any time by some external sources (from outside the program). Example
+usage of the <B>volatile </B>keyword is shown below:</P>
+<P CLASS="western" STYLE="margin-left: 3.1in"></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; margin-top: 0in">
+The value of date can be modified by its own program too. If you
+don’t want the program to modify the value of date variable, but it
+can be modified by external factors, then date can be declared as
+both <B>volatile </B>and <B>const </B>as shown below:<SPAN DIR="LTR" STYLE="position: relative; top: 0.52in; left: 3.17in; width: 1.98in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">volatile
+	const int date = 21;</P>
+</SPAN>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0in"><A NAME="Reading_input_from_Keyboard"></A>
+<FONT COLOR="#365f91">Reading input from Keyboard</FONT></H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in; text-indent: 0.5in; margin-top: 0.03in">
+Another way of assigning values to variables besides directly
+assigning the value is reading values from the keyboard. C provides
+<B>scanf </B>function in the <B>stdio.h </B>header file. Using this
+function we can read values from the keyboard and assign the values
+to variables. The syntax of <B>scanf </B>function is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.24in; left: 2.61in; width: 3.23in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">scanf(“control
+	string”,&amp;variable1,&amp;variable2,…);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 0.11in">The
+<B>control string </B>specifies the type of value to read from the
+keyboard and the ampersand symbol <B>&amp; </B>is an operator to
+specify the address the variable(s). Example usage of <B>scanf
+</B>function is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="position: relative; top: 0.2in; left: 3.52in; width: 1.46in; height: 0.29in; border: 1px solid #000000; padding: 0in; background: #ffffff">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in">scanf(“%d”,
+	&amp;var);</P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0.07in"><A NAME="ASCII_(American_Standard_Code_for_Inform"></A>
+<FONT COLOR="#365f91">ASCII (American Standard Code for Information
+Interchange) Code</FONT></H4>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.25in; left: 1.62in; width: 481px"><IMG SRC="{{url_for('static',filename='img/C_html_c3b83c98.png')}}" NAME="image41.png" WIDTH=481 HEIGHT=516 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always"><A NAME="Format_Specifiers_used_in_printf()"></A>
+<FONT COLOR="#365f91" SIZE=6><FONT FACE="Cambria, serif"><FONT SIZE=4><B>Format
+Specifiers used in printf()</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in; margin-bottom: 0in"><BR><BR>
+</P>
+<TABLE WIDTH=640 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=317>
+	<COL WIDTH=317>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=45 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in"><B>Data Type</B></P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in"><B>Format Specifier</B></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=47 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">Int</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%d (or) %i</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">unsigned int</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%u</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">short int</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%hd</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=47 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">unsigned short int</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%hu</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">long int</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%ld</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">unsigned long int</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%lu</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=47 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">Float</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%f (or) %e (or) %g</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">Double</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%f (or) %e (or) %g</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">long double</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%Lf</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=47 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">Char</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%c</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">unsigned char</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%c</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=317 HEIGHT=46 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">String</P>
+		</TD>
+		<TD WIDTH=317 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-top: 0in"><BR>
+			</P>
+			<P STYLE="margin-left: 0.1in">%s</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.17in"><A NAME="Examples"></A>
+<FONT COLOR="#365f91"><FONT FACE="Cambria, serif"><FONT SIZE=6><B>Examples</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.15in"><B>/*
+C program to illustrate integer constants */</B></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; line-height: 0.19in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in; line-height: 0.19in">
+printf(&quot;%d \n&quot;,20);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.04in">printf(&quot;%d
+\n&quot;,-55); printf(&quot;%u \n&quot;,65535U); printf(&quot;%ld
+\n&quot;,999999999L); printf(&quot;%o \n&quot;,040); printf(&quot;%x
+\n&quot;,0x23);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in; line-height: 0.19in">
+Explanation:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In the above c program, 20, -55, 65535 and 999999999 represent
+decimal integer constants. Whereas 040  represents octal integer
+constant and 0x23 represents hexadecimal integer constant. %d is the
+format specifier for displaying decimal integers, %u for displaying
+unsigned decimal integers, %ld for displaying long decimal integers,
+%o for displaying octal integers and %x or %X for displaying
+hexadecimal integer values.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/* C program to illustrate real constants */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in; line-height: 0.19in">
+clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">printf(&quot;%f
+\n&quot;,1.5232);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">printf(&quot;%f
+\n&quot;,-45.2f);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">printf(&quot;%f
+\n&quot;,32.);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">printf(&quot;%f
+\n&quot;,.56);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.49in; margin-top: 0in">
+printf(&quot;%e \n&quot;,2.3e2); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Explanation:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 0.08in">
+In the above program, 1.5232, -45.2, 32., .56 are example of real
+constants. 2.3e2 is also real constant which is represented in
+scientific notation. %f is used to display real values and %e for
+displaying real values in scientific notation. By default all the
+real values are treated as double precision values. If you want to
+specify a single precision real value, you can use the letter ‘f’
+after the real value like -45.2f in the above program.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/* C program to demonstrate character constants */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in; line-height: 0.19in">
+clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">printf(&quot;%c
+\n&quot;, 'a');</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">printf(&quot;%c \n&quot;,
+'f');</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">printf(&quot;%s \n&quot;,
+&quot;hai&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.39in; text-indent: -0in">
+printf(&quot;%s \n&quot;, &quot;hello&quot;); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Explanation:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">In the above program,
+‘a’ and ‘f’ are single character constants, whereas “hai”
+and “hello” are string constants. %c is used to display single
+characters and %s is used to display strings.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/* C program to demonstrate the use of variables */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in; line-height: 0.19in">
+int a;	/*variable a declaration*/</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.23in; text-indent: -0in">
+int b;	/*variable b declaration*/ clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">a =
+10;	/*Initialization of variable a*/</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.01in; text-indent: -0in">
+b = 20;	/*Initialization of variable b*/ printf(&quot;Value of a+b
+is: %d&quot;,(a+b));</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.04in">Explanation:</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">In the above program,
+a and b are variables which can hold integer values as specified by
+the <B>int </B>keyword in the declaration. Later, a is initialized to
+10 and b is initialized to 20.</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/* C program to demonstrate different data types */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-top: 0in; line-height: 0.19in">
+int i = 10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.35in">unsigned
+int ui = 65535; short int si = 30;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.09in; text-indent: -0in">
+unsigned short int usi = 255; long int li = 2147483647;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.63in; text-indent: -0in">
+unsigned long int uli = 4294967295; float f = 23.4897897897;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">double
+d = 23.4235423542;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.29in">long
+double ldouble = 24.562343546546; char ch = 'a';</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.38in; margin-top: 0in">
+unsigned char uch = 'g'; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.29in">printf(&quot;i
+= %d\n&quot;,i); printf(&quot;ui = %u\n&quot;,ui); printf(&quot;si =
+%hd\n&quot;,si); printf(&quot;usi = %hu\n&quot;,usi); printf(&quot;li
+= %ld\n&quot;,li); printf(&quot;uli = %lu\n&quot;,uli); printf(&quot;f
+= %f\n&quot;,f);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.72in">printf(&quot;d
+= %f\n&quot;,d); printf(&quot;ldouble = %.Lf\n&quot;,ldouble);
+printf(&quot;ch = %c\n&quot;,ch);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.29in">printf(&quot;uch
+= %c\n&quot;,uch); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/* C program to demonstrate user defined data types */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.98in; margin-top: 0in">
+/*Declaring sum as a user defined data type*/ typedef int sum;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.96in; text-indent: -0in">
+/*Declaring days as a user defined data type*/ enum days
+{mon,tue,wed,thu,fri,sat,sun};</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">sum s;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.79in; text-indent: -0in">
+enum days day1; int a=10,b=20; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.09in; text-indent: -0in">
+s = a+b; day1 = wed;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.69in">printf(&quot;sum
+of a and b is: %d\n&quot;,s); printf(&quot;day1 value is: %d&quot;,day1);
+getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/* C program to demonstrate const keyword */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.15in; margin-top: 0in">
+/*Declaring a constant pi*/ const float pi = 3.142;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.2in">float
+area; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in">area = pi*10*10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.75in; text-indent: -0in">
+printf(&quot;Area of circle is: %f&quot;,area); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; line-height: 0.19in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0.14in"><B>/*
+C program to demonstrate symbolic constants by using #define
+directive */</B></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 6.2in">#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-right: 5.07in">/*Declaring
+a symbolic constant PI*/ #define PI 3.142</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">main()</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 6.2in">float
+area; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">area
+= PI*10*10;</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.5in; text-indent: -0in">
+printf(&quot;Area of the circle is: %f&quot;,area); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.08in; margin-top: 0in; page-break-before: always">
+<B>/*C program to demonstrate use of scanf() function */</B></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in; margin-right: 6.21in">
+#include&lt;stdio.h&gt; #include&lt;conio.h&gt; main()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.08in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 5.64in; margin-top: 0in">
+int num1,num2; clrscr();</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; line-height: 0.19in">printf(&quot;Enter
+the value of num1:\n&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.62in">/*
+To accept the value into num1 */ scanf(&quot;%d&quot;,&amp;num1);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 4.56in">/*
+To accept the value into num2 */ printf(&quot;Enter the value of
+num2:\n&quot;); scanf(&quot;%d&quot;,&amp;num2);</P>
+<P CLASS="western" STYLE="margin-left: 0.58in; margin-right: 3.42in">printf(&quot;Sum
+of num1 and num2 is: %d&quot;,(num1+num2)); getch();</P>
+<P CLASS="western" STYLE="margin-left: 0.08in">}</P>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock course %}

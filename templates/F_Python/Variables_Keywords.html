@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+{%block course%}
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.4in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: relative; top: 0.48in; left: 0.99in; width: 2.32in; height: 0.21in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; margin-top: 0.01in"><FONT SIZE=3>Module
+		1 - Introduction to Python</FONT></P>
+	</SPAN><BR>
+	</P>
+</DIV>
+
+<H1 CLASS="western"><BR CLEAR=LEFT><FONT COLOR="#17365d">Variables and Keywords</FONT></H1>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+
+    <H3 CLASS="western"><FONT COLOR="#4f81bc">Variables</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Variables are just
+names of memory locations. Variables are used to store and retrieve
+values from memory. Type of the variable is based on the value we
+assign to the variable.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">In
+Python, names come into existence when you assign values to them, but
+there are a few rules to follow when choosing names for the subjects
+of your programs:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<UL>
+	<LI><P STYLE="margin-right: 0.22in; line-height: 100%">Names must
+	start with a letter or underscore and can be followed by any number
+	of letters, digits, or underscores.</P>
+	<LI><P STYLE="line-height: 0.19in">Special symbols are not allowed
+	in names.</P>
+	<LI><P STYLE="line-height: 0.19in">Names are case sensitive.</P>
+	<LI><P STYLE="margin-top: 0.06in; line-height: 100%; page-break-before: always">
+	Names cannot be reserved words.</P>
+</UL>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Syntax for creating a
+variable is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Variable-name = value</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.61in; margin-top: 0in; line-height: 200%">
+Consider the following example which creates a variable named <I>x
+</I>and assigns the value 10 to it: x = 10</P>
+<H3 CLASS="western" STYLE="margin-top: 0.14in"><FONT COLOR="#4f81bc">Keywords</FONT></H3>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are keywords
+available in Python:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<TABLE WIDTH=586 CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=114>
+	<COL WIDTH=115>
+	<COL WIDTH=115>
+	<COL WIDTH=115>
+	<COL WIDTH=114>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=29 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">False</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">class</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">finally</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">Is</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">return</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=30 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">None</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">continue</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">for</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">lambda</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">try</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=30 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">True</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">def</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">from</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">nonlocal</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">while</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=30 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">and</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">del</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">global</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">Not</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">with</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=30 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">as</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">elif</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">if</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">Or</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">yield</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=30 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">assert</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">else</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">import</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">Pass</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=114 HEIGHT=29 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">break</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">except</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">in</P>
+		</TD>
+		<TD WIDTH=115 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P STYLE="margin-left: 0.1in; margin-top: 0.08in">Raise</P>
+		</TD>
+		<TD WIDTH=114 STYLE="border: 1.00pt solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.01in; padding-right: 0in">
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.79in; line-height: 200%">
+False – False boolean value True – True boolean value</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.02in; line-height: 200%">
+None – Special constant in Python that represents nothing or a null
+value and – Logical and operator</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">as
+– Used to create an alias while importing a module</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.08in; line-height: 200%">
+assert – Assert is used to create assertions which are used for
+debugging break – Used inside loops to alter its behaviour</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.42in; line-height: 200%">
+class – Used to define a new user-defined class continue – Used
+inside loops to alter its behaviour def – Used to define a
+used-defined function</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.68in; line-height: 200%">
+del – Used to delete the reference to an object elif – Else if
+ladder</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.25in; margin-top: 0.06in; line-height: 200%">
+else – Used in conjunction with if except – Used in exception
+handling finally – Used in exception handling</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">for –
+Is a loop to repeat a set of statements</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.22in; line-height: 200%">
+from – Used to import specific attributes or functions into the
+current namespace global – Used to declare a variable inside a
+function (local variable) as global variable if – One-way selection
+statement</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">import
+– Used to import modules into the current namespace</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in">in
+– Used to test if a sequence (string, list, tuple, etc.) contains a
+value. Also used in a for loop to traverse over a range of values.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.98in; line-height: 200%">
+is – Used to test object identity (whether two variables are
+referring to same object or not) lambda – Used to create an
+anonymous (nameless) function</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.25in; margin-top: 0in">
+nonlocal – Used inside nested functions to say that the variable is
+modifiable outside the function in which it is being used</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.88in; line-height: 200%">
+not – Logical not operator or – Logical or operator</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.65in; line-height: 200%">
+pass – Pass is a null statement in Python. Nothing happens when it
+is executed. raise – Used in exception handling</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.91in; line-height: 200%">
+return – Used inside a function to exit it and return a value try –
+Used in exception handling</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in">while
+– Is a loop to repeat a set of statements</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">with - with statement
+is used to wrap the execution of a block of code within methods
+defined by the context manager</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">yield - yield is used
+inside a function like a return statement. But yield returns a
+generator.</P>
+<P CLASS="western"><BR>
+</P>
+{%endblock course%}
