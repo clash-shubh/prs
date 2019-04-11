@@ -127,11 +127,11 @@
 
     <form class="Login" action="login" method="POST">
       <div class="input-container" id="email-container">
-            <input type="text" name="username" id="email" class="inp" required>
+            <input type="text" name="username" id="email" class="inp" required  pattern=".{4,}" required title="Username must consist of 4 Characters">
             <label for="email" class="placeholder">username</label>
       </div>
       <div class="input-container" id="password-container">
-        <input type="password" name="password" class="inp" required>
+        <input type="password" name="password" class="inp" required required pattern=".{8,}" required title="Password must be atleast 8 characters">
         <label for="password" class="placeholder">Password</label>
       </div>
       <input type="submit" value="Log In" class="btn">

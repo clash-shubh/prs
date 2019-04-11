@@ -65,6 +65,9 @@ def signup():
         password=bcrypt.hashpw(request.form['password'].encode('utf-8'),bcrypt.gensalt())
         country=request.form["country"]
 
+        if name[0].isdigit():
+            return "username should start with a character"
+
         base_url = "https://cloud.mongodb.com/api/atlas/v1.0"
         GROUP_ID = '5c9871e2553855b52c5fafb3'
         whitelist_ep = "/groups/" + GROUP_ID + "/whitelist"
