@@ -1,0 +1,757 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+    
+
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Swing
+Controls</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">Labels</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The JLabel class is used to display a label i.e., static text. A
+JLabel object can be created using any one of the following
+constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.99in; margin-top: 0.19in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JLabel(Icon
+icon) JLabel(String str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JLabel(String
+str, Icon icon, int align)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above constructors icon is used to specify an image to be
+displayed as a label. Icon is a</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+predefined interface which is implemented by the ImageIcon class. str
+is used to specify the text to be displayed in the label and align is
+used to specify the alignment of the text.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.55in; margin-top: 0.12in; line-height: 125%">
+Some of the methods available in JLabel class are as follows: void
+setText(String str) – To set the text of the label</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">String
+getText() – To get the text of the label</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.55in; margin-top: 0.11in; line-height: 125%">
+void setIcon(Icon icon) – To display an image in the label Icon
+getIcon() – To retrieve the image displayed in the label</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.05in; margin-top: 0.03in; line-height: 91%">
+Following code demonstrates working with a JLabel: import java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JLabel
+l;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.41in; margin-top: 0in; line-height: 91%">
+l = new JLabel(&quot;This is a label!&quot;); add(l);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as follows:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 500px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_919ceb30.png')}}" NAME="image106.png" WIDTH=500 HEIGHT=298 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western">Buttons</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The JButton class is used to display a push button. The JButton class
+implements the abstract class AbstractButton which provides the
+following methods:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.81in; margin-top: 0.12in; line-height: 125%">
+void setDisableIcon(Icon di) – To set the icon to be displayed when
+button is disabled void setPressedIcon(Icon pi) – To set the icon
+to be displayed when button is pressed void setSelectedIcon(Icon si)
+– To set the icon to be displayed when button is selected</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">void
+setRolloverIcon(Icon ri) – To set the icon to be displayed when the
+button is rolled over</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.85in; margin-top: 0.11in; line-height: 125%">
+void setText(String str) – To set the text to be displayed on the
+button String getText() – To retrieve the text displayed on the
+button</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">A
+JButton object can be created using any one of the following
+constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JButton(Icon
+icon) JButton(String str) JButton(String str, Icon icon)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.19in; line-height: 91%">
+In the above constructors, icon specifies the image to be displayed
+as button and str specifies the text to be displayed on the button.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+JButton objects raise ActionEvent when the button is clicked. It can
+be handled by implementing ActionListener interface and the event
+handling method is actionPerformed().</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.07in; margin-top: 0.14in; line-height: 91%">
+Following code demonstrates working with JButton: import java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JButton
+b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">setTitle(&quot;My
+Application&quot;);</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 3.58in; margin-top: 0.01in; line-height: 91%">
+setLayout(new FlowLayout()); b = new JButton(&quot;Click Me&quot;);
+add(b);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 493px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_8d0d0684.png')}}" NAME="image107.png" WIDTH=493 HEIGHT=293 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Toggle Buttons</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The JToggleButton class creates a toggle button. It is different from
+a push button in the sense, a toggle button toggles between two
+states. When a user clicks on a toggle button it remains in the
+pushed state and again when the button is clicked it reverts back to
+its normal state.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.15in; line-height: 91%">
+The JToggleButton class inherits the abstract class AbstractButton. A
+JToggleButton object can be created using the following constructor:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JToggleButton(String
+str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+In the above constructor str is the text to be displayed on the
+button. A toggle button can raise both ActionEvent and ItemEvent.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.62in; margin-top: 0.14in; line-height: 91%">
+Following code demonstrates working with JToggleButton: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import javax.swing.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends JFrame</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JToggleButton
+b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.18in; margin-top: 0in; line-height: 91%">
+b = new JToggleButton(&quot;Click Me&quot;); add(b);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 500px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_cff84505.png')}}" NAME="image108.png" WIDTH=500 HEIGHT=296 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.58in; text-indent: -0in; line-height: 0.9in">
+Toggle button in the above output is clicked. <B>Check boxes</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+A check box can be created using the JCheckBox class which inherits
+the JToggleButton class. A JCheckBox object can be created using the
+following constructor:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JCheckBox(String
+str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above constructor str specifies the string that is displayed by
+the side of box. A check</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+box raises ItemEvent when the user selects or deselects it. This
+event can be handled by implementing the ItemListener interface and
+the event handling method is itemStateChanged(). We can use
+isSelected() method from JCheckBox class to know whether a check box
+is selected or not.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.86in; margin-top: 0.14in; line-height: 91%">
+Following code demonstrates working with JCheckBox: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import javax.swing.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends JFrame</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JCheckBox
+c1;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 5.13in; margin-top: 0.01in; line-height: 91%">
+JCheckBox c2; JCheckBox c3; MyFrame()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout()); c1
+= new JCheckBox(&quot;C&quot;);</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 3.69in; margin-top: 0in; line-height: 91%">
+c2 = new JCheckBox(&quot;C++&quot;); c3 = new JCheckBox(&quot;Java&quot;);
+add(c1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(c2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.51in; margin-top: 0.01in; line-height: 91%">
+add(c3); setVisible(true);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 498px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_b112813b.png')}}" NAME="image109.png" WIDTH=498 HEIGHT=298 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Radio Buttons</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Radio buttons are used to create a group of mutually exclusive
+buttons. User can select only one button. The JRadioButton class can
+be used to create radio buttons. The JRadioButton class inherits the
+JToggleButton class. A JRadioButton object can be created by using
+the following constructor:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JRadioButton(String
+str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above constructor str specifies the string to be displayed beside
+the circle. A radio</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">button
+raises action event, item event etc. Most commonly handled event is
+ActionEvent.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+We must also use another class ButtonGroup to group the radio buttons
+i.e to make them mutually exclusive. Following code demonstrates
+working with JRadioButton:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.14in; margin-top: 0.14in; line-height: 91%">
+import java.awt.*; import javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JRadioButton
+r1;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 4.92in; margin-top: 0.01in; line-height: 91%">
+JRadioButton r2; ButtonGroup bg; MyFrame()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.47in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout()); r1
+= new JRadioButton(&quot;Male&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.3in; margin-top: 0in; line-height: 91%">
+r2 = new JRadioButton(&quot;Female&quot;); add(r1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(r2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.87in; margin-top: 0.01in; line-height: 91%">
+bg = new ButtonGroup(); bg.add(r1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.51in; margin-top: 0in; line-height: 91%">
+bg.add(r2); setVisible(true);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 498px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_7184e7cc.png')}}" NAME="image110.png" WIDTH=498 HEIGHT=299 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Text Fields</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A text field is a GUI control which allows the user to enter a single
+line of text. A text field can be created using the class JTextField
+which inherits the class JTextComponent. A JTextField object can be
+created using any one of the following constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.64in; margin-top: 0.19in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JTextField(int
+cols) JTextField(String str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JTextField(String
+str, int cols)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.17in; line-height: 91%">
+In the above constructors cols specifies the size of the text field
+and str specifies the default string to be displayed in the text
+field.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+A text field generates ActionEvent when the user hits the ‘enter’
+key. It can also generate CaretEvent when the cursor position
+changes. CaretEvent is available in javax.swing.event package.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.91in; margin-top: 0.14in; line-height: 91%">
+Following code demonstrates working with JTextField: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import javax.swing.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends JFrame</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JTextField
+jtf;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+jtf = new JTextField(20); add(jtf);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0.01in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 498px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f776503c.png')}}" NAME="image111.png" WIDTH=498 HEIGHT=296 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Tabbed Panes</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A tabbed pane is a control which can be used to manage several
+components in groups. Related components can be placed in a tab.
+Tabbed panes are frequently found in modern GUIs. A tabbed pane can
+be created using JTabbedPane class.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">After
+creating a JTabbedPane object, we can add tabs by using the following
+method:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+addTab(String tabname, Component comp)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above syntax tabname is the name of the tab and comp is the
+reference to the component that should be added to the tab. Following
+code demonstrates working with JTabbedPane:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JCheckBox
+c1;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.91in; margin-top: 0.01in; line-height: 91%">
+JCheckBox c2; JCheckBox c3; JRadioButton r1; JRadioButton r2;
+ButtonGroup bg; JLabel l; JTextField jtf; JPanel langs; JPanel
+gender; JPanel name; JTabbedPane jtp; MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.4in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout()); c1
+= new JCheckBox(&quot;C&quot;);</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 3.69in; margin-top: 0in; line-height: 91%">
+c2 = new JCheckBox(&quot;C++&quot;); c3 = new JCheckBox(&quot;Java&quot;);
+langs = new JPanel();</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">langs.add(c1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.62in; margin-top: 0.01in; line-height: 91%">
+langs.add(c2); langs.add(c3);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.3in; margin-top: 0in; line-height: 91%">
+r1 = new  JRadioButton(&quot;Male&quot;); r2 = new
+JRadioButton(&quot;Female&quot;); bg = new ButtonGroup(); bg.add(r1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">bg.add(r2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.05in; margin-top: 0.01in; line-height: 91%">
+gender = new JPanel(); gender.add(r1); gender.add(r2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.48in; margin-top: 0in; line-height: 91%">
+l = new JLabel(&quot;Enter Name: &quot;); jtf = new JTextField(20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.15in; margin-top: 0in; line-height: 91%">
+name = new JPanel(); name.add(l); name.add(jtf);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.39in; margin-top: 0in; line-height: 91%">
+jtp = new JTabbedPane(); jtp.addTab(&quot;Languages&quot;, langs);
+jtp.addTab(&quot;Gender&quot;, gender); jtp.addTab(&quot;Name&quot;,
+name); add(jtp);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0.01in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 497px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_690fe983.png')}}" NAME="image112.png" WIDTH=497 HEIGHT=297 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">List Boxes</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A list box displays a list of items from which the user can select
+one or more items. A list box can be created using the class JList.
+Starting from Java 7, JList is defined as a generic class as shown
+below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JList&lt;type&gt;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 91%">where
+type represents the data type of the items to be stored in the list.
+A JList object can be created using the following constructor:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JList(type[]
+items)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above constructor items is an array of the data type type. After
+creating a JList object,</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+it should be wrapped inside a JScrollPane. It provides scrollbars to
+navigate the list of items in the JList.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The JList generates ListSelectionEvent when a user selects or
+deselects an item in the list. It is handled by implementing the
+ListSelectionListener interface which is available in
+javax.swing.event package and the event handling method is
+valueChanged().</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+We can set the selection mode of a JList by using setSelectionMode()
+whose general form is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+setSelectionMode(int mode)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">In the above syntax
+mode can be any one of the following constants:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.13in; margin-top: 0.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">SINGLE_SELECTION
+SINGLE_INTERVAL_SELECTION MULTIPLE_INTERVAL_SELECTION</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.35in; margin-top: 0.17in; line-height: 125%">
+Following are some of the methods available in the JList class: int
+getSelectedIndex() – Returns the index of the selected item</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.71in; text-indent: -0in; margin-top: 0in; line-height: 126%">
+E getSelectedValue() – Returns the value of the item selected by
+the user Following code demonstrates working with JList:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.25in">import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; margin-right: 5.04in; margin-top: 0.01in; line-height: 91%">
+JList&lt;String&gt; jl; JScrollPane jsp; MyFrame()</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.6in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">String[]
+branches = {&quot;CSE&quot;, &quot;ECE&quot;, &quot;EEE&quot;, &quot;IT&quot;,
+&quot;MECH&quot;, &quot;CIV&quot;};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.36in; margin-top: 0in; line-height: 91%">
+jl = new JList&lt;String&gt;(branches); jsp = new JScrollPane(jl);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.48in; margin-top: 0in; line-height: 91%">
+jsp.setPreferredSize(new Dimension(120, 80)); add(jsp);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.12in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_1ed86503.png')}}" NAME="image113.png" ALIGN=BOTTOM WIDTH=499 HEIGHT=297 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Combo Boxes</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.13in; line-height: 91%">
+A combo box control displays a pop-up list of items from which user
+can select only one item. A combo box can be created using the
+JComboBox class. Starting from Java 7, JComboBox class is defined as
+a generic class as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JComboBox&lt;type&gt;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in">
+An object of JComboBox class can be created using the following
+constructors:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JComboBox()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JComboBox(E[]
+items)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.17in; margin-top: 0.04in; line-height: 125%">
+Following are some of the methods available in JComboBox class: void
+addItem(E obj) – To add an item is the combo box</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+Object getSelectedItem() – To retrieve the item selected by the
+user</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+int getSelectedIndex() – To retrieve the index of the item selected
+by the user</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">A
+JComboBox object generates action event when the user selects an item
+from the list. It</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">also
+generates an item event when the user selects or deselects an item
+from the list.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.79in; margin-top: 0.11in; line-height: 126%">
+Following code demonstrates working with JComboBox: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.25in">import
+javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JComboBox&lt;String&gt;
+jc;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">String[]
+branches = {&quot;CSE&quot;, &quot;ECE&quot;, &quot;EEE&quot;, &quot;IT&quot;,
+&quot;MECH&quot;, &quot;CIV&quot;};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.83in; margin-top: 0.01in; line-height: 91%">
+jc = new JComboBox&lt;String&gt;(branches); add(jc);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 495px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_c71ad73f.png')}}" NAME="image114.png" WIDTH=495 HEIGHT=296 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western">Tables</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A table control can be used to display data in the form of rows and
+columns. Each column contains a heading. A table can be created using
+the JTable class. Several classes and interfaces associated with the
+JTable class are available in the javax.swing.table package.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">A
+JTable object can be created with the following constructor:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">JTable(Object[][]
+data, Object[] colHeads)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above syntax data is a two-dimensional array that contains the
+original data to be displayed in the table and colHeads is a
+one-dimensional array that contains the column headings. As JTable
+does not provide scrolling capability, it should be wrapped in
+JScrollPane.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.31in; margin-top: 0.14in; line-height: 91%">
+A JTable generates ListSelectionEvent when the user selects something
+in a table. It generates TableModelEvent when the data in the table
+is somehow changed.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Following
+code demonstrates working with JTable:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.14in; margin-top: 0.13in; line-height: 91%">
+import java.awt.*; import javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JTable
+jt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.05in; margin-top: 0.01in; line-height: 91%">
+JScrollPane jsp;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.05in; margin-top: 0in; line-height: 91%">
+MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">String[]
+colHeads = {&quot;Student&quot;, &quot;JP&quot;, &quot;FLAT&quot;,
+&quot;CO&quot;};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">String[][]
+data = {	{&quot;Ramesh&quot;, &quot;77&quot;, &quot;80&quot;, &quot;75&quot;},</P>
+<P CLASS="western" STYLE="margin-left: 3.6in; line-height: 0.38in">{&quot;Suresh&quot;,
+&quot;89&quot;, &quot;86&quot;, &quot;83&quot;},</P>
+<P CLASS="western" STYLE="margin-left: 3.6in; line-height: 0.38in">{&quot;Mahesh&quot;,
+&quot;74&quot;, &quot;80&quot;, &quot;75&quot;},</P>
+<P CLASS="western" STYLE="margin-left: 3.6in; line-height: 0.38in">{&quot;Dinesh&quot;,
+&quot;78&quot;, &quot;80&quot;, &quot;75&quot;},</P>
+<P CLASS="western" STYLE="margin-left: 3.59in; line-height: 0.38in">{&quot;Gireesh&quot;,
+&quot;89&quot;, &quot;86&quot;, &quot;83&quot;},</P>
+<P CLASS="western" STYLE="margin-left: 3.59in; line-height: 0.39in">{&quot;Paramesh&quot;,
+&quot;77&quot;, &quot;84&quot;, &quot;72&quot;} };</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.36in">jt
+= new JTable(data, colHeads);</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; margin-right: 2.38in; margin-top: 0.01in; line-height: 91%">
+jsp = new JScrollPane(jt); jsp.setPreferredSize(new Dimension(450,
+100)); add(jsp);</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; margin-right: 2.02in; margin-top: 0in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 491px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_7cf00244.png')}}" NAME="image115.png" WIDTH=491 HEIGHT=292 BORDER=0></SPAN></P>
+
+
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

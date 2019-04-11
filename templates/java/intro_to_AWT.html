@@ -1,0 +1,435 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Introduction
+to AWT</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+AWT (Abstract Window Toolkit) was Java’s first GUI framework, which
+was introduced in Java 1.0. It is used to create GUIs (Graphical User
+Interfaces). Although programmers use more advanced frameworks like
+Swings and JavaFX, it is important to know that they are built on top
+of AWT.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 0.49in">AWT Classes</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The AWT framework contains many classes and interfaces using which we
+can create GUIs. The AWT package is java.awt. Some of the frequently
+used AWT classes are listed below:</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_a37b1efe.png')}}" NAME="image81.png" ALIGN=BOTTOM WIDTH=602 HEIGHT=894 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Various
+classes in java.awt package are arranged in a hierarchy as shown
+below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 599px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_7795e36e.png')}}" NAME="image82.png" WIDTH=599 HEIGHT=510 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 0.49in">Component and
+Container</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The Component is the abstract root class for many GUI control
+classes. Container is a sub class of Component class. The Component
+and various Container classes are arranged in a hierarchy as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.49in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_6c6a6414.png')}}" NAME="image83.png" ALIGN=BOTTOM WIDTH=335 HEIGHT=273 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">Component</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Component is the abstract class that encapsulates all the properties
+of a visual component. Except for menus, most of the GUI components
+are inherited from the Component class.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Container</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+Container is a sub class of the Component class which can be used to
+hold other components. A Container object can hold other Containers
+also. A Container is responsible for laying out (positioning) the
+components.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Panel</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+Panel class is a concrete sub class of the Container class. A Panel
+object is a window without title bar, menu bar and border. Panel is
+the super class of Applet class and is capable of holding other
+components or containers.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Window</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+Window is a sub class of Container class. A Window creates a
+top-level container which can hold other components or containers.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">Frame</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+Frame is a concrete sub class of Window class. The Frame encapsulates
+a window. Frame contains a title bar, menu bar, borders and resizable
+corners. To create stand alone applications in Java, we generally use
+Frame.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in; line-height: 0.39in">Canvas</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+Canvas class is derived from the Component class. A Canvas
+encapsulates a blank window on which we can draw.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0in; line-height: 0.49in">Frame
+Class</H4>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+The Frame class is used to create standard windows. Following are two
+Frame class constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Frame()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Frame(String
+title)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.15in; line-height: 0.39in">
+Following are some of the frequently used methods of Frame class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+void setSize(int width, int height) – Used to specify the width and
+height of the frame window.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.53in; margin-top: 0in; line-height: 91%">
+void setSize(Dimension reference) – Used to specify the dimensions
+of the frame window. Dimension getSize() – Returns the dimensions
+of the frame window.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+void setVisible(boolean visibleFlag) – Makes the frame window
+visible or non-visible based on the boolean parameter.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">void
+setTitle(String title) – Used to set the title of the frame window.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.62in; margin-top: 0in; line-height: 91%">
+Following is Java code for creating a simple frame window: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(600,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.77in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void paint(Graphics g)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">g.drawString(&quot;This
+is a frame!&quot;, 40, 80);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Graphics
+in AWT</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" ALIGN=JUSTIFY>Graphics Class</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+In GUI applications, we can use Graphics class of java.awt package to
+create various graphics like lines, rectangles, circles, polygons
+etc. Let’s look at some of the methods available in the Graphics
+class:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+void drawLine(int startX, startY, endX, endY) – Used to draw a line
+between twi points.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+void drawRect(int startX, int startY, int width, int height) – Used
+to draw a rectangle starting from the top left corner with the given
+width and height. The coordinates of the top left corner of the
+rectangle are startX and startY.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+void fillRect(int startX, int startY, int width, int height) – Used
+to draw a solid (colored) rectangle with the given parameters.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void drawRoundRect(int startX, int startY, int width, int height, int
+xDiam, int yDiam) – Used to draw a rounded rectangle whose
+x-diameter and y-diameter of the corners is given by xDiam and yDiam
+respectively.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void fillRoundRect(int startX, int startY, int width, int height, int
+xDiam, int yDiam) – Used to draw a solid (colored) rounded
+rectangle whose x-diameter and y-diameter of the corners is given by
+xDiam and yDiam respectively.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+void drawOval(int startX, int startY, int width, int height) – Used
+to draw an ellipse inside</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+an imaginary rectangle whose dimensions are specified by the given
+parameters. We can get a circle by giving the same value for both
+width and height.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void fillOval(int startX, int startY, int width, int height) – Used
+to draw a solid (colored) ellipse inside an imaginary rectangle whose
+dimensions are specified by the given parameters. We can get a circle
+by giving the same value for both width and height.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void drawArc(int startX, int startY, int width, int height, int
+startAngle, int sweepAngle) – Used to draw an arc inside an
+imaginary rectangle. The start angle and the sweep angle are
+specified by using startAngle and sweepAngle respectively.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void fillArc(int startX, int startY, int width, int height, int
+startAngle, int sweepAngle) – Used to draw a solid (colored) arc
+inside an imaginary rectangle. The start angle and the sweep angle
+are specified by using startAngle and sweepAngle respectively.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void drawPolygon(int x[], int y[], int numPoints) – Used to draw a
+polygon whose x coordinates and y coordinates of the points are
+specified using the x array and y array respectively. Number of
+points are specified using numPoints.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+void fillPolygon(int x[], int y[], int numPoints) – Used to draw a
+solid (colored) polygon whose x coordinates and y coordinates of the
+points are specified using the x array and y array respectively.
+Number of points are specified using numPoints.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.45in; margin-top: 0.14in; line-height: 91%">
+Following Java code demonstrates various methods from the Graphics
+class: import java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends Frame</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(600,
+400);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.77in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void paint(Graphics g)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">g.drawLine(20,
+60, 80, 100);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawRect(100,
+60, 80, 40);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.fillRect(200,
+60, 80, 40);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawRoundRect(300,
+60, 80, 40, 20, 20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.fillRoundRect(400,
+60, 80, 40, 20, 20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawOval(20,
+120, 80, 40);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.fillOval(120,
+120, 80, 40);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawArc(220,
+120, 80, 40, 90, -90);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">g.fillArc(320,
+120, 80, 40, 90, -90);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">int[]
+x = {20, 100, 80, 20};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+y = {200, 180, 240, 260};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawPolygon(x,
+y, 4);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+fillx = {120, 200, 180, 120};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+filly = {200, 180, 240, 260};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.fillPolygon(fillx,
+filly, 4);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 594px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_e2631047.png')}}" NAME="image84.png" WIDTH=594 HEIGHT=395 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H4 CLASS="western">Color Class</H4>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.11in; line-height: 91%">
+To use colors in our GUI applications, AWT provides the Color class.
+We can create a Color object by using any of the following
+constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.65in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Color(int
+red, int green, int blue) Color(int rgbValue)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Color(float
+red, float green, float blue)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.17in; line-height: 91%">
+We can get values of red component, green component or blue component
+of the color by using the following methods:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.29in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+getRed() int getGreen() int getBlue()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.17in">We
+can apply or get the color of the graphic object by using the
+following methods:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.79in; margin-top: 0.04in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+setColor(Color newColor) Color getColor()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.63in; margin-top: 0.19in; line-height: 91%">
+After applying colors the above Java program is as follows: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.77in; margin-top: 0.01in; line-height: 91%">
+setSize(600, 400); setTitle(&quot;My Application&quot;);
+setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void paint(Graphics g)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">g.setColor(Color.GREEN);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawLine(20,
+60, 80, 100);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.68in; margin-top: 0.01in; line-height: 91%">
+g.drawRect(100, 60, 80, 40); g.setColor(Color.RED); g.fillRect(200,
+60, 80, 40);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.72in; margin-top: 0in; line-height: 91%">
+g.drawRoundRect(300, 60, 80, 40, 20, 20); g.setColor(Color.BLUE);
+g.fillRoundRect(400, 60, 80, 40, 20, 20);</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; margin-right: 3.68in; margin-top: 0in; line-height: 91%">
+g.drawOval(20, 120, 80, 40); g.setColor(Color.ORANGE);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">g.fillOval(120,
+120, 80, 40);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawArc(220,
+120, 80, 40, 90, -90);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.3in; margin-top: 0.01in; line-height: 91%">
+g.setColor(Color.MAGENTA); g.fillArc(320, 120, 80, 40, 90, -90);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+x = {20, 100, 80, 20};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+y = {200, 180, 240, 260};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.91in; margin-top: 0.01in; line-height: 91%">
+g.drawPolygon(x, y, 4); g.setColor(Color.CYAN);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+fillx = {120, 200, 180, 120};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">int[]
+filly = {200, 180, 240, 260};</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.fillPolygon(fillx,
+filly, 4);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 366px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_d2a55e51.png')}}" NAME="image85.png" WIDTH=366 HEIGHT=245 BORDER=0></SPAN></P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

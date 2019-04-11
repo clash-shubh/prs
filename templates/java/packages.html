@@ -1,0 +1,272 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Packages</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">Package Definition</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A package is a group of related classes. A package is used to
+restrict access to a class and to create namespaces. If all
+reasonable class names are already used, then we can create a new
+package (new namespace) and reuse the class names again. For example
+a package mypackage1 can contain a class named MyClass and another
+package mypackage2 can also contain a class named MyClass.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Defining or Creating a Package</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A package can be created by including the package statement as first
+line in a Java source file. Syntax for creating or defining a package
+is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">package</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">mypackage;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above syntax, package is a keyword and mypackage is the name
+of our package. All the classes that follow the package statement are
+considered to be a part of the package mypackage.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Multiple source files can include the package statement with the same
+package name. Packages are maintained as regular directories
+(folders) in the machine. For example, we have to create a folder
+named mypackage and store the .class files in that folder.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+Following example demonstrates creating a package:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.39in">
+ClassA.java</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+package mypackage;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class ClassA</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void methodA()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;This
+is methodA in Class A&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">ClassB.java</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">package
+mypackage;</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">public
+class ClassB</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void methodB()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;This
+is methodB in Class B&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example, both ClassA and ClassB belong to the same package
+mypackage.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Remember
+that the package creation statement should be the first line in the
+source file.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">We
+can also create a hierarchy of packages as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">package
+pack1.pack2.pack3;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+Remember that packages are normal folders in the file system. So,
+pack3 is a sub folder in pack2 and pack2 is a sub folder in pack1.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Java Packages and
+CLASSPATH</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+It is not mandatory that the driver program (main program) and the
+package(s) to be at the same location. So how does JVM know the path
+to the package(s)? There are three options:</P>
+<OL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Placing
+	the package in the current working</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">directory.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Specifying
+	the package(s) path using CLASSPATH environment</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">variable.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Using
+	the -classpath or -cp options with javac and java</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">commands.</FONT></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+If no package is specified, by default all the classes are placed in
+a default package. That is why no errors are shown even if we don’t
+use a package statement.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+By default Java compiler and JVM searches the current working
+directory (option 1) for specified package(s) like mypackage. Let’s
+assume that our package mypackage is stored at following location:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">D:\packages\mypackage</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+Then we can set the CLASSPATH (option 2) environment variable (in
+command prompt) to the location of the package as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">set
+CLASSPATH = .;D:\packages</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.2in; line-height: 91%">
+The dot (.) before the path specifies the current working directory
+and multiple paths can be separated using semi-colon (;).</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+We can also use -classpath or -cp options (option 3) with javac and
+java commands as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.58in; margin-top: 0.19in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">javac
+-classpath .;D:\packages Driver.java or</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">javac
+-cp .;D:\packages</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Driver.java</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.07in; line-height: 91%">
+In the above example, Driver.java is our main program which utilizes
+the classes in the package mypackage.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Importing or Using Packages</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+There are multiple ways in which we can import or use a package. They
+are as follows:</P>
+<OL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Importing
+	all the classes in a</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">package.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Importing
+	only necessary classes in a</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">package.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Specifying
+	the fully qualified name of the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">class.</FONT></FONT></P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+First way is to import all the classes in a package using the import
+statement. The import statement is placed after the package statement
+if any and before all class declarations. We can import all the
+classes in a package as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">import</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">mypackage.*;</FONT></FONT></FONT></FONT></P>
+<UL>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">in
+	the above line denotes all classes within the package mypackage. Now
+	you are free to directly use all the classes within that package. A
+	program which demonstrates importing all classes in a package is
+	given</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">below:</FONT></FONT></P>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+import mypackage.*;</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+public class Driver</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.72in; margin-top: 0.01in; line-height: 91%">
+ClassA obj1 = new ClassA(); obj1.methodA();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.72in; margin-top: 0in; line-height: 91%">
+ClassB obj2 = new ClassB(); obj2.methodB();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">If
+you want to use only one or two classes in a package, the second way
+is to specify the class</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">names
+instead of * as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">import</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">mypackage.ClassA;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">import</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">mypackage.ClassB;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.7in; margin-top: 0.04in; line-height: 126%">
+A program which demonstrates importing specific class from a package
+is given below: import mypackage.ClassA;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.25in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">ClassA
+obj1 = new ClassA();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">obj1.methodA();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Suppose
+if two packages contain a class with same name, then it will lead to
+compile-time</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">errors.
+To avoid this, we have to use the fully qualified name of the class.
+A fully qualified</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">name
+of the class refers to the name of the class preceded by the package
+name. An example</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">that
+demonstrates a fully qualified name is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.39in">
+public class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">mypackage.ClassA
+obj1 = new mypackage.ClassA();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">obj1.methodA();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

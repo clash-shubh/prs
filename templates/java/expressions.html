@@ -1,0 +1,184 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Expressions</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+An expression is a construct which is made up of literals, variables,
+method calls and operators following the syntax of Java. Every
+expressions consists of at least one operator and an operand. Operand
+can be either a literal, variable or a method invocation.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Following
+(figure in next page) are some of the examples for expressions in
+Java:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">How expressions are evaluated?</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+It is common for an expression to have more than one operator. For
+example, consider the below example:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">(20
+* 5) + (10 / 2) – (3 * 10)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.32in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_8f1810c1.jpg')}}" NAME="image43.jpeg" ALIGN=BOTTOM WIDTH=568 HEIGHT=379 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+So, how is the above expression evaluated? Expression evaluation in
+Java is based upon the</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+following concepts:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Type
+	promotion</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">rules</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Operator</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">precedence</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Associativity</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">rules</FONT></FONT></P>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+I have already explained the type promotion rules here. Since all are
+integer values, there is no need to worry about type promotion rules
+here. We will now concentrate on operator precedence and
+associativity rules.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Operator precedence:</H5>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+All the operators in Java are divided into several groups and are
+assigned a precedence level.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+The operator precedence chart for the operators in Java is shown
+below (figure in next page):</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+Now let’s consider the following expression:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">10
+– 2 * 5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.2in; line-height: 91%">
+One will evaluate the above expression normally as, 10-2 gives 8 and
+then 8*5 gives 40. But Java evaluates the above expression
+differently. Based on the operator precedence chart shown above, *
+has higher precedence than +. So, 2* 5 is evaluated first which gives
+10 and then 10 – 10 is evaluated which gives 0.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.16in; left: 1.41in; width: 551px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_389984d3.jpg')}}" NAME="image44.jpeg" WIDTH=551 HEIGHT=402 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+What if the expression contains two or more operators from the same
+group? Such ambiguities are solved using the associativity rules.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Associativity rules:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+When an expression contains operators from the same group,
+associativity rules are applied to determine which operation should
+be performed first. The associativity rules of Java are shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.14in; left: 2.33in; width: 381px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_67f43c22.jpg')}}" NAME="image45.jpeg" WIDTH=381 HEIGHT=294 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Now, let’s consider
+the following expression:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">10-6+2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above expression, the operators + and – both belong to the
+same group in the operator precedence chart. So, we have to check the
+associativity rules for evaluating the above expression.
+Associativity rule for + and – group is left-to-right i.e, evaluate
+the expression from left to right. So, 10-6 is evaluated to 4 and
+then 4+2 is evaluated to 6.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Use of parenthesis in expressions</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+Let’s look at our original expression example:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">(20
+* 5) + (10 / 2) – (3 * 10)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">You
+might think that, what is the need of parenthesis ( and ) in the
+above expression. The</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+reason I had included them is, parenthesis have the highest priority
+(precedence) over all the operators in Java.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+So, in the above expression, (20*5) is evaluated to 100, (10/2) is
+evaluated to 5 and (3*10) is evaluated to 30. Now, our intermediate
+expression looks like:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">100
++ 5 – 30</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+Now, we can apply the associativity rules and evaluate the
+expression. The final answer for the above expression is 75.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+There is another popular use of parenthesis. We will use them in
+print statements. For example consider the following piece of code:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+a=10, b=20;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">System.out.println(“Sum
+of a and b is: “+a+b);</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+One might think that the above code will produce the output: “Sum
+of a and b is: 30”. The real output will be:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Sum
+of a and b is: 1020</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+Why? Because, when one of the operand inside a print statement is a
+string, the + operator acts as a concatenation operator. To make it
+behave as an arithmetic operator we should enclose a+b is parenthesis
+as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+a=10, b=20;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">System.out.println(“Sum
+of a and b is: “+(a+b));</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">Now
+(a+b) is evaluated first and then concatenated to the rest.</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

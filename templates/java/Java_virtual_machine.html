@@ -1,0 +1,133 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Java
+Virtual Machine</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Before learning about JVM it is important to know about JDK (Java
+Development Kit) and JRE (Java Runtime Environment). Below figure
+shows the relationship between JDK, JRE, and JVM:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.23in; left: 1.26in; width: 557px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_39d9c210.jpg')}}" NAME="image19.jpeg" WIDTH=557 HEIGHT=313 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+JDK provides programmers with a set of tools (like javac, debugger,
+javap, appletviewer etc..) for developing Java programs. JDK includes
+JRE.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+JRE provides the run-time engine JVM along with the class libraries
+which contains the predefined functionality.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Using JDK programmers can create and run Java programs. But with JRE
+alone, programmers or users can only run already compiled Java
+programs. We cannot create Java programs using only JRE.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Java Virtual Machine (JVM) is an abstract computing machine that
+allows a computer to run programs written in Java. There are three
+concepts related to JVM:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P CLASS="western" STYLE="margin-top: 0.03in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Specification</FONT></FONT></P>
+			<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Implementation</FONT></FONT></P>
+			<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Instance</FONT></FONT></P>
+		</UL>
+	</OL>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The JVM specification is a document which contains formal information
+about what a JVM implementation should contain. A single
+specification allows various interoperable implementations.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+A JVM implementation is a computer program that meets the
+requirements given in JVM specification.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+An instance of a JVM is an implementation running in a process that
+executes bytecode. Oracle’s implementation of JVM specification is
+known as HotSpot. Other famous implementations are JRockit, Kaffe,
+IBM J9.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Overview of the architecture of JVM is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.21in; left: 1.47in; width: 513px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_8316b780.jpg')}}" NAME="image20.jpeg" WIDTH=513 HEIGHT=333 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Class Loader</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+A class loader implementation is a program that should be able to
+perform the following activities:</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Loading:
+			finds and imports the binary data for a</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">type</FONT></FONT></P>
+			<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Linking:
+			performs verification, preparation, and resolution</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">(optional)</FONT></FONT></P>
+			<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+			<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Initialization:
+			Invokes Java code that initializes class variables to their proper
+			initial values</FONT></FONT></P>
+		</UL>
+	</OL>
+</OL>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">Heap</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The heap area of JVM is used for dynamic memory allocation. In
+HotSpot the heap is divided into generations:</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+			young generation stores objects whose lifetime is</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">short.</FONT></FONT></P>
+			<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+			old generation stores objects which persist for longer</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">durations.</FONT></FONT></P>
+		</UL>
+	</OL>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The permanent generation area stores class definitions and other
+metadata. This area is removed in Java 8.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

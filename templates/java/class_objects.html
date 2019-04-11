@@ -1,0 +1,333 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Classes
+and Objects</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+According to object orientation, a class is a template or blueprint
+for creating objects. An object is an instance of a class. To
+understand a Java class and object easily let’s consider a real
+world example of boys and girls as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+If we declare the boy as a class in Java, it will be something as
+shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=4 STYLE="font-size: 14pt"><FONT SIZE=4>class Boy</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=4 STYLE="font-size: 14pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.18in; line-height: 91%">
+<FONT SIZE=4 STYLE="font-size: 14pt"><FONT SIZE=4>String name; String
+address; int age;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=4 STYLE="font-size: 14pt"><FONT SIZE=4>void
+tellName(){ };</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.85in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>void tellAddress(){
+}; void tellAge(){ };</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=4 STYLE="font-size: 14pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+Declaring a class for girl is left to you as an exercise.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+Now, let’s create an object, say, George. In Java, we create
+objects as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.35in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Boy george = new
+Boy();</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.4in">
+Again creating other objects is left as an exercise for you.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Class:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+To declare a class in Java, we use the Java keyword class. Remember
+that all the keywords in Java are lowercase letters. The class
+keyword is followed by class name which is Boy in my example.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+According to Java’s convention, every first letter in a word must
+be a uppercase letter. All the predefined Java classes follow this
+convention. Some of the predefined Java classes are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.12in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>O</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">bject
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>E</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">xception
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>T</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">hrowable
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>S</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">ystem
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>P</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">rint</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>S</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">tream
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>S</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">canner
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>S</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">tring</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>T</B></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">okenizer</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above example of class Boy, we have three variables: name,
+address and age. We also have three methods (functions in C and C++)
+namely, tellName(), tellAddress() and tellAge().</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">If
+you are creating a class, it means that you are creating a new
+user-defined type. That class</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">(type)
+will be used to create objects later.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">General
+syntax for declaring a class in Java is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class ClassName</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Class
+Members</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+In the above example, the class members are the three variables and
+the three methods. So, there are a total of 6 class members in our
+example of Boy class.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Rules
+for writing class names or any other identifiers (variable names,
+method names etc…):</P>
+<UL>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">A
+	name must start with a letter or an underscore ( _ ) or a dollar
+	sign ($). Beginning the name with a letter is recommended. From
+	second character on wards a name can contain digits or numbers</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">also.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">White
+	spaces and special symbols like %, @, * are not allowed in the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">name.</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Uppercase
+	characters are distinct from lowercase characters. Names are case-
+	sensitive i.e var is different from</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">VAR.</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Keywords
+	or reserved words can’t be used for names. For example, goto
+	cannot be used for a name as it is a reserved word in</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Java.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Some
+valid class names will be:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.46in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Student
+Contact UserDetails Registration Marks Sem2Marks</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">_Names</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">$Product</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">Some
+invalid examples for class names are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.01in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2Inventory
+(Name cannot start with a number) User Details (Name cannot contain
+white spaces)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.79in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Cart@Shop
+(Name cannot contain special symbols) switch (Keywords cannot be used
+in names)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Object:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Syntax
+for creating an object in Java is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">ClassName	object-reference</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">=</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">new	ClassName();</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example for creating an object for the Boy class declared above is as
+shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.41in; left: 2.83in; width: 309px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_96500555.jpg')}}" NAME="image24.jpeg" WIDTH=309 HEIGHT=227 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+As already denoted in the figure, Boy is the name of the class for
+which we are creating the object. Remember that objects doesn’t
+exist without a class. obj is the reference to the object. The actual
+object is created by the new operator which is one of the Java’s
+keywords. The new keyword creates the object dynamically (at runtime)
+in the RAM (Random Access Memory) and returns the reference (address)
+of the object created. That reference is stored in obj which will be
+used to access the object in future.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+last part of the line is Boy() which is a constructor. For now
+remember that a</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.01in; line-height: 91%">
+constructor is a method which will have the same name as class name.
+Constructors will be explained in detail in a future article.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Above
+object creation can be separated into two lines as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Boy
+obj;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">obj
+= new Boy();</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+In the first line, by default, obj refers to null. The memory
+representation of the above two lines is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.39in; left: 1.52in; width: 539px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_94309617.png')}}" NAME="image25.png" WIDTH=539 HEIGHT=379 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+After creating an object using the above syntax, we can access the
+class members like variables and methods using the dot (.) operator
+or also known as dot separator. So, we can access the three variables
+(fields) name, address and age as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.5in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">obj.name
+= “George”; obj.address = “Los Angels, </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">USA”;
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">obj.age
+=</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">23;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">The
+general syntax for accessing a class member is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">object_reference.member_name;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">By
+joining all the pieces together, the complete program will be as
+shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class Boy</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.18in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String name; String
+address; int age;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.85in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>void tellName(){ };
+void tellAddress(){ }; void tellAge(){ };</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.31in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Boy
+obj = new Boy();</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.65in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>obj.name =
+&quot;George&quot;; obj.address = &quot;Los Angels, USA&quot;;
+obj.age =</FONT><FONT SIZE=4> </FONT><FONT SIZE=4>23;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.19in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(&quot;Name
+of the boy is: &quot;+obj.name); System.out.println(&quot;Address of
+the boy is: &quot;+obj.address); System.out.println(&quot;Age of the
+boy is: &quot;+obj.age);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In lines 15,16 and 17 you can see that there is a + operator in the
+println statement. Here, + is not a addition operator. If one operand
+of the + operator is a string, then + behaves as a</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">concatenation
+operator. So, the right side value will be converted into a string
+and is joined</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">with
+the left side string.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Output
+of the above program will be:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Name
+of the boy is: George</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.94in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Address
+of the boy is: Los Angels, USA Age of the boy is: 23</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Differences
+between a class and an object:</B></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.13in; left: 1.94in; width: 499px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f5282b7a.png')}}" NAME="image26.png" WIDTH=499 HEIGHT=394 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Some of the questions
+related to Java classes and objects:</P>
+<OL>
+	<LI><H5 CLASS="western" STYLE="margin-top: 0.11in">Are object
+	references same as pointers in C and C++?</H5>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A: Although references are very similar to pointers (both store
+address of the memory location), references cannot be manipulated as
+we can with pointers. In C and C++, one can</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+increment a pointer value or do other operations on it. Such
+operations are not allowed on</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+references in Java.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<OL START=2>
+	<LI><H5 CLASS="western" ALIGN=JUSTIFY>Where are objects created?</H5>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+A: Objects are created dynamically in the heap area inside RAM
+(Random Access Memory).</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<OL START=3>
+	<LI><P CLASS="western" STYLE="margin-right: 4.2in; line-height: 125%"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Can
+	classes exist </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>without
+	objects? </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A: Yes. But
+	vice-verse is not</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">true.</FONT></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<OL START=4>
+	<LI><H5 CLASS="western" STYLE="margin-top: 0in">What does an
+	instance actually mean?</H5>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A: As already mentioned above, the fields of a class does not contain
+any values. An object contains its own value for every field. For
+example, if we consider the object of Boy class (see above), the
+values for the fields name, address and age are: “George”, “Los
+Angels, USA” and 23 respectively. These values are collectively
+known as the state of the object. This is why an object is known as
+an instance of the class as it has its own values for all the fields.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

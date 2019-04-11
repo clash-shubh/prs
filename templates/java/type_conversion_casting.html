@@ -1,0 +1,181 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Type
+Conversion and Casting</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Type conversion is of types based on how the conversion is performed:
+1) Implicit conversion (also known as automatic conversion or
+coercion), 2) Explicit conversion (also known as type casting).</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.35in; left: 2.1in; width: 394px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_5fafd06.jpg')}}" NAME="image42.jpeg" WIDTH=394 HEIGHT=260 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Implicit Conversion or Coercion</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+This type of conversion is performed automatically by Java due to
+performance reasons. Implicit conversion is not performed at all
+times. There are two rules to be satisfied for the conversion to take
+place. They are:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+	source and destination types must be compatible with each</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">other.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+	size of the destination type must be larger than the source</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">type.</FONT></FONT></P>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+For example, Java will automatically convert a value of byte into int
+type in expressions since they are both compatible and int is larger
+than byte type. Since a smaller range type is converted into a larger
+range type this conversion is also known as widening conversion.
+Characters can never be converted to boolean type. Both are
+incompatible.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 0.37in">Explicit
+Conversion or Casting</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+There may be situations where you want to convert a value having a
+type of size less than the destination type size. In such cases Java
+will not help you. You have do it on your own explicitly. That is why
+this type of conversion is known as explicit conversion or casting as
+the programmer does this manually.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Syntax for type casting is as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">(destination-type)
+value</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in">
+An example for type casting is shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+a = 10;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">byte
+b = (int) a;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above example, I am forcing an integer value to be converted
+into a byte type. For type casting to be carried out both the source
+and destination types must be compatible with each other. For
+example, you can’t convert an integer to boolean even if you force
+it.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In the above example, size of source type int is 32 bits and size of
+destination type byte is 8 bits. Since we are converting a source
+type having larger size into a destination type having less size,
+such conversion is known as narrowing conversion.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+A type cast can have unexpected behavior. For example, if a double is
+converted into an int, the fraction component will be lost.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Type promotion in expressions</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In addition to assignment statements, there is another place where
+type conversion can occur. It is in expressions. An expression is a
+collection of variables, values, operators and method calls which
+evaluate to a single value.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Type
+promotion rules of Java for expressions are listed below:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">All
+	char, short and byte values are automatically promoted to int</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">type.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">If
+	at least one operand in an expression is a long type, then the
+	entire expression will be promoted to</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">long.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">If
+	at least one operand in an expression is a float type, then the
+	entire expression will be promoted to</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">float.</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">If
+	at least one operand in an expression is a double type, then the
+	entire expression will be promoted to</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">double.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+To understand the above type promotion rules let’s consider the
+following example of expression evaluation:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class Sample</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.65in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int i = 1000000;
+char c = 'z'; short s = 200; byte b = 120; float f = 3.45f;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>double
+d = 1.6789;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.31in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>double result = (f
+* b) + (i / c) - (d * s); System.out.println(&quot;Result =
+&quot;+result);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is: Result = 8274.22</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above program the expression is (f * b) + (i / c) – (d * s). In
+the first sub expression (f *</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+b), as one operand is float, the result of the expression will be a
+float. In the second sub expression (i / c), char type will be
+promoted to int and the result of the expression will be an int. In
+the third sub expression (d * s), as one operand is double, the
+result of the expression is a double.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+So the results of the sub expressions are float, int and double.
+Since one of them is a double, the result of the entire expression is
+promoted to a double.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

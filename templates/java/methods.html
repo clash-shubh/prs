@@ -1,0 +1,171 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Methods</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.09in; line-height: 91%">
+<B>Method: </B>A method is a piece of code to solve a particular
+task. A method is analogous to functions in C and C++. Methods are
+defined inside a class. The syntax for creating a method is as shown
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.33in; left: 2.42in; width: 354px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_2189fdda.png')}}" NAME="image34.png" WIDTH=354 HEIGHT=244 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The return_type specifies the type of value that will be returned by
+the method. The name of the method is specified by method_name. Every
+parameter in the parameters list follows the below syntax:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">datatype
+parameter_name</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+The parameters count can be zero or more based upon your
+requirements. The body of the method is represented using the braces
+{ and }. Body of the method is also known as the method definition.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+If a method does not return any value, its return type must be void.
+A method can return a single value back by using the return
+statement. Syntax for using return statement is as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">return
+value;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">As
+an example, let’s create a method which takes side of a square as
+parameter and prints</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">out
+the area of the square. The method is shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>void area(int s)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(&quot;Area
+of the square is: &quot;+(s*s));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In the above method, s is a parameter and the return of the method is
+void as the method is not returning back any value.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+Let’s create another method which returns back the perimeter of the
+square. The method is shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>perimeter()</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>return
+4*side;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In the above method, there are no parameters. The variable side is an
+instance variable of  the class (see below). The method perimeter
+returns back an integer value using the return keyword. So the return
+type of the method is int.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+A method in a class can be called by creating an object to that class
+and then use the dot operator followed by the method name and
+arguments if any. Syntax for a method call is as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">object_reference.method_name(arguments);</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+Now, let’s look at the entire Java program which contains the class
+Sqaure along with the above methods for computing area, perimeter and
+some other code:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class
+Square</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+side;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>void
+area(int s)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(&quot;Area
+of the square is: &quot;+(s*s));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+perimeter()</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>return
+4*side;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+getSide()</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>return
+side;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.07in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Square s1 = new
+Square(); s1.side = 10;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>s1.area(s1.side);
+//Method call</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(&quot;Perimeter
+of the square is: &quot;+s1.perimeter()); //Method</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.41in; text-indent: 3.5in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>call
+System.out.println(&quot;Length of the side is: &quot;+s1.getSide());
+//Method call</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+for the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.85in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Area
+of the square is: 100 Perimeter of the square is: </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">40
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Length
+of the side is:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">10</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">A
+well written Java program is one which contains a set of classes that
+hides their fields</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+(instance variables) from direct access and allows them to be
+accessed only through methods.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+The values passed in a method call are known as arguments and the
+variables declared in the method to receive the values from the
+method call are known as parameters.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

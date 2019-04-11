@@ -1,0 +1,165 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Dynamic
+Method Dispatch</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">What is dynamic method
+dispatch?</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Dynamic method dispatch is a mechanism which resolves the call to a
+overridden method at run-time based on the type of object being
+referred.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">When is dynamic method dispatch possible?</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">It
+is possible only when the following are satisfied:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">A
+	class inherits from another class</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">(inheritance)</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Super
+	class variable refers a sub class</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">object</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">A
+	overridden method is invoked using the super class</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">reference</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Why dynamic method
+dispatch?</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Dynamic method dispatch is the way to provide run-time polymorphism
+in Java. Let’s look at what is static (compile-time) polymorphism
+and dynamic (run-time) polymorphism.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Before understanding what is the difference between static and
+dynamic polymorphism, let’s look at what is method binding. The
+process of associating or linking a method call with its definition
+(body) is known as method binding. This is can take place in two
+ways: at compile time or at run-time.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+When method binding takes place at compile time it is known as static
+binding and if the method binding takes place at run-time it is known
+as dynamic binding. Static binding takes place when there is no
+inheritance or if there is inheritance and the method is specified as
+static or final or private, or if the type of reference and type of
+the object it is referring to are same. In all other cases it will be
+dynamic binding.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Now, if the call to a polymorphic method (overloaded or overridden)
+is bound at compile time, it is known as static polymorphism or else
+if the call to a polymorphic method takes place at run-time it is
+known as dynamic polymorphism.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Run-time polymorphism always depends on the type of sub class object
+that is being referred to by the super class reference. This type of
+binding is also known as late binding.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Now, let’s look at some code example.</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.06in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">Example
+1:</FONT></FONT></H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in; line-height: 0.39in">
+class Shape</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">void
+area()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">System.out.println(&quot;Area
+of shape&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+Circle extends Shape</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">void
+area()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Area
+of circle&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+Rectangle extends Shape</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">void
+area()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Area
+of rectangle&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">Shape
+s = new Shape();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">s.area();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.49in; margin-top: 0.01in; line-height: 91%">
+s = new Circle(); s.area();</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">s
+= new Rectangle();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">s.area();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example, the call to area() method at line 30 is an example
+for static</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+polymorphism. However at lines 31 and 33 the super class (Shape)
+reference s has been assigned objects of Circle and Rectangle
+respectively. Now the subsequent calls to area() method at lines 32
+and 34 are bound at run-time which are an example for run-time
+polymorphism. Output of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.99in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Area
+of shape Area of circle Area of rectangle</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.2in; line-height: 91%">
+So, we can say that run-time polymorphism is possible only when there
+is inheritance and dynamic method dispatch.</P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

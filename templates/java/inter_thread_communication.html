@@ -1,0 +1,395 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Inter
+Thread Communication</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Although we can restrict the access of data or code to a single
+thread at a time by using synchronization, it can’t guarantee the
+consistent execution of our logic.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+As an example let’s consider the conventional Producer-Consumer
+problem which is generally introduced in Operating Systems course. In
+this problem Producer process or thread produces items and stores in
+a queue and Consumer process or thread consumes items from the queue.
+Note that the Consumer thread should wait until the Producer produces
+at least one item.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+In our example we will maintain a class Q which contains a single
+variable n. The Producer thread stores item (integer) into n and
+Consumer thread retrieves the item (integer) from n.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Consumer
+thread must wait until the Producer places an item in n and Producer
+should</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+wait until the Consumer retrieves the item in n. This kind of inter
+thread communication can be achieved using the following pre-defined
+methods in Object class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.53in; margin-top: 0.19in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+void wait() throws InterruptedException final void notify()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+void notifyAll()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.07in; line-height: 91%">
+Consider the following example Java Program which provides solution
+to Producer- Consumer problem:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section79" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	Q</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: -0in; line-height: 0.39in">int
+	n;</P>
+	<P CLASS="western" STYLE="margin-left: -0in; line-height: 0.38in">synchronized
+	void put(int n)</P>
+	<P CLASS="western" STYLE="margin-left: -0in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section80" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.n
+	= n;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;Put:
+	&quot; + n);</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">synchronized
+	int get()</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Got:
+	&quot; + n);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">return
+	n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">class
+	Producer implements Runnable</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.11in; margin-top: 0.01in; line-height: 91%">
+Q q;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.11in; margin-top: 0in; line-height: 91%">
+Producer(Q q)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.q
+= q;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">new
+Thread(this, &quot;Producer&quot;).start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">int
+i = 0;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">while(true)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">q.put(i++);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+Consumer implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Q
+q;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">Consumer(Q
+q)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.q
+= q;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">new
+Thread(this, &quot;Consumer&quot;).start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">while(true)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">q.get();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">Q
+q = new Q();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.34in; margin-top: 0.01in; line-height: 91%">
+Producer p = new Producer(q); Consumer c = new Consumer(q);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Although
+the put() and get() methods are sychronized, the output of the above
+program</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">looks
+like this:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Put:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Put:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Put:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Got:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Got:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Got:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Put:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Put:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Put:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">6</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Got:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">6</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Got:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">6</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT COLOR="#303030">…</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.06in; line-height: 91%">
+To make the Producer wait until Consumer retrieves the item and
+Consumer wait until Producer places an item, we can use the wait()
+and notify() methods as shown in the below program:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section81" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	Q</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: -0in; margin-top: 0in; line-height: 0.39in">
+	int n;</P>
+	<P CLASS="western" STYLE="margin-left: -0in; margin-right: 4.12in; margin-top: 0.01in; line-height: 91%">
+	boolean statusFlag = false; synchronized void put(int n)</P>
+	<P CLASS="western" STYLE="margin-left: -0in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section82" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">while(statusFlag)</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section83" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">wait();</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.4in; margin-top: 0.01in; line-height: 91%">
+catch(InterruptedException e){} this.n = n; System.out.println(&quot;Put:
+&quot; + n); statusFlag = true;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">notify();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">synchronized
+int get()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section84" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">while(!statusFlag)</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section85" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">wait();</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+	e){}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.47in; margin-top: 0.01in; line-height: 91%">
+	statusFlag = false; System.out.println(&quot;Got: &quot; + n);
+	notify();</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">return
+	n;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">class
+	Producer implements Runnable</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.11in; margin-top: 0.01in; line-height: 91%">
+Q q;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.11in; margin-top: 0in; line-height: 91%">
+Producer(Q q)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.q
+= q;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">new
+Thread(this, &quot;Producer&quot;).start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">int
+i = 0;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">while(true)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">q.put(i++);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+Consumer implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Q
+q;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">Consumer(Q
+q)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.q
+= q;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">new
+Thread(this, &quot;Consumer&quot;).start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">while(true)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">q.get();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">Q
+q = new Q();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.34in; margin-top: 0.01in; line-height: 91%">
+Producer p = new Producer(q); Consumer c = new Consumer(q);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif"><FONT SIZE=5 STYLE="font-size: 20pt">Put:
+1</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif"><FONT SIZE=5 STYLE="font-size: 20pt">Got:
+1</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif"><FONT SIZE=5 STYLE="font-size: 20pt">Put:
+2</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif"><FONT SIZE=5 STYLE="font-size: 20pt">Got:
+2</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif"><FONT SIZE=5 STYLE="font-size: 20pt">Put:
+3</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif"><FONT SIZE=5 STYLE="font-size: 20pt">Got:
+3</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in">…</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

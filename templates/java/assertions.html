@@ -1,0 +1,172 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Assertions</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+<B>Definition: </B>An assertion is a condition that should be true
+during the program execution. They are generally used to detect
+errors (testing) during development of software. They have no use
+after the code is released to the users. They encourage defensive
+programming.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Creating and Using Assertions:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+Assertions can be created using the assert keyword. The general form
+of using assert keyword is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">assert
+condition;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.2in; line-height: 91%">
+When the given condition becomes false, AssertionError is thrown by
+the Java run-time. The second form of assert is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">assert
+condition : expr;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+In the above syntax, expr can be any non-void value which will be
+passed on to the constructor of AssertionError and will be displayed
+as an error message.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Enabling and Disabling Assertions:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">For
+enabling them we have to use the following syntax while executing a
+Java program:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java
+-ea ClassName</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+Where -ea denotes enable assertion and similarly for disabling them
+we can use the following syntax:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java
+-da ClassName</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Where
+-da denotes disable assertion.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">For
+enabling or disabling assertion in a package we can use the following
+syntax:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java
+[-ea | -da] [:package-name… | :ClassName]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Example Program:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+Let’s consider a Java program where the numbers entered by the user
+must not be negative values. To implement this we can use assert
+keyword as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.9in; margin-top: 0.14in; line-height: 91%">
+import java.util.Scanner; class AssertionDemo</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">Scanner
+input = new Scanner(System.in);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.46in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Enter n: &quot;); int n = input.nextInt();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.53in; margin-top: 0in; line-height: 91%">
+assert n&gt;0; System.out.println(&quot;n = &quot; + n);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">If
+the n value is given as -9, then output of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.86in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Exception
+in thread “main” java.lang.AssertionError at</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">AssertionDemo.main(AssertionDemo.java:9)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+As the above error message does not give much information we can use
+second form of assert as shown in the below program:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">import
+java.util.Scanner;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">class
+AssertionDemo</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">Scanner
+input = new Scanner(System.in);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.46in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Enter n: &quot;); int n = input.nextInt();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.2in; margin-top: 0in; line-height: 91%">
+assert n&gt;0 : &quot;n cannot be negative&quot;;
+System.out.println(&quot;n = &quot; + n);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Now
+the output of the above program for -9 as n value is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Exception
+in thread “main” java.lang.AssertionError:</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">n
+cannot be negative</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">at
+AssertionDemo.main(AssertionDemo.java:9)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

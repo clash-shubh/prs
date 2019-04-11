@@ -1,0 +1,966 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Control
+Statements</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">What are control
+statements?</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In a Java program, we already know that execution starts at main
+method. The first statement inside the body of main method is
+executed and then the next statement and so on. In general, the
+statements execute one after another in a linear fashion.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+What if we want the statements to execute in a non-linear fashion
+i.e., skip some statements or repeat a set of statements or select
+one set of statements among several alternatives based on the outcome
+of evaluating an expression or the value of a variable?</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+To solve the above mentioned problems, every programming language
+provides control statements which allow the programmers to execute
+the code in a non-linear fashion.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Types or categories of control
+statements in Java</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+In Java, control statements can be categorized into the following
+categories:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Selection
+	statements (if,</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">switch)</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Iteration
+	statements (while, do-while, for,</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">for-each)</FONT></FONT></P>
+	<LI><P CLASS="western"  STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Jump
+	statements (break, continue,</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">return)</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Selection statements</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+As the name implies, selection statements in Java executes a set of
+statements based on the value of an expression or value of a
+variable. A programmer can write several blocks of code</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">and
+based on the condition or expression, one block can be executed.
+Selection statements</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+are also known as conditional statements or branching statements.
+Selection statements provided by Java are if and switch.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">if statement:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The if statement is used to execute a set of statements based on the
+boolean value returned by an expression. Syntax of if statement is as
+shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(condition/expression)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>statements;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+If you want to execute only one statement in the if block, you can
+omit the braces and write  it as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(condition/expression)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>statement;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+In the above syntax, the set of statements are executed only when the
+condition or expression evaluates to true. Otherwise, the statement
+after the if block is executed.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Let’s
+consider the following example which demonstrates the use of if
+statement:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.92in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int a = 10; if(a
+&amp;lt; 10)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“a
+is less than 10”);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+The output for the above piece of code will be a blank screen i.e. no
+output because the condition a &lt; 10 returns false and the print
+statement will not be executed.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In the above piece of code, instead of displaying nothing when the
+condition returns false, we can show an appropriate message. This can
+be done using the else statement. Remember</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">that
+you can’t use else without using if statement. By using the else
+statement our previous</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">example
+now becomes as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 6.01in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int a = 10; if(a &lt;
+10)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“a
+is less than 10”);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“a
+is greater than or equal to 10”);</FONT></FONT></P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Nested if statement:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+If you want to test for another condition after the initial condition
+available in the if statement, it is common sense to write another if
+statement. Such nesting of one if statement inside another if
+statement is called a nested if statement. Syntax of nested if
+statement is as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(condition)</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(condition)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(condition)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.32in">…</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+We can also combine multiple conditions into a single expression
+using the logical operators. As an example for nested if, let’s
+look at a program for finding the largest of the three numbers a, b
+and c. Below we will look at a code fragment which shows logic for
+finding whether a is the greatest or not:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<DIV ID="TextSection" DIR="LTR" GUTTER=3 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(a
+	&gt; b)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(a
+	&gt; c)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“a
+	is the largest number”);</FONT></FONT></P>
+</DIV>
+<DIV ID="Section1" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+	As mentioned above we can convert a nested if into a simple if by
+	combining multiple condition into a single condition by using the
+	logical operators as shown below:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(a &gt; b &amp;&amp;
+	a &gt; c)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“a
+	is the largest number”);</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<H5 CLASS="western" STYLE="line-height: 0.39in">if-else-if Ladder:</H5>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	The if-else-if ladder is a multi-way decision making statement. If
+	you want to execute one code segment among a set of code segments,
+	based on a condition, you can use the if-else-if ladder. The syntax
+	is as shown below:</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(condition)</FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+	if(condition)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+	if(condition)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<DIV ID="Section2" DIR="LTR" GUTTER=15 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.02in; margin-top: 0in; line-height: 91%">
+	… <FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+</DIV>
+<DIV ID="Section3" DIR="LTR">
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+	Looking at the above syntax, you can say that only one of the blocks
+	execute based on the condition. When all conditions fail, the else
+	block will be executed. As an example for if-else- if ladder, let’s
+	look at a program for finding whether the given character is a vowel
+	(a, e, i, o,</P>
+	<OL TYPE=a START=21>
+		<LI><P STYLE="line-height: 0.39in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">or</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">not:</FONT></FONT></P>
+	</OL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">char
+	ch;</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.65in; margin-top: 0.12in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>ch = ‘e’;
+	//You can also read input from the user if(ch == ‘a’)</FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”);</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+	if(ch==’e’)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”);</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+	if(ch==’i')</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”);</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+	if(ch==’o’)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+character is a vowel”);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+if(ch==’u’)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<DIV ID="Section4" DIR="LTR" GUTTER=15 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”);</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is not a vowel”);</FONT></FONT></P>
+</DIV>
+<DIV ID="Section5" DIR="LTR">
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+	In the above program, the else block serves as a default block that
+	is to be executed in case if the entered character is not a, e, i, o
+	or u.</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<H5 CLASS="western">switch Statement:</H5>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	The switch statement is another multi-way decision making statement.
+	You can consider the switch as an alternative for if-else-if ladder.
+	Every code segment written using a switch statement can be converted
+	into an if-else-if ladder equivalent.</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+	Use switch statement only when you want a literal or a variable or
+	an expression to be equal to another value. The switch statement is
+	simple than an equivalent if-else-if ladder construct. You cannot
+	use switch to test multiple conditions using logical operators,
+	which can be done in if-else-if ladder construct. Syntax for switch
+	statement is as shown below:</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>switch(expression)</FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case
+	label1:</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>break;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case
+label2:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.88in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements; break;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case
+label3:</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.88in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements; break;</FONT></FONT></P>
+<DIV ID="Section6" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: -0.01in; margin-top: 0in; line-height: 91%">
+	… <FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>default:</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-right: 4.88in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements; break;</FONT></FONT></P>
+</DIV>
+<DIV ID="Section7" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Some
+	points to remember about switch statement:</P>
+	<OL TYPE=a START=21>
+		<UL>
+			<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+			<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+			expression in the above syntax can be a byte, short, int, char or
+			an enumeration. From Java 7 onwards, we can also use Strings in a</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">switch</FONT></FONT></P>
+			<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+			<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">case
+			is a keyword use to specify a block of statements to be executed
+			when the value of the expression matches with the corresponding</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">label</FONT></FONT></P>
+			<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+			<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+			break statement at the end of each case is optional. If you don’t
+			use break at the end of a case, all the subsequent cases will be
+			executed until a break statement is encountered or the end of the
+			switch statement is</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">encountered.</FONT></FONT></P>
+			<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+			<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+			default block is also optional. It is used in a switch statement
+			to specify a set of statements that should be executed when none
+			of the labels match with the value of the expression. It is a
+			convention to place the default block at the end of the switch
+			statement but not a</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+			</FONT><FONT SIZE=4 STYLE="font-size: 16pt">rule.</FONT></FONT></P>
+		</UL>
+	</OL>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">As
+	an example for switch statement, let’s consider the vowel’s
+	example discussed above:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>char
+ch;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.5in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>ch = ‘u’; //You
+can also read input from the user switch(ch)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<DIV ID="Section8" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case</FONT><FONT SIZE=4>
+	</FONT><FONT SIZE=4>‘a’:</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case</FONT><FONT SIZE=4>
+	</FONT><FONT SIZE=4>‘e’:</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case</FONT><FONT SIZE=4>
+	</FONT><FONT SIZE=4>‘i':</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case</FONT><FONT SIZE=4>
+	</FONT><FONT SIZE=4>‘o’:</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: -0.01in; margin-top: 0in; line-height: 255%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>case </FONT><FONT SIZE=4>‘u’:
+	</FONT><FONT SIZE=4>default:</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-right: 2.58in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”); break;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-right: 2.58in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”); break;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-right: 2.58in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”); break;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-right: 2.58in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”); break;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; margin-right: 2.58in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is a vowel”); break;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Entered
+	character is not a vowel”);</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.02in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>break;
+	//There is no need of this break. You can omit this if you want</FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Iteration Statements</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+While selection statements are used to select a set of statements
+based on a condition, iteration statements are used to repeat a set
+of statements again and again based on a condition for finite or
+infinite number of times.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+What is the need for iteration statements or looping statements? To
+answer this, let’s consider an example. Suppose you want to read
+three numbers from user. For this you might write three statements
+for reading input. In another program you want to read ten numbers.
+For this you write ten statements for reading input. Yet in another
+program you want to read ten thousand numbers as input. What do you
+do? Even copying and pasting the statements to read input takes time.
+To solve this problem, Java provides us with iteration statements.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.53in; text-indent: -0in; margin-top: 0.13in; line-height: 125%">
+Iteration statements provided by Java are: for, while, do-while and
+for-each <B>while Statement:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.02in; line-height: 91%">
+while is the simplest of all the iteration statements in Java. Syntax
+of while loop is as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>while(condition)</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+As long as the condition is true, the statements execute again and
+again. If the statement to be executed in any loop is only one, you
+can omit the braces. As the while loop checks the condition at the
+start of the loop, statements may not execute even once if the
+condition fails. If you want to execute the body of a loop atleast
+once, use do-while loop.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Let’s
+see an example for reading 1000 numbers from the user:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 6.28in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int i; i = 0;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>while(i
+&lt; 1000)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.51in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Code for reading
+input… i++;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The above loop works in this way. First i is initialized to zero,
+then condition i &lt; 1000 is evaluated which is true. So the
+statements for reading input are executed and finally i is
+incremented by 1 (i++). Again the condition is evaluated and so on.
+When i value becomes 1000, condition fails and control exits the loop
+and goes to the next line after the while statement.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">do-while Statement:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+do-while statement is similar to while loop except that the condition
+is checked after executing the body of the loop. So, the do-while
+loop executes the body of the loop atleast once. Syntax of do-while
+is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>do</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}while(condition);</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+This loop is generally used in cases where you want to prompt the
+user to ask whether he/she would like to continue or not. Then, based
+on user’s input, the body of the loop will be executed again or
+else the control quits the loop.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Let’s
+consider an example where the body of the loop will be executed based
+on the user’s</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">input:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>char
+ch;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>do</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Statements;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Do
+you want to continue? Enter Y or N);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Statement
+for reading the character from the user</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}while(ch
+== ‘Y’);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+In the above code segment, the body of the do-while loop executes
+again and again as long as the user inputs the character Y when
+prompted.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">for Statement:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The for statement might look busy but provides more control than
+other looping statements. In a for statement, initialization of the
+loop control variable, condition and modifying the value of the loop
+control variable are combined into a single line. The syntax of for
+statement is as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(initialization;
+condition; iteration)</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In the above syntax, the initialization is an assignment expression
+which initializes the loop control variable and/or other variables.
+The initialization expression evaluates only once. The condition is a
+boolean expression. If the condition evaluates to true, the body of
+the loop is executed. Else, the control quits the loop. Every time
+after the body executes, the iteration expression is evaluated.
+Generally, this is an increment or decrement expression which</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">modifies
+the value of the control variable. All the three parts i.e.
+initialization, condition and</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">iteration
+are optional.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Let’s
+consider an example code segment which prints the numbers from 1 to
+100:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(int i = 1; i &lt;=
+100; i++)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“i
+= “ + i );</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+In the above code segment, int i = 1 is the initialization
+expression, i &lt;= 100 is the condition and i++ is the iteration
+expression.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">We
+can create an infinite for loop as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<DIV ID="Section9" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(
+	; ; </FONT><FONT SIZE=4>)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+</DIV>
+<DIV ID="Section10" DIR="LTR">
+	<H5 CLASS="western" STYLE="line-height: 0.39in">for-each Statement:</H5>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	The for-each statement is a variation of the traditional for
+	statement which has been introduced in JDK 5. The for-each statement
+	is also known as enhanced for statement. It is a simplification over
+	the for statement and is generally used when you want to perform a
+	common operation sequentially over a collection of values like an
+	array etc… The syntax of for-each statement is as shown below:</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(type var :
+	collection)</FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+data type of var must be same as the data type of the collection. The
+above syntax is can</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+be read as, for each value in collection, execute the statements.
+Starting from the first value in the collection, each value is copied
+into var and the statements are executed. The loop executes until the
+values in the collection completes.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+Let’s consider a code segment which declares an array containing 10
+values and prints the sum of those 10 values using a for-each
+statement:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int[ ] array =
+{1,2,3,4,5,6,7,8,9,10};</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.61in; margin-top: 0.01in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int sum = 0;
+for(int x : array)</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>sum
++= x;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Sum
+is: “+sum);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">The
+equivalent code segment for the above code using a for loop is as
+shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int[ ] array =
+{1,2,3,4,5,6,7,8,9,10};</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+sum = 0;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(int
+x = 0; x &lt; 10; x++)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>sum
++= array[x];</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“Sum
+is: “+sum);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Nested Loops:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+A loop inside another loop is called as a nested loop. For each
+iteration of the outer loop the inner loop also iterates. Syntax of a
+nested loop is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>outer
+loop</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>inner
+loop</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Let’s
+consider an example which demonstrates a nested loop:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(int i = 0; i &lt;
+5; i++)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(int
+j = 0; j &lt;= i; j++)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(“*”);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+for the above code segment is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">*</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">**</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">***</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">****</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">*****</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.16in">Jump Statements</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+As the name implies, jump statements are used to alter the sequential
+flow of the program. Jump statements supported by Java are: break,
+continue and return.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">break Statement:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The break statement has three uses in a program. First use is to
+terminate a case inside a switch statement, second use to terminate a
+loop and the third use is,break can be used as a sanitized version of
+goto which is available in other languages. First use is already
+explained above. Now we will look at the second and third use of
+break statement.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+The break statement is used generally to terminate a loop based on a
+condition. For example, let’s think that we have written a loop
+which reads data from a heat sensor continuously. When the heat level
+reaches to a threshold value, the loop must break and the next line
+after the loop must execute which might be a statement to raise an
+alarm. In this case the loop will be infinite as we don’t know when
+the value from the sensor will match the threshold value. General
+syntax of the break statement inside a loop is shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section11" DIR="LTR" GUTTER=7 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.31in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Loop</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.28in; margin-top: 0in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Statements;
+	if(condition)</FONT></FONT></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.4in; margin-right: 5.02in; line-height: 0.33in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>break;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Statements
+	after break;</FONT></FONT></P>
+</DIV>
+<DIV ID="Section12" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+	As an example to demonstrate the break statement inside a loop,
+	let’s look at the following code segment:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(i = 1; i &lt;
+	10; i++)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.81in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(i);
+	if(i == 5)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>break;</FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.32in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.4in">
+Output for the above code segment is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+When used inside a nested loop, break statement makes the flow of
+control to quit the inner loop only and not the outer loop too.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Another use of the break statement is, it can be used as an
+alternative to goto statement which is available in other programming
+languages like C and C++. General syntax of break label statement is
+as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<DIV ID="Section13" DIR="LTR" GUTTER=4 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>label1:</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.38in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;
+	label2:</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+</DIV>
+<DIV ID="Section14" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.83in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;
+	if(condition)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>break
+	label1;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.31in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Statements;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; line-height: 91%">
+	In the above syntax, when the condition becomes true, control
+	transfers from that line to the line which is available after the
+	block labeled label1. This form of break is generally used in nested
+	loops in which the level of nesting is high and you want the control
+	to jump from the</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">inner
+most loop to the outermost loop. This form of break can be used in
+all loops or in any</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">other
+block. Syntax for writing a label is, any valid identifier followed
+by a colon (:).</P>
+<H5 CLASS="western" STYLE="margin-left: 0.14in; margin-top: 0.11in">continue
+Statement:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Unlike break statement which terminates the loop, continue statement
+is used to skip rest of the statements after it for the current
+iteration and continue with the next iteration. Syntax of continue is
+as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<DIV ID="Section15" DIR="LTR" GUTTER=7 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Loop</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.28in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Statements;
+	if(condition)</FONT></FONT></P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.58in; margin-right: 5.02in; line-height: 0.33in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>continue;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>//Statements
+	after continue;</FONT></FONT></P>
+</DIV>
+<DIV ID="Section16" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Like
+	break statement, continue can also be used inside all loops in Java.</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+	As an example to demonstrate the continue statement inside a loop,
+	let’s look at the following code segment:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>for(i = 1; i &lt;
+	5; i++)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(i
+	== 3)</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>continue;</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(i);</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Output
+	for the above code segment is:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.54in; margin-top: 0.18in; line-height: 125%">
+When the value of i becomes 3, continueis executed and the print
+statement gets skipped. <B>return Statement:</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.02in; line-height: 91%">
+The return statement can only be used inside methods which can return
+control or a value back to the calling method. The return statement
+can be written at any line inside the body of the method. Common
+convention is to write the return statement at the end of the
+method’s body. Let’s consider a small example to demonstrate the
+use of return statement:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>void fact(int n)</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>if(n
+== 0) return 1;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+if(n == 1) return 1;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>else
+return fact(n)*fact(n-1);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

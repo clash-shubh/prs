@@ -1,0 +1,1123 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Multi
+Threading</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" ALIGN=JUSTIFY>Background Information</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+Multitasking: Ability to execute two or more tasks in parallel or
+simultaneously is known as multitasking. Multitasking is of two
+types: 1) Process based multitasking and 2) Thread based
+multitasking.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Process based multitasking: Executing two or more processes
+simultaneously is known as process based multitasking. For example,
+we can listen to music and browse internet at the same time. The
+processes in this example are the music player and browser.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Thread based multitasking: Thread is a part of process i.e., a
+process can contain one or more threads. If two or more such threads
+execute simultaneously, it is known as thread based multitasking or
+multithreading.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+For example, using a browser we can navigate through the webpage and
+at the same time download a file. In this example, navigation is one
+thread and downloading is another thread.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Another example for multithreading is in a word-processing
+application like MS Word, we can type text in one thread and spell
+checker checks for mistakes in another thread.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Java doesn’t provide control over process based multitasking. But,
+it allows programmers to control multithreading.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Advantage of multithreading is, it increases CPU utilization i.e.,
+CPU is made busy (always executing some thread) without leaving it
+idle.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H4 CLASS="western">Multithreading in Java</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+A thread is a separate flow of execution in a program. All Java
+programs by default contain a single thread called the “Main
+thread”. A thread contains a set of statements like a method in
+Java.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The difference between thread and a method is, unlike methods,
+threads can run simultaneously or in parallel with other threads.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+On a machine with single CPU threads cannot run in parallel exactly.
+Only one thread can run at a time. This kind of concurrency is called
+quasi-concurrency. But, on a machine with multiple cores or multiple
+CPUs, each CPU can run a single thread in parallel.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in">The Thread class and the
+Runnable Interface</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Threads in Java are supported through Thread class and Runnable
+interface. A single thread is represented in a Java program as Thread
+class instance (object). To create a new thread in a Java program, we
+can either:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Extend
+	the Thread class</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">or</FONT></FONT></P>
+	<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Implement
+	the Runnable</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">interface</FONT></FONT></P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+The Thread class contains the following methods:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.61in; left: 2.43in; width: 325px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_b9d3999b.png')}}" NAME="image63.png" WIDTH=325 HEIGHT=156 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Main Thread</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+When a Java program is executed, by default it starts a single thread
+of execution. That thread is known as the “Main thread”. The main
+thread is important due to two reasons:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">It
+		is used to create child</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">threads.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">It
+		is the last thread to terminate during which it will perform
+		various shutdown operations.</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+We can control the main thread by obtaining a reference to it using
+the Thread object as shown in the below program:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.39in">
+public class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">Thread
+mainThread = Thread.currentThread();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.67in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Current thread: &quot; + mainThread);
+mainThread.setName(&quot;My Thread&quot;); System.out.println(&quot;After
+name change: &quot; + mainThread); try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">for(int
+i = 1; i &lt;= 5; i++)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(&quot;i
+= &quot; + i);</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">Thread.sleep(1000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Thread
+is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above program main thread reference is obtained by using the
+currentThread()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+method in Thread class. The setName() method is used to assign a new
+name to the main thread. The new name assigned to the main thread is
+My Thread.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The sleep() method is used to pause the current thread (main thread)
+for certain amount of time which is specified in milliseconds. In the
+above program 1000 in the sleep() method pauses the thread for 1
+second.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Current
+thread: Thread[main,5,main]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.25in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">After
+name change: Thread[My Thread,5,main] i =</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">i
+=</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">i
+=</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">i
+=</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">i
+=</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above output, [main,5,main], first main refers to the name of
+the thread, 5 refers to the default priority of the main thread and
+last refers to the thread group name which is also main.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Syntax of some the methods used above are as follows:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">static
+Thread currentThread()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.72in; margin-top: 0.06in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">static
+void sleep(long milliseconds) throws InterruptedException final void
+setName(String threadName)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+String getName()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Thread
+Methods</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">isAlive() and join()
+Methods</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Even though threads are independent most of the time, there might
+some instances at which we want a certain thread to wait until all
+other threads complete their execution. In such situations we can use
+isAlive() and join() methods. Syntax of these methods is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+boolean isAlive()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+void join() throws InterruptedException</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+void join(long milliseconds) throws InterruptedException</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.07in; line-height: 91%">
+The isAlive() method can be used to find whether the thread is still
+running or not. If the thread is still running, it will return true.
+Otherwise, it will return false.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+The join() method makes the thread to wait until the invoking thread
+terminates. Below program demonstrates the use of isAlive() and
+join() methods:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.39in">
+class MyThread implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyThread()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">t
+= new Thread(this);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Child thread: &quot; + t); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">for(int
+i = 1; i &lt;= 3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot;: &quot; + i);</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">Thread.sleep(500);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Child
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Child
+thread is terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.29in; margin-top: 0.01in; line-height: 91%">
+MyThread my = new MyThread(); try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Child
+thread is running: &quot; + my.t.isAlive());</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.9in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Main thread is waiting...&quot;);
+my.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Child
+thread is running: &quot; + my.t.isAlive());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.03in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread: Thread[Thread-0,5,main] Child thread is running: true</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.36in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Main
+thread is </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">waiting…
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Thread-0:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Thread-0:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Thread-0:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.94in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread is terminated Child thread is running: false Main thread
+terminated</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+In the above program, main thread is waiting for the child thread to
+complete its execution and then it terminates.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 0.37in">Suspending,
+Resuming and Stopping Threads</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Based on the requirements sometimes you might want to suspend, resume
+or stop a thread. For doing such operations on a thread, before Java
+2, thread API used to contain suspend(), resume() and stop() methods.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+But all these methods might lead to undesired behavior of the program
+or machine. For example, these methods might lead to deadlock when a
+thread locked and is accessing a data structure and suddenly it is
+suspended or stopped. All other threads will be waiting indefinitely
+for gaining access to the data structure.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Because of this drawback of suspend(), resume() and stop() methods,
+they have been deprecated (should not be used) from Java 2 on wards.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Instead we have to check whether the thread is suspended or not
+through code itself. We can do that using a boolean variable which
+acts like a flag (ON / OFF).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Below program demonstrates the use of the boolean variable
+suspendFlag which is initially false. We write two more methods
+mySuspend() and myResume() which changes the value of the variable
+suspendFlag.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+We have also used two more methods wait() and notify() from Object
+class. The wait() method suspends the current thread and the notify()
+method resumes (wakes up) the execution of the current thread.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.39in">
+class MyThread implements Runnable</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.42in; margin-top: 0.01in; line-height: 91%">
+boolean suspendFlag; MyThread(String name)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in; margin-top: 0.01in; line-height: 91%">
+t = new Thread(this, name); System.out.println(&quot;Child thread: &quot;
++ t); suspendFlag = false;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section70" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">for(int
+	i = 1; i &lt;= 5; i++)</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section71" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(t.getName()
+	+ &quot;: &quot; + i);</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in; margin-right: 3.3in; margin-top: 0.01in; line-height: 91%">
+	Thread.sleep(500); synchronized(this)</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.16in; line-height: 0.36in">
+	while(suspendFlag)</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.06in; line-height: 0.38in">
+	wait();</P>
+	<P CLASS="western" STYLE="margin-left: 2.09in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.36in">catch(InterruptedException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">{</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">System.out.println(t.getName()
++ &quot; is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot; is terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">public
+synchronized void mySuspend()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">suspendFlag
+= true;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">public
+synchronized void myResume()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">suspendFlag
+= false;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">notify();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyThread
+thread1 = new MyThread(&quot;First Thread&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.84in; margin-top: 0.01in; line-height: 91%">
+MyThread thread2 = new MyThread(&quot;Second Thread&quot;); try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">System.out.println(&quot;Main
+thread is waiting...&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 3.59in; margin-top: 0.01in; line-height: 91%">
+Thread.sleep(1000); thread1.mySuspend();</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.83in; margin-top: 0in; line-height: 91%">
+System.out.println(&quot;---Suspending thread 1---&quot;);
+Thread.sleep(1000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">thread1.myResume();</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.95in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;---Resuming thread 1---&quot;);
+Thread.sleep(1000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.02in; margin-top: 0in; line-height: 91%">
+thread1.t.join(); thread2.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread: Thread[First Thread,5,main]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.45in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread: Thread[Second Thread,5,main] Main thread is waiting…</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT COLOR="#303030">—<FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Suspending
+thread 1—</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT COLOR="#303030">—<FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Resuming
+thread 1—</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.9in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread is terminated First Thread is terminated Main thread
+terminated</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.07in; line-height: 91%">
+In the above output you can observer that first thread is suspended
+for some time and has been resumed again.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.29in; margin-top: 0.12in; line-height: 126%">
+Below program demonstrates stopping a thread: class MyThread
+implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 3.38in; margin-top: 0.01in; line-height: 91%">
+private volatile boolean stopFlag = false; MyThread()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">t
+= new Thread(this);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">while(!stopFlag)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Child
+thread running!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.35in">Thread.sleep(200);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">catch(InterruptedException
+e) {}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.print(&quot;Child
+thread stopped!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void stop()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">stopFlag
+= true;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args) throws InterruptedException</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyThread
+m = new MyThread();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.25in; margin-top: 0.01in; line-height: 91%">
+Thread.sleep(1000); m.stop();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.61in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread running! Child thread running! Child thread running! Child
+thread running! Child thread running! Child thread stopped!</FONT></FONT></FONT></FONT></P>
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Thread
+Priorities</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+In a uni-processor system, when several threads are competing for the
+CPU, you might want a certain thread to get more CPU time (burst
+time) over the remaining threads. We can use thread priorities in
+such situation.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The thread class provides three final static variables (constants)
+namely: MIN_PRIORITY, NORM_PRIORITY, and MAX_PRIORITY whose values
+are 1, 5 and 10 respectively. Priority values can be in the range 1
+to 10. 1 denotes minimum priority and 10 denotes maximum priority.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+A higher priority thread always gets more CPU time over the lesser
+priority thread. When a lesser priority thread is currently running
+on a CPU and a higher priority thread resumes (after wait or sleep or
+unblocked from I/O), it will preempt the lesser priority thread.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+By default all the newly created threads will have a priority of 5.
+For assigning a new priority to the thread, we can use setPriority()
+method of Thread class whose syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+void setPriority(int priority_level)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+For retrieving the priority of the thread we can use getPriority()
+method of Thread class whose syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">final
+int</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">getPriority()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.19in; margin-top: 0.18in; line-height: 126%">
+Below program demonstrates the use of setPriority() and getPriority()
+methods: class MyThread1 implements Runnable</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.27in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">MyThread1(String
+name)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in; margin-top: 0.01in; line-height: 91%">
+t = new Thread(this, name); System.out.println(&quot;Child thread: &quot;
++ t); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">for(int
+i = 1; i &lt;= 10; i++)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot;: &quot; + i);</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">Thread.sleep(100);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(t.getName()
++ &quot; is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot; is terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+MyThread2 implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyThread2(String
+name)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">t
+= new Thread(this, name);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.88in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Child thread: &quot; + t); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">for(int
+i = 1; i &lt;= 10; i++)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot;: &quot; + i);</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">Thread.sleep(500);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(t.getName()
++ &quot; is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">System.out.println(t.getName()
++ &quot; is terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyThread1
+thread1 = new MyThread1(&quot;First Thread&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.7in; margin-top: 0.01in; line-height: 91%">
+MyThread2 thread2 = new MyThread2(&quot;Second Thread&quot;);
+thread1.t.setPriority(10);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">thread2.t.setPriority(1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 0.5in; margin-top: 0in; line-height: 91%">
+System.out.println(&quot;Priority of first thread is: &quot; +
+thread1.t.getPriority()); System.out.println(&quot;Priority of second
+thread is: &quot; + thread2.t.getPriority()); try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is waiting...&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.02in; margin-top: 0.01in; line-height: 91%">
+thread1.t.join(); thread2.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.75in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread: Thread[First Thread,5,main] First Thread: 1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.45in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread: Thread[Second Thread,5,main] Priority of first thread is: 10</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.88in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Priority
+of second thread is: 1 Main thread is waiting… Second Thread: 1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">6</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">7</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">8</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">9</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 10</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread is terminated Second Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">4</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">6</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">7</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">8</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">9</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread: 10</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.9in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread is terminated Main thread terminated</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.44in; margin-top: 0.18in; line-height: 105%">
+Although the sleeping time of first thread is less than the second
+thread, in general, thread with higher priority gets more CPU time.</P>
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Thread
+States</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.09in; line-height: 91%">
+Life cycle of a thread refers to all the actions or activities done
+by a thread from its creation to termination. A thread can be in any
+one of the following five states during its life cycle:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>New:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A thread is created
+		but didn’t begin its</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">execution.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Runnable:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A thread that
+		either is executing at present or that will execute when it gets
+		the access to</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">CPU.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Terminated:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A thread that has
+		completed its execution.</FONT></FONT></P>
+		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Waiting:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A thread that is
+		suspended because it is waiting for some action to occur. For
+		example, it is waiting because of a call to non-timeout version of
+		wait() method or join() method or sleep()</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">method.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Blocked:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A thread that has
+		suspended execution because it is waiting to acquire a lock or
+		waiting for some I/O event to</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">occur.</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">The
+life cycle of a thread is illustrated in the following diagram:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.12in; left: 2.08in; width: 401px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_99dca9cf.jpg')}}" NAME="image64.jpeg" WIDTH=401 HEIGHT=312 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+state of a thread can be retrieved using the getState() method of the
+Thread class. The</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">syntax
+of this method is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Thread.State
+getState()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.2in; line-height: 91%">
+The getState() method returns one of the values in State enumeration.
+The constants in State enumerations are:</P>
+<OL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">NEW</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">RUNNABLE</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">TERMINATED</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">BLOCKED</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">WAITING</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">TIMED_WAITING</FONT></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.63in; margin-top: 0.11in; line-height: 126%">
+Below example demonstrates the use of getState() method: class
+MyThread implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyThread(String
+name)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">t
+= new Thread(this, name);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.74in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;Child thread: &quot; + t);
+System.out.println(&quot;State: &quot; + t.getState()); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;State:
+&quot; + t.getState());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">for(int
+i = 1; i &lt;= 3; i++)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot;: &quot; + i);</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">Thread.sleep(2000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(t.getName()
++ &quot; is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(t.getName()
++ &quot; is terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">MyThread
+thread1 = new MyThread(&quot;First Thread&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is waiting...&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">thread1.t.sleep(1000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 1.7in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;State: &quot; + thread1.t.getState());
+thread1.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">System.out.println(&quot;State:
+&quot; + thread1.t.getState());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+for the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.75in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Child
+thread: Thread[First Thread,5,main] State: NEW</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.35in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Main
+thread is waiting… State: RUNNABLE</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread: 1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">State:
+TIMED_WAITING</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread is terminated State: TERMINATED</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Main
+thread terminated</FONT></FONT></FONT></FONT></P>
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Daemon
+Threads</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+A daemon thread is a thread which runs in the background. Example for
+daemon thread in Java is the garbage collector. In Java, thread can
+be divided into two categories:</P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">User</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">threads</FONT></FONT></P>
+		<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Daemon</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">threads</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+A user thread is a general thread which is created by the user. A
+daemon thread is also a user thread which is made as a daemon thread
+(background thread).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Difference between a user thread and a daemon thread is, a Java
+program will not terminate if there is at least one user thread in
+execution. But, a Java program can terminate if there are one or more
+daemon threads in execution.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">To
+work with daemon threads, Java provides two methods:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+setDaemon(boolean flag)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">boolean
+isDaemon()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.07in; line-height: 91%">
+The setDaemon() method is used to convert a user thread into a daemon
+thread. The isDaemon() thread can be used to know whether a thread is
+a daemon thread or not.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.33in; margin-top: 0.12in; line-height: 126%">
+Below program demonstrates a daemon thread: class ChildThread
+implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">ChildThread(String
+name)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">t
+= new Thread(this, name);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.29in; margin-top: 0.01in; line-height: 91%">
+t.setDaemon(true); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section72" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">while(true)</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section73" DIR="LTR" GUTTER=30 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">&quot;+t.isDaemon());</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">System.out.println(&quot;This
+	thread is a daemon thread:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.91in; line-height: 91%">
+	System.out.println(t.getName()+&quot;: Hi&quot;);
+	Thread.sleep(1000);</P>
+</DIV>
+<DIV ID="Section74" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Child
+	thread is interrupted&quot;);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	DaemonThread</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+	static void main(String args[])</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">ChildThread
+one = new ChildThread(&quot;Daemon Thread&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.22in; margin-top: 0.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">This
+thread is a daemon thread: true Daemon Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Hi</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.77in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Daemon
+Thread: </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Hi
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Daemon
+Thread: </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Hi
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Daemon
+Thread:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Hi</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT COLOR="#303030">…</FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

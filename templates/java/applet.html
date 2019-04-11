@@ -1,0 +1,546 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Applets</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">Definition of Applet</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+An applet is a small Java program that is a part of a web page and is
+downloaded automatically from a server when the client requests that
+web page.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Applet Fundamentals</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Since applet is a part of a webpage, we will learn basic things
+related to web pages. A web page is a collection of information (ex:
+Google home page, Yahoo home page etc). Web pages are generally
+created using HTML.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">A
+web page contains at least four basic HTML tags:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>&lt;html&gt;
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Specifies
+		that it is the root</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">tag.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>&lt;head&gt;
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Specifies
+		the head section of the web page. It contains meta information,
+		page title, scripts, external style sheet links</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">etc.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>&lt;body&gt;
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Contains
+		the content that is displayed to a user who is visiting the web</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">page.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>&lt;title&gt;
+		: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Specifies the
+		title of the web page. It is specified inside &lt;head&gt;</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">tags.</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+As an example let’s look at the HTML code of a web page that
+displays “Hello World” in large letters. The code is as follows:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">hello.html</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">&lt;html&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;head&gt;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">&lt;title&gt;My
+Webpage&lt;/title&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;/head&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;body&gt;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">&lt;h1&gt;Hello
+World&lt;/h1&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">&lt;/body&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">&lt;/html&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+The file will be saved with .html extension. When you open the file
+with a web browser, the output will be as follows:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.84in; left: 2.23in; width: 370px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_3dee6816.jpg')}}" NAME="image65.jpeg" WIDTH=370 HEIGHT=260 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.15in">An
+applet can be displayed in a web page using the &lt;applet&gt; tag as
+shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">&lt;applet
+code=”ClassName” height=”200″ width=”400″&gt;&lt;/applet&gt;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+An applet doesn’t contain a main() method like the Java console
+programs. An applet is used to display graphics or to display a GUI
+(ex: login form, registration form) to the users.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Creating an Applet</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+An applet can be created by extending either Applet class or JApplet
+class. First let’s see how to create an applet using the Applet
+class. The Applet class is available in java.applet package. An
+applet which displays “Hello World” is shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.2in; margin-top: 0.14in; line-height: 91%">
+MyApplet.java import java.awt.*; import java.applet.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyApplet extends Applet</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void paint(Graphics g)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">g.drawString(&quot;Hello
+World!&quot;, 20, 20);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">/*</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">&lt;applet
+code=&quot;MyApplet&quot; height=&quot;300&quot;
+width=&quot;500&quot;&gt;&lt;/applet&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">*/</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Remember
+to include the &lt;applet&gt; tag in comments. This is useful for
+running the applet.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">The
+value of code attribute must match with the class name.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In the above applet program, the class MyApplet extends the Applet
+class and it contains a method named paint() which accepts a
+parameter of the type Graphics. The Graphics class belongs to
+java.awt package and is used to display text or graphics on our
+applet.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+paint() method is used to re-display the output when the applet is
+resized or minimized</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+or maximized. The drawString() method belongs to Graphics class and
+it displays “Hello World!” on the applet display area at the
+point whose coordinates are (20, 20).</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Save
+the file as MyApplet.java and compile it to generate MyApplet.class
+file.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Running an Applet</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">An
+applet can be executed in two ways:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Using
+		appletviewer command-line tool</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">or</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 4.98in; margin-top: 0.11in; line-height: 125%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Using
+		a browser </FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Using
+		appletviewer</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>tool:</B></FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.02in; line-height: 91%">
+Java provides a command line tool named appletviewer for quick
+debugging of applets. Use the following syntax for running an applet
+using appletviewer:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">appletviewer
+filename.java</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">As
+the file name of our applet is MyApplet.java, the command for
+executing the applet is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">appletviewer
+MyApplet.java</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">Output
+of the above command will be as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.66in; left: 2.94in; width: 227px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_2a1a5bb8.png')}}" NAME="image66.png" WIDTH=227 HEIGHT=168 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Using a browser:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Create
+a web page named hello.html with the following HTML code:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">&lt;html&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;head&gt;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">&lt;title&gt;My
+Webpage&lt;/title&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;/head&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;body&gt;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">&lt;applet
+code=&quot;MyApplet&quot; height=&quot;200&quot;
+width=&quot;400&quot;&gt;&lt;/applet&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">&lt;/body&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">&lt;/html&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Unfortunately from Java 7 onwards, local applets (unsigned) cannot be
+viewed using a browser and Google Chrome browser no longer supports
+applets in web pages.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.63in; text-indent: -0in; margin-top: 0.12in; line-height: 125%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">It
+is recommended to use appletviewer tool to debug and execute applets.
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Differences between a
+Java Application and Applets</B></FONT></FONT><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 1.11in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_23c235c3.png')}}" NAME="image67.png" WIDTH=602 HEIGHT=341 BORDER=0></SPAN></P>
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Applet
+Life Cycle</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.07in">The
+life cycle of an applet is as shown in the figure below:</P>
+<P CLASS="western"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.18in; left: 1.83in; width: 449px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_342fe1b2.png')}}" NAME="image68.png" WIDTH=449 HEIGHT=214 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+As shown in the above diagram, the life cycle of an applet starts
+with init() method and ends with destroy() method. Other life cycle
+methods are start(), stop() and paint(). The methods to execute only
+once in the applet life cycle are init() and destroy(). Other methods
+execute multiple times.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Below
+is the description of each applet life cycle method:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+<B>init(): </B>The init() method is the first method to execute when
+the applet is executed. Variable declaration and initialization
+operations are performed in this method.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+<B>start(): </B>The start() method contains the actual code of the
+applet that should run. The start() method executes immediately after
+the init() method. It also executes whenever the applet is restored,
+maximized or moving from one tab to another tab in the browser.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+<B>stop(): </B>The stop() method stops the execution of the applet.
+The stop() method executes when the applet is minimized or when
+moving from one tab to another in the browser.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in"><B>destroy():
+</B>The destroy() method executes when the applet window is closed or
+when the tab</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+containing the webpage is closed. stop() method executes just before
+when destroy() method is invoked. The destroy() method removes the
+applet object from memory.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+<B>paint(): </B>The paint() method is used to redraw the output on
+the applet display area. The paint() method executes after the
+execution of start() method and whenever the applet or browser is
+resized.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+The method execution sequence when an applet is executed is:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">init()</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">start()</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">paint()</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+The method execution sequence when an applet is closed is:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">stop()</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">destroy()</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.47in; margin-top: 0.11in; line-height: 126%">
+Example program that demonstrates the life cycle of an applet is as
+follows: import java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.25in">
+import java.applet.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyApplet extends Applet</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void init()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;Applet
+initialized&quot;);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void start()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Applet
+execution started&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void stop()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Applet
+execution stopped&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void paint(Graphics g)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Painting...&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void destroy()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Applet
+destroyed&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above applet program when run using appletviewer tool is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Applet
+initialized</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Applet
+execution </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">started
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Painting…</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Painting…</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Applet
+execution stopped Applet destroyed</FONT></FONT></FONT></FONT></P>
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Applet
+Class</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+The Applet class provides the support for creation and execution of
+applets. It allows us to start and stop the execution of an applet.
+Applet class extends the Panel class which extends Container class
+and which in turn extends the Component class. So applet supports all
+window-based activities.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western">Methods in Applet Class</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Below
+are some of the methods available in the class Applet:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+<B>init() </B>– This method is called when the execution of the
+applet begins. It is the entry point for all applets.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+<B>start() </B>– This method is automatically executed after the
+init() method completes its execution or whenever the execution of an
+applet is resumed.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.79in; margin-top: 0.12in; line-height: 125%">
+<B>stop() </B>– This method executes whenever the execution of the
+applet is suspended. <B>destroy() </B>– This method is called when
+the webpage containing the applet is closed. <B>getCodeBase() </B>–
+Returns the URL associated with the applet.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>getDocumentBase()
+</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– Returns the URL
+of the HTML document that invokes the applet.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; text-indent: -0in; margin-top: 0.13in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>getParameter(String
+paramName) </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">–
+Returns the value associated with the paramName. Returns null if
+there is no value.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.81in; margin-top: 0.12in; line-height: 125%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>isActive()
+</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– Returns true if
+the applet is started or false if the applet is stopped. </FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>resize(int
+width, int height) </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">–
+Resizes the applet based on the given width and height.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>showStatus(String
+str) </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– Displays the
+string str in the status bar of the browser or applet.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Passing
+Parameters to Applets</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.09in; line-height: 91%">
+Parameters specify extra information that can be passed to an applet
+from the HTML page. Parameters are specified using the HTML’s param
+tag.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Param Tag</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The &lt;param&gt; tag is a sub tag of the &lt;applet&gt; tag. The
+&lt;param&gt; tag contains two attributes: name and value which are
+used to specify the name of the parameter and the value of the
+parameter respectively. For example, the param tags for passing name
+and age parameters looks as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">&lt;param
+name=”name” value=”Ramesh” /&gt;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">&lt;param
+name=”age” value=”25″ /&gt;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.2in; line-height: 91%">
+Now, these two parameters can be accessed in the applet program using
+the getParameter() method of the Applet class.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">getParameter() Method</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The getParameter() method of the Applet class can be used to retrieve
+the parameters passed from the HTML page. The syntax of
+getParameter() method is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">String
+getParameter(String param-name)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Let’s
+look at a sample program which demonstrates the &lt;param&gt; HTML
+tag and the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">getParameter()
+method:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.2in; margin-top: 0.13in; line-height: 91%">
+import java.awt.*; import java.applet.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyApplet extends Applet</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">String
+n;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">String
+a;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void init()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">n
+= getParameter(&quot;name&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">a
+= getParameter(&quot;age&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void paint(Graphics g)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">g.drawString(&quot;Name
+is: &quot; + n, 20, 20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.drawString(&quot;Age
+is: &quot; + a, 20, 40);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">/*</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">&lt;applet
+code=&quot;MyApplet&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">&lt;param
+name=&quot;name&quot; value=&quot;Ramesh&quot; /&gt;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">&lt;param
+name=&quot;age&quot; value=&quot;25&quot; /&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">&lt;/applet&gt;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">*/</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of the above program is as follows:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 516px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_d120ec66.png')}}" NAME="image69.png" WIDTH=516 HEIGHT=382 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Applet
+Tag</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in; line-height: 0.39in">applet
+Tag Attributes</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Following
+are the various attributes of applet tag:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="line-height: 0.38in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>code</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		Used to specify the name of the applet</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">class.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="line-height: 0.38in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>codebase</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Used to specify the
+		location at which the applet code (class) is</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">available.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="line-height: 0.38in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>width</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Used to specify the
+		width of the applet display</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">area.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="line-height: 0.38in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>height</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		Used to specify the height of the applet display</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">area.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.68in; margin-top: 0.01in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>name</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Used to specify the
+		name of the applet which is helpful in distinguish one applet from
+		another when there are multiple applets in the same</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">webpage.</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-right: 0.34in; margin-top: 0.05in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>hspace</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Used to specify the
+		horizontal space to the left and right of the applet display area.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.41in; margin-top: 0in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>vspace</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		Used to specify the vertical space to the top and bottom of the
+		applet display area.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.48in; margin-top: 0in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>align</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">:
+		Used to specify the alignment of the applet display area with
+		respect to other HTML</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">elements.</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.61in; line-height: 91%">
+Above listed attributes are the most frequently used attributes of
+the applet tag. Below is sample HTML code using some of the
+attributes specified above.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">&lt;applet
+code=”MyApplet” codebase=”<A HREF="http://www.abc.com/applets/">http://www.abc.com/applets/</A>”</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.49in; line-height: 146%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">height=”300″
+width=”400″ name=”applet1″ hspace=”20″ vspace=”20″&gt;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">&lt;/applet&gt;</FONT></FONT></FONT></FONT></P>
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

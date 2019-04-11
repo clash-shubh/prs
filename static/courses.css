@@ -18,14 +18,16 @@ body{
 }
 img{
   padding-left: 25%;
+  padding-top: 10px;
 }
 a{
   text-decoration: none;
 }
 .name{
 
-  padding-left: 46%;
+  padding-left: 40%;
   padding-top:20px;
+  font-size: 30px;
 
 }
 .link-strip{
@@ -39,6 +41,6 @@ a{
 }
 .name-re{
   text-align: center;
-  
+
   font-size: 40px;
 }

@@ -1,0 +1,610 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Strings</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+A string is a collection of characters. In Java, strings can be
+created using three predefined classes namely String, StringBuffer
+and StringBuilder which are available in java.lang package. Why did
+Java designers provide three classes for creating strings?</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Each of the above three string classes has their own advantages and
+disadvantages. If you want to create an immutable (whose content
+cannot be changed once created) string, String class is the best
+choice. Strings created using StringBuffer and StringBuilder classes
+are mutable (content can be changed after they are created).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Among StringBuffer and StringBuilder classes, strings created using
+StringBuffer are thread safe whereas strings created using
+StringBuilder are non-thread safe. I will explain about threads in
+future articles.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Differences between all string classes: String, StringBuffer and
+StringBuilder are summarized in the below table:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f37e884.png')}}" NAME="image55.png" ALIGN=BOTTOM WIDTH=602 HEIGHT=161 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.37in">
+Now let’s look at each class in detail…</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.14in; line-height: 100%">
+String Class</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.09in">
+A string can be created in Java using the following alternatives:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String s1 = &quot;This
+is string s1.&quot;;</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.33in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String s2 = new
+String(&quot;This is string s2.&quot;);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.01in; line-height: 91%">
+In line 2, we are using a String constructor along with the new
+operator to create the string explicitly. In line 1, the whole
+process (creation of string) is done implicitly by JVM.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+If the content of the newly created string matches with the existing
+string (already available in memory), then a reference to the
+existing string in the memory is returned instead of allocating new
+memory. Since strings created using String are shared, hence they are
+immutable as changing the string content using one reference might
+effect the others.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">String Manipulation</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+As we already know that strings created using String class are
+immutable, how to manipulate them? Let us concatenate (join) two
+strings as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.45in; margin-top: 0.13in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str =
+&quot;hello&quot;; str = str + &quot;world&quot;;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">From
+the above two lines of code, content in str is “helloworld”. How
+is this possible if strings</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+created using String class are immutable. Actually what JVM has done
+implicitly (automatically) is this:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">str
+= new StringBuffer().append(str).append(&quot;world&quot;).toString();</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Since concatenation is a manipulation, a new StringBuffer object is
+created and the content of str which is “hello” is appended to
+the buffer by using append method and then “world”  is
+concatenated to “hello” making it “helloworld”. Finally the
+StringBuffer object is converted to a String object using the
+toString. All this process is done automatically by JVM whenever we
+try to concatenate two or more String objects.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Now
+we will look at various methods supported by String class for working
+with strings.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">String Methods</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The length method can be used to find the length of given string.
+Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+length()</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using length method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.67in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str =
+&quot;hello&quot;; System.out.println(str.length()); </FONT><FONT SIZE=4 STYLE="font-size: 16pt">The
+above code prints 5.</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The equals method can be used to compare whether two strings are
+having the same content or not. If both the strings are same, this
+method returns true, otherwise, false. Syntax of this method is given
+below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<FONT COLOR="#303030"><FONT FACE="Arial, serif">boolean equals(String
+str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using equals method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello&quot;;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.43in; margin-top: 0in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str2 = new
+String(&quot;hello&quot;); </FONT><FONT SIZE=4>System.out.println(str1.equals(str2));
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">The above code prints
+true.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+The compareTo method can be used to compare whether two strings are
+having the same content or not. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+compareTo(String str)</FONT></FONT></H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+This method returns 0 when both strings are same, returns -ve number
+when the invoking string is less than the argument string, and +ve
+number when the invoking string is greater than the argument string.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">An
+example of using compareTo method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello&quot;;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.52in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str2 = new
+String(&quot;hello&quot;); </FONT><FONT SIZE=4>System.out.println(str1.compareTo(str2));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints 0 as both strings are equal (same content).</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Another
+example of compareTo method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hallo&quot;;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.52in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str2 = new
+String(&quot;hello&quot;); </FONT><FONT SIZE=4>System.out.println(str1.compareTo(str2));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Above example prints -4 as the difference between ‘a’ in “hallo”
+and ‘e’ in “hello” is 4 and “hallo” is the invoking
+string.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+indexOf method is used to find the position (number) of a specified
+character in the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">invoking
+string. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+indexOf(char c)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using indexOf method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello world&quot;; </FONT><FONT SIZE=4>System.out.println(str1.indexOf('o'));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Above example prints 4 which the index of first ‘o’ in the string
+“hello world”. Index of a string always starts from zero.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.31in; margin-top: 0.14in; line-height: 91%">
+The overloaded indexOf method is used to find the position (number)
+of a specified string in the invoking string. Syntax of this method
+is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+indexOf(String str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using indexOf method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello world&quot;; </FONT><FONT SIZE=4>System.out.println(str1.indexOf(&quot;wor&quot;));
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above example prints 6.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+The lastIndexOf method is used to find the position (number) of a
+specified character from the end of the invoking string. Syntax of
+this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+lastIndexOf(char c)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using lastIndexOf method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello world&quot;; </FONT><FONT SIZE=4>System.out.println(str1.lastIndexOf('o'));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.01in; line-height: 91%">
+Above example prints 7 which is the position of ‘o’ from the end
+of the invoking string “hello world”.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+overloaded lastIndexOf method is used to find the position (number)
+of a specified</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">string
+from the end of the invoking string. Syntax of this method is given
+below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+lastIndexOf(String str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using lastIndexOf method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.94in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 = &quot;I
+am a good and I am bad&quot;;
+</FONT><FONT SIZE=4>System.out.println(str1.lastIndexOf(&quot;am&quot;));
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above example prints 18.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+The substring method can be used to extract a sub string from the
+invoking string from a specified position to the end of the string.
+Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">String
+substring(int index)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of substring method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello world&quot;; </FONT><FONT SIZE=4>System.out.println(str1.substring(2));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints “llo world”. The starting index specified in the
+above example is 2.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The overloaded substring method can be used to extract a sub string
+from the invoking string from a specified start position to end
+position in the string. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">String
+substring(int startindex, int endindex)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of substring method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.22in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello world&quot;; System.out.println(str1.substring(6, 9));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Above example prints “wor”. The starting index is 6 and the end
+index is 9. All the characters from starting index to excluding end
+index are returned.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+toLowerCase method can be used to convert all characters in a string
+to lower case</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">characters.
+Syntax is as given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">String
+toLowerCase()</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of toLowerCase method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.15in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;Hello World&quot;; System.out.println(str1.toLowerCase());
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above example prints
+“hello</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">world”.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+The toUpperCase method can be used to convert all characters in a
+string to upper case characters. Syntax is as given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">String
+toUpperCase()</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of toUpperCase method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;Hello World&quot;; </FONT><FONT SIZE=4>System.out.println(str1.toUpperCase());</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints “HELLO WORLD”.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The startsWith method can be used to check whether the invoking
+string starts with a specified string or not. Syntax of this method
+is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">boolean
+startsWith(String str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of startsWith method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.5in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str1 =
+&quot;hello world&quot;;
+</FONT><FONT SIZE=4>System.out.println(str1.startsWith(&quot;hello&quot;));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Above example prints true since the invoking string “hello world”
+starts with the specified string “hello”.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Similarly,
+endsWith method can be used to find out whether a string ends with a
+specified</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">string
+or not.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The overloaded valueOf method can be used to convert primitive type
+values like int, float, double etc to a String. Syntax of valueOf
+method that converts a given int value to a String value is given
+below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">static
+String valueOf(int value)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of valueOf method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int x = 10;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.81in; margin-top: 0in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>String str =
+String.valueOf(x); System.out.println(str); </FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above
+example prints 10.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+Above mentioned methods are the most frequently used methods of
+String class. You can have a look at other methods by clicking the
+link which is provided above.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Now
+we will look at the StringBuffer class and some of the methods
+available in that class.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 100%">StringBuffer</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+As already mentioned, strings created using StringBuffer class are
+mutable i.e., after creating a string, we can change the content of
+the string. Also strings created with StringBuffer class are thread
+safe (I will cover this aspect in future article on MultiThreading).</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">Creating Strings using
+StringBuffer Class</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">We
+can use the overloaded StringBuffer constructors as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer
+sb1 = new StringBuffer();</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.93in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb2 =
+new StringBuffer(30); StringBuffer sb3 = new StringBuffer(&quot;hello&quot;);</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+The first line in the above example creates a empty StringBuffer
+object with a default capacity of 16 characters. The second line
+creates a StringBuffer object with a capacity of 30 characters and
+the last line creates a StringBuffer object from the supplied string
+“hello”  and reserves an additional space for accommodating 16
+characters to reduce reallocation.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.61in; margin-top: 0.12in; line-height: 125%">
+Now let’s look at most of the frequently used methods available in
+the StringBuffer class. <B>StringBuffer Methods</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.02in; line-height: 91%">
+The length method can be used to find the size of a StringBuffer
+object. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+length()</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using length method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.length());</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints 5 which is the number of characters (size) in the
+buffer.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+The capacity method can be used to find the capacity of a
+StringBuffer object. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">int
+capacity()</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using capacity method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.capacity());</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints 21 which is the capacity (size + 16) of the buffer.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">You
+can use ensureCapacity and setLength methods to set the capacity and
+size of the buffer</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">respectively.
+Syntax of each of these methods is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.59in; margin-top: 0.15in; line-height: 220%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=3><B>void
+ensureCapacity(int minCapacity) void setLength(int length)</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+charAt method can be used to retrieve a single character from a
+specified position.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Syntax
+of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">char
+charAt(int pos)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using charAt method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.charAt(1));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints the character ‘e’ which is available at the
+specified position 1.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The setCharAt method can be used to set (change) a character at a
+specific location in the buffer. Syntax of this method is given
+below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">void
+setCharAt(int pos, char ch)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using setCharAt method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.96in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;); sb1.setCharAt(1, 'a');
+System.out.println(sb1);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints “hallo”.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The getChars method can be used to extract a sub string from the
+buffer to a character array. Syntax of this method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>void
+getChars(int startIndex, int endIndex, char target[], int
+targetStart)</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above syntax, startIndex is the starting position in the invoking
+string and endIndex</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+is the position up to which the characters are extracted plus one.
+target is the array in to which the sub string is extracted and
+targetStart specifies the index in the target array from which the
+sub string must be stored.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">An
+example of getChars method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>char[] target = new
+char[10];</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;); sb1.getChars(0, 3, target, 0);
+System.out.println(target);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints “hel”.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The append method can be used to concatenate the string
+representation of different types of data to the end of a buffer.
+This method is overloaded. Syntax of this method which accepts a
+String argument is shown below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">StringBuffer
+append(String str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of this method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.append(&quot;world&quot;)); </FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above
+example prints “helloworld”.</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The insert method can be used to insert string representation of
+different types of data into a buffer at a specified position. This
+method is overloaded like append method. Syntax of this method for
+String type is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">StringBuffer
+insert(int index, String str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using insert method is given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer
+sb1 = new StringBuffer(&quot;hello&quot;);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(sb1.insert(5,&quot;world&quot;));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Above example prints “helloworld”. Although the example inserts
+the string “world” at the end of the buffer, it can be inserted
+at any position you want.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+The reverse method can be used to reverse the content of a buffer.
+Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">StringBuffer
+reverse()</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using reverse method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.reverse());</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints “olleh”.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The deleteCharAt method can be used to delete a character at
+specified location in the buffer. Syntax of this method is given
+below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">StringBuffer
+deleteCharAt(int pos)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using deleteCharAt method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.deleteCharAt(1)); </FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above
+example prints “hllo”.</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The delete method can be used delete a set of characters from the
+buffer. The starting index and ending index specifies the set of
+characters to be deleted. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">StringBuffer
+delete(int startIndex, int endIndex)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using delete method is given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer
+sb1 = new StringBuffer(&quot;hello&quot;);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(sb1.delete(1,
+4));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">Above
+example prints “ho”. Characters from index 1 to 3 are deleted.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The replace method can be used to replace a set of characters with a
+specified string. The sub string is specified with starting index and
+ending index plus one. Syntax of this method is given below:</P>
+<H5 CLASS="western" STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">StringBuffer
+replace(int startIndex, int endIndex, String str)</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">An
+example of using replace method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; margin-top: 0.12in; line-height: 92%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.replace(1, 3, &quot;a&quot;)); </FONT><FONT SIZE=4 STYLE="font-size: 16pt">Above
+example prints “halo”.</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+The substring method can be used to extract a substring from the
+buffer. This is method is overloaded. Syntax of this method is given
+below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=3><B>String
+substring(int startIndex)</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=3><B>String
+substring(int startIndex, int endIndex)</B></FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">An example of using
+substring method is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.95in; text-indent: -0in; margin-top: 0.12in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>StringBuffer sb1 =
+new StringBuffer(&quot;hello&quot;);
+System.out.println(sb1.substring(1));
+System.out.println(sb1.substring(1, 4));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.4in">In
+the above example, line 2 prints “ello” and line 3 prints “ell”.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H4 CLASS="western">StringBuilder</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+The StringBuilder class is similar to StringBuffer class in the sense
+that both classes contain same methods. The difference between them
+is in the case of performance. StringBuilder is faster than
+StringBuffer.</P>
+<P CLASS="western" STYLE="page-break-before: always"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

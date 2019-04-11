@@ -1,0 +1,200 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Object
+Orientation Principles</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.07in">Following
+are the principles of object oriented paradigm (model):</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in">Abstraction</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Abstraction is first of the object orientation principles. It is
+defined as hiding the complex details and presenting only with the
+relevant or necessary details. Abstraction is used to manage
+complexity while writing programs. Encapsulation and inheritance are
+used to implement abstraction while writing programs. Abstraction
+represents the external behavior of the object (what the object does)
+and encapsulation represents how it is implemented internally by the
+object.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.13in">
+As a real world example for abstraction let’s consider the car
+example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.68in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_c37c7695.jpg')}}" NAME="image7.jpeg" ALIGN=BOTTOM WIDTH=300 HEIGHT=234 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">When
+you want to purchase a car, the car dealer gives you the details of
+available colors,</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+seating capacity, engine, gearbox, type of steering and other kinds
+of general details. The car dealer never tells you specific (complex)
+details of material being used for the hood, nuts and bolts and such.<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 1.21in; left: 2.58in; width: 300px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_c78f5b6e.jpg')}}" NAME="image8.jpeg" WIDTH=300 HEIGHT=225 BORDER=0></SPAN></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.18in; line-height: 91%">
+The above details are not needed. These details are hidden by the car
+dealer. Like this, you can think of other examples in the real world.
+Abstraction is everywhere.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in">Encapsulation</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+Encapsulation is the fundamental principle to achieve abstraction in
+object oriented programming. Abstraction is conceptual and
+encapsulation is a way to implement</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">abstraction.
+Wherever you can find abstraction you can say that encapsulation is
+there but</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">encapsulation
+may not always provide abstraction.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Encapsulation is defined as wrapping up or combining the data and
+code into a single unit. In the definition data refers to variables
+and code refers to methods (functions). Every object contains private
+data (variables) and public methods which allows other code to access
+the private data. Private methods are optional. We can view an object
+in OOP as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.33in; left: 2.19in; width: 380px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_64f5c8b8.jpg')}}" NAME="image9.jpeg" WIDTH=380 HEIGHT=272 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+As a real world example for encapsulation let’s consider a
+television. We access the television by using a remote which provides
+an interface to communicate with the television. Television
+manufacturer is hiding its components (data) under the shell and is
+providing public interface (remote control) to access its components.<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 1.59in; left: 2.58in; width: 297px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_c5c831db.jpg')}}" NAME="image10.jpeg" WIDTH=297 HEIGHT=198 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+our real world example, television components are analogous to
+private member variables</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">and
+public methods are analogous to buttons on remote control of the
+television.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Data hiding or information hiding is the side effect of
+encapsulation. Whenever we use encapsulation, we are implicitly
+hiding the data of an object which is known as data hiding.
+Encapsulation helps programmers to write code which is extensible.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Note: Don’t worry about variables and methods. I will explain
+briefly about them in Java basics section.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Inheritance</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Another way to implement abstraction is by using inheritance. In
+inheritance, classes are arranged as hierarchies. You might come
+across situations where even though objects have similar properties
+are quite different. In such cases, it is better to move all the
+common properties and behavior into one common class and the specific
+properties and behavior into special or specific classes.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Inheritance is defined as one object derives or inherits the
+properties and behavior of another object. As said above common
+properties and behavior are moved into a common class also known as
+super class or base class or parent class. Specific properties and
+behavior are moved into specialized classes also known as sub class
+or derived class or child class.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+As a real world example, consider a child inheriting the properties
+(land and other assets) from their parents.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+As another example, let’s consider that we are developing a program
+to work with geometrical objects like circle, rectangle etc. In the
+application I can create these objects and</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">perform
+operations like move, re size etc. These operations are common for
+all the objects.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+So, we can use inheritance in this context. The resultant class
+hierarchy will be as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.92in; left: 2.22in; width: 385px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_55e4a39f.png')}}" NAME="image11.png" WIDTH=385 HEIGHT=288 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.28in; line-height: 1.03in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Inheritance
+promotes re-usability. </FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Polymorphism</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Polymorphism means many forms. More generally it is defined as one
+interface multiple implementations. It means that based on the
+situation or different factors, the same thing exhibits multiple
+behaviors or the same thing can be used to carry out different tasks.
+Here thing is used as a general element.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+As a real world example for polymorphism, let’s consider the animal
+Chameleon. This animal changes its color to reflect the surroundings
+to hide from its prey. It is really cool!</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Based
+on the color of the surroundings the same thing (Chamelon) can change
+its color</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">from
+one to another.<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.46in; left: 2.58in; width: 300px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_2f083f11.png')}}" NAME="image12.png" WIDTH=300 HEIGHT=208 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.18in; line-height: 91%">
+In every well written java program, we can find encapsulation,
+inheritance and polymorphism.</P>
+
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

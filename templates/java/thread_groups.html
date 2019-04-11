@@ -1,0 +1,184 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Thread
+Groups</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+A thread group is a collection of threads. A thread group allows the
+programmer to maintain a group of threads more effectively. To
+support thread groups Java provides a class named ThreadGroup
+available in java.lang package.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Some
+of the constructors available in ThreadGroup class are:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.47in; margin-top: 0.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">ThreadGroup(String
+group-name) ThreadGroup(ThreadGroup parent, String group-name)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">After
+creating a thread group using one of the above constructors, we can
+add a thread to</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">the
+thread group using one of the following Thread constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.99in; margin-top: 0.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Thread(ThreadGroup
+ref, Runnable obj) Thread(ThreadGroup ref, String thread-name)
+Thread(ThreadGroup ref, Runnable obj, String thread-name)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">Following are some of
+the methods available in ThreadGroup class:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>getName()
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– To get the name
+		of the thread</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">group</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>setMaxPriority()
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– To set the
+		maximum priority of all the threads in the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">group</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>setMinPriority()
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– To set the
+		minimum priority of all the threads in the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">group</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>start()
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– To start the
+		execution of all the threads in the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">group</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.77in; margin-top: 0.11in; line-height: 125%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>list()
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">– To print
+		information of the thread group and the threads in the group. Below
+		program demonstrates the use of thread groups in</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Java:</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.39in">
+class ChildThread implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">ChildThread(ThreadGroup
+g, String name)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">t
+= new Thread(g,this,name);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">g.setMaxPriority(8);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">System.out.println(t.getName()+&quot;
+belongs to the group: &quot;+g.getName());</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">System.out.println(&quot;Maximum
+priority of &quot;+g.getName()+&quot; is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">&quot;+g.getMaxPriority());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">for(int
+i=1;i&lt;=10;i++)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.out.println(t.getName()+&quot;:&quot;+i);</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">Thread.sleep(1000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(t.getName()+&quot;
+is interrupted&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args) throws InterruptedException</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">ThreadGroup
+tg1 = new ThreadGroup(&quot;Group A&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.54in; margin-top: 0.01in; line-height: 91%">
+ChildThread one = new ChildThread(tg1, &quot;First Thread&quot;);
+ChildThread two = new ChildThread(tg1, &quot;Second Thread&quot;);
+try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">Thread.sleep(3000);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 0.61in; margin-top: 0.01in; line-height: 91%">
+System.out.println(&quot;All the threads in the group will be
+stopped&quot;); tg1.stop();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;main
+thread is interrupted&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">tg1.list();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.6in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread belongs to the group: Group A Maximum priority of Group A is:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">8</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.3in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Second
+Thread belongs to the group: Group A Maximum priority of Group A is:</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">8</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.98in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">First
+Thread:1 Second Thread:1 First Thread:2 Second Thread:2 Second
+Thread:3 First Thread:3</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.99in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">All
+the threads in the group will be stopped
+java.lang.ThreadGroup[name=Group A,maxpri=8]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.37in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Thread[First
+Thread,5,Group A] Thread[Second Thread,5,Group A]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

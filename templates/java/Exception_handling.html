@@ -1,0 +1,990 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Exception
+Handling</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.07in">In
+general, the errors in programs can be categorized into three types:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Syntax
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>errors: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Also
+		called compile time errors when a program violates the rules of the
+		programming language. Ex: missing a semi colon, typing a spelling
+		mistake in keyword</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">etc.</FONT></FONT></P>
+		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Run-time
+		errors: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Errors
+		which are raised during execution of the program due to violation
+		of semantic rules or other abnormal behaviour. Ex: dividing a
+		number with zero, stack overflow, illegal type conversion,
+		accessing an unavailable array element etc.</FONT></FONT></P>
+		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Logic
+		errors: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Errors
+		which are raised during the execution of the program due to
+		mistakes in the logic applied in the program. These are the most
+		severe kind of errors to detect. Ex: misplacing a minus sign in the
+		place of plus sign, placing a semi colon at the end of loops</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">etc.</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+<B>Exception: </B>An abnormal condition that occurs at run-time or a
+run-time error is known as an exception.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+<B>Exception Handling: </B>Handling exceptions is known as exception
+handling. Instead of letting the program crash (terminate abnormally)
+when an error occurs at run-time, we provide meaningful error
+messages to the users by handling the exception(s).</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">Exception Handling
+Fundamentals</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+In Java, abnormal conditions that occur in programs are known as
+exceptions. Java exceptions are objects which are thrown when an
+exception raises. Exceptions which are</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">raised
+must be handled (caught) at some point. Exceptions can be created by
+Java run-time</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">system
+or they can be created manually.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+Java aids exception handling by providing five keywords: try, catch,
+throw, throws, and finally. Their use is described as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in"><B>try:
+</B>Statements that are supposed to raise exception(s) are placed
+inside a try block.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.13in; line-height: 91%">
+<B>catch: </B>Code that handles exceptions are placed in catch
+blocks. A try block must be followed by one or more catch blocks or a
+single finally block.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+<B>throw: </B>Most of the exceptions are thrown automatically by the
+Java run-time system. We can throw exceptions manually using throw
+keyword.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+<B>throws: </B>If a method which raises exceptions doesn’t want to
+handle them, they can be  thrown to parent method or the Java
+run-time using the throws keyword.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+<B>finally: </B>All the statements that should execute irrespective
+of whether a exception arises or not is placed in the finally block.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">The
+general form of an exception handling block looks as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section48" DIR="LTR" GUTTER=17 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">try</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">//Statements that
+	might arise exceptions</P>
+</DIV>
+<DIV ID="Section49" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">catch(ExceptionType1
+	obj)</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Exception
+	handling code</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">catch(ExceptionType2
+obj)</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<DIV ID="Section50" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: -0.01in; margin-top: 0.01in; line-height: 91%">
+	//... finally</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in; line-height: 0.38in">//Exception
+	handling code</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in">//Code that execute
+	even if exception(s) occur or not</P>
+</DIV>
+<DIV ID="Section51" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Note
+	that every try block must be followed by one or more catch blocks or
+	a single finally</P>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+	block. To aid exception handling, Java provides several pre-defined
+	exception classes. The root class for all exception classes is
+	Throwable. The hierarchy of exception classes is as follows:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.17in; left: 1.15in; width: 578px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_e3c9c06f.jpg')}}" NAME="image62.jpeg" WIDTH=578 HEIGHT=338 BORDER=0></SPAN><BR>
+	</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 0.37in">Exception
+Types</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+There are different categorizations of exceptions based on factors
+given below:</P>
+<UL>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Nature
+		of</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">exceptions</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Necessity
+		of handling</FONT><FONT SIZE=4 STYLE="font-size: 16pt"> </FONT><FONT SIZE=4 STYLE="font-size: 16pt">exceptions</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 4.57in; margin-top: 0.11in; line-height: 125%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Creation
+		of exceptions </FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Nature
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>of</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Exceptions:</B></FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.03in; line-height: 91%">
+Based on nature of exceptions, exceptions are categorized into
+Exceptions and Errors. Two direct sub classes of the Throwable class
+are Exception and Error.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+All the sub classes of Exception class are related to exceptions
+raised in the programmer’s code. One important sub class is
+RuntimeException which contains several sub classes representing
+exceptions that are automatically handled by the Java run-time
+system. Examples of such exceptions are divide by zero, array index
+out of bounds.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+All the sub classes of Error class are related to exceptions related
+to problems with run-time system. Examples of such errors are stack
+overflow and out of memory.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">Necessity of Handling
+Exceptions:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Based on whether it is compulsory to provide exception handling code
+or not, exceptions are categorized into checked exceptions and
+unchecked exceptions.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Exceptions for which providing exception handling is not necessary
+are known as unchecked exceptions. All sub classes of
+RuntimeException class are examples of unchecked exceptions.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Exceptions
+which must be handled by the code written by programmer are known as</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+checked	exceptions.	Examples	of	checked	exceptions	are	IOException,
+ClassNotFoundException etc.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">Creation of
+Exceptions:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+Based on who is providing the exception classes, exceptions are
+categorized into pre-defined exceptions (system exceptions) and
+user-defined exceptions.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+All exception classes available with Java are known as pre-defined
+exceptions or system exceptions. Exceptions that created by the
+programmer are known as user-defined exceptions.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Exception Handling Example</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+Let’s see a sample Java program which handles “divide by zero”
+exception. First let’s see the Java program without using exception
+handling constructs. The program is given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.39in">
+class Divide</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">int
+a = 10, b = 0;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.17in; margin-top: 0.01in; line-height: 91%">
+int c = a / b; System.out.println(&quot;Result is: &quot; + c);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">The
+output of the above program is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Exception
+in thread “main” java.lang.ArithmeticException: / by zero at
+Divide.main(Divide.java:6)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+The exception which was automatically generated by Java run-time
+system was ArithmeticException which is a sub class of
+RuntimeException. So, all unchecked exceptions like
+ArithmeticException are automatically handled by Java run-time
+system.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The above output says that the exception was raised in main method,
+exception raised was ArithmeticException and the associated message
+is / by zero, exception was raised in Divide class, in Divide.java
+file and on line number 6.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Now, let’s use exception handling constructs to provide our own
+exception handling code (message). The program is given below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.39in">
+class Divide</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section52" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 4.01in; margin-top: 0in; line-height: 91%">
+	int a = 10, b = 0; int c = a / b;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">System.out.println(&quot;Result
+	is: &quot; + c);</P>
+</DIV>
+<DIV ID="Section53" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(ArithmeticException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;b
+	cannot be zero&quot;);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">b
+cannot be zero</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">This
+is how we can use exception handling constructs to handle exceptions
+in Java.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">try
+and catch Blocks</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">A Simple try-catch
+Block</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+As we know, statements that might raise exceptions are placed inside
+try block and the exception handling code is placed inside catch
+block. A try block must be followed immediately by one or more catch
+blocks or a finally block.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.83in; margin-top: 0.12in; line-height: 126%">
+Let’s see an example program which catches an array index out of
+bounds exception: class ArrayException</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.27in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section54" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">int
+	a[] = {1, 2, 3};</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 1.83in; margin-top: 0.01in; line-height: 91%">
+	System.out.println(&quot;Value is: &quot; + a[4]);
+	System.out.println(&quot;Another print statement!&quot;);</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">catch(ArrayIndexOutOfBoundsException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Outside
+try-catch block&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.27in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java.lang.ArrayIndexOutOfBoundsException:
+4 Outside try-catch block</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+Whenever an exception is raised in one of the statements of try
+block, control automatically enters a subsequent catch block. After
+the code in the catch block completes execution, the control moves to
+the next statement after the try-catch block.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In the above catch block ‘e’ represents the exception object.
+When printed in the println() method, the toString() method executes
+which in turn gives the exception related information.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Multiple catch Blocks</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A try block can be followed by multiple catch blocks to catch
+different types of exceptions in the code. Let’s look at a Java
+program which uses multiple catch blocks:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.9in; margin-top: 0.14in; line-height: 91%">
+import java.util.Scanner; class ArrayException</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section55" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.29in; margin-top: 0in; line-height: 91%">
+	Scanner input = new Scanner(System.in); int x = 10;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.55in; margin-top: 0in; line-height: 91%">
+	int y = input.nextInt(); int z = x / y;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.08in; margin-top: 0in; line-height: 91%">
+	System.out.println(&quot;z = &quot; + z); int a[] = {1, 2, 3};</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 1.83in; margin-top: 0in; line-height: 91%">
+	System.out.println(&quot;Value is: &quot; + a[4]);
+	System.out.println(&quot;Another print statement!&quot;);</P>
+</DIV>
+<DIV ID="Section56" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(ArithmeticException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.36in">System.out.println(e);</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.36in">catch(ArrayIndexOutOfBoundsException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.36in">System.out.println(e);</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.36in">System.out.println(&quot;Outside
+	try-catch block&quot;);</P>
+	<P CLASS="western" STYLE="margin-left: 0.59in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.09in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.09in; line-height: 0.38in">Output
+	of the above program when z is given the value 2 by the user is:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">z
+= 5</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.27in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java.lang.ArrayIndexOutOfBoundsException:
+4 Outside try-catch block</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">Output
+of the above program when z is given the value 0 by the user is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.93in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java.lang.ArithmeticException:
+/ by zero Outside try-catch block</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+When using multiple catch blocks care should be taken that the order
+of exception classes must be from sub classes to the super class
+Exception. For example if the above program is modified as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.9in; margin-top: 0.14in; line-height: 91%">
+import java.util.Scanner; class ArrayException</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section57" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.29in; margin-top: 0in; line-height: 91%">
+	Scanner input = new Scanner(System.in); int x = 10;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.55in; margin-top: 0in; line-height: 91%">
+	int y = input.nextInt(); int z = x / y;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.08in; margin-top: 0in; line-height: 91%">
+	System.out.println(&quot;z = &quot; + z); int a[] = {1, 2, 3};</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 1.83in; margin-top: 0in; line-height: 91%">
+	System.out.println(&quot;Value is: &quot; + a[4]);
+	System.out.println(&quot;Another print statement!&quot;);</P>
+</DIV>
+<DIV ID="Section58" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">catch(Exception
+	e)</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">System.out.println(e);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(ArithmeticException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(ArrayIndexOutOfBoundsException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Outside
+try-catch block&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">The
+above program when compiled will generate errors as the second and
+third catch blocks</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+are non-reachable. To eliminate errors place the Exception catch
+block as the last catch block.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Nested try Blocks</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In Java, try blocks can be nested in one another. In nested try
+blocks, an exception raised in the inner try block can be handled by
+the catch blocks of outer try block. To understand this let’s look
+at the following example program:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.9in; margin-top: 0.14in; line-height: 91%">
+import java.util.Scanner; class ArrayException</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section59" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.29in; margin-top: 0in; line-height: 91%">
+	Scanner input = new Scanner(System.in); int x = 10;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.55in; margin-top: 0in; line-height: 91%">
+	int y = input.nextInt(); int z = x / y;</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 3.08in; margin-top: 0in; line-height: 91%">
+	System.out.println(&quot;z = &quot; + z); try</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section60" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">int
+	a[] = {1, 2, 3};</P>
+	<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">System.out.println(&quot;Value
+	is: &quot; + a[4]);</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">catch(ArithmeticException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 2.09in; line-height: 0.36in">System.out.println(e);</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.36in">System.out.println(&quot;Another
+	print statement!&quot;);</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.36in">catch(ArithmeticException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.36in">System.out.println(e);</P>
+	<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.39in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">catch(ArrayIndexOutOfBoundsException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Outside
+try-catch block&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Notice	that	in	the	above	program	the	catch	block	of	inner	try	is	handling</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+ArithmeticException which is not supposed to raise in the inner try
+block. So, the array index out of bounds exception will be handled by
+the catch block of outer try block.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">z
+= 2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.27in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java.lang.ArrayIndexOutOfBoundsException:
+4 Outside try-catch block</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">This
+is how we use try and catch blocks in Java.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">throw
+throws and finally</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">throw Keyword</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The throw keyword can be used in Java programs to throw exception
+objects explicitly. The syntax of using throw is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">throw
+ThrowableInstance;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+ThrowableInstance can be object of Throwable class or any of its sub
+classes. A reference</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+to the Throwable instance can be obtained using the parameter in
+catch block or by using the new operator.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.3in; margin-top: 0.12in; line-height: 126%">
+Let’s see a sample program that demonstrates the use of throw:
+class ArrayException</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section61" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in">throw new
+	ArithmeticException(&quot;Testing throw&quot;);</P>
+</DIV>
+<DIV ID="Section62" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(Exception
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">throw
+	e;</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">At
+	line 7 throw keyword is used to throw a n object of
+	ArithmeticException with the message</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+	Testing throw. At line 12 we are re-throwing the exception to Java
+	run-time system. Output dwof the above program is:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java.lang.ArithmeticException:
+	Testing throw</FONT></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.55in; margin-top: 0in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Exception
+	in thread “main” java.lang.ArithmeticException: Testing throw</FONT></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">at
+	ArrayException.main(ArrayException.java:8)</FONT></FONT></FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">throws Keyword</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The throws keyword can be used in method definition to let the caller
+of a method know about the exceptions that the method might raise and
+which are not handled by that method. The general form of throws is
+as follows:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.19in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">type
+method-name(parameters-list) throws exception-list</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">{</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">//body
+of method</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">}</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.06in; line-height: 91%">
+The exception-list is a comma separated list of exceptions that the
+method might throw. Except the sub classes of Error and
+RuntimeException classes all other exceptions (checked exceptions)
+must be mentioned explicitly with the throws keyword. Otherwise, it
+will lead to compile-time errors.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.5in; margin-top: 0.12in; line-height: 126%">
+Let’s see a sample program which demonstrates the use of throws
+keyword: class ArrayException</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.27in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">static
+void myMethod() throws ArithmeticException</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">throw
+new ArithmeticException(&quot;Testing throws&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">myMethod();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(Exception
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Observe
+that the method myMethod() does not handle ArithmeticException. It
+throws the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+exception to its caller (main method) which in turn handles the
+exception. We can throw multiple exceptions using the throws keyword.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">finally Keyword</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The statements in finally block are guaranteed to be executed
+irrespective of whether an exception raises or not. House keeping
+code like closing the connection to a file or database can be written
+in a finally block as it always executes.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.35in; text-indent: -0in; margin-top: 0.12in; line-height: 126%">
+Let’s see an example program which demonstrates the use of finally
+keyword: class FinallyDemo</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.27in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">int
+a[] = {1,2,3,4,5};</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">System.out.println(&quot;Value
+is: &quot; + a[4]);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(Exception
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<DIV ID="Section63" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.37in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.38in">finally</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.37in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.37in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.27in; line-height: 0.38in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in; line-height: 0.38in">System.out.println(e);</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in">System.out.println(&quot;Guaranteed
+	to execute&quot;);</P>
+</DIV>
+<DIV ID="Section64" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+	of the above program is:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.47in; margin-top: 0.06in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Value
+	is: 5 Guaranteed to </FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">execute</FONT></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.38in; margin-top: 0.18in; line-height: 126%">
+	Let’s modify the above program so that an exception is raised:
+	class FinallyDemo</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+	static void main(String[] args)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section65" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">int
+	a[] = {1,2,3,4,5};</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; line-height: 0.39in">System.out.println(&quot;Value
+	is: &quot; + a[8]);</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">catch(Exception
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<DIV ID="Section66" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.37in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.38in">finally</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.37in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.37in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.27in; line-height: 0.38in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in; line-height: 0.38in">System.out.println(e);</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.04in">System.out.println(&quot;Guaranteed
+	to execute&quot;);</P>
+</DIV>
+<DIV ID="Section67" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+	of the above program is:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.27in; margin-top: 0.06in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">java.lang.ArrayIndexOutOfBoundsException:
+	8 Guaranteed to execute</FONT></FONT></FONT></FONT></P>
+	<H2 CLASS="western" STYLE="margin-top: 0.14in"><BR CLEAR=LEFT><FONT COLOR="#17365d">User
+	Defined Exceptions</FONT></H2>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.09in; line-height: 91%">
+	Although Java provides several pre-defined exception classes,
+	sometimes we might need to create our own exceptions which are also
+	called as user-defined exceptions.</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Steps
+	for creating a user-defined exception:</P>
+	<OL>
+		<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Create
+		a class with your own class name (this acts the exception</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">name)</FONT></FONT></P>
+		<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Extend
+		the pre-defined class</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">Exception</FONT></FONT></P>
+		<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Throw
+		an object of the newly create</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">exception</FONT></FONT></P>
+	</OL>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">As
+an example for user-defined exception, I will create my own exception
+named</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">NegativeException
+as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.39in">
+class NegativeException extends Exception</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">String
+msg = &quot;Value cannot be negative&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.06in; margin-top: 0.01in; line-height: 91%">
+NegativeException() {} NegativeException(String str)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">msg
+= str;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+String toString()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">return
+&quot;NegativeException: &quot; + msg;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Note
+that I am overriding the toString() method of the Exception class to
+provide</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">meaningful
+description of my own exception.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.71in; margin-top: 0.11in; line-height: 126%">
+Now, I can use my own exception NegativeException in Java programs as
+shown below: class NegativeExceptionDemo</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">int
+x = -5;</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">if(x
+&lt; 0)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<DIV ID="Section68" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.18in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.38in">else</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.18in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.18in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.41in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.23in; line-height: 0.38in">throw
+	new NegativeException();</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.23in">System.out.println(&quot;x
+	= &quot; + x);</P>
+</DIV>
+<DIV ID="Section69" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(NegativeException
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(e);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+	of the above program is:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">NegativeException:
+	Value cannot be negative</FONT></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+	From the above program you might have guessed the use of
+	NegativeException. It notifies the user about negative values which
+	are not allowed as input.</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">This
+	how we can create and use our own exceptions in Java.</P>
+</DIV>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

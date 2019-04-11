@@ -1,0 +1,250 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Variables</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">Variable Definition:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">A
+variable is a named location in memory (RAM) to store data.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+It is common in programs to store data and process the data to get
+the required outcome. If the data is predetermined (Case 1), for
+example, you want to add 2 and 3. Here, you know what to add. But
+what if the data will be read at runtime (Case 2) or someone else
+will give the data for your program. You can’t predict that data.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+For Case 2, you have to use variables for storing the data in memory
+and then process it to get the output.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Java program for Case 1 will be as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class Sample</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.23in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(&quot;Sum
+of 2 and 3 is: &quot;+(2+3));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In the above program you must enclose 2+3 in brackets. Otherwise
+instead of 5, which is the expected output, you will get 23 (2 and 3
+will be treated as strings and gets concatenated with each other).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Before looking at the program for Case 2, let’s learn how to
+declare variables and use them.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Creating or declaring
+variables in Java:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">A
+variable can be created or declared in Java by using the below
+syntax:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">datatype</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">variable_name;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+A variable_name can be any valid identifier in Java. Before using any
+variable in a Java program, you have to declare it first as per the
+syntax given above. The datatype specifies the type of value you are
+going to store in the variable. More on Java data types in another
+article. For now, just think of it as the type of variable.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">Example
+for declaring a variable in Java is shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">x;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.58in; margin-top: 0.18in; line-height: 125%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">In
+the above example, int is a Java’s primitive data type and x is the
+name of the variable. </FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Initializing
+variables in Java:</B></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">After
+declaring variables, we can initialize them as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">variable_name
+= value;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">So,
+we can initialize the variable x as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">x
+= 10;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+Remember that x has been declared as an integer. So, we can store
+integer values in x. For initializing a variable, we use the
+assignment (=) operator. We can combine variable declaration and
+initialization into a single line as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+x = 10;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+Initializing variables with literal values like 10, 2.5, etc… is
+known as static initialization. We can also assign an expression to a
+variable as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 5.56in; margin-top: 0.06in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+a = 10; int b = 20; int c = a+b;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+The expression a+b will be evaluated at runtime (execution of the
+program) and then it will be assigned to the variable c. This type of
+initialization is know as dynamic initialization.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.12in">We
+can declare multiple variables of the same type as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">int
+x, y, z;</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+Java program for Case 2 shown below will give you an example of how
+to use variables in Java:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.11in; margin-top: 0.13in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>import
+java.util.Scanner; class Sample</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.23in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+x, y;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.15in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Scanner input = new
+Scanner(System.in); System.out.println(&quot;Enter value of x: &quot;);
+ x = input.nextInt(); System.out.println(&quot;Enter value of y:</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>&quot;);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>y
+= input.nextInt();</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.out.println(&quot;Sum
+of x and y is: &quot;+(x+y));</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In the above program Scanner is a utility class available in
+java.util package to read data from various sources like standard
+input, files etc… To read input from console (standard input) we
+provide System.in as a parameter to the Scanner’s constructor.
+nextInt() method</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+available in the Scanner class returns the input entered by the user
+as an integer. The</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+variables x and y are dynamically initialized. Output of the above
+program is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Enter
+value of x:</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">10</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Enter
+value of y:</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">20</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.24in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Sum
+of x and y is: 30</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Types of variables:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Based on the location where the variable is declared and how it is
+declared, variables in Java are divided into three types. They are:</P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Instance</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">variables</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Class</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">variables</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Local</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">variables</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+<B>Instance Variables: </B>A variable which is declared inside a
+class and outside all the methods, constructors and blocks is known
+as an instance variable.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+<B>Class Variables: </B>A variable which is declared inside a class
+and outside all the methods, constructors, blocks and is marked as
+static is known as a class variable. More on static keyword in
+another article.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+<B>Local Variables: </B>Any variable which is declared inside a class
+and inside a block, method or a constructor is known as a local
+variable.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Following Java example program demonstrates all the three kinds of
+variables:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.1in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class Sample</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+x, y;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>static
+int result;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>void
+add(int a, int b)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 5.26in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>x = a; y = b;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.5in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int sum = x+y;
+System.out.println(&quot;Sum = &quot;+sum);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.23in; line-height: 0.31in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.94in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Sample obj = new
+Sample(); obj.add(10,20);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above program x and y are instance variables, result is a class
+variable; a, b, sum and</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">args
+are local variables.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+One important point to remember is, every object maintains its own
+copy of each instance variable and a shared copy of each class
+variable.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Questions related to variables:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">1.
+What is difference between instantiation and initialization?</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.31in; margin-top: 0.13in; line-height: 91%">
+A: Instantiation refers to creating an object for the class and
+initialization refers to assigning some value to a variable.</P>
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

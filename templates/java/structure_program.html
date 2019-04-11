@@ -1,0 +1,115 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+<P CLASS="western" STYLE="margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Structure
+of a Java program</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.07in">Structure
+of a Java class is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.22in; left: 1.18in; width: 572px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f68d4ed.jpg')}}" NAME="image21.jpeg" WIDTH=572 HEIGHT=394 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">A Java class can
+contain the following:</P>
+<UL>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Package
+	statement: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A package
+	statement is used to declare a Java class as a part of  the
+	specified package. More on declaring packages later. Package
+	statement is optional. When we decide to write a package statement,
+	it should be the first statement in the file. Only exception to this
+	rule is writing</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">comments.</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Import
+	statement(s): </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">We can
+	write one or more import statements. These are also optional. An
+	import statement is used to link our class with other classes in the
+	same package or other packages to use their functionality. More on
+	import statement in other</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">articles.</FONT></FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<UL>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Comments:
+	</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">We can write one or
+	more comments in a Java class to explain the use of certain
+	statements or provide extra information like purpose of the class,
+	author’s name, date and time of creation etc. Comments are
+	optional. Comments can be written in the first line or anywhere in
+	the program. More on writing comments  later.</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Class
+	</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>declaration: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">A
+	class declaration consists of the class keyword followed by the
+	class name, which is followed by the body of the class represented
+	using braces { }. A class declaration can contain the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">following:</FONT></FONT></P>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Variable</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">declarations</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Comments</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Constructors</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Methods</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Nested</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">classes</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Nested</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">interfaces</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Enumerations</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.79in; margin-top: 0.11in; line-height: 125%">
+All the above elements (variable declarations, comments etc…) can
+occur in any order. Now, let’s look at the structure of a Java
+program. It will be as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.53in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_c45df3eb.jpg')}}" NAME="image22.jpeg" ALIGN=BOTTOM WIDTH=510 HEIGHT=402 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">As
+I had already mentioned above, a Java program is a set of one or more
+classes in which</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+each class will be declared following the structure of a Java class
+and one of the classes will have a main method to start the execution
+of the Java program.</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

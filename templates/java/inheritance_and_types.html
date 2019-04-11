@@ -1,0 +1,517 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+<H1 CLASS="western" ALIGN=LEFT STYLE="margin-right: 0in"><BR>
+</H1>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Inheritance
+Concepts</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.07in">Inheritance
+is defined as: Deriving properties and behavior of one class to
+another class.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The class from which things are derived is known as super class and
+the class in to which things are derived to is known as sub class. A
+super class can also be called as base or parent class and a sub
+class can also be called as derived or child class.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Inheritance relationship between two classes is also known as is-a
+relationship or also called as generalization-specialization
+relationship. When one or more classes have general characteristics,
+such characteristics are moved to a general class (super class) and
+only special characteristics are maintained in the specialized class
+(sub class). Inheritance relationship can be represented as shown
+below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 2.11in; left: 3.78in; width: 70px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_6c33a577.png')}}" NAME="image56.png" WIDTH=70 HEIGHT=156 BORDER=0></SPAN></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.18in; line-height: 91%">
+In the above figure, class A is super class and class B is sub class.
+In Java programs, inheritance is implemented using extends keyword.
+For example, if a class B wants to derive the characteristics of
+class A, we can write as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in; line-height: 0.39in">
+class B extends class A</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+of class B</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Let’s
+look at how inheritance works using a more practical example given
+below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">String
+name;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.07in; margin-top: 0.01in; line-height: 91%">
+String regdNo; int age;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">Student(String
+name, String regdNo, int age)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.name
+= name;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.07in; margin-top: 0.01in; line-height: 91%">
+this.regdNo = regdNo; this.age = age;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getName()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+name is: &quot;+name);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getRegdNo()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+registered number is: &quot;+regdNo);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getAge()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+name is: &quot;+age);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">class
+CSEStudent extends Student</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 2.73in; margin-top: 0.01in; line-height: 91%">
+static final String branch = &quot;CSE&quot;; CSEStudent(String name,
+String regdNo, int age)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">super(name,
+regdNo, age);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getBranch()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+branch is: &quot;+branch);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">CSEStudent
+s1 = new CSEStudent(&quot;Teja&quot;, &quot;10AB001&quot;, 20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.53in; margin-top: 0.01in; line-height: 91%">
+s1.getName(); s1.getRegdNo(); s1.getAge(); s1.getBranch();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example, class Student is super class and class CSEStudent
+is sub class. You can</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+see how general data and code is maintained in the super class and
+how specific data (branch and getBranch) is maintained in the sub
+class. Output of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; line-height: 0.24in; page-break-before: always">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Student’s
+name is: Teja</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.78in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Student’s
+registered number is: 10AB001 Student’s name is: 20</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Student’s
+branch is: CSE</FONT></FONT></FONT></FONT></P>
+<H5 CLASS="western" STYLE="margin-top: 0.18in">Advantages of
+Inheritance</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Following
+are the advantages of using inheritance in programs:</P>
+<OL TYPE=a START=21>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Reusability:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">The code and
+		methods declared in the base class can be re used in the derived</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">class.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Extensibility:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Derived classes can
+		be extended to provide new functionality of their own.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Data
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Hiding: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Base
+		class can hide some of its data and code by making them</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">private.</FONT></FONT></P>
+		<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Overriding:
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Derived classes can
+		have methods with same signature as in base class. The methods in
+		the derived class provides suitable functionality which might be
+		different from the methods available in the base</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">class.</FONT></FONT></P>
+	</UL>
+</OL>
+<H5 CLASS="western" STYLE="margin-top: 0.12in">Disadvantages of
+Inheritance</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Following
+are the disadvantages of using inheritance:</P>
+<OL TYPE=a START=21>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">More
+		time taken for the control to reach the base class from derived
+		classes when there are several levels of</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">inheritance.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Tight
+		coupling between the base class and derived</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">class.</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Increase
+		in maintenance time as changes done to base class may require
+		changes to be performed in the derived</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">class.</FONT></FONT></P>
+	</UL>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in; page-break-before: always">
+<BR CLEAR=LEFT><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Types
+of Inheritance</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+There are five types of inheritance based on how many base classes
+and derived classes are there in the inheritance relationship. They
+are as follows:</P>
+<OL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Simple</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">inheritance</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Multi-level
+	inheritance</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Multiple</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">inheritance</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Hierarchical</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">inheritance</FONT></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Hybrid</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">inheritance</FONT></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.92in; text-indent: -0in; margin-top: 0.11in; line-height: 125%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Let’s
+look at each one of these five types of inheritance in more detail.
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Simple inheritance:</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.02in; line-height: 91%">
+This is the most frequently used and most simple of the five types of
+inheritance. In this type of inheritance there is a single derived
+class which inherits from a single base class. This can be
+represented pictorially as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.34in; left: 3.23in; width: 153px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_42d4797f.png')}}" NAME="image57.png" WIDTH=153 HEIGHT=225 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above figure, A is base class and B is derived class. This can be
+converted to Java code</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">as
+given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section23" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">//Members of class A</P>
+</DIV>
+<DIV ID="Section24" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	B extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<H5 CLASS="western" STYLE="line-height: 0.38in">Multi-level
+	Inheritance</H5>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	In this type of inheritance there are several classes in the
+	hierarchy forming multiple levels. Each level contains a base class
+	and a derived class. Multi-level inheritance can be represented as
+	shown below:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.28in; left: 3.21in; width: 161px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_72a35a76.png')}}" NAME="image58.png" WIDTH=161 HEIGHT=312 BORDER=0></SPAN><BR>
+	</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above figure there are two levels. First level contains A as the
+base class and B as the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+derived class. In the second level B is the base class and C is the
+derived class. The above figure can be converted to Java code as
+given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section25" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">//Members of class A</P>
+</DIV>
+<DIV ID="Section26" DIR="LTR">
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	B extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	C extends B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class C</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<H5 CLASS="western" STYLE="line-height: 0.38in">Multiple Inheritance</H5>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+	In this type of inheritance a single derived class can inherit from
+	two or more base classes. Multiple inheritance can be represented as
+	shown below:</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.26in; left: 2.71in; width: 277px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_a1a74818.png')}}" NAME="image59.png" WIDTH=277 HEIGHT=160 BORDER=0></SPAN><BR>
+	</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above figure A and B are base classes and C is the derived class.
+Above figure can be</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">converted
+to Java code as given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section27" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">class
+	B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">//Members of class A</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">//Members of class B</P>
+</DIV>
+<DIV ID="Section28" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	C extends A,B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class C</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">It
+	is important to remember that in Java, we can inherit from more than
+	one class. So in the</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">above
+	code class C extends A, B is syntactically incorrect.</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.11in">Hierarchical
+	Inheritance</H5>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+	In this type of inheritance, two or more derived classes inherit
+	from a common base class. Hierarchical inheritance can be
+	represented as shown below:</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.14in; left: 2.5in; width: 313px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_60ab8a90.png')}}" NAME="image60.png" WIDTH=313 HEIGHT=131 BORDER=0></SPAN><BR>
+	</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above figure A is the base class and B, C and D are derived
+classes. Above figure can</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">be
+converted to Java code as given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section29" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">//Members of class A</P>
+</DIV>
+<DIV ID="Section30" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	B extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	C extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class C</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	D extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class D</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<H5 CLASS="western" STYLE="line-height: 0.38in">Hybrid Inheritance</H5>
+	<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+	As the name itself implies, hybrid inheritance is a combination of
+	any two or more of the above mentioned four types of inheritance.
+	Hybrid inheritance can be represented as shown below:</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; margin-bottom: 0in; page-break-before: always">
+<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.15in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f4e0fded.png')}}" NAME="image61.png" ALIGN=BOTTOM WIDTH=400 HEIGHT=219 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above figure you can see hierarchical, single and multi-level
+inheritance. Above figure</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">can
+be converted to Java code as given below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<DIV ID="Section31" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">//Members of class A</P>
+</DIV>
+<DIV ID="Section32" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	B extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	C extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class C</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	D extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+	of class D</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+E extends B</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">//Members
+of class E</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">Note:
+It is not mandatory to write the classes in a particular order in
+Java. You can write in</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">any
+order that you want.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in">What types of
+inheritance does Java support?</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Java supports all types of inheritance mentioned above except
+multiple inheritance. Java doesn’t allow multiple inheritance in
+case of classes but it allows multiple inheritance in case of
+interfaces. As interfaces are not yet introduced, I will cover this
+in future articles.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Why multiple inheritance (among classes) has been removed in Java?
+Well, there are certain problems in multiple inheritance. For
+example, consider that a derived class C inherits from classes A and
+B (multiple inheritance). Suppose there are is a variable by the name
+X in both classes A and B. Now, if I access X in class C (which is
+valid due to inheritance) where does X value come from. Does it come
+from A or B?</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Above problem is also valid for methods and not only for variables.
+Such situations leads to ambiguity. To eliminate such ambiguous
+situations, Java designers voted for removing multiple inheritance in
+the case of classes.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

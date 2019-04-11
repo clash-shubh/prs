@@ -1,0 +1,534 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Synchronization</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western">Why Synchronization is Needed?</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+When two or more threads are accessing the same resource like a
+variable or a data structure, it may lead to inconsistent data or
+values. Such conditions that lead to inconsistency are known as race
+conditions.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+As an example let’s consider a variable count whose value is 7 at
+present. Consider two operations: count = count + 1 which is executed
+by thread1 and another operation count = count – 1 which is
+executed by thread2. Note that both threads are sharing the common
+variable count.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+If both threads execute in parallel then the sequence of operations
+can be either:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">count
+= count +</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">count
+= count –</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.04in">
+or</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.18in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">count
+= count –</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">count
+= count +</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.06in; line-height: 91%">
+In both sequences the end value of count will be 7 which is a
+consistent value. But often a single high-level language statement
+will be converted to multiple assembly language statements.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">The
+count = count + 1 will be converted to following assembly language
+statements:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.18in; margin-top: 0.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">A:
+R1 = count B: R1 = R1 +</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">C:
+count =</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">R1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.31in; margin-top: 0.07in; line-height: 91%">
+Statements are labelled as A, B and C for convenience. R1 is a CPU
+register. Similarly count = count – 1 will be converted to
+following assembly language statements:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.2in; margin-top: 0.19in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">D:
+R2 = count E: R2 = R2 – 1</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">F:
+count = R2</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.07in; line-height: 91%">
+Again statements are labelled as D, E and F for convenience. R2 is
+another CPU register. Statements A, B and C are executed by thread1
+in parallel with statements D, E and F of thread2.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+Let the value of count be 7. Now consider the following statement
+execution sequence: A, B, D, E, C, F as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.36in; margin-top: 0.19in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">A:
+R1 = count (R1 = 7) B: R1 = R1 + 1 (R1 =</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">8)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.36in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">D:
+R2 = count (R2 = 7) E: R2 = R2 – 1 (R2 =</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">6)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.24in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">C:
+count = R1 (count = 8) F: count = R2 (count = 6)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+End value of count after the above execution sequence is 6 which is
+an inconsistent value</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+and the execution sequence can be considered as an example that led
+to race condition.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+To prevent race conditions we can use a mechanism known as
+synchronization.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 100%">What is
+Synchronization?</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+Synchronization is a mechanism which restricts simultaneous access to
+a shared resource by multiple threads.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Synchronization is used at large in operating systems like Windows,
+Linux, MacOSX etc. No synchronization might lead to a deadlock which
+is a serious problem. In Java, synchronization is supported by the
+synchronized keyword.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+Using synchronized keyword we can create:</P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Synchronized</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">methods</FONT></FONT></P>
+		<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">Synchronized</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">blocks</FONT></FONT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 100%">Synchronization
+in Java</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+The key to synchronization in Java is monitor. A monitor is an object
+which is used for obtaining a mutual exclusive lock. Once a thread
+acquires a lock, it is said to have entered the monitor. When one
+thread is inside the monitor, no other thread is allowed to acquire a
+lock until that thread exits the monitor.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Every
+object in Java has an implicit monitor associated with it. To enter
+an object’s monitor,</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">a
+method which is modified using synchronized keyword should be called.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.11in">Synchronized Methods</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+A method that is modified with the synchronized keyword is called a
+synchronized method. Syntax of a synchronized method is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">synchronized
+return-type method-name(parameters)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">{
+… }</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.26in; margin-top: 0.04in; line-height: 126%">
+First let’s consider a program which doesn’t contain the
+synchronized method: class MyName</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">void
+printName()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section75" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; margin-top: 0in">
+	}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.86in; margin-top: 0in; line-height: 91%">
+	System.out.print(&quot;[My name &quot;); Thread.sleep(200);
+	System.out.print(&quot;is &quot;); Thread.sleep(500);
+	System.out.println(&quot;Suryateja]&quot;);</P>
+</DIV>
+<DIV ID="Section76" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(Exception
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">System.out.println(&quot;Thread
+	Interrupted&quot;);</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+MyThread implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.01in; margin-top: 0.01in; line-height: 91%">
+MyName myname; MyThread(MyName myname)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.myname
+= myname;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.16in; margin-top: 0.01in; line-height: 91%">
+t = new Thread(this); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">myname.printName();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.39in; margin-top: 0.01in; line-height: 91%">
+MyName myname = new MyName(); MyThread thread1 = new
+MyThread(myname); MyThread thread2 = new MyThread(myname); MyThread
+thread3 = new MyThread(myname); try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.4in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">thread1.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 4.02in; margin-top: 0.01in; line-height: 91%">
+thread2.t.join(); thread3.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">[My
+name [My name [My name is is is Suryateja] Suryateja]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Suryateja]</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Main
+thread terminated</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+As you can observe in the above program, all three threads are
+executing the same method printName() simultaneously and hence the
+inconsistent output. For consistent output we can make the
+printName() method synchronized.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Below
+example demonstrates the use of synchronized methods in Java:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in; line-height: 0.39in">
+class MyName</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">synchronized
+void printName()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<DIV ID="Section77" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.36in">try</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.13in; margin-top: 0in">
+	}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.28in; margin-right: 2.86in; margin-top: 0in; line-height: 91%">
+	System.out.print(&quot;[My name &quot;); Thread.sleep(200);
+	System.out.print(&quot;is &quot;); Thread.sleep(500);
+	System.out.println(&quot;Suryateja]&quot;);</P>
+</DIV>
+<DIV ID="Section78" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(Exception
+	e)</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Thread
+	Interrupted&quot;);</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	MyThread implements Runnable</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Thread
+	t;</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.01in; margin-top: 0.01in; line-height: 91%">
+	MyName myname; MyThread(MyName myname)</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.9in; margin-top: 0.01in; line-height: 91%">
+this.myname = myname; t = new Thread(this); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">@Override</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">myname.printName();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyName
+myname = new MyName();</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 2.39in; margin-top: 0.01in; line-height: 91%">
+MyThread thread1 = new MyThread(myname); MyThread thread2 = new
+MyThread(myname); MyThread thread3 = new MyThread(myname); try</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">thread1.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">thread2.t.join();</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">thread3.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">System.out.println(&quot;Main
+thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above program is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.44in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">[My
+name is Suryateja] [My name is Suryateja] [My name is Suryateja] Main
+thread terminated</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.35in; margin-top: 0.18in; line-height: 125%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">In
+the above example synchronized method is printName() of MyName class.
+</FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Synchronized Blocks</B></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.02in; line-height: 91%">
+Sometimes while working with third-party classes, we might want to
+synchronize the access to methods in those classes. In such cases,
+synchronized methods cannot be used. Instead we can use synchronized
+blocks. Syntax of a synchronized block is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">synchronized(object-reference)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">{	//Statements
+to be synchronized</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">
+</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">}</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.81in; margin-top: 0.04in; line-height: 125%">
+The above program can be modified to contain a synchronized block as
+shown below: class MyName</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 4.3in; line-height: 0.37in">
+void printName()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.86in; margin-top: 0.11in; line-height: 125%">
+System.out.print(&quot;[My name &quot;); Thread.sleep(200);
+System.out.print(&quot;is &quot;); Thread.sleep(500);
+System.out.println(&quot;Suryateja]&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.01in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">catch(Exception
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-top: 0.11in">System.out.println(&quot;Thread
+Interrupted&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.11in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in">class MyThread
+implements Runnable</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.37in">Thread
+t;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.01in; margin-top: 0.11in; line-height: 125%">
+MyName myname; MyThread(MyName myname)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.9in; margin-top: 0.11in; line-height: 125%">
+this.myname = myname; t = new Thread(this); t.start();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.92in; margin-top: 0in; line-height: 125%">
+@Override public void run()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">synchronized(myname)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-top: 0.11in">myname.printName();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.11in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.11in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-top: 0.11in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.39in; margin-top: 0.11in; line-height: 125%">
+MyName myname = new MyName(); MyThread thread1 = new
+MyThread(myname); MyThread thread2 = new MyThread(myname); MyThread
+thread3 = new MyThread(myname); try</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.01in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.6in; margin-right: 4.03in; margin-top: 0.11in; line-height: 125%">
+thread1.t.join(); thread2.t.join(); thread3.t.join();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">catch(InterruptedException
+e)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">{</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.6in; margin-top: 0.11in">
+System.out.println(&quot;Main thread is interrupted!&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-top: 0.11in">System.out.println(&quot;Main
+thread terminated&quot;);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.37in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Output
+of the above program is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.44in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">[My
+name is Suryateja] [My name is Suryateja] [My name is Suryateja] Main
+thread terminated</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+In the above program the call to the method printName() is written
+inside a synchronized block.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

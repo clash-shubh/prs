@@ -1,0 +1,213 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Adapter
+Classes</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Adapter classes are a set of classes which can be used to simplify
+the event handling process. As we can see in the mouse event handling
+program here, even though we want to handle only one or two mouse
+events, we have to define all other remaining methods available in
+the listener interface(s).</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+To remove the aforementioned disadvantage, we can use adapter classes
+and define only the required event handling method(s). Some of the
+adapter classes available in the java.awt.event package are listed
+below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 1.07in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_5ff1ded9.png')}}" NAME="image80.png" WIDTH=602 HEIGHT=215 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.54in; line-height: 0.76in">
+So, the mouse event handling program can be simplified using adapter
+classes as follows: import javax.swing.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.36in">
+import java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyApplet extends JApplet</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JLabel
+label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">public
+void init()</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setSize(600,300); setLayout(new FlowLayout()); label = new JLabel();
+add(label);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addMouseListener(new
+MyAdapter(label));</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">class
+MyAdapter extends MouseAdapter</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JLabel
+label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyAdapter(JLabel
+label)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.label
+= label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void mouseClicked(MouseEvent me)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">label.setText(&quot;Mouse
+is clicked&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Inner
+Classes</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+An inner class is a class which is defined inside another class. The
+inner class can access all the members of an outer class, but
+vice-versa is not true. The mouse event handling  program which was
+simplified using adapter classes can further be simplified using
+inner classes.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+Following is a Java program which handles the mouse click event using
+inner class and adapter class:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.99in; line-height: 91%">
+import javax.swing.*; import java.awt.*; import java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyApplet extends JApplet</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JLabel
+label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void init()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(600,300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setLayout(new FlowLayout()); label = new JLabel(); add(label);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addMouseListener(new
+MyAdapter());</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">class
+MyAdapter extends MouseAdapter</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">public
+void mouseClicked(MouseEvent me)</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">label.setText(&quot;Mouse
+is clicked&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example, the class MyAdapter is the inner class which has
+been declared inside</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">the
+outer class MyApplet.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0in; line-height: 0.49in">Anonymous
+Inner Classes</H4>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+Anonymous inner classes are nameless inner classes which can be
+declared inside another class or as an expression inside a method
+definition.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 91%">The
+above mouse event handling program can further be simplified by using
+an anonymous inner class as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.99in; line-height: 91%">
+import javax.swing.*; import java.awt.*; import java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyApplet extends JApplet</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JLabel
+label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void init()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">setSize(600,300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setLayout(new FlowLayout()); label = new JLabel(); add(label);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addMouseListener(new
+MouseAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void mouseClicked(MouseEvent me)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">label.setText(&quot;Mouse
+is clicked&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above program, the syntax new MouseAdapter() {…} says to the
+compiler that the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+code written in between the braces represents an anonymous inner
+class and it extends the class MouseAdapter.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+Whenever the line addMouseListener… executes, Java run-time system
+automatically creates the instance of anonymous inner class.</P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

@@ -1,0 +1,309 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Constructors
+in Inheritance</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Consider two classes participating in simple inheritance. Let A be
+the super class and B be the sub class. Now, which constructor is
+invoked first? Is it the constructor of B followed by the constructor
+of A or vice versa? The sequence in which the constructors are
+invoked is from super class to sub class i.e, first the constructor
+of class A is executed then constructor of class B is executed.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+The sequence of constructor invocation does not change even when
+super keyword is used. Now let’s consider a few examples to
+understand how constructors in inheritance works.</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.08in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">Example
+1:</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<DIV ID="Section33" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.39in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">System.out.println(&quot;Class
+	A's constructor is invoked&quot;);</P>
+</DIV>
+<DIV ID="Section34" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	B extends A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">B()</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;Class
+B's constructor is invoked&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">A
+obj = new A();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example, object for class A is created. Since A is the
+super class only it’s</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">constructor
+is invoked and the output will be:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Class
+A’s constructor is invoked</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">Now
+let’s look at another example.</P>
+<H5 CLASS="western" STYLE="margin-top: 0.06in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">Example
+2:</FONT></FONT></H5>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<DIV ID="Section35" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.39in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">System.out.println(&quot;Class
+	A's constructor is invoked&quot;);</P>
+</DIV>
+<DIV ID="Section36" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">class
+	B extends A</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<DIV ID="Section37" DIR="LTR" GUTTER=16 STYLE="column-count: 2">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; line-height: 0.38in">
+	B()</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.17in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.17in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">System.out.println(&quot;Class
+	B's constructor is invoked&quot;);</P>
+</DIV>
+<DIV ID="Section38" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+	class Driver</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+	static void main(String[] args)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">B
+	obj = new B();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+	the above example, we are creating object for the sub class B. Since
+	B is a sub class,</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+	constructor of class A is invoked first and then constructor of
+	class B is invoked. Output for above program is:</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.64in; margin-top: 0.08in">
+	<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Class
+	A’s constructor is invoked Class B’s constructor is invoked</FONT></FONT></FONT></FONT></P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">Now,
+	let’s look at another example.</P>
+	<H5 CLASS="western" STYLE="margin-top: 0.07in"><FONT COLOR="#303030"><FONT FACE="Arial, serif">Example
+	3:</FONT></FONT></H5>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+</DIV>
+<DIV ID="Section39" DIR="LTR" GUTTER=15 STYLE="column-count: 3">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+	A</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.39in">A()</P>
+	<P CLASS="western" STYLE="margin-left: 0in; line-height: 0.39in">{</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in">System.out.println(&quot;Class
+	A's constructor is invoked&quot;);</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+B extends A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<DIV ID="Section40" DIR="LTR" GUTTER=16 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; line-height: 0.36in">
+	B()</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.17in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.17in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">System.out.println(&quot;Class
+	B's constructor is invoked&quot;);</P>
+</DIV>
+<DIV ID="Section41" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+	C extends B</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+</DIV>
+<DIV ID="Section42" DIR="LTR" GUTTER=15 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.03in; line-height: 0.36in">
+	C()</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.18in; line-height: 0.39in">
+	{</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=RIGHT STYLE="margin-right: 0.18in; line-height: 0.39in">
+	}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in">System.out.println(&quot;Class
+	C's constructor is invoked&quot;);</P>
+</DIV>
+<DIV ID="Section43" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+	class Driver</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+	static void main(String[] args)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">C
+	obj = new C();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">In
+the above we can see multi-level inheritance A &lt;- B &lt;- C. The
+object we are creating is for</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+sub class C. So the sequence in which constructors are executed is
+constructor of class A followed by class B followed by class C.
+Output of the above program is:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 3.63in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Class
+A’s constructor is invoked Class B’s constructor is invoked Class
+C’s constructor is invoked</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.52in; margin-top: 0.18in; line-height: 105%">
+I think above examples are enough to explain constructors in
+inheritance. If you have any doubts comment below.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

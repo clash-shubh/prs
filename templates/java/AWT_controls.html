@@ -1,0 +1,713 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">AWT
+Controls</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.09in; line-height: 91%">
+We can add and remove controls to a Container like Applet and Frame
+using the following methods available in the Container class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.23in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Component
+add(Component ref) Component remove(Component ref)</FONT></FONT></FONT></FONT></P>
+<H5 CLASS="western" STYLE="margin-top: 0.17in; line-height: 0.39in">Label</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+A label is a GUI control which can be used to display static text.
+Label can be created using the Label class and its constructors which
+are listed below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.09in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Label()
+Label(String str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Label(String
+str, int how)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.17in; line-height: 91%">
+The parameter how specifies the text alignment. Valid values are
+Label.LEFT, Label.CENTER or Label.RIGHT.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.35in; margin-top: 0in; line-height: 91%">
+Some of the methods available in the Label class are as follows: void
+setText(String str) – To set or assign text to the label.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">String
+getText() – To retrieve the text of a label.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.97in; margin-top: 0.01in; line-height: 91%">
+void setAlignment(int how) – To set the alignment of text in a
+label. int getAlignment() – To get the alignment of text in a
+label.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.36in; margin-top: 0in; line-height: 91%">
+Following example demonstrates working with labels in AWT: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Label
+myLabel;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.92in; margin-top: 0in; line-height: 91%">
+myLabel = new Label(&quot;This is a label!&quot;); add(myLabel);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of above code is as show below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 399px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_33748d83.png')}}" NAME="image86.png" WIDTH=399 HEIGHT=199 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in; line-height: 0.39in">Buttons</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+A push button is the frequently found GUI control. A push button or a
+button can be created by using the Button class and its constructors
+which are given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Button()
+Button(String str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.17in; line-height: 0.39in">
+Some of the methods available in the Button class are as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.09in; margin-top: 0.01in; line-height: 91%">
+void setLabel(String str) – To set or assign the text to be
+displayed on the button. String getLabel() – To retrieve the text
+on the button.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+When a button is clicked, it generates an ActionEvent which can be
+handled using the ActionListener interface and the event handling
+method is actionPerformed(). If there are multiple buttons we can get
+the label of the button which was clicked by using the method
+getActionCommand().</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.74in; line-height: 91%">
+Following Java code demonstrates working with buttons: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Button
+b1, b2, b3;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.8in; margin-top: 0in; line-height: 91%">
+b1 = new Button(&quot;Red&quot;); b2 = new Button(&quot;Green&quot;);
+b3 = new Button(&quot;Blue&quot;); add(b1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(b2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(b3);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.59in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.59in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.59in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 401px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_7fc759ea.png')}}" NAME="image87.png" WIDTH=401 HEIGHT=200 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Checkboxes</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">A
+checkbox control can be created using the Checkbox class and its
+following constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.68in; margin-top: 0.04in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Checkbox()
+Checkbox(String str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Checkbox(String
+str, boolean on)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Checkbox(String
+str, boolean on, CheckboxGroup cbGroup) Checkbox(String str,
+CheckboxGroup cbGroup, boolean on)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.32in; margin-top: 0.19in; line-height: 91%">
+Following are various methods available in the Checkbox class:
+boolean getState() – To retrieve the state of a checkbox.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.72in; margin-top: 0in; line-height: 91%">
+void setState(boolean on)– To set the state of a checkbox. String
+getLabel() – To retrieve the text of a checkbox.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">void
+setLabel(String str) – To set the text of a checkbox.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+A checkbox when selected or deselected, generates an ItemEvent which
+can be handled using the ItemListener interface and the corresponding
+event handling method is itemStateChanged().</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.82in; margin-top: 0in; line-height: 91%">
+Following code demonstrates working with checkboxes: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends Frame</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Checkbox
+c1, c2;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.55in; margin-top: 0in; line-height: 91%">
+c1 = new Checkbox(&quot;Male&quot;); c2 = new Checkbox(&quot;Female&quot;);
+add(c1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(c2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.35in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 399px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_16895958.png')}}" NAME="image88.png" WIDTH=399 HEIGHT=200 BORDER=0></SPAN></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.18in; line-height: 91%">
+In AWT, there is no separate class for creating radio buttons. The
+difference between a checkbox and radio button is, a user can select
+one or more checkboxes. Whereas, a user can select only one radio
+button in a group.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+Radio buttons can be create by using Checkbox class and CheckboxGroup
+class as shown in the below code:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.99in; margin-top: 0in; line-height: 91%">
+import java.awt.*; import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+public class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.64in; margin-top: 0.01in; line-height: 91%">
+Checkbox c1, c2; CheckboxGroup cbg; MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">cbg
+= new CheckboxGroup();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.85in; margin-top: 0in; line-height: 91%">
+c1 = new Checkbox(&quot;Male&quot;, cbg, false); c2 = new
+Checkbox(&quot;Female&quot;, cbg, false); add(c1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(c2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 397px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f683a5a1.png')}}" NAME="image89.png" WIDTH=397 HEIGHT=198 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Dropdown Boxes</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+A drop down box or a combo box contains a list of items (strings).
+When a user clicks on a drop down box, it pops up a list of items
+from which user can select a single item.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 91%">
+A drop down box can be created using the Choice class. There is only
+one constructor in the choice class using which we can create an
+empty list.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Following
+are various methods available in Choice class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.01in; margin-top: 0.01in; line-height: 91%">
+void add(String name) – To add an item to the drop down list.
+String getSelectedItem() – To retrieve the item selected by the
+user.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.36in; margin-top: 0in; line-height: 91%">
+int getSelectedIndex() – To retrieve the index of the item selected
+by the user. int getItemCount() – To retrieve the number of items
+in the drop down list. void select(int index) – To select an item
+based on the given index.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.52in; margin-top: 0in; line-height: 91%">
+void select(String name) – To select an item based on the given
+item name. void getItem(int index) – To retrieve an item at the
+given index.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Whenever
+an user selects an item from the drop down box, an ItemEvent is
+generated. It can</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.01in; line-height: 91%">
+be handled using the ItemListener interface and the event handling
+method is itemStateChanged().</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.42in; line-height: 91%">
+Following code demonstrates working with drop down boxes: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Choice
+myList;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.03in; margin-top: 0in; line-height: 91%">
+myList = new Choice(); myList.add(&quot;CSE&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">myList.add(&quot;ECE&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">myList.add(&quot;EEE&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.41in; margin-top: 0.01in; line-height: 91%">
+myList.add(&quot;IT&quot;); add(myList);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.38in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 400px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_1e0fead9.png')}}" NAME="image90.png" WIDTH=400 HEIGHT=199 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in; line-height: 0.39in">List
+Boxes</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+A List box contains a list of items among which the user can select
+one or more items. More than one items in the list box are visible to
+the user. A list box can be created using the List class along with
+the following constructors:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.05in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">List()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">List(int
+numRows)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">List(int
+numRows, boolean multipleSelect)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.17in; line-height: 91%">
+In the above constructors, numRows specifies the number of items to
+be visible to the user and multipleSelect specifies whether the user
+can select multiple items or not.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+When a list item is double clicked, ActionEvent is generated. It can
+be handled with ActionListener and the event handling method is
+actionPerformed(). We can get the name of the item using
+getActionCommand() method.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+When a list item is selected or deselected, ItemEvent is generated.
+It can be handled with ItemListener and the event handling method is
+itemStateChanged(). We can use getItemSelectable() method to obtain a
+reference to the object that raised this event.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.39in">
+Following are some of the methods available in the List class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">void
+add(String name) – To add an item to the list box.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.64in; margin-top: 0.01in; line-height: 91%">
+void add(String name, int index) – To add an item at the specified
+index in the list box. String getSelectedItem() – To get the item
+name which is selected by the user.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 1.41in; margin-top: 0in; line-height: 91%">
+int getSelectedIndex() – To get the item index which is selected by
+the user. String[] getSelectedItems() – To retrieve the selected
+item names by the user. int[] getSelectedIndexes() – To retrieve
+the selected item indexes by the user. int getItemCount() – To
+retrieve the number of items in the list box.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.08in; margin-top: 0.01in; line-height: 91%">
+void select(int index) – To select an item based on the given
+index. String getItem(int index) – To retrieve the item at the
+given index.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.96in; margin-top: 0in; line-height: 91%">
+Following code demonstrates working with list boxes: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+import java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">List
+myList;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+myList = new List(); myList.add(&quot;CSE&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">myList.add(&quot;ECE&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">myList.add(&quot;EEE&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.41in; margin-top: 0in; line-height: 91%">
+myList.add(&quot;IT&quot;); add(myList);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 396px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_4491ea0f.png')}}" NAME="image91.png" WIDTH=396 HEIGHT=197 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Text Fields</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+A text field or text box is a single line text entry control which
+allows the user to enter a single line of text. a text field can be
+created using the TextField class along with its following
+constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">TextField()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.39in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">TextField(int
+numChars) TextField(String str) TextField(String str, int numChars)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.19in; line-height: 91%">
+In the above constructors numChars specifies the width of the text
+field, and str specifies the initial text in the text field.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">When
+an user hits ‘Enter’ key on the keyboard in a text field, an
+ActionEvent is generated. It</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.01in; line-height: 91%">
+can be handled using ActionListener and the event handling method is
+actionPerformed(). Whenever an user modifies the text in the text
+field, a TextEvent is generated which can be handled using
+TextListener and the event handling method is textValueChanged().</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.39in">
+Following are various methods available in TextField class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">String
+getText() – Retrieves the text in the text field.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">void
+setText(String str) – Assigns or sets text in the text field.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">String
+getSelectedText() – Retrieves the selected text in the text field.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; text-indent: -0in; margin-top: 0in; line-height: 91%">
+void select(int startindex, int endindex) – To select the text in
+text field from startindex to endindex – 1.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">boolean
+isEditable() – To check whether the text field is editable or not.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">void
+setEditable(boolean canEdit) – To make a text field editable or
+non-editable.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+void setEchoChar(char ch) – To set the echo character of a text
+field. This is generally used for password fields.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+boolean echoCharIsSet() – To check whether the echo character for
+the text field is set or not.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">char
+getEchoChar() – To retrieve the current echo character.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.93in; line-height: 91%">
+Following code demonstrates working with text fields: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">Label
+myLabel;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">TextField
+tf;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.01in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());
+myLabel = new Label(&quot;Enter name: &quot;); tf = new
+TextField(20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.58in; margin-top: 0.01in; line-height: 91%">
+add(myLabel); add(tf);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.09in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 397px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_28fae39d.png')}}" NAME="image92.png" WIDTH=397 HEIGHT=198 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Text Areas</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+A text area is a multi-line text entry control in which user can
+enter multiple lines of text. A text area can be created using the
+TextArea class along with the following constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">TextArea()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.06in; margin-top: 0in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">TextArea(int
+numLines, int numChars) TextArea(String str)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.18in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">TextArea(String
+str, int numLines, int numChars) TextArea(String str, int numLines,
+int numChars, int sBars)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.19in; line-height: 91%">
+In the above constructors, numLines specifies the height of the text
+area, numChars specifies the width of the text area, str specifies
+the initial text in the text area and sBars specifies the scroll
+bars. Valid values of sBars can be any one of the following:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 3.03in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">SCROLLBARS_BOTH
+SCROLLBARS_NONE SCROLLBARS_HORIZONTAL_ONLY</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">SCROLLBARS_VERTICAL_ONLY</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.1in; margin-top: 0.17in; line-height: 91%">
+Following are some of the methods available in the TextArea class:
+String getText() – To retrieve the text in the text area.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.97in; margin-top: 0in; line-height: 91%">
+void setText(String str) – To assign or set the text in a text
+area. String getSelectedText() – To retrieve the selected text in a
+text area.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; text-indent: -0in; margin-top: 0in; line-height: 91%">
+void select(int startindex, int endindex) – To select the text in
+text field from startindex to endindex – 1.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">boolean
+isEditable() – To check whether the text field is editable or not.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 1.02in; margin-top: 0.01in; line-height: 91%">
+void setEditable(boolean canEdit) – To make a text field editable
+or non-editable. void append(String str) – To append the given
+string to the text in the text area. void insert(String str, int
+index) – To insert the given string at the specified index.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; text-indent: -0in; margin-top: 0in; line-height: 91%">
+void replaceRange(String str, int startIndex, int endIndex) – To
+replace the text from startIndex to endIndex – 1 with the given
+string.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.93in; line-height: 91%">
+Following code demonstrates working with text areas: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends Frame</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">TextArea
+ta;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">setTitle(&quot;My
+Application&quot;);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">setLayout(new
+FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.89in; margin-top: 0.01in; line-height: 91%">
+ta = new TextArea(3, 20); add(ta);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 395px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_13a5d8ab.png')}}" NAME="image93.png" WIDTH=395 HEIGHT=199 BORDER=0></SPAN></P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

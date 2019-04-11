@@ -1,0 +1,259 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+    
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Introduction
+to Swings</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Although Java already provides AWT for creating GUIs, due to several
+limitations of AWT, they developed swings package. One limitation of
+AWT is, AWT takes the help of native operating system to create a GUI
+control like button, checkbox etc. From operating system to operating
+system the look and feel of the component might vary. This
+contradicts with Java’s motto: Write Once Run Anywhere.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Java provides javax.swing package which does not need any help of the
+native operating system for creating GUI controls. Hence programs
+created using swings are portable.<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.98in; left: 1.02in; width: 599px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_efa8710b.png')}}" NAME="image100.png" WIDTH=599 HEIGHT=188 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="margin-top: 0in; line-height: 100%">Features
+of Swings</H4>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.09in">Swings
+offers the following features:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+<B>Lightweight Components: </B>The components created using swings
+package doesn’t need the help of native operating system. Swings is
+a part of Java Foundation Classes (JFC) which are purely developed in
+Java. Also swing components require less memory and CPU cycles than
+their counterpart AWT components. Hence swing components are called
+lightweight components.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt"><B>Pluggable
+Look and Feel: </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt">Swings
+supports pluggable look and feel i.e., the appearance of a</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+component can be separated from how the component behaves. This
+enables programmers to assign different look (themes) for the same
+component without changing its behavior.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.14in; line-height: 91%">
+Default look and feel of Java is metal. Java 8 also provides Nimbus
+look and feel. In windows operating system, windows look and feel is
+also available.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 100%">Differences between AWT
+and Swings</H4>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.09in">Following
+are the differences between AWT and Swings packages:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.56in; left: 1in; width: 593px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_8cf0b4aa.png')}}" NAME="image101.png" WIDTH=593 HEIGHT=367 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H4 CLASS="western">Model-View-Controller (MVC) Connection</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+MVC is an architectural pattern widely used in development of
+software. Every GUI control or component contains three aspects:</P>
+<OL>
+	<LI><P STYLE="margin-top: 0.12in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+	way the component looks (appearance) when rendered on the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">screen.</FONT></FONT></P>
+	<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+	way the component reacts to the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">user.</FONT></FONT></P>
+	<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">The
+	state information associated with the</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+	</FONT><FONT SIZE=4 STYLE="font-size: 16pt">component.</FONT></FONT></P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+MVC can be used to separate the three aspects mentioned above. By
+separating them, each aspect can be modified independently without
+any changes to the remaining aspects.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In MVC terminology, model corresponds to the state information of a
+component. For example, a button might contain a field that might
+represent if it is pressed or released. The view corresponds to the
+look or appearance of the component when rendered on the screen. For
+example, a button is displayed as a rectangle. The controller
+determines how the component reacts to the user events. For example,
+when user presses a button, a new frame can be displayed.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+The controller changes the model and the model notifies the state
+change to the view to be updated accordingly. Java Swings uses a
+modified version of MVC architecture, in which view and controller
+are combined into single entity called UIDelegate. This modified
+architecture is called as Model-Delegate architecture or Separable
+Model architecture.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H4 CLASS="western">Components and Containers</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.11in; line-height: 91%">
+A swing GUI contains two main elements: components and containers. A
+component is an individual control like a button or label. A
+container is an object which can hold other components and
+containers.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Components</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Swing components are derived from the class JComponent (except the
+four top-level containers). JComponent supports pluggable look and
+feel and supports the functionality common for all the components.
+JComponent class inherits the AWT classes Container and Component.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+All swing components are represented as classes and are present in
+javax.swing package. Some of the components available in the Swings
+package are listed below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.98in; left: 1.02in; width: 597px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_fd100c27.png')}}" NAME="image102.png" WIDTH=597 HEIGHT=270 BORDER=0></SPAN></P>
+<H5 CLASS="western" STYLE="margin-top: 0.18in">Containers</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Swing provides two types of containers. First are top-level
+containers also called heavyweight containers. These are at the top
+in the containment hierarchy. The top-level containers are</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">JFrame,
+JApplet, JWindow, and JDialog. All the containers inherit the AWT
+classes</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Component
+and Container.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Second are the lightweight containers which can be nested inside
+top-level containers. Lightweight containers are inherited from the
+class JComponent. Example of a lightweight container is JPanel.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Top-level Container Panes</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.13in; line-height: 91%">
+Each top-level container defines a set of panes. At the top of the
+hierarchy is an instance of JRootPane. It is a lightweight container
+whose purpose is to manage other panes.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The panes that make up the JRootPane are: glass pane, layered pane,
+and content pane. The glass pane is a top level pane which lies above
+all components and covers all other panes. It can be used to manage
+mouse events over the entire container or to paint over any other
+component. Glass pane is a transparent instance of JPanel.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; text-indent: -0in; margin-top: 0.14in; line-height: 91%">
+The layered pane is an instance of JLayeredPane which allows the
+components to be assigned a depth value (Z-order). The layered pane
+holds the content pane and the menu bar.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The content pane is the pane to which the visual components are
+added. The content pane is an opaque instance of JPanel.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+Following are some of the swing packages:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.12in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_1a8812d4.png')}}" NAME="image103.png" ALIGN=BOTTOM WIDTH=601 HEIGHT=140 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Following
+code demonstrates a simple GUI application using JFrame:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.14in; margin-top: 0.01in; line-height: 91%">
+import java.awt.*; import javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends JFrame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JButton
+b;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(500,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.13in; margin-top: 0in; line-height: 91%">
+b = new JButton(&quot;Button in Swing&quot;); add(b);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.02in; margin-top: 0in; line-height: 91%">
+setVisible(true); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 499px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_4be5c8e4.png')}}" NAME="image104.png" WIDTH=499 HEIGHT=297 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.87in; line-height: 91%">
+Following code demonstrates a simple GUI application using JApplet:
+import javax.swing.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyApplet extends JApplet</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">JLabel
+label;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void init()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(600,300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">setLayout(new
+FlowLayout());</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.67in; margin-top: 0.01in; line-height: 91%">
+label = new JLabel(&quot;Applet using JApplet&quot;); add(label);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.43in; left: 1.02in; width: 479px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_33e09e92.png')}}" NAME="image105.png" WIDTH=479 HEIGHT=296 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

@@ -1,0 +1,221 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">super
+Keyword</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">Uses of super keyword</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.11in">Following
+are the uses of super keyword:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<OL TYPE=a START=21>
+	<UL>
+		<LI><P CLASS="western" STYLE="margin-top: 0.03in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">To
+		refer the immediate super class</FONT><FONT SIZE=4 STYLE="font-size: 16pt">
+		</FONT><FONT SIZE=4 STYLE="font-size: 16pt">constructor</FONT></FONT></P>
+		<LI><P CLASS="western" STYLE="margin-right: 3.09in; margin-top: 0.11in; line-height: 125%">
+		<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">To
+		refer the immediate super class members </FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>Refer
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>super </B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>class</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>
+		</B></FONT><FONT SIZE=4 STYLE="font-size: 16pt"><B>constructor:</B></FONT></FONT></P>
+	</UL>
+</OL>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.02in; line-height: 91%">
+The super keyword can be used to invoke the constructor of its
+immediate super class and pass data to it. Syntax for doing so is
+given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">super(parameters-list);</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+When writing the above statement inside the constructor of the
+derived class, it must be the first line. It is a mandatory
+requirement.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.73in; margin-top: 0.12in; line-height: 126%">
+For understanding how this works, let’s consider our previous
+example: class Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.27in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">private
+String name;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.56in; margin-top: 0.01in; line-height: 91%">
+private String regdNo; private int age;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">Student(String
+name, String regdNo, int age)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">this.name
+= name;</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.07in; margin-top: 0.01in; line-height: 91%">
+this.regdNo = regdNo; this.age = age;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getName()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;Student's
+name is: &quot;+name);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void getRegdNo()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+registered number is: &quot;+regdNo);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getAge()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+name is: &quot;+age);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+CSEStudent extends Student</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">static
+final String branch = &quot;CSE&quot;;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">CSEStudent(String
+name, String regdNo, int age)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">super(name,
+regdNo, age);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void getBranch()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Student's
+branch is: &quot;+branch);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">public
+class Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 1.77in; margin-top: 0.01in; line-height: 91%">
+CSEStudent s1 = new CSEStudent(&quot;Teja&quot;, &quot;10AB001&quot;,
+20); s1.getName();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.52in; margin-top: 0in; line-height: 91%">
+s1.getRegdNo(); s1.getAge(); s1.getBranch();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example you can see that the data in Student class is made
+private. We can still</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+pass data from the derived class CSEStudent to its parent class
+Student using the super construct given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">super(name,
+regdNo, age);</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.2in; line-height: 91%">
+You can also see that the above statement is the only line inside the
+CSEStudent class constructor. If there were multiple lines, the above
+line must be the first line.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-left: 0.14in">Refer super class
+members</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.13in; line-height: 91%">
+Second use of super keyword (in sub class) is to access the hidden
+members of its immediate super class. To understand this let’s
+consider the following example:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">class
+A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">int
+x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void display()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">System.out.println(&quot;This
+is display in A&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+B extends A</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">int
+x;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">public
+void display()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">System.out.println(&quot;Value
+of x in A is: &quot; + super.x);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">super.display();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">System.out.println(&quot;This
+is display in B&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">class
+Driver</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">B
+obj = new B();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">obj.display();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">In
+the above example we can see that we are using the super keyword in
+two places. First use</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">is
+to display the value of variable x of the super class A using the
+following expression:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">super.x</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Second
+use was for calling the display() method of the super class A in the
+sub class B using</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">the
+following construct:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.06in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">super.display()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

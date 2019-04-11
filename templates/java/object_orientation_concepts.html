@@ -1,0 +1,186 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+    
+<P CLASS="western"><BR CLEAR=LEFT><FONT COLOR="#17365d"><FONT FACE="Cambria, serif"><FONT SIZE=6 STYLE="font-size: 26pt">Object
+Orientation Concepts</FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.07in">What is the need to
+learn about object orientation concepts?</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+As you have already seen here: introduction to java, Java is an
+object oriented programming language. Java follows or is built upon
+the object oriented paradigm. Generally, every programming language
+supports at least one of the programming paradigms.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+To understand a Java program and its structure, it is essential to
+know about the object orientation concepts.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Structured  Paradigm Vs Object Oriented Paradigm</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In programming languages following structured paradigm or procedural
+paradigm instructions are written in linear blocks or using
+functions. We can say that in procedural or structured paradigm,
+“Code allows access to data”.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In object oriented paradigm, the program is written using objects and
+classes. A problem can be solved through interactions between
+objects. We can say that in object oriented paradigm, “Data allows
+access to code”.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Object Oriented Paradigm</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The fundamental unit in object oriented paradigm is an object. Let’s
+look at an object in detail.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; margin-bottom: 0in; page-break-before: always">
+<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.29in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_ee495956.jpg')}}" NAME="image1.jpeg" ALIGN=BOTTOM WIDTH=362 HEIGHT=200 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Object:</H5>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Object
+is a real world thing or entity that is tangible or intangible. An
+object consists of</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+properties and/or behavior. For example consider a student object
+whose name is John. Student object contains properties or
+characteristics like name, age, gender, date of birth etc and
+behavior like eat, sleep, register, write exam etc.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+A student object can be represented on paper or electronically as
+shown below. I am using the industry standard language UML (Unified
+Modeling Language) for representing the student object.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.41in; left: 2.5in; width: 334px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_adb2bee8.png')}}" NAME="image2.png" WIDTH=334 HEIGHT=200 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Class:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+It is common for most of the Java programs to have similar objects.
+Similar means objects having same properties and behavior. So, a
+class can be defined as a mold or template for creating objects. A
+class can also be defined as a collection of similar objects.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.41in; left: 2.58in; width: 300px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_1620df93.jpg')}}" NAME="image3.jpeg" WIDTH=300 HEIGHT=225 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN DIR="LTR" STYLE="float: left; width: 3.12in; height: 0.25in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in"><FONT COLOR="#4f81bd"><FONT SIZE=2 STYLE="font-size: 9pt"><B>Figure
+	1</B></FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In the above example, the class is the mold (in yellow color) and the
+object is the paw (blue color). All the objects (blue color) will
+have the same size, shape etc.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Considering the above student example, let’s think of three student
+objects: John, Mary and Krishna. All of these three students will
+have similar properties like name, age, gender etc and similar
+behavior like register, write exam etc. These three objects can be
+grouped into a class named Student. A class can be represented
+diagrammatically (using UML) as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.55in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_cff38f41.png')}}" NAME="image4.png" ALIGN=BOTTOM WIDTH=354 HEIGHT=288 BORDER=0></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Now
+we can represent the class Student and the three objects John, Mary
+and Krishna of the</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">class
+Student as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.32in; left: 2.21in; width: 378px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_2b470fb4.png')}}" NAME="image5.png" WIDTH=378 HEIGHT=272 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+By now you will be able to distinguish between an object and a class.
+There is some more terminology you must know. Above, I said that
+object contains properties and behavior. A property is a
+characteristic which can be used to describe the object and will
+generally be a noun. Behavior is defined as a set of operations that
+can be performed by the object or on the object. Operations are
+generally verbs.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">Object state:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The set of values assigned to the properties of an object is known as
+the state of an object. For example we know that for the John object
+there are three properties: name, age and gender. Then, the state of
+John object will be John, 21 and male which are the values of name,
+age and gender respectively.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western">Messages:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In object oriented world objects don’t sit idle. They communicate
+with one other by passing messages. A message is a request to carry
+out a task. A task can be anything from displaying a message to
+retrieving data from database and process it.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+An object can send messages to those objects only which can process
+the messages. For example, let’s think that an object Ken of Person
+class wants his dad (John) to purchase apples for him. To carry out
+that task Ken sends the message getApples(10) to John. This can be
+viewed diagrammatically as shown below:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.41in; left: 2.39in; width: 360px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_eff05bf7.jpg')}}" NAME="image6.jpeg" WIDTH=360 HEIGHT=240 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">It
+is the responsibility of John object to process the message
+getApples(10) and give response</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+back to Ken object. The response message is not mandatory. In the
+above message getApples(10), 10 is a parameter. A parameter is a
+mechanism to pass additional information along with the message. In
+the above example, 10 reflects the number of apples Ken wants.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

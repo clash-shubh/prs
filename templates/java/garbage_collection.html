@@ -1,0 +1,145 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+<H2 CLASS="western" STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Garbage
+Collection</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+In most of the object oriented programming languages, memory
+management (allocating and deallocating memory) is left to the user
+and it is generally error prone (user might forget to free the memory
+occupied by an object). Objects are allocated memory in the heap
+memory which grows and shrinks dynamically. Java provides automatic
+memory management through a mechanism known as garbage collection.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Unused objects are collected for garbage collection by the program
+known as garbage collector. Java has its own set of algorithms which
+decides whether an object is eligible for garbage collection or not.
+Generally, an object is garbage collected when it goes out of scope
+or when the object is no longer referenced.</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0.12in">Garbage
+Collector</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The garbage collector frequently scans the heap memory for detecting
+unused objects. Two general methods used by garbage collectors for
+finding unused objects are: reference counting and tracing.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In <B>reference counting method</B>, whenever an object is created,
+its reference count will be 1. As the object is referenced by other
+references, the reference count will be incremented by 1 for
+reference. As the references decrease, the reference count will be
+decremented. When the</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">reference
+count is finally 0, the object will be garbage collected. Let’s
+consider the following</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">code
+segment as an example:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class Square</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>int
+side;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>class
+SquareDemo</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 4.06in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Square s1 = new
+Square(); Square s2 = new Square(); s1 = s2;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Following
+memory representation illustrates the reference count for each
+object:</P>
+<P CLASS="western" STYLE="margin-top: 0in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.13in; left: 1.02in; width: 593px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_4be9a4b4.jpg')}}" NAME="image53.jpeg" WIDTH=593 HEIGHT=369 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+In <B>tracing method</B>, also known as mark and sweep method, the
+garbage collector scans the</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+dynamic memory areas for all the objects. The mark phase marks all
+the objects which are being referenced. After the marking is
+completed, the sweep phase frees the memory allocated to all other
+unmarked objects.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+The garbage collectors using mark and sweep method uses compaction
+and copying (related to operating system memory management). During
+the sweep phase, the memory might get fragmented. The garbage
+collector moves all the fragmented memory towards one end
+(compaction) so that the other end contains a free block of memory
+which can be used by other code. Any other objects on the other side
+of the used memory are copied to this side (copying).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+The garbage collector can run synchronously when the program runs out
+of memory or asynchronously when the system is idle. The garbage
+collector is an example of daemon thread (a thread which runs in the
+background).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Garbage collector can be explicitly invoked by using System.gc() or
+Runtime.gc(). Explicit invocation doesn’t guarantee that unused
+objects will be garbage collected. It is up to Java Virtual Machine
+when the unused objects will be actually freed.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Finalization</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+It is common in Java programs to access files and databases (will be
+covered in future articles). It is also common for programmers to
+open the files and other resources and forget to close the
+connections to those resources. The code which is used to close the
+connections to resources like files, databases etc… is known as
+cleanup code or housekeeping code.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+cleanup code is generally written in the <B>finalize() </B>method
+which belongs to the Object</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+class, as the finalize() method is guaranteed to be executed when the
+object gets cleaned up from the memory. This process is known as
+finalization.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

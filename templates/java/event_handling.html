@@ -1,0 +1,407 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Event
+Handling</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+<B>Definition: </B>The process of handling events is known as event
+handling. Java uses “delegation event model” to process the
+events raised in a GUI program.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 0.49in">Delegation Event
+Model</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The delegation event model provides a consistent way of generating
+and processing events. In this model a source generates an event and
+sends it to one or more listeners. A listener waits until it receives
+an event and once it receives an event, processes the event and
+returns.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The advantage of this model is the application logic for processing
+the events is clearly separated from the user interface logic. In
+this model the listeners must register with a source to receive the
+events.Another advantage of this model is, notification of events is
+sent only to the registered listeners.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Events</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+An event is an object that describes a state change in the source.
+Some examples of activities that cause events to be generated are
+clicking a button, pressing a key on the keyboard, selecting an item
+in the list.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Event Sources</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+A source is an object that generates an event. A source might
+generate more than one event. Examples of sources are button, check
+box, radio button, text box etc.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">A
+source must be registered with listeners in order for the events to
+be detected. The general</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">form
+of a registration method is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">public
+void add</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><I>Type</I></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Listener(</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><I>Type</I></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Listener
+tl)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+A listener can also be unregistered from the source using the remove
+method whose syntax is as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">public
+void remove</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><I>Type</I></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Listener(</FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><I>Type</I></FONT></FONT></FONT><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Listener
+tl)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">Event Listeners</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+A listener is an object that is notified when an event occurs. A
+listener has two major requirements. First is, listener must be
+registered with a source to receive notifications and second is, it
+must implement methods to receive and process these notifications.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+In Java, events and sources are maintained as classes, listeners are
+maintained as interfaces. Most of them are available in
+java.awt.event package. Examples of listeners are MouseListener, Key
+Listener etc.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 0.49in">java.awt.event
+Package</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+The java.awt.event package contains many event classes which can be
+used for event handling. Root class for all the event classes in Java
+is EventObject which is available in java.util package. Root class
+for all AWT event classes is AWTEvent which is available in java.awt
+package and is a sub class of EventObject class.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">Some
+of the frequently used event classes available in java.awt.event
+package are listed</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.32in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_4151f143.png')}}" NAME="image70.png" WIDTH=602 HEIGHT=351 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.46in; line-height: 0.76in">
+Various constructors and methods available in the above listed event
+classes are as follows: <B>ActionEvent</B></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.36in">An
+action event is generated when a button is clicked, or a list item is
+double-clicked, or a</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">menu
+item is selected.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">ActionEvent
+class contains the following methods:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+String getActionCommand() – Used to obtain the command name for the
+invoking ActionEvent object.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+int getModifiers() – This method returns an integer that indicates
+which modifier keys (ALT, CTRL, META, and/or SHIFT) were pressed.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">long
+getWhen() – Returns the time when the event was generated.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">AdjustmentEvent</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+The adjustment event is generated when the scroll bar is adjusted.
+There are five types of adjustment events. For each type there is a
+constant declared in the class which are as follows:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.43in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">BLOCK_DECREMENT
+BLOCK_INCREMENT TRACK UNIT_DECREMENT UNIT_INCREMENT</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.39in">
+Following are the methods available in AdjustmentEvent class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Adjustable
+getAdjustable() – Returns the object that generated the event.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+int getAdjustmentType() – Returns one of the five constants that
+represents the type of event.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">int
+getValue() – Returns a number that represents the amount of
+adjustment.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0in; line-height: 0.39in">ComponentEvent</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+A component event is generated when the visibility, position and size
+of a component is changed. There are four types of component events
+which are identified by the following constants:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.2in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">COMPONENT_HIDDEN
+COMPONENT_SHOWN COMPONENT_MOVED COMPONENT_RESIZED</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Following
+method is available in the ComponentEvent class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Component
+getComponent() – Returns the component that generated the event.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">ContainerEvent</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+A container event is generated when a component is added to or
+removed from the container. There are two types of container events
+which are represented by the following constants:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.05in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">COMPONENT_ADDED
+COMPONENT_REMOVED</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Following
+are the methods available in the ContainerEvent class:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+Container getContainer() – Returns the reference of the container
+that generated the event. Component getChild() – Returns the
+reference of the component that is added to or removed from the
+container.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">FocusEvent</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.01in; line-height: 91%">
+A focus event is generated when a component gains or loses input
+focus. These events are identified by the following constants:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.93in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">FOCUS_GAINED
+FOCUS_LOST</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.39in">
+Following are the methods available in the FocusEvent class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+Component getOppositeComponent() – Returns the other component that
+gained or lost focus.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+boolean isTemporary() – Method returns true or false that indicates
+whether the change in focus is temporary or not.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">ItemEvent</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">An
+item event is generated when the user clicks on a check box or clicks
+a list item or selects</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">/
+deselects a checkable menu item. These events are identified by the
+following constants:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.19in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">SELECTED
+DESELECTED</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Following
+are the methods available in the ItemEvent class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Object
+getItem() – Returns a reference to the item whose state has
+changed.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+ItemSelectable getItemSelectable() – Returns the reference of
+ItemSelectable object that raised the event.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+int getStateChange() – Returns the status of the state (whether
+SELECTED or DESELECTED)</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">KeyEvent</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+A key event is generated when a key on the keyboard is pressed,
+released or typed. These events are identified by the following
+constants:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.62in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">KEY_PRESSED
+(when a key is pressed) KEY_RELEASED (when a key is released)
+KEY_TYPED (when a character is typed)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; line-height: 91%">
+There are several other constants which recognizes various keys on
+the keyboard and they are as follows:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.69in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_7a8d278e.png')}}" NAME="image71.png" WIDTH=602 HEIGHT=77 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+KeyEvent is a sub class of InputEvent. Following are the methods
+available in KeyEvent class: char getKeyChar() – Returns the
+character entered from the keyboard</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">int
+getKeyCode() – Returns the key code</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">MouseEvent</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+The mouse event is generated when the user generates a mouse event on
+a source. Mouse events are represented by the following constants:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.7in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_31caca8c.png')}}" NAME="image72.png" WIDTH=602 HEIGHT=182 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Following
+are some of the methods available in MouseEvent class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.82in; margin-top: 0.01in; line-height: 91%">
+int getX() – Returns the x-coordinate of the mouse at which the
+event was generated. int getY() – Returns the y-coordinate of the
+mouse at which the event was generated.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+Point getPoint() – Returns the x and y coordinates of mouse at
+which the event was generated.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">int
+getClickCount() – This method returns the number of mouse clicks
+for an event.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+int getButton() – Returns an integer that represents the buttons
+that caused the event. Returned value can be either NOBUTTON, BUTTON1
+(left mouse button), BUTTON2 (middle mouse button), or BUTTON3 (right
+mouse button).</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.2in; margin-top: 0in; line-height: 91%">
+Following methods are available to obtain the coordinates relative to
+the screen: Point getLocationOnScreen()</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.27in; margin-top: 0in; line-height: 91%">
+int getXOnScreen() int getYOnScreen()</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">TextEvent</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+The text event is generated when the user enters a character into a
+text field or a text area. This event is identified by the following
+constant:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">TEXT_VALUE_CHANGED</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="margin-top: 0.15in; line-height: 0.39in">WindowEvent</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+A window event is generated when a user performs any one of the
+window related events which are identified by the following
+constants:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.7in; left: 1in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_ba8af849.png')}}" NAME="image73.png" WIDTH=602 HEIGHT=256 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0in; line-height: 0.39in">
+Following are some of the methods available in the WindowEvent class:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+Window getWindow() – Returns the reference of the window on which
+the event is generated.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+Window getOppositeWindow() – Returns the reference to the previous
+window when a focus event of activation event has occurred.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 1.25in; margin-top: 0in; line-height: 91%">
+int getOldState() – Returns an integer indicating the old state of
+the window. int getNewState() – Returns an integer indicating the
+new state of the window.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H4 CLASS="western" STYLE="line-height: 0.42in">Sources of Events</H4>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; line-height: 91%">
+All GUI elements which are derived from the Component class are
+examples of sources which generates events. Following are some of the
+examples of event sources available in Java:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 1.07in; left: 1.02in; width: 602px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f4d29a1d.png')}}" NAME="image74.png" WIDTH=602 HEIGHT=240 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

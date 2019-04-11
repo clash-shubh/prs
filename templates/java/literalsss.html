@@ -1,0 +1,186 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR CLEAR=LEFT><FONT COLOR="#17365d">Literals</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+Every Java primitive data type has its corresponding literals. A
+literal is a constant value which is used for initializing a variable
+or directly used in an expression. Below are some general examples of
+Java literals:</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.24in; left: 2.85in; width: 273px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f647f7d0.png')}}" NAME="image29.png" WIDTH=273 HEIGHT=176 BORDER=0></SPAN><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 0.37in">Integer
+Literals:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Integer literals are the most commonly used literals in a Java
+program. Any whole number value is an example of an integer literal.
+For example, 1, 10, 8343 are all decimal values i.e., of base 10.
+Java also supports other types of integer literals like values of
+base 8 (octal values) and base 16 (hexadecimal values).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+An octal value contains numbers within the range 0 to 7. Octal
+literals in Java are preceded by a zero (0). So, to represent an
+octal 6 in Java, we should write 06.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+An hexadecimal value contains numbers within the range 0 to 15 in
+which 10, 11, 12, 13, 14 and 15 will be represented using a, b, c, d,
+e and f or A, B, C, D, E and F respectively. Hexadecimal literals in
+Java are preceded by a zero-x (0x or 0X). So, to represent an
+hexadecimal 99 in Java, we should write 0x99 or 0X99.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+Integer literals of type long should be explicitly marked with a
+lowercase l or an uppercase L at the end of the integer value. For
+example 9223372036854775807L is the largest  long value.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.11in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=5 STYLE="font-size: 16pt"><I>New
+additions in Java SE 7:</I></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+In Java SE 7 binary literals were added. Now, programmers are able to
+assign numbers in base 2 (binary). A binary literal must be preceded
+by a zero-b (0b or 0B). For example, to assign the number 12 in
+binary we will write the literal as 0b1100 or 0B1100.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+Along with binary literals, one more modification was made to how the
+literals can be written. From Java SE 7 onwards, programmers are
+allowed to specify one or more underscores ( _ ) between the numbers
+in integer literals. For example, if we write 11_245_346, it will be
+interpreted as 11,245,346. Remember that an underscore can never
+occur at the</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.35in">
+beginning or ending of the literal. Multiple underscores are also
+supported. For example we</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+can write an integer literal as 23__45 which will be interpreted as
+2345.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The underscores are only for semantic (visual) aid. They are ignored
+by the compiler. Many people have the notion of writing a binary
+number as 4-bit groups. Underscores can help you to represent a
+binary literal as 4-bit groups. For example you can write a binary
+literal using underscores as shown below:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.08in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">0b1010_1100_1011_1001</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" ALIGN=JUSTIFY>Floating-point Literals:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Floating-point literals are used to represent decimal numbers with a
+fractional component. Floating-point literals can be represented in
+either standard notation or in scientific notation.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In standard notation, a literal consists of a whole number followed
+by a decimal point followed by a fractional component. Examples of
+floating-point literals represented in standard notation are: 0.234,
+435.655, 11.092 etc…</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+In scientific notation, a literal is represented as a floating-point
+number followed by an exponent. The exponent consists of e or E
+followed by a decimal number. Valid examples of floating-point
+literals represented in scientific notation are: 8.32E4, 0.23e+10,
+32.431E-9 etc…</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+By default a floating-point literal is treated as a double value. To
+explicitly specify a literal as float you have to write a f or F at
+the end of the literal. Valid examples are: 1.55f, 0.24312F etc. You
+can explicitly specify that a literal is of the type double by
+writing a d or D at the end of the literal. But doing that is
+unnecessary.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">As
+mentioned above in integer literals, from Java SE 7 onwards,
+underscores are also</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+supported in floating point literals. Underscore can occur in between
+the digits before the decimal point or after the decimal point. Valid
+example is 12_32.2_323_87, which will be interpreted as 1232.232387
+by the compiler.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western">Boolean Literals:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A variable of the type boolean can be initialized with one of the two
+boolean literals true or false. The boolean literals are not
+converted to integers i.e., true doesn’t mean 1 and false doesn’t
+mean 0. Boolean literals can also be used in expressions with boolean
+operators.</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">Character Literals:</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+A character literal in Java is specified in a pair of single quotes.
+All the visible ASCII characters can be directly written as ‘a’,
+‘x’, ‘@’ etc. As per the non-existing characters, you can use
+the escape sequences. For example, to enter a single quote we will
+write it as ‘\”. Here, backslash is used to specify an escape
+sequence. Similarly to specify a new line, we will write ‘\n’.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.15in; line-height: 91%">
+We can also specify integers to be stored as values into char
+variables. Java converts the integer into corresponding Unicode
+character. Also, we can specify character literals in octal and
+hexadecimal format. We specify octal value as a backslash followed by
+a three digit number. For example, ‘\141’ is equivalent to the
+letter ‘a’. We specify hexadecimal values as a backslash-u (\u)
+followed by a four digit number. For example, ‘\u0061’ represents
+the letter ‘a’.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">String Literals:</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+Strings cannot be created by using any of the predefined primitive
+types. Java provides three class String, StringBuffer and
+StringBuidler for working with strings in Java programs.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.14in; line-height: 91%">
+A string literal is a string constant which can be created using
+double quotes as shown below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.08in; line-height: 0.24in">
+<FONT COLOR="#303030">“<FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">hi”</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.2in"><FONT COLOR="#303030">“<FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">hello
+John” “\”The Game\””</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in">The
+last string literal contains an escape sequence for double quotes.</P>
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}

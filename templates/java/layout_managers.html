@@ -1,0 +1,567 @@
+{% extends "layout.html"%}
+{%block course%}
+
+<DIV TYPE=HEADER>
+	<P CLASS="western" STYLE="margin-bottom: 0.37in; line-height: 5%"><SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 0.99in; width: 1.62in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+		<P STYLE="margin-left: 0.01in; line-height: 0.17in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Calibri, serif">Introduction to Java</FONT></FONT></P>
+	</SPAN>
+	<SPAN DIR="LTR" STYLE="position: absolute; top: 0.51in; left: 6.11in; width: 1.17in; height: 0.18in; border: none; padding: 0in; background: #ffffff">
+	
+	</SPAN><BR>
+	</P>
+</DIV>
+
+
+
+
+
+<H2 CLASS="western" STYLE="page-break-before: always"><BR CLEAR=LEFT><FONT COLOR="#17365d">Layout
+Managers</FONT></H2>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.09in; line-height: 91%">
+A layout manager is one which automatically manages the arrangement
+of various of components in a container. Each container will have a
+default layout manager. Default layout managers for some of the
+container classes are given below:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.33in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">Panel
+– Flow Layout JPanel – Flow Layout Applet – Flow Layout JApplet
+– Border Layout Frame – Border Layout JFrame – Border Layout</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.19in; line-height: 91%">
+A layout manager is an instance of that class which implements the
+LayoutManager interface. The layout manager can be set by using the
+setLayout() method whose general form is as follows:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.18in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+setLayout(LayoutManager layoutObj)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+We can manually arrange the position of each component (not
+recommended) by passing null to setLayout() method and by using
+setBounds() method on each component. Different layout managers
+available in AWT are:</P>
+<OL>
+	<LI><P STYLE="line-height: 0.39in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">FlowLayout</FONT></FONT></P>
+	<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">BorderLayout</FONT></FONT></P>
+	<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">GridLayout</FONT></FONT></P>
+	<LI><P STYLE="margin-top: 0.11in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">CardLayout</FONT></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<OL START=5>
+	<LI><P STYLE="line-height: 0.37in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4 STYLE="font-size: 16pt">GridBagLayout</FONT></FONT></P>
+</OL>
+<P CLASS="western"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.39in">FlowLayout Manager</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+The flow layout manager arranges the components one after another
+from left-to-right and top-to-bottom manner. The flow layout manager
+gives some space between components. Flow layout manager instance can
+be created using anyone of the following constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.71in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">FlowLayout()
+FlowLayout(int how)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">FlowLayout(int
+how, int hspace, int vspace)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.15in; line-height: 100%">
+In the above constructors, how specifies the alignment, hspace
+specifies horizontal space, and vspace specifies vertical space.
+Valid values for alignment are as follows: <FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">FlowLayout.LEFT</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 4.49in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">FlowLayout.CENTER
+FlowLayout.RIGHT FlowLayout.LEADING FlowLayout.TRAILING</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.8in; margin-top: 0.19in; line-height: 91%">
+Following code demonstrates working with FlowLayout: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">Panel
+p1, p2, p3;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 5.06in; margin-top: 0.01in; line-height: 91%">
+Label l1, l2; TextField t1, t2; Button b; MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.57in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new FlowLayout()); p1
+= new Panel();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.18in; margin-top: 0in; line-height: 91%">
+l1 = new Label(&quot;Enter Username: &quot;); t1 = new TextField(20);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">p1.add(l1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">p1.add(t1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.49in; margin-top: 0.01in; line-height: 91%">
+p1.setPreferredSize(new Dimension(400, 30)); p2 = new Panel();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.21in; margin-top: 0in; line-height: 91%">
+l2 = new Label(&quot;Enter Password: &quot;); t2 = new TextField(20);
+t2.setEchoChar('*');</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">p2.add(l2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">p2.add(t2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.47in; margin-top: 0.01in; line-height: 91%">
+p2.setPreferredSize(new Dimension(400, 30)); p3 = new Panel();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.89in; margin-top: 0in; line-height: 91%">
+b = new Button(&quot;Login&quot;); p3.add(b);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">add(p1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(p2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(p3);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 394px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_c2d03bdb.png')}}" NAME="image94.png" WIDTH=394 HEIGHT=194 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.37in">BorderLayout Manager</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.13in; line-height: 91%">
+The border layout manager divides the container area into five
+regions namely: north, south, east, west, and center. Default region
+is center. You have to be careful with border layout as controls
+might be stacked over one another. Border layout instance can be
+created by using one of the below constructors:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.05in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">BorderLayout()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">BorderLayout(int
+hspace, int vspace)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.17in; line-height: 91%">
+In the above constructors, hspace signifies horizontal space between
+components and vspace signifies vertical space between components.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.65in; line-height: 91%">
+Following code demonstrates working with BorderLayout: import
+java.awt.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">import
+java.awt.event.*;</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">public
+class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Button
+bnorth, bsouth, beast, bwest, bcenter;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(400,
+200);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.48in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); bnorth = new Button(&quot;North&quot;);
+bsouth = new Button(&quot;South&quot;); beast = new Button(&quot;East&quot;);
+bwest = new Button(&quot;West&quot;);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">bcenter
+= new Button(&quot;Center&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.99in; margin-top: 0.01in; line-height: 91%">
+add(bnorth, BorderLayout.NORTH); add(bsouth, BorderLayout.SOUTH);
+add(beast, BorderLayout.EAST); add(bwest, BorderLayout.WEST);
+add(bcenter, BorderLayout.CENTER);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.37in">Output
+of the above code is as shown below:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.12in"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_fc9536a2.png')}}" NAME="image95.png" ALIGN=BOTTOM WIDTH=400 HEIGHT=200 BORDER=0></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<H5 CLASS="western" STYLE="line-height: 0.35in">GridLayout Manager</H5>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+The grid layout manager arranges the components in a 2-dimensional
+grid. While creating the instance of GridLayout, we can specify the
+number of rows and columns in the grid. Care must be taken with the
+number of cells in the grid and the number of components being added
+to the grid. If they don’t match, we might get unexpected output.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+Am instance of GridLayout can be created using one of the following
+constructors:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.04in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">GridLayout()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">GridLayout(int
+numRows, int numCols)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">GridLayout(int
+numRows, int numCols, int hspace, int vspace)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.17in; line-height: 91%">
+In the above constructors, numRows and numCols specifies the number
+of rows and columns in the grid, hspace and vsapce specifies the
+horizontal space and vertical space between the components.</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.81in; line-height: 91%">
+Following code demonstrates working with GridLayout: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+public class MyFrame extends Frame</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.66in; margin-top: 0.01in; line-height: 91%">
+Button b1, b2, b3, b4; MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(300,
+300);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.35in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); setLayout(new GridLayout(2,
+2)); b1 = new Button(&quot;1&quot;);</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 4.11in; margin-top: 0in; line-height: 91%">
+b2 = new Button(&quot;2&quot;); b3 = new Button(&quot;3&quot;); b4 =
+new Button(&quot;4&quot;); add(b1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(b2);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(b3);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">add(b4);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">addWindowListener(new
+WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">public
+static void main(String[] args)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+mf = new MyFrame();</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 298px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_b3645cd5.png')}}" NAME="image96.png" WIDTH=298 HEIGHT=300 BORDER=0></SPAN></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<H5 CLASS="western">CardLayout Manager</H5>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.13in; line-height: 91%">
+The card layout manager allows the user to create a deck of cards.
+Each card can contain different components. At any instant only one
+card in the deck can be displayed.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.14in; line-height: 91%">
+To implement card layout, we must take a panel which acts as the
+container for other cards. Each card in turn can be a panel which can
+contain different components. Components will be added to the
+respective cards (panels) and all the cards will be finally added to
+the deck (container panel).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.12in">
+The card layout can be instantiated using any one of the following
+constructors:</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.06in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">CardLayout()</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">CardLayout(int
+hspace, int vspace)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-top: 0.15in; line-height: 0.37in">
+When adding the cards (panels) to the deck, the following add()
+method can be used:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.2in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+add(Component panelRef, Object name)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.2in; line-height: 91%">
+In the above syntax, name is a string which represents the name of
+the card (panel). After adding all the cards (panels) to the deck, we
+can navigate through the cards using the following methods available
+in CardLayout class:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 4.21in; margin-top: 0.05in; line-height: 205%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+first(Container deck) void last(Container deck) void next(Container
+deck)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.24in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+previous(Container deck)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT COLOR="#303030"><FONT FACE="Arial, serif"><FONT SIZE=4 STYLE="font-size: 15pt">void
+show(Container deck, String cardName)</FONT></FONT></FONT></FONT></P>
+<P CLASS="western"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 2.78in; margin-top: 0.17in; line-height: 91%">
+Following code demonstrates working with CardLayout: import
+java.awt.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+import java.awt.event.*;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.38in">
+public class MyFrame extends Frame implements ActionListener</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.39in">
+{</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">Button
+first, last, next, prev;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.77in; margin-top: 0.01in; line-height: 91%">
+Panel bpanel, deck;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.77in; margin-top: 0in; line-height: 91%">
+Label l1, l2, l3;</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.35in; margin-top: 0in; line-height: 91%">
+Panel card1, card2, card3; CardLayout cl;</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.35in">MyFrame()</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setSize(300,
+300);</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 3.75in; margin-top: 0.01in; line-height: 91%">
+setTitle(&quot;My Application&quot;); first = new Button(&quot;First&quot;);
+last = new Button(&quot;Last&quot;); next = new Button(&quot;Next&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.49in; margin-top: 0.01in; line-height: 91%">
+prev = new Button(&quot;Previous&quot;);
+first.addActionListener(this); last.addActionListener(this);
+next.addActionListener(this); prev.addActionListener(this); bpanel =
+new Panel(); bpanel.add(first); bpanel.add(last); bpanel.add(next);
+bpanel.add(prev);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.09in; margin-top: 0.01in; line-height: 91%">
+add(bpanel, BorderLayout.NORTH); cl = new CardLayout();</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 3.47in; margin-top: 0in; line-height: 91%">
+l1 = new Label(&quot;This is card 1&quot;); l2 = new Label(&quot;This
+is card 2&quot;); l3 = new Label(&quot;This is card 3&quot;); card1 =
+new Panel();</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.2in; margin-top: 0.01in; line-height: 91%">
+card2 = new Panel(); card3 = new Panel();</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">card1.add(l1);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4.63in; margin-top: 0.01in; line-height: 91%">
+card2.add(l2); card3.add(l3);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 3.86in; margin-top: 0in; line-height: 91%">
+deck = new Panel(); deck.setLayout(cl); deck.add(card1, &quot;card1&quot;);
+deck.add(card2, &quot;card2&quot;); deck.add(card3, &quot;card3&quot;);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.56in; margin-top: 0.01in; line-height: 91%">
+add(deck, BorderLayout.CENTER); addWindowListener(new WindowAdapter()</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.36in">public
+void windowClosing(WindowEvent we)</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.36in">System.exit(0);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.38in">}</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.39in">);</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">setVisible(true);</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">}</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+void actionPerformed(ActionEvent ae)</P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">if(ae.getActionCommand().equals(&quot;First&quot;))</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.38in">cl.first(deck);</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; margin-right: 2.43in; text-indent: -0.5in; margin-top: 0.01in; line-height: 91%">
+else if(ae.getActionCommand().equals(&quot;Last&quot;))
+cl.last(deck);</P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.35in">else
+if(ae.getActionCommand().equals(&quot;Next&quot;))</P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.39in">cl.next(deck);</P>
+<DIV ID="Section86" DIR="LTR" GUTTER=3 STYLE="column-count: 2">
+	<P CLASS="western" ALIGN=RIGHT STYLE="line-height: 0.38in">else</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-right: 0.09in">}</P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" STYLE="margin-left: 0.23in">cl.previous(deck);</P>
+</DIV>
+<DIV ID="Section87" DIR="LTR">
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.36in">public
+	static void main(String[] args)</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.39in">{</P>
+	<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.36in">MyFrame
+	mf = new MyFrame();</P>
+	<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.38in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">}</P>
+	<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.38in">Output
+	of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.44in; left: 1.02in; width: 300px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_f31de137.png')}}" NAME="image97.png" WIDTH=300 HEIGHT=300 BORDER=0></SPAN></P>
+	<P CLASS="western" STYLE="margin-top: 0in"><BR>
+	</P>
+	<H5 CLASS="western" STYLE="line-height: 0.39in">GrdiBagLayout
+	Manager</H5>
+	<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0.01in; line-height: 91%">
+	The grid bag layout manager can be used to create an uneven grid
+	i.e., number of columns in each row can differ. Also the size of
+	components within a cell can be different.</P>
+</DIV>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.35in">The
+location and size of each component are specified by a set of
+constraints that are</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0.01in; line-height: 91%">
+contained in an object of type GridBagConstraints. These constraints
+include height, width, and placement of a component.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; margin-right: 0.32in; margin-top: 0in; line-height: 91%">
+The general process to work with GridBagLayout is, first set the
+layout of the container to GridBagLayout, then set the constraints
+for each component using GridBagConstraints,  and then add each
+component to the container.</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 0.39in; margin-top: 0in; line-height: 91%">
+GridBagConstraints class specifies the following fields which can be
+used to set constraints on each component:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.83in; left: 1.02in; width: 600px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_e60a0083.png')}}" NAME="image98.png" WIDTH=600 HEIGHT=466 BORDER=0></SPAN></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-top: 0.18in; line-height: 0.39in">
+Following code can be used to work with GridBagLayout:</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; margin-right: 5.19in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>import java.awt.*;
+import java.awt.event.*;</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.1in; line-height: 0.34in">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public class
+MyFrame extends Frame</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; margin-right: 4.84in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>Button b1, b2, b3,
+b4; MyFrame()</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 4in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>setSize(420, 300);
+setTitle(&quot;My Application&quot;);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.38in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>GridBagLayout gbl =
+new GridBagLayout(); GridBagConstraints gbc = new
+GridBagConstraints(); setLayout(gbl);</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 3.85in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>b1 = new
+Button(&quot;Button 1&quot;); b2 = new Button(&quot;Button 2&quot;);
+b3 = new Button(&quot;Button 3&quot;); b4 = new Button(&quot;Button
+4&quot;); gbc.weightx = 1.0;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.ipadx
+= 200;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.insets
+= new Insets(4, 4, 0, 0);</FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 1.1in; margin-right: 2.66in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.anchor =
+GridBagConstraints.NORTHWEST; gbc.gridwidth =
+GridBagConstraints.RELATIVE; gbl.setConstraints(b1,</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>gbc);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.51in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.gridwidth =
+GridBagConstraints.REMAINDER; gbl.setConstraints(b2, gbc);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.weighty
+= 1.0;</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.69in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.gridwidth =
+GridBagConstraints.RELATIVE; gbl.setConstraints(b3,</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>gbc);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; margin-right: 2.51in; margin-top: 0in; line-height: 91%">
+<FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>gbc.gridwidth =
+GridBagConstraints.REMAINDER; gbl.setConstraints(b4,</FONT><FONT SIZE=4>
+</FONT><FONT SIZE=4>gbc);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>add(b1);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>add(b2);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>add(b3);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.01in; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>add(b4);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>addWindowListener(new
+WindowAdapter()</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+void windowClosing(WindowEvent we)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 2.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>System.exit(0);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>setVisible(true);</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>public
+static void main(String[] args)</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>{</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.1in; line-height: 0.32in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>MyFrame
+mf = new MyFrame();</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.6in; line-height: 0.33in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.34in"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT SIZE=4>}</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-left: 0.1in; line-height: 0.39in">Output
+of the above code is as shown below:<SPAN CLASS="sd-abs-pos" STYLE="position: relative; top: 0.31in; left: 1.02in; width: 421px"><IMG SRC="{{url_for('static',filename='img/JAVAFULL_MERGE_1__html_2c7c7fae.png')}}" NAME="image99.png" WIDTH=421 HEIGHT=298 BORDER=0></SPAN></P>
+
+
+
+
+
+
+
+
+<DIV TYPE=FOOTER>
+	<P CLASS="western" STYLE="margin-top: 0.1in; line-height: 5%"><BR>
+	</P>
+</DIV>
+    
+    
+    
+{% endblock course %}
