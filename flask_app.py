@@ -165,6 +165,7 @@ def loginrdr():
 @app.route("/courses")
 def courses():
     recommend=None
+    info=None
     users=mongo.db.user
 
     if not session:
@@ -172,7 +173,7 @@ def courses():
     name=session['username']
 
     exist_user=users.find_one({'username': name})
-    if exist_user['recommendation'] != -1:
+    if exist_user['recommendation'] != '-1':
         recommend = exist_user['recommendation']
         info=Dict.courses[recommend]
     return render_template('courses.html',info=info,recommend=recommend)
