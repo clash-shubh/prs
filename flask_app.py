@@ -34,7 +34,7 @@ c=Dict.c
 tanishq =[]
 def loadcsv():
 
-    with open('/home/helloheroguy/mysite/static/output.csv', 'r', encoding = 'utf-8') as csvFile:
+    with open('static/output.csv', 'r', encoding = 'utf-8') as csvFile:
         reader = csv.reader(csvFile)
         for row in reader:
             tanishq.append(row)
